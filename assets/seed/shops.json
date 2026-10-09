@@ -1,0 +1,58 @@
+[
+  {
+    "id": "brown-bag",
+    "name": "Brown Bag Coffee Roasters",
+    "address": "595 Rue de Vernon #7, Gatineau",
+    "latitude": 45.447293,
+    "longitude": -75.801528,
+    "approximate": false
+  },
+  {
+    "id": "brulerie-aladdin",
+    "name": "Brulerie Aladdin",
+    "address": "774 Boul Saint-Joseph, Gatineau",
+    "latitude": 45.460106,
+    "longitude": -75.741233,
+    "approximate": false
+  },
+  {
+    "id": "cafe-vasanti",
+    "name": "Café Vasanti",
+    "address": "105 Rue de l'Hôtel-de-Ville, Gatineau",
+    "latitude": 45.4277195,
+    "longitude": -75.7148913,
+    "approximate": false
+  },
+  {
+    "id": "bluebird-coffee",
+    "name": "Bluebird Coffee",
+    "address": "261 Dalhousie St, Ottawa",
+    "latitude": 45.4305799,
+    "longitude": -75.6924113,
+    "approximate": false
+  },
+  {
+    "id": "fraser-cafe",
+    "name": "Fraser Cafe",
+    "address": "7 Springfield Rd, Ottawa",
+    "latitude": 45.4402303,
+    "longitude": -75.6761349,
+    "approximate": false
+  },
+  {
+    "id": "happy-goat",
+    "name": "Happy Goat Coffee Co.",
+    "address": "Wellington West (Hintonburg), Ottawa",
+    "latitude": 45.4027,
+    "longitude": -75.7307,
+    "approximate": true
+  },
+  {
+    "id": "morning-owl",
+    "name": "Morning Owl",
+    "address": "Parkdale Ave, Ottawa",
+    "latitude": 45.3989,
+    "longitude": -75.7311,
+    "approximate": true
+  }
+]
