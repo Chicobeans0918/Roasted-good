@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/recommendations.dart';
+import '../data/streaks.dart';
 import '../models/coffee_bean.dart';
 import '../state/app_state.dart';
 import '../theme/app_theme.dart';
@@ -39,12 +40,13 @@ class DiscoverScreen extends StatelessWidget {
       surpriseMe: state.surpriseMe,
       decafOnly: state.decafOnly,
       limit: 4,
-    );
+    ).map((r) => r.bean).toList();
   }
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     final state = AppState.of(context);
     final discoveries = _discoveries(state);
     final recommended = _recommended(state);
@@ -62,7 +64,8 @@ class DiscoverScreen extends StatelessWidget {
                   Text(
                     '$_greeting, Marc-André',
                     textAlign: TextAlign.center,
-                    style: AppType.serifStyle(
+                    style: AppType.serifFor(
+                      context,
                       size: 34,
                       weight: FontWeight.w500,
                     ),
@@ -72,9 +75,11 @@ class DiscoverScreen extends StatelessWidget {
                     'What are you brewing today?',
                     textAlign: TextAlign.center,
                     style: theme.textTheme.bodyLarge?.copyWith(
-                      color: AppColors.muted,
+                      color: p.muted,
                     ),
                   ),
+                  _StreakPill(
+                      streak: currentStreak(state.triedCoffees)),
                 ],
               ),
             ),
@@ -99,8 +104,53 @@ class DiscoverScreen extends StatelessWidget {
   }
 }
 
-class _Section extends StatelessWidget {
-  const _Section({
+/// Minimal streak indicator under the greeting. Hidden when there is
+/// no active streak.
+class _StreakPill extends StatelessWidget {
+  const _StreakPill({required this.streak});
+
+  final int streak;
+
+  @override
+  Widget build(BuildContext context) {
+    if (streak <= 0) return const SizedBox.shrink();
+    final theme = Theme.of(context);
+    final p = context.palette;
+    return Padding(
+      padding: const EdgeInsets.only(top: 14),
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 14,
+          vertical: 8,
+        ),
+        decoration: BoxDecoration(
+          color: p.surfaceVariant.withValues(alpha: 0.5),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              Icons.local_fire_department_outlined,
+              size: 16,
+              color: p.ink,
+            ),
+            const SizedBox(width: 6),
+            Text(
+              '$streak-day streak',
+              style: theme.textTheme.bodySmall?.copyWith(
+                color: p.ink,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _Section extends StatelessWidget {  const _Section({
     required this.title,
     required this.subtitle,
     required this.beans,
@@ -113,6 +163,7 @@ class _Section extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -134,7 +185,7 @@ class _Section extends StatelessWidget {
             child: Text(
               'Nothing here yet — check the catalogue.',
               style: theme.textTheme.bodyMedium?.copyWith(
-                color: AppColors.muted,
+                color: p.muted,
               ),
             ),
           )

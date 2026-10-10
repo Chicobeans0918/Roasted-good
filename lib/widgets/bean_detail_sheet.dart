@@ -13,7 +13,7 @@ Future<void> showBeanDetailSheet(BuildContext context, CoffeeBean bean) {
   return showModalBottomSheet<void>(
     context: context,
     isScrollControlled: true,
-    backgroundColor: AppColors.cream,
+    backgroundColor: context.palette.surface,
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
     ),
@@ -41,6 +41,7 @@ class BeanDetailSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     final state = AppState.of(context);
     final recipe =
         SampleData.recipes.where((r) => r.beanId == bean.id).firstOrNull;
@@ -59,7 +60,7 @@ class BeanDetailSheet extends StatelessWidget {
                 width: 40,
                 height: 4,
                 decoration: BoxDecoration(
-                  color: AppColors.line,
+                  color: p.line,
                   borderRadius: BorderRadius.circular(2),
                 ),
               ),

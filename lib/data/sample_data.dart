@@ -333,6 +333,20 @@ abstract final class SampleData {
       longitude: -75.7311,
       approximate: true,
     ),
+    CoffeeShop(
+      id: 'uji-cafe',
+      name: 'Uji Café',
+      address: '215 Rideau St, Ottawa',
+      latitude: 45.4278363,
+      longitude: -75.6883043,
+    ),
+    CoffeeShop(
+      id: 'kafia-coffee',
+      name: 'International Kafia Coffee',
+      address: '842 Boyd Ave, Ottawa',
+      latitude: 45.376811,
+      longitude: -75.751322,
+    ),
   ];
 
   static const List<BrewRecipe> recipes = [

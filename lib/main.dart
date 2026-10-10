@@ -32,18 +32,25 @@ class RoastedApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Rebuilds when AppState notifies (e.g. the theme toggle), so the
+    // active theme switches instantly.
     return AppStateScope(
       state: state,
-      child: MaterialApp(
-        title: 'Roasted',
-        theme: AppTheme.light(),
-        // Forced light theme: no darkTheme, so the cream palette always
-        // renders regardless of the device's dark-mode setting.
-        initialRoute: LoginScreen.routeName,
-        routes: {
-          LoginScreen.routeName: (_) => const LoginScreen(),
-          AppShell.routeName: (_) => const AppShell(),
-        },
+      child: AnimatedBuilder(
+        animation: state,
+        builder: (context, _) => MaterialApp(
+          title: 'Roasted',
+          theme: AppTheme.light(),
+          // Designed dark theme (deep espresso, cream text) — honours the
+          // user's Light / Dark / System choice, defaulting to system.
+          darkTheme: AppTheme.dark(),
+          themeMode: state.themeMode,
+          initialRoute: LoginScreen.routeName,
+          routes: {
+            LoginScreen.routeName: (_) => const LoginScreen(),
+            AppShell.routeName: (_) => const AppShell(),
+          },
+        ),
       ),
     );
   }

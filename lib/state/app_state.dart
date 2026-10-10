@@ -25,6 +25,17 @@ class AppState extends ChangeNotifier {
   double surpriseMe = 0.5;
   bool decafOnly = false;
 
+  /// Appearance: follows the system by default; the user can pin
+  /// Light or Dark from Profile → Information.
+  ThemeMode _themeMode = ThemeMode.system;
+  ThemeMode get themeMode => _themeMode;
+
+  void setThemeMode(ThemeMode mode) {
+    if (_themeMode == mode) return;
+    _themeMode = mode;
+    notifyListeners();
+  }
+
   String? _uid;
   UserDataSync? _sync;
 
@@ -158,6 +169,31 @@ class AppState extends ChangeNotifier {
     if (uid != null) {
       _sync?.removeTasting(uid, tried.id);
     }
+  }
+
+  // ——— Café Perks ———
+
+  /// Check-ins needed at one shop to earn a free coffee.
+  static const int perkThreshold = 10;
+
+  final Map<String, int> _perkCheckIns = {};
+
+  /// Check-in counts per shop id. Local-only state.
+  Map<String, int> get perkCheckIns => Map.unmodifiable(_perkCheckIns);
+
+  int perkVisitsFor(String shopId) => _perkCheckIns[shopId] ?? 0;
+
+  bool perkRewardReady(String shopId) =>
+      perkVisitsFor(shopId) >= perkThreshold;
+
+  void checkInAtShop(String shopId) {
+    _perkCheckIns.update(shopId, (v) => v + 1, ifAbsent: () => 1);
+    notifyListeners();
+  }
+
+  void redeemPerk(String shopId) {
+    _perkCheckIns.remove(shopId);
+    notifyListeners();
   }
 
   // ——— Tuning ———

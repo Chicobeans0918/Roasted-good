@@ -23,7 +23,7 @@ class RatingStars extends StatelessWidget {
                   ? Icons.star_half
                   : Icons.star_border,
           size: size,
-          color: AppColors.starOrange,
+          color: context.palette.star,
         );
       }),
     );
@@ -52,7 +52,7 @@ class RatingInput extends StatelessWidget {
           constraints: const BoxConstraints(),
           icon: Icon(
             value >= starValue ? Icons.star : Icons.star_border,
-            color: AppColors.starOrange,
+            color: context.palette.star,
             size: 32,
           ),
           onPressed: () => onChanged(starValue),

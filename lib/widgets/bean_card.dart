@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../data/bean_photos.dart';
 import '../models/coffee_bean.dart';
 import '../state/app_state.dart';
 import '../theme/app_theme.dart';
@@ -19,6 +20,7 @@ Color roastColor(String roastLevel) {
 }
 
 /// Rich brown gradient standing in for bean photography, tuned per roast.
+/// Used only as a fallback if a photo asset fails to load.
 List<Color> roastGradient(String roastLevel) {
   switch (roastLevel.toLowerCase()) {
     case 'light':
@@ -31,7 +33,8 @@ List<Color> roastGradient(String roastLevel) {
   }
 }
 
-/// Bean photo placeholder — a rich brown gradient tile.
+/// Bean photo thumbnail — the real bean photograph, with the roast
+/// gradient as a fallback if the asset can't load.
 class BeanThumb extends StatelessWidget {
   const BeanThumb({
     super.key,
@@ -46,17 +49,27 @@ class BeanThumb extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final gradient = roastGradient(bean.roastLevel);
-    return Container(
-      width: size,
-      height: size,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: gradient,
-        ),
-        borderRadius: BorderRadius.circular(borderRadius),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(borderRadius),
+      child: Image.asset(
+        beanPhotoAsset(bean),
+        width: size,
+        height: size,
+        fit: BoxFit.cover,
+        errorBuilder: (_, _, _) {
+          final gradient = roastGradient(bean.roastLevel);
+          return Container(
+            width: size,
+            height: size,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: gradient,
+              ),
+            ),
+          );
+        },
       ),
     );
   }
@@ -82,16 +95,16 @@ class BeanGridCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     final state = AppState.of(context);
     final wishlisted = state.isWishlisted(bean.id);
     final tried = state.hasTried(bean.id);
-    final gradient = roastGradient(bean.roastLevel);
 
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.cream,
+        color: p.surface,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppColors.line),
+        border: Border.all(color: p.line),
       ),
       clipBehavior: Clip.antiAlias,
       // The card always fills its parent's height exactly (grid cell or
@@ -105,14 +118,21 @@ class BeanGridCard extends StatelessWidget {
             child: Stack(
               fit: StackFit.expand,
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: gradient,
-                    ),
-                  ),
+                Image.asset(
+                  beanPhotoAsset(bean),
+                  fit: BoxFit.cover,
+                  errorBuilder: (_, _, _) {
+                    final gradient = roastGradient(bean.roastLevel);
+                    return Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: gradient,
+                        ),
+                      ),
+                    );
+                  },
                 ),
                 if (tried)
                   Positioned(
@@ -124,22 +144,22 @@ class BeanGridCard extends StatelessWidget {
                         vertical: 5,
                       ),
                       decoration: BoxDecoration(
-                        color: AppColors.espresso,
+                        color: p.accent,
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          const Icon(
+                          Icon(
                             Icons.check,
                             size: 13,
-                            color: AppColors.cream,
+                            color: p.onAccent,
                           ),
                           const SizedBox(width: 3),
                           Text(
                             'TRIED',
                             style: theme.textTheme.labelSmall?.copyWith(
-                              color: AppColors.cream,
+                              color: p.onAccent,
                               fontSize: 10,
                               letterSpacing: 1.0,
                             ),
@@ -181,10 +201,10 @@ class BeanGridCard extends StatelessWidget {
                 const SizedBox(height: 6),
                 Row(
                   children: [
-                    const Icon(
+                    Icon(
                       Icons.star_border,
                       size: 20,
-                      color: AppColors.starOrange,
+                      color: p.star,
                     ),
                     const SizedBox(width: 4),
                     Text(
@@ -195,10 +215,10 @@ class BeanGridCard extends StatelessWidget {
                     ),
                     if (bean.local) ...[
                       const SizedBox(width: 8),
-                      const Icon(
+                      Icon(
                         Icons.location_on_outlined,
                         size: 16,
-                        color: AppColors.muted,
+                        color: p.muted,
                       ),
                     ],
                   ],
@@ -238,7 +258,6 @@ class BeanGridCard extends StatelessWidget {
                           message: 'Mark as tried',
                           child: Icon(
                             Icons.coffee_outlined,
-                            color: AppColors.ink,
                           ),
                         ),
                       ),
@@ -263,9 +282,7 @@ class BeanGridCard extends StatelessWidget {
                             wishlisted
                                 ? Icons.favorite
                                 : Icons.favorite_border,
-                            color: wishlisted
-                                ? AppColors.espresso
-                                : AppColors.ink,
+                            color: wishlisted ? p.accent : p.ink,
                           ),
                         ),
                       ),
@@ -298,13 +315,14 @@ class BeanRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     return InkWell(
       onTap: onTap,
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 12),
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           border: Border(
-            bottom: BorderSide(color: AppColors.line),
+            bottom: BorderSide(color: p.line),
           ),
         ),
         child: Row(

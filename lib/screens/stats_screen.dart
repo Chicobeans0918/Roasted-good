@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
+import '../data/streaks.dart';
 import '../models/tried_coffee.dart';
 import '../state/app_state.dart';
 import '../theme/app_theme.dart';
+import '../screens/wrapped_screen.dart';
 import '../widgets/bean_detail_sheet.dart';
 import '../widgets/profile_widgets.dart';
 import '../widgets/rating_stars.dart';
+import '../widgets/streak_calendar.dart';
 
 /// Stats: the coffee journey in numbers, plus a Hall of fame of
 /// top-rated beans.
@@ -13,25 +16,8 @@ class StatsScreen extends StatelessWidget {
   const StatsScreen({super.key});
 
   /// Consecutive days with at least one tasting, ending today or yesterday.
-  int _streak(List<TriedCoffee> tried) {
-    if (tried.isEmpty) return 0;
-    final days = {
-      for (final t in tried)
-        DateTime(t.date.year, t.date.month, t.date.day),
-    };
-    var cursor = DateTime.now();
-    final today = DateTime(cursor.year, cursor.month, cursor.day);
-    if (!days.contains(today)) {
-      cursor = today.subtract(const Duration(days: 1));
-    }
-    var streak = 0;
-    while (days.contains(
-        DateTime(cursor.year, cursor.month, cursor.day))) {
-      streak++;
-      cursor = cursor.subtract(const Duration(days: 1));
-    }
-    return streak;
-  }
+  /// Shared helper in lib/data/streaks.dart.
+  int _streak(List<TriedCoffee> tried) => currentStreak(tried);
 
   List<(String, int)> _topOrigins(AppState state, List<TriedCoffee> tried) {
     final counts = <String, int>{};
@@ -48,6 +34,7 @@ class StatsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     final state = AppState.of(context);
     final tried = state.triedCoffees;
     final beansTried = {
@@ -75,13 +62,13 @@ class StatsScreen extends StatelessWidget {
           children: [
             Text(
               'Coffee stats',
-              style: AppType.serifStyle(size: 34, weight: FontWeight.w500),
+              style: AppType.serifFor(context, size: 34, weight: FontWeight.w500),
             ),
             const SizedBox(height: 8),
             Text(
               'Your journey in numbers',
               style: theme.textTheme.bodyMedium?.copyWith(
-                color: AppColors.muted,
+                color: p.muted,
               ),
             ),
             const SizedBox(height: 28),
@@ -113,7 +100,7 @@ class StatsScreen extends StatelessWidget {
                   icon: Icons.star_border,
                   value: avg,
                   label: 'AVG RATING',
-                  iconColor: AppColors.starOrange,
+                  iconColor: p.star,
                 ),
                 const SizedBox(width: 16),
                 StatTile(
@@ -129,6 +116,33 @@ class StatsScreen extends StatelessWidget {
                 ),
               ],
             ),
+            const SizedBox(height: 44),
+            SizedBox(
+              width: double.infinity,
+              child: OutlinedButton.icon(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (_) => const WrappedScreen(),
+                  ),
+                ),
+                icon: const Icon(
+                  Icons.auto_awesome_outlined,
+                  size: 18,
+                ),
+                label: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                  child: Text(
+                      'View your ${DateTime.now().year} Wrapped'),
+                ),
+              ),
+            ),
+            const SizedBox(height: 44),
+            const SectionTitle(
+              icon: Icons.calendar_month_outlined,
+              text: 'Brew calendar',
+            ),
+            const SizedBox(height: 16),
+            StreakCalendar(tried: tried),
             const SizedBox(height: 44),
             const SectionTitle(
               icon: Icons.public_outlined,
@@ -178,6 +192,7 @@ class _HallOfFame extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     final best = <String, TriedCoffee>{};
     for (final t in tried) {
       final current = best[t.beanId];
@@ -214,7 +229,7 @@ class _HallOfFame extends StatelessWidget {
                 margin: const EdgeInsets.only(bottom: 12),
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  border: Border.all(color: AppColors.line),
+                  border: Border.all(color: p.line),
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Row(
@@ -226,9 +241,7 @@ class _HallOfFame extends StatelessWidget {
                         style: AppType.serifStyle(
                           size: 22,
                           weight: FontWeight.w600,
-                          color: i == 0
-                              ? AppColors.starOrange
-                              : AppColors.muted,
+                          color: i == 0 ? p.star : p.muted,
                         ),
                       ),
                     ),

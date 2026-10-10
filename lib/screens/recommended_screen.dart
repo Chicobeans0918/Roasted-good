@@ -57,14 +57,31 @@ class RecommendedScreen extends StatelessWidget {
                 crossAxisCount: 2,
                 crossAxisSpacing: 20,
                 mainAxisSpacing: 24,
-                childAspectRatio: 0.56,
+                childAspectRatio: 0.5,
               ),
               itemCount: recommended.length,
               itemBuilder: (context, index) {
-                final bean = recommended[index];
-                return BeanGridCard(
-                  bean: bean,
-                  onDetails: () => showBeanDetailSheet(context, bean),
+                final rec = recommended[index];
+                return Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: BeanGridCard(
+                        bean: rec.bean,
+                        onDetails: () =>
+                            showBeanDetailSheet(context, rec.bean),
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      rec.reason,
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        fontStyle: FontStyle.italic,
+                      ),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
                 );
               },
             ),

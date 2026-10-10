@@ -47,6 +47,7 @@ class _CatalogueScreenState extends State<CatalogueScreen> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     final state = AppState.of(context);
     final beans = _filtered(state.beans);
 
@@ -68,19 +69,19 @@ class _CatalogueScreenState extends State<CatalogueScreen> {
                           onPressed: () => setState(() => _query = ''),
                         ),
                   filled: true,
-                  fillColor: AppColors.creamDark.withValues(alpha: 0.45),
+                  fillColor: p.surfaceVariant.withValues(alpha: 0.45),
                   contentPadding: const EdgeInsets.symmetric(
                     horizontal: 20,
                     vertical: 14,
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(28),
-                    borderSide: const BorderSide(color: AppColors.line),
+                    borderSide: BorderSide(color: p.line),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(28),
-                    borderSide: const BorderSide(
-                      color: AppColors.ink,
+                    borderSide: BorderSide(
+                      color: p.ink,
                       width: 1.5,
                     ),
                   ),
@@ -108,7 +109,7 @@ class _CatalogueScreenState extends State<CatalogueScreen> {
                       child: Text(
                         'No beans match your filters.',
                         style: theme.textTheme.bodyMedium?.copyWith(
-                          color: AppColors.muted,
+                          color: p.muted,
                         ),
                       ),
                     )
@@ -153,6 +154,7 @@ class _ChipRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     return SizedBox(
       height: 40,
       child: ListView.separated(
@@ -167,7 +169,7 @@ class _ChipRow extends StatelessWidget {
             label: Text(
               option,
               style: theme.textTheme.bodySmall?.copyWith(
-                color: isSelected ? AppColors.cream : AppColors.ink,
+                color: isSelected ? p.onAccent : p.ink,
               ),
             ),
             selected: isSelected,

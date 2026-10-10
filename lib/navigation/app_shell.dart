@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../screens/catalogue_screen.dart';
 import '../screens/discover_screen.dart';
 import '../screens/profile_screen.dart';
+import '../screens/scan_screen.dart';
 import '../screens/shops_screen.dart';
 import '../screens/stats_screen.dart';
 import '../theme/app_theme.dart';
@@ -55,24 +56,46 @@ class _AppShellState extends State<AppShell> {
 
   @override
   Widget build(BuildContext context) {
+    final p = context.palette;
     return Scaffold(
-      body: IndexedStack(
-        index: _index,
-        children: [for (final tab in _tabs) tab.screen],
+      body: Stack(
+        children: [
+          IndexedStack(
+            index: _index,
+            children: [for (final tab in _tabs) tab.screen],
+          ),
+          // Scan-a-bag shortcut, top right of every main screen.
+          Positioned(
+            top: 4,
+            right: 8,
+            child: SafeArea(
+              child: IconButton(
+                tooltip: 'Scan a bag',
+                icon: const Icon(Icons.photo_camera_outlined),
+                color: p.ink,
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (_) => const ScanScreen(),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: Container(
-        decoration: const BoxDecoration(
-          color: AppColors.cream,
+        decoration: BoxDecoration(
+          color: p.surface,
           border: Border(
-            top: BorderSide(color: AppColors.line),
+            top: BorderSide(color: p.line),
           ),
         ),
         child: BottomNavigationBar(
           currentIndex: _index,
           type: BottomNavigationBarType.fixed,
-          backgroundColor: AppColors.cream,
-          selectedItemColor: AppColors.ink,
-          unselectedItemColor: AppColors.muted,
+          backgroundColor: p.surface,
+          selectedItemColor: p.ink,
+          unselectedItemColor: p.muted,
           elevation: 0,
           selectedLabelStyle: const TextStyle(fontSize: 11),
           unselectedLabelStyle: const TextStyle(fontSize: 11),

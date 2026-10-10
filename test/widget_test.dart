@@ -59,6 +59,15 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Marc-André'), findsOneWidget);
+
+    // The section cards sit below the fold (Perks + Wrapped banner).
+    await tester.scrollUntilVisible(
+      find.text('Information'),
+      500,
+      scrollable: find.byType(Scrollable).first,
+    );
+    await tester.pumpAndSettle();
+
     expect(find.text('Information'), findsOneWidget);
     expect(find.text('Coffees tried'), findsOneWidget);
     expect(find.text('Recommended'), findsOneWidget);
@@ -127,9 +136,15 @@ void main() {
     await tester.tap(find.text('Save tasting'));
     await tester.pumpAndSettle();
 
-    // The form closed; open Profile > Coffees tried.
+    // The form closed; open Profile > Coffees tried (below the fold).
     expect(find.text('Log a tasting'), findsNothing);
     await tester.tap(find.text('Profile').last);
+    await tester.pumpAndSettle();
+    await tester.scrollUntilVisible(
+      find.text('Coffees tried'),
+      500,
+      scrollable: find.byType(Scrollable).first,
+    );
     await tester.pumpAndSettle();
     await tester.ensureVisible(find.text('Coffees tried'));
     await tester.pumpAndSettle();
@@ -156,8 +171,13 @@ void main() {
     expect(find.text('TASTINGS'), findsOneWidget);
     expect(find.text('DAY STREAK'), findsOneWidget);
 
-    // Hall of fame is below the fold (lazy-built).
-    await tester.scrollUntilVisible(find.text('Hall of fame'), 500);
+    // Hall of fame is below the fold (lazy-built). Scope the scrollable:
+    // the brew calendar's GridView is a Scrollable too.
+    await tester.scrollUntilVisible(
+      find.text('Hall of fame'),
+      500,
+      scrollable: find.byType(Scrollable).first,
+    );
     await tester.pumpAndSettle();
     expect(find.text('Hall of fame'), findsOneWidget);
   });

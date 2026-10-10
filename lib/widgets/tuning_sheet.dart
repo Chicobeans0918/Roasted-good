@@ -8,13 +8,14 @@ import '../theme/app_theme.dart';
 void showTuningSheet(BuildContext context) {
   showModalBottomSheet<void>(
     context: context,
-    backgroundColor: AppColors.cream,
+    backgroundColor: context.palette.surface,
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
     ),
     builder: (sheetContext) {
       final live = AppState.of(sheetContext);
       final theme = Theme.of(sheetContext);
+      final p = sheetContext.palette;
       return SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(24, 12, 24, 32),
@@ -27,7 +28,7 @@ void showTuningSheet(BuildContext context) {
                   width: 40,
                   height: 4,
                   decoration: BoxDecoration(
-                    color: AppColors.line,
+                    color: p.line,
                     borderRadius: BorderRadius.circular(2),
                   ),
                 ),
@@ -77,7 +78,7 @@ void showTuningSheet(BuildContext context) {
                   style: theme.textTheme.titleSmall,
                 ),
                 value: live.decafOnly,
-                activeThumbColor: AppColors.ink,
+                activeThumbColor: p.ink,
                 onChanged: (value) => live.updateTuning(decaf: value),
               ),
             ],

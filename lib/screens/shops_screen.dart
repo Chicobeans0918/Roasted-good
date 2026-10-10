@@ -7,7 +7,14 @@ import '../state/app_state.dart';
 import '../theme/app_theme.dart';
 
 /// Coffee shops and roasteries on a real interactive map
-/// (OpenStreetMap tiles), centered on Gatineau–Ottawa.
+/// (CARTO minimal basemap, no POI clutter), centered on Gatineau–Ottawa.
+///
+/// Minimal CARTO basemap tile URL — light and dark variants follow the
+/// app theme. Verified against the CARTO basemap tile scheme:
+/// `light_all` / `dark_all` with subdomains a–d and `{r}` retina support.
+String cartoTileUrl({required bool dark}) =>
+    'https://{s}.basemaps.cartocdn.com/${dark ? 'dark_all' : 'light_all'}/{z}/{x}/{y}{r}.png';
+
 class ShopsScreen extends StatefulWidget {
   const ShopsScreen({super.key});
 
@@ -46,10 +53,13 @@ class _ShopsScreenState extends State<ShopsScreen> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     final state = AppState.of(context);
     final shops = state.shops;
     final selected =
         shops.where((s) => s.id == _selectedShopId).firstOrNull;
+    // Minimal CARTO basemap (no POI clutter); dark variant follows theme.
+    final isDark = theme.brightness == Brightness.dark;
 
     return Scaffold(
       body: SafeArea(
@@ -67,8 +77,8 @@ class _ShopsScreenState extends State<ShopsScreen> {
                     ),
                     children: [
                       TileLayer(
-                        urlTemplate:
-                            'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                        urlTemplate: cartoTileUrl(dark: isDark),
+                        subdomains: const ['a', 'b', 'c', 'd'],
                         userAgentPackageName: 'com.beanquest.coffee_beans',
                       ),
                       MarkerLayer(
@@ -99,8 +109,8 @@ class _ShopsScreenState extends State<ShopsScreen> {
                                     Icons.location_on_outlined,
                                     size: 34,
                                     color: shop.id == _selectedShopId
-                                        ? AppColors.ink
-                                        : AppColors.muted,
+                                        ? p.accent
+                                        : p.muted,
                                   ),
                                 ),
                               ),
@@ -116,10 +126,22 @@ class _ShopsScreenState extends State<ShopsScreen> {
                       child: _ShopCard(
                         shop: selected,
                         distanceKm: _distanceKm(selected),
-                        backgroundColor: AppColors.cream,
+                        backgroundColor: p.surface,
                         onTap: () {},
                       ),
                     ),
+                  // Tile attribution (required by CARTO / OSM).
+                  Positioned(
+                    right: 8,
+                    bottom: 6,
+                    child: Text(
+                      '© OpenStreetMap contributors © CARTO',
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        fontSize: 9,
+                        color: p.muted,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -174,6 +196,7 @@ class _ShopCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(12),
@@ -183,8 +206,8 @@ class _ShopCard extends StatelessWidget {
           color: backgroundColor,
           borderRadius: BorderRadius.circular(12),
           border: highlighted
-              ? Border.all(color: AppColors.ink, width: 1.5)
-              : Border.all(color: AppColors.line),
+              ? Border.all(color: p.ink, width: 1.5)
+              : Border.all(color: p.line),
         ),
         child: Row(
           children: [

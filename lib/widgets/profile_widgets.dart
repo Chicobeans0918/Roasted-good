@@ -25,20 +25,21 @@ class StatTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     return Expanded(
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 24),
         decoration: BoxDecoration(
-          border: Border.all(color: AppColors.line),
+          border: Border.all(color: p.line),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
           children: [
-            Icon(icon, size: 26, color: iconColor ?? AppColors.ink),
+            Icon(icon, size: 26, color: iconColor ?? p.ink),
             const SizedBox(height: 10),
             Text(
               value,
-              style: AppType.serifStyle(size: 26, weight: FontWeight.w600),
+              style: AppType.serifFor(context, size: 26, weight: FontWeight.w600),
             ),
             const SizedBox(height: 4),
             Text(label, style: theme.textTheme.labelSmall),
@@ -58,9 +59,10 @@ class SectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     return Row(
       children: [
-        Icon(icon, size: 22, color: AppColors.ink),
+        Icon(icon, size: 22, color: p.ink),
         const SizedBox(width: 8),
         Text(text, style: theme.textTheme.titleMedium),
       ],
@@ -76,10 +78,11 @@ class EmptyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        border: Border.all(color: AppColors.line),
+        border: Border.all(color: p.line),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Text(text, style: theme.textTheme.titleMedium),
@@ -101,10 +104,11 @@ class TasteIdentityCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     return Container(
       padding: const EdgeInsets.all(28),
       decoration: BoxDecoration(
-        color: AppColors.espresso,
+        color: p.identityCard,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
@@ -112,16 +116,16 @@ class TasteIdentityCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Icon(
+              Icon(
                 Icons.auto_awesome_outlined,
-                color: AppColors.creamDark,
+                color: p.onIdentityCard.withValues(alpha: 0.75),
                 size: 20,
               ),
               const SizedBox(width: 8),
               Text(
                 'YOUR TASTE IDENTITY',
                 style: theme.textTheme.labelSmall?.copyWith(
-                  color: AppColors.creamDark,
+                  color: p.onIdentityCard.withValues(alpha: 0.75),
                   letterSpacing: 1.6,
                 ),
               ),
@@ -133,7 +137,7 @@ class TasteIdentityCard extends StatelessWidget {
             style: AppType.serifStyle(
               size: 24,
               weight: FontWeight.w500,
-              color: AppColors.cream,
+              color: p.onIdentityCard,
               height: 1.25,
             ),
           ),
@@ -141,7 +145,7 @@ class TasteIdentityCard extends StatelessWidget {
           Text(
             subline,
             style: theme.textTheme.bodyMedium?.copyWith(
-              color: AppColors.creamDark,
+              color: p.onIdentityCard.withValues(alpha: 0.75),
             ),
           ),
         ],
@@ -161,10 +165,11 @@ class FlavourBars extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     if (flavours.isEmpty) {
       return Text(
         'Log tastings to reveal your flavour affinities.',
-        style: theme.textTheme.bodyMedium?.copyWith(color: AppColors.muted),
+        style: theme.textTheme.bodyMedium?.copyWith(color: p.muted),
       );
     }
     return Column(
@@ -187,9 +192,9 @@ class FlavourBars extends StatelessWidget {
             child: LinearProgressIndicator(
               value: value.clamp(0.0, 1.0),
               minHeight: 12,
-              backgroundColor: AppColors.creamDark.withValues(alpha: 0.4),
+              backgroundColor: p.surfaceVariant.withValues(alpha: 0.4),
               valueColor:
-                  const AlwaysStoppedAnimation<Color>(AppColors.sage),
+                  AlwaysStoppedAnimation<Color>(p.sage),
             ),
           ),
           const SizedBox(height: 14),
@@ -207,7 +212,7 @@ class RatingStyleCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
+    final p = context.palette;
     final highest = tried.isEmpty
         ? '–'
         : tried
@@ -219,23 +224,25 @@ class RatingStyleCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        border: Border.all(color: AppColors.line),
+        border: Border.all(color: p.line),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
         children: [
-          _row(theme, 'Highest given', highest, star: true),
-          const Divider(color: AppColors.line, height: 28),
-          _row(theme, 'Tastings logged', '${tried.length}'),
-          const Divider(color: AppColors.line, height: 28),
-          _row(theme, 'Liked', '$liked of ${tried.length}'),
+          _row(context, 'Highest given', highest, star: true),
+          Divider(color: p.line, height: 28),
+          _row(context, 'Tastings logged', '${tried.length}'),
+          Divider(color: p.line, height: 28),
+          _row(context, 'Liked', '$liked of ${tried.length}'),
         ],
       ),
     );
   }
 
-  Widget _row(ThemeData theme, String label, String value,
+  Widget _row(BuildContext context, String label, String value,
       {bool star = false}) {
+    final theme = Theme.of(context);
+    final p = context.palette;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -243,11 +250,11 @@ class RatingStyleCard extends StatelessWidget {
         Row(
           children: [
             if (star)
-              const Padding(
-                padding: EdgeInsets.only(right: 4),
+              Padding(
+                padding: const EdgeInsets.only(right: 4),
                 child: Icon(
                   Icons.star,
-                  color: AppColors.starOrange,
+                  color: p.star,
                   size: 20,
                 ),
               ),
@@ -257,6 +264,38 @@ class RatingStyleCard extends StatelessWidget {
       ],
     );
   }
+}
+
+/// One-line taste summary from the user's tastings, e.g.
+/// "Light-roast lover · into Ethiopia".
+String tasteIdentityLine(
+  List<TriedCoffee> tried,
+  CoffeeBean? Function(String id) beanFor,
+) {
+  if (tried.isEmpty) return 'Your palate is a blank slate — for now';
+  final liked = [for (final t in tried) if (t.liked) t];
+  final pool = liked.isNotEmpty ? liked : tried;
+  final roasts = <String, int>{};
+  final origins = <String, int>{};
+  for (final t in pool) {
+    final bean = beanFor(t.beanId);
+    if (bean == null) continue;
+    roasts.update(bean.roastLevel, (v) => v + 1, ifAbsent: () => 1);
+    origins.update(bean.origin, (v) => v + 1, ifAbsent: () => 1);
+  }
+  String? top(Map<String, int> counts) => counts.isEmpty
+      ? null
+      : counts.entries
+          .reduce((a, b) => a.value >= b.value ? a : b)
+          .key;
+  final parts = <String>[];
+  final roast = top(roasts);
+  if (roast != null) parts.add('${roast.toLowerCase()}-roast lover');
+  final origin = top(origins);
+  if (origin != null) parts.add('into $origin');
+  return parts.isEmpty
+      ? 'Your palate is taking shape'
+      : parts.join(' · ');
 }
 
 /// One bean with all of its tastings nested underneath, newest first.
@@ -273,10 +312,11 @@ class GroupedTastingCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     return Container(
       margin: const EdgeInsets.only(bottom: 20),
       decoration: BoxDecoration(
-        border: Border.all(color: AppColors.line),
+        border: Border.all(color: p.line),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -308,19 +348,19 @@ class GroupedTastingCard extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const Icon(
+                  Icon(
                     Icons.chevron_right,
-                    color: AppColors.muted,
+                    color: p.muted,
                   ),
                 ],
               ),
             ),
           ),
-          const Divider(color: AppColors.line, height: 1),
+          Divider(color: p.line, height: 1),
           for (var i = 0; i < tastings.length; i++) ...[
             _TastingRow(tasting: tastings[i]),
             if (i < tastings.length - 1)
-              const Divider(color: AppColors.line, height: 1),
+              Divider(color: p.line, height: 1),
           ],
         ],
       ),
@@ -336,6 +376,7 @@ class _TastingRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     return Padding(
       padding: const EdgeInsets.all(18),
       child: Column(
@@ -349,13 +390,13 @@ class _TastingRow extends StatelessWidget {
                   vertical: 4,
                 ),
                 decoration: BoxDecoration(
-                  color: AppColors.creamDark.withValues(alpha: 0.5),
+                  color: p.surfaceVariant.withValues(alpha: 0.5),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Text(
                   tasting.brewMethod,
                   style: theme.textTheme.bodySmall?.copyWith(
-                    color: AppColors.ink,
+                    color: p.ink,
                   ),
                 ),
               ),
@@ -375,7 +416,7 @@ class _TastingRow extends StatelessWidget {
                       : Icons.thumb_down_outlined,
                   size: 17,
                   color:
-                      tasting.liked ? AppColors.espresso : AppColors.muted,
+                      tasting.liked ? p.accent : p.muted,
                 ),
               ),
             ],
@@ -386,7 +427,7 @@ class _TastingRow extends StatelessWidget {
               '“${tasting.note}”',
               style: theme.textTheme.bodyMedium?.copyWith(
                 fontStyle: FontStyle.italic,
-                color: AppColors.muted,
+                color: p.muted,
               ),
             ),
           ],
@@ -406,10 +447,11 @@ class PickCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final p = context.palette;
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        border: Border.all(color: AppColors.line),
+        border: Border.all(color: p.line),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Row(
@@ -433,22 +475,22 @@ class PickCard extends StatelessWidget {
               vertical: 8,
             ),
             decoration: BoxDecoration(
-              color: AppColors.espresso,
+              color: p.accent,
               borderRadius: BorderRadius.circular(20),
             ),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Icon(
+                Icon(
                   Icons.star,
                   size: 18,
-                  color: AppColors.starOrange,
+                  color: p.star,
                 ),
                 const SizedBox(width: 4),
                 Text(
                   rating.toStringAsFixed(1).replaceAll('.0', ''),
                   style: theme.textTheme.bodyMedium?.copyWith(
-                    color: AppColors.cream,
+                    color: p.onAccent,
                   ),
                 ),
               ],
