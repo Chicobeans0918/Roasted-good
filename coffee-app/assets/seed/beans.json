@@ -1,0 +1,424 @@
+[
+  {
+    "id": "yirgacheffe-dawn",
+    "name": "Yirgacheffe Dawn",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Jasmine",
+      "Bergamot",
+      "Apricot"
+    ],
+    "rating": 4.5,
+    "description": "Bright and floral, jasmine floating over ripe apricot.",
+    "local": false,
+    "decaf": false
+  },
+  {
+    "id": "kenya-aa",
+    "name": "Kenya AA Peaberry",
+    "origin": "Kenya",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Blackcurrant",
+      "Winey",
+      "Bright"
+    ],
+    "rating": 5.0,
+    "description": "Bold blackcurrant acidity with a winey, juicy finish.",
+    "local": false,
+    "decaf": false
+  },
+  {
+    "id": "costa-rica-tarrazu",
+    "name": "Tarrazú Honey",
+    "origin": "Costa Rica",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Honey",
+      "Green apple",
+      "Clean"
+    ],
+    "rating": 4.5,
+    "description": "Honey-processed sweetness, crisp green apple, clean cup.",
+    "local": false,
+    "decaf": false
+  },
+  {
+    "id": "huila-reserve",
+    "name": "Huila Reserve",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolate",
+      "Caramel",
+      "Citrus"
+    ],
+    "rating": 4.0,
+    "description": "A comforting all-rounder: chocolate, caramel, citrus lift.",
+    "local": false,
+    "decaf": false
+  },
+  {
+    "id": "brazil-cerrado",
+    "name": "Cerrado Classic",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Hazelnut",
+      "Milk chocolate",
+      "Low acid"
+    ],
+    "rating": 4.0,
+    "description": "Low-acid and nutty — the easy-drinking espresso base.",
+    "local": false,
+    "decaf": false
+  },
+  {
+    "id": "guatemala-antigua",
+    "name": "Antigua Valley",
+    "origin": "Guatemala",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Cocoa",
+      "Orange zest",
+      "Smoke"
+    ],
+    "description": "Volcanic-soil depth: cocoa, orange zest, a whisper of smoke.",
+    "local": false,
+    "decaf": false
+  },
+  {
+    "id": "decaf-colombia",
+    "name": "Decaf Huila",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolate",
+      "Graham",
+      "Sweet"
+    ],
+    "description": "All of the Huila comfort, none of the caffeine.",
+    "local": false,
+    "decaf": true
+  },
+  {
+    "id": "sumatra-night",
+    "name": "Sumatra Night",
+    "origin": "Indonesia",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Earthy",
+      "Dark chocolate",
+      "Spice"
+    ],
+    "rating": 3.5,
+    "description": "Heavy and brooding — earth, dark chocolate, warm spice.",
+    "local": false,
+    "decaf": false
+  },
+  {
+    "id": "huila-pink-bourbon",
+    "name": "Huila Pink Bourbon",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Panela",
+      "Red plum",
+      "Floral"
+    ],
+    "rating": 4.5,
+    "description": "Rare pink bourbon varietal: panela sweetness, red plum.",
+    "local": false,
+    "decaf": false
+  },
+  {
+    "id": "santos-gold",
+    "name": "Santos Gold",
+    "origin": "Brazil",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Toasted nut",
+      "Molasses",
+      "Low acid"
+    ],
+    "description": "Dark-roasted Santos: toasted nut and molasses richness.",
+    "local": false,
+    "decaf": false
+  },
+  {
+    "id": "kona-peaberry",
+    "name": "Kona Peaberry",
+    "origin": "Hawaii",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Honey",
+      "Milk chocolate",
+      "Delicate"
+    ],
+    "rating": 4.5,
+    "description": "Hawaiian treasure — delicate honey and milk chocolate.",
+    "local": false,
+    "decaf": false
+  },
+  {
+    "id": "blue-mountain",
+    "name": "Blue Mountain",
+    "origin": "Jamaica",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Silky",
+      "Cocoa",
+      "Mild"
+    ],
+    "rating": 4.5,
+    "description": "The famously silky Jamaican cup: mild, cocoa, refined.",
+    "local": false,
+    "decaf": false
+  },
+  {
+    "id": "harrar-bold",
+    "name": "Harrar Bold",
+    "origin": "Ethiopia",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Blueberry",
+      "Wine",
+      "Spice"
+    ],
+    "description": "Wild Harrar: blueberry and wine notes in a dark roast.",
+    "local": false,
+    "decaf": false
+  },
+  {
+    "id": "chiapas-cloud",
+    "name": "Chiapas Cloud",
+    "origin": "Mexico",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Cocoa",
+      "Orange",
+      "Soft"
+    ],
+    "description": "Soft Mexican highland coffee: cocoa and sweet orange.",
+    "local": false,
+    "decaf": false
+  },
+  {
+    "id": "celebes-kalosi",
+    "name": "Celebes Kalosi",
+    "origin": "Indonesia",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Syrupy",
+      "Dark chocolate",
+      "Cedar"
+    ],
+    "description": "Syrupy Sulawesi body with cedar and dark chocolate.",
+    "local": false,
+    "decaf": false
+  },
+  {
+    "id": "kilimbi-hill",
+    "name": "Kilimbi Hill",
+    "origin": "Rwanda",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Black tea",
+      "Citrus",
+      "Honey"
+    ],
+    "rating": 4.0,
+    "description": "Rwandan brightness: black tea, citrus, honeyed finish.",
+    "local": false,
+    "decaf": false
+  },
+  {
+    "id": "happy-goat-yirgacheffe",
+    "name": "Ethiopian Yirgacheffe",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Floral",
+      "Jasmine",
+      "Citrus"
+    ],
+    "rating": 4.5,
+    "description": "Happy Goat's take on Yirgacheffe: floral and jasmine-bright.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false
+  },
+  {
+    "id": "happy-goat-huila",
+    "name": "Colombian Huila",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolate",
+      "Caramel",
+      "Round"
+    ],
+    "rating": 4.0,
+    "description": "Happy Goat's Huila: round chocolate-caramel comfort.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false
+  },
+  {
+    "id": "brown-bag-espresso-blend",
+    "name": "Triple-Origin Espresso Blend",
+    "origin": "Blend",
+    "roastLevel": "Medium-Dark",
+    "tastingNotes": [
+      "Chocolate",
+      "Spice",
+      "Full body"
+    ],
+    "rating": 4.5,
+    "description": "Brown Bag's signature espresso: chocolate, spice, full body.",
+    "local": true,
+    "roaster": "Brown Bag Coffee Roasters",
+    "decaf": false
+  },
+  {
+    "id": "brown-bag-ethiopian",
+    "name": "Ethiopian Single Origin",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Fruity",
+      "Bright",
+      "Tea-like"
+    ],
+    "rating": 4.0,
+    "description": "Brown Bag's fruity Ethiopian: bright and tea-like.",
+    "local": true,
+    "roaster": "Brown Bag Coffee Roasters",
+    "decaf": false
+  },
+  {
+    "id": "morning-owl-colombian",
+    "name": "Direct-Trade Colombian",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Nutty",
+      "Sweet",
+      "Balanced"
+    ],
+    "rating": 4.0,
+    "description": "Morning Owl's direct-trade Colombian: nutty and sweet.",
+    "local": true,
+    "roaster": "Morning Owl",
+    "decaf": false
+  },
+  {
+    "id": "morning-owl-ethiopian-natural",
+    "name": "Ethiopian Natural",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Berry",
+      "Juicy",
+      "Floral"
+    ],
+    "rating": 4.5,
+    "description": "Morning Owl's natural Ethiopian: juicy berry bomb.",
+    "local": true,
+    "roaster": "Morning Owl",
+    "decaf": false
+  },
+  {
+    "id": "kafia-guji",
+    "name": "Ethiopian Guji",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Blueberry",
+      "Floral",
+      "Sweet"
+    ],
+    "rating": 4.5,
+    "description": "Kafia's Guji: blueberry sweetness with floral highs.",
+    "local": true,
+    "roaster": "International Kafia Coffee",
+    "decaf": false
+  },
+  {
+    "id": "kafia-sumatra",
+    "name": "Sumatra Mandheling",
+    "origin": "Indonesia",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Earthy",
+      "Low acid",
+      "Heavy"
+    ],
+    "description": "Kafia's Mandheling: heavy, earthy, low acid.",
+    "local": true,
+    "roaster": "International Kafia Coffee",
+    "decaf": false
+  },
+  {
+    "id": "artery-colombia-rwanda",
+    "name": "Colombia–Rwanda Blend",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolate",
+      "Vanilla",
+      "Smooth"
+    ],
+    "rating": 4.0,
+    "description": "The Artery's community blend: smooth chocolate-vanilla.",
+    "local": true,
+    "roaster": "The Artery Community Roasters",
+    "decaf": false
+  },
+  {
+    "id": "aladdin-sumatra-dark",
+    "name": "Sumatra Dark",
+    "origin": "Indonesia",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Smoky",
+      "Bold",
+      "Chocolate"
+    ],
+    "description": "Brulerie Aladdin's dark Sumatra: smoky and bold.",
+    "local": true,
+    "roaster": "Brulerie Aladdin",
+    "decaf": false
+  },
+  {
+    "id": "aladdin-house-blend",
+    "name": "House Blend",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Balanced",
+      "Nutty",
+      "Chocolate"
+    ],
+    "rating": 4.0,
+    "description": "Brulerie Aladdin's house blend: balanced everyday cup.",
+    "local": true,
+    "roaster": "Brulerie Aladdin",
+    "decaf": false
+  },
+  {
+    "id": "poppa-bean-seasonal",
+    "name": "Seasonal Roast",
+    "origin": "Rotating",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Seasonal",
+      "Fresh crop"
+    ],
+    "description": "Poppa Bean's rotating seasonal pick: always fresh crop.",
+    "local": true,
+    "roaster": "Poppa Bean",
+    "decaf": false
+  }
+]
