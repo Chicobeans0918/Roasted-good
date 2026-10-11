@@ -50,6 +50,8 @@ class DiscoverScreen extends StatelessWidget {
     final state = AppState.of(context);
     final discoveries = _discoveries(state);
     final recommended = _recommended(state);
+    final name = state.userName;
+    final greeting = name.isEmpty ? _greeting : '$_greeting, $name';
 
     return Scaffold(
       body: SafeArea(
@@ -62,7 +64,7 @@ class DiscoverScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    '$_greeting, Marc-André',
+                    greeting,
                     textAlign: TextAlign.center,
                     style: AppType.serifFor(
                       context,
@@ -89,14 +91,17 @@ class DiscoverScreen extends StatelessWidget {
               subtitle: 'New beans worth exploring',
               beans: discoveries,
             ),
-            const SizedBox(height: 56),
-            _Section(
-              title: 'Recommended for you',
-              subtitle: state.triedCoffees.isEmpty
-                  ? 'Log a tasting to personalize these picks'
-                  : 'Based on the coffees you have rated',
-              beans: recommended,
-            ),
+            // "Recommended for you" only appears once the user has enough
+            // tastings for it to mean something — otherwise it's a second
+            // carousel of the same beans.
+            if (state.triedCoffees.length >= 3) ...[
+              const SizedBox(height: 56),
+              _Section(
+                title: 'Recommended for you',
+                subtitle: 'Based on the coffees you have rated',
+                beans: recommended,
+              ),
+            ],
           ],
         ),
       ),

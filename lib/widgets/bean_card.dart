@@ -76,7 +76,8 @@ class BeanThumb extends StatelessWidget {
 }
 
 /// Catalogue-style bean card: photo tile, serif name, origin, roast,
-/// orange star rating, "Details" outlined button + espresso "+" button.
+/// orange star rating, espresso "+" button + wishlist button.
+/// The whole card is tappable and opens the bean detail sheet ([onDetails]).
 /// Sized by its parent (grid cell or fixed-width carousel slot).
 class BeanGridCard extends StatelessWidget {
   const BeanGridCard({
@@ -87,6 +88,8 @@ class BeanGridCard extends StatelessWidget {
   });
 
   final CoffeeBean bean;
+
+  /// Opens the bean detail sheet. Wired to the whole card's tap.
   final VoidCallback onDetails;
 
   /// Opens the tasting-log form. Defaults to the shared tasting sheet.
@@ -100,7 +103,10 @@ class BeanGridCard extends StatelessWidget {
     final wishlisted = state.isWishlisted(bean.id);
     final tried = state.hasTried(bean.id);
 
-    return Container(
+    return InkWell(
+      onTap: onDetails,
+      borderRadius: BorderRadius.circular(16),
+      child: Container(
       decoration: BoxDecoration(
         color: p.surface,
         borderRadius: BorderRadius.circular(16),
@@ -226,22 +232,6 @@ class BeanGridCard extends StatelessWidget {
                 const SizedBox(height: 10),
                 Row(
                   children: [
-                    Expanded(
-                      child: OutlinedButton(
-                        onPressed: onDetails,
-                        style: OutlinedButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(vertical: 10),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                        ),
-                        child: Text(
-                          'Details',
-                          style: theme.textTheme.titleSmall,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 8),
                     SizedBox(
                       width: 46,
                       height: 46,
@@ -293,6 +283,7 @@ class BeanGridCard extends StatelessWidget {
             ),
           ),
         ],
+      ),
       ),
     );
   }

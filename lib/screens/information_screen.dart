@@ -6,6 +6,66 @@ import '../state/app_state.dart';
 import '../theme/app_theme.dart';
 import '../widgets/profile_widgets.dart';
 
+/// Editable display name, used for the Home greeting and Profile header.
+class _NameField extends StatefulWidget {
+  const _NameField();
+
+  @override
+  State<_NameField> createState() => _NameFieldState();
+}
+
+class _NameFieldState extends State<_NameField> {
+  late final TextEditingController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = TextEditingController();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Safe to read the inherited AppState here (not in initState).
+    final name = AppState.of(context).userName;
+    if (_controller.text != name) _controller.text = name;
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final p = context.palette;
+    return TextField(
+      controller: _controller,
+      textCapitalization: TextCapitalization.words,
+      decoration: InputDecoration(
+        hintText: 'What should we call you?',
+        filled: true,
+        fillColor: p.surface,
+        contentPadding: const EdgeInsets.all(16),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: const BorderRadius.all(Radius.circular(16)),
+          borderSide: BorderSide(color: p.line),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: const BorderRadius.all(Radius.circular(16)),
+          borderSide: BorderSide(color: p.ink, width: 1.5),
+        ),
+      ),
+      onSubmitted: (value) => AppState.of(context).setUserName(value),
+      onTapOutside: (_) {
+        FocusScope.of(context).unfocus();
+        AppState.of(context).setUserName(_controller.text);
+      },
+    );
+  }
+}
+
 /// Profile → Information: taste identity, flavour affinities, rating style.
 class InformationScreen extends StatelessWidget {
   const InformationScreen({super.key});
@@ -52,6 +112,13 @@ class InformationScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.fromLTRB(24, 8, 24, 48),
         children: [
+          const SectionTitle(
+            icon: Icons.person_outline,
+            text: 'Your Name',
+          ),
+          const SizedBox(height: 16),
+          const _NameField(),
+          const SizedBox(height: 48),
           TasteIdentityCard(
             headline: tried.isEmpty
                 ? 'Your palate is a blank slate — for now'

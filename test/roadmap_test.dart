@@ -115,14 +115,10 @@ void main() {
   });
 
   group('minimal map tiles', () {
-    test('CARTO light/dark URLs are exact', () {
+    test('OSM tile URL needs no API key', () {
       expect(
-        cartoTileUrl(dark: false),
-        'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-      );
-      expect(
-        cartoTileUrl(dark: true),
-        'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+        osmTileUrl(),
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       );
     });
   });
@@ -276,6 +272,13 @@ void main() {
             home: const InformationScreen(),
           ),
         ),
+      );
+      await tester.pump();
+      // The "Your Name" section sits above; scroll to the theme toggle.
+      await tester.scrollUntilVisible(
+        find.text('Appearance'),
+        500,
+        scrollable: find.byType(Scrollable).first,
       );
       await tester.pump();
       expect(find.text('Appearance'), findsOneWidget);

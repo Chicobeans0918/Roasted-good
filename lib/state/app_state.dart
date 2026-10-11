@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/coffee_repository.dart';
 import '../data/sample_data.dart';
@@ -33,6 +34,28 @@ class AppState extends ChangeNotifier {
   void setThemeMode(ThemeMode mode) {
     if (_themeMode == mode) return;
     _themeMode = mode;
+    notifyListeners();
+  }
+
+  /// The user's display name, editable from Profile → Information.
+  /// Blank by default so testers never see someone else's name.
+  static const _userNameKey = 'roasted_user_name';
+  String _userName = '';
+  String get userName => _userName;
+
+  /// Loads locally persisted preferences. Called once at startup.
+  Future<void> loadPreferences() async {
+    final prefs = await SharedPreferences.getInstance();
+    _userName = prefs.getString(_userNameKey) ?? '';
+    notifyListeners();
+  }
+
+  Future<void> setUserName(String name) async {
+    final trimmed = name.trim();
+    if (trimmed == _userName) return;
+    _userName = trimmed;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_userNameKey, _userName);
     notifyListeners();
   }
 

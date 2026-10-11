@@ -1,10 +1,12 @@
 import 'package:coffee_beans/main.dart';
+import 'package:coffee_beans/models/tried_coffee.dart';
 import 'package:coffee_beans/screens/catalogue_screen.dart';
 import 'package:coffee_beans/screens/discover_screen.dart';
 import 'package:coffee_beans/state/app_state.dart';
 import 'package:coffee_beans/widgets/tasting_form_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   testWidgets('App boots to the login screen', (tester) async {
@@ -26,17 +28,39 @@ void main() {
     expect(find.text('Profile'), findsOneWidget);
   });
 
-  testWidgets('Home greets the user with discoveries and recommendations',
+  testWidgets(
+      'Home greets generically, shows discoveries, and reveals recommendations only after 3 tastings',
       (tester) async {
-    await tester.pumpWidget(RoastedApp(state: AppState()));
+    SharedPreferences.setMockInitialValues({});
+    final state = AppState();
+    await tester.pumpWidget(RoastedApp(state: state));
     await tester.tap(find.text('Log in'));
     await tester.pumpAndSettle();
 
-    expect(find.textContaining('Marc-André'), findsOneWidget);
+    // No name set: no hardcoded name anywhere, generic greeting.
+    expect(find.textContaining('Marc-André'), findsNothing);
     expect(find.text('Discoveries'), findsOneWidget);
+    expect(find.text('Recommended for you'), findsNothing);
 
-    // The recommendations section is below the fold and builds lazily:
-    // drag the home list down to reveal it.
+    // Setting a name personalizes the greeting.
+    await state.setUserName('Jules');
+    await tester.pumpAndSettle();
+    expect(find.textContaining('Jules'), findsOneWidget);
+
+    // Log three tastings → the recommendations section appears.
+    final beanIds = state.beans.take(3).map((b) => b.id).toList();
+    for (var i = 0; i < 3; i++) {
+      state.logTasting(TriedCoffee(
+        id: 't$i',
+        beanId: beanIds[i],
+        brewMethod: 'V60',
+        rating: 4,
+        liked: true,
+        date: DateTime.now(),
+      ));
+    }
+    await tester.pumpAndSettle();
+
     final homeList = find
         .descendant(
           of: find.byType(DiscoverScreen),
@@ -48,7 +72,7 @@ void main() {
     expect(find.text('Recommended for you'), findsOneWidget);
   });
 
-  testWidgets('Profile shows the name header and the four section cards',
+  testWidgets('Profile shows the name header and three section rows',
       (tester) async {
     await tester.pumpWidget(RoastedApp(state: AppState()));
     await tester.tap(find.text('Log in'));
@@ -58,9 +82,11 @@ void main() {
     await tester.tap(find.text('Profile').last);
     await tester.pumpAndSettle();
 
-    expect(find.text('Marc-André'), findsOneWidget);
+    // No name set: friendly fallback, never someone else's name.
+    expect(find.text('Coffee lover'), findsOneWidget);
+    expect(find.textContaining('Marc-André'), findsNothing);
 
-    // The section cards sit below the fold (Perks + Wrapped banner).
+    // The section rows sit below the fold (Perks summary + Wrapped banner).
     await tester.scrollUntilVisible(
       find.text('Information'),
       500,
@@ -70,8 +96,9 @@ void main() {
 
     expect(find.text('Information'), findsOneWidget);
     expect(find.text('Coffees tried'), findsOneWidget);
-    expect(find.text('Recommended'), findsOneWidget);
     expect(find.text('Wishlist'), findsOneWidget);
+    // "Recommended" lives on Home now (after 3 tastings), not on Profile.
+    expect(find.text('Recommended'), findsNothing);
 
     // Tapping "Wishlist" opens the wishlist screen (empty state).
     await tester.ensureVisible(find.text('Wishlist'));

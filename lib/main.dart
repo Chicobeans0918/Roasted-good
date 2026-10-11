@@ -18,6 +18,7 @@ Future<void> main() async {
   AuthService.instance = AuthService(firebaseEnabled: firebaseReady);
 
   final state = AppState();
+  await state.loadPreferences();
   // Try the remote catalogue (Firestore) when Firebase is ready;
   // falls back to bundled seed data silently.
   unawaited(state.refreshCatalogue(firebaseEnabled: firebaseReady));

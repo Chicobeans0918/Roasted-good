@@ -41,6 +41,7 @@ dependencies:
   cloud_firestore: ^5.6.12
   sign_in_with_apple: ^7.0.1
   url_launcher: ^6.3.1
+  shared_preferences: ^2.3.3
 
 dev_dependencies:
   flutter_test:

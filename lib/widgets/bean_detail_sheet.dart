@@ -46,7 +46,6 @@ class BeanDetailSheet extends StatelessWidget {
     final recipe =
         SampleData.recipes.where((r) => r.beanId == bean.id).firstOrNull;
     final wishlisted = state.isWishlisted(bean.id);
-    final userRating = state.ratingFor(bean.id) ?? bean.rating ?? 0;
 
     return SafeArea(
       child: SingleChildScrollView(
@@ -109,12 +108,6 @@ class BeanDetailSheet extends StatelessWidget {
               style: theme.textTheme.bodyLarge,
             ),
             const SizedBox(height: 24),
-            Text('YOUR RATING', style: theme.textTheme.labelSmall),
-            const SizedBox(height: 4),
-            RatingInput(
-              value: userRating,
-              onChanged: (value) => state.setRating(bean.id, value),
-            ),
             if (recipe != null) ...[
               const SizedBox(height: 24),
               Text('BREW IT', style: theme.textTheme.labelSmall),
