@@ -10,9 +10,15 @@ abstract final class FirebaseBootstrap {
     if (!DefaultFirebaseOptions.isConfigured) {
       return false;
     }
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
+    try {
+      await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform,
+      );
+    } catch (_) {
+      // No Firebase config for this platform (e.g. web) — stay offline
+      // on the bundled seed data.
+      return false;
+    }
     return true;
   }
 }

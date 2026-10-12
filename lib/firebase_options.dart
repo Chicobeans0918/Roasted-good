@@ -1,25 +1,42 @@
-// PLACEHOLDER — DO NOT EDIT BY HAND.
-//
-// This file is a stand-in. Run `flutterfire configure` (see FIREBASE_SETUP.md)
-// to generate the real Firebase options for the Roasted project. Until then
-// `DefaultFirebaseOptions.isConfigured` is false and the app runs fully
-// offline on its bundled seed data.
+// File generated for the Roasted project (from GoogleService-Info.plist).
+// Firebase API keys are public client identifiers (security comes from
+// Firestore rules); this file is safe to commit.
+// ignore_for_file: type=lint
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
+import 'package:flutter/foundation.dart'
+    show defaultTargetPlatform, kIsWeb, TargetPlatform;
 
-/// Firebase configuration for the Roasted app.
+/// Default [FirebaseOptions] for use with your Firebase apps.
 class DefaultFirebaseOptions {
-  /// False until `flutterfire configure` has generated real options.
-  static bool get isConfigured => false;
+  /// True now that real options have been generated.
+  static bool get isConfigured => true;
 
   static FirebaseOptions get currentPlatform {
-    // ignore: avoid_print
-    print(
-      'Firebase is not configured. Follow FIREBASE_SETUP.md, then run '
-      '`flutterfire configure` to generate lib/firebase_options.dart.',
-    );
-    throw UnsupportedError(
-      'Firebase options have not been generated. '
-      'Follow FIREBASE_SETUP.md and run `flutterfire configure`.',
-    );
+    if (kIsWeb) {
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web.',
+      );
+    }
+    switch (defaultTargetPlatform) {
+      case TargetPlatform.iOS:
+        return ios;
+      case TargetPlatform.android:
+      case TargetPlatform.macOS:
+      case TargetPlatform.windows:
+      case TargetPlatform.linux:
+      case TargetPlatform.fuchsia:
+        throw UnsupportedError(
+          'DefaultFirebaseOptions are only configured for iOS.',
+        );
+    }
   }
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyD_3Jbp5p2WMjZGxdrRpSBMLfQADuSLJwY',
+    appId: '1:943027758563:ios:a0afd6a6fe8442f976ecd6',
+    messagingSenderId: '943027758563',
+    projectId: 'roasted-app-579f9',
+    storageBucket: 'roasted-app-579f9.firebasestorage.app',
+    iosBundleId: 'com.beanquest.coffeeBeans',
+  );
 }
