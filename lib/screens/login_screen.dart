@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 import '../navigation/app_shell.dart';
 import '../services/auth_service.dart';
@@ -10,8 +9,9 @@ import '../state/app_state.dart';
 import '../theme/app_theme.dart';
 
 /// Entry screen — serif wordmark up top, boxed fields, espresso button.
-/// Wires Firebase Auth (email/password, Apple, guest) when configured;
-/// otherwise signs in offline on the bundled seed data.
+/// Email/password sign-in only (guest and Apple sign-in removed).
+/// When Firebase is configured, credentials are verified for real;
+/// otherwise any non-empty credentials enter offline on bundled data.
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -41,19 +41,16 @@ class _LoginScreenState extends State<LoginScreen> {
     final navigator = Navigator.of(context);
     setState(() => _busy = true);
     try {
-      final email = _emailController.text;
+      final email = _emailController.text.trim();
       final password = _passwordController.text;
+      if (email.isEmpty || password.isEmpty) {
+        _snack('Enter your email and password to continue.');
+        return;
+      }
       if (_registerMode) {
-        if (email.isEmpty || password.isEmpty) {
-          _snack('Enter an email and a password to create your account.');
-          return;
-        }
         await auth.registerWithEmail(email, password);
       } else {
-        if (email.isNotEmpty || password.isNotEmpty) {
-          await auth.signInWithEmail(email, password);
-        }
-        // Empty fields: offline-style entry (also covers unconfigured Firebase).
+        await auth.signInWithEmail(email, password);
       }
       await _attachRemote(state, auth);
       navigator.pushReplacementNamed(AppShell.routeName);
@@ -61,44 +58,6 @@ class _LoginScreenState extends State<LoginScreen> {
       _snack(_friendlyAuthError(e));
     } catch (e) {
       _snack('Something went wrong. Please try again.');
-    } finally {
-      if (mounted) setState(() => _busy = false);
-    }
-  }
-
-  Future<void> _signInWithApple(BuildContext context) async {
-    final auth = AuthService.instance;
-    final state = AppState.of(context);
-    final navigator = Navigator.of(context);
-    setState(() => _busy = true);
-    try {
-      await auth.signInWithApple();
-      await _attachRemote(state, auth);
-      navigator.pushReplacementNamed(AppShell.routeName);
-    } on FirebaseAuthException catch (e) {
-      _snack(_friendlyAuthError(e));
-    } on SignInWithAppleAuthorizationException catch (e) {
-      if (e.code != AuthorizationErrorCode.canceled) {
-        _snack('Apple sign-in failed. Please try again.');
-      }
-    } catch (_) {
-      _snack('Apple sign-in is not available right now.');
-    } finally {
-      if (mounted) setState(() => _busy = false);
-    }
-  }
-
-  Future<void> _continueAsGuest(BuildContext context) async {
-    final auth = AuthService.instance;
-    final state = AppState.of(context);
-    final navigator = Navigator.of(context);
-    setState(() => _busy = true);
-    try {
-      await auth.signInAsGuest();
-      await _attachRemote(state, auth);
-      navigator.pushReplacementNamed(AppShell.routeName);
-    } catch (_) {
-      navigator.pushReplacementNamed(AppShell.routeName);
     } finally {
       if (mounted) setState(() => _busy = false);
     }
@@ -250,18 +209,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 const SizedBox(height: 12),
-                SizedBox(
-                  width: double.infinity,
-                  child: OutlinedButton.icon(
-                    onPressed: _busy ? null : () => _signInWithApple(context),
-                    icon: const Icon(Icons.phone_iphone, size: 20),
-                    label: const Padding(
-                      padding: EdgeInsets.symmetric(vertical: 12),
-                      child: Text('Continue with Apple'),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 12),
                 Center(
                   child: Wrap(
                     alignment: WrapAlignment.center,
@@ -291,16 +238,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ],
-                  ),
-                ),
-                const SizedBox(height: 8),
-                Center(
-                  child: TextButton(
-                    onPressed: _busy ? null : () => _continueAsGuest(context),
-                    child: Text(
-                      'Continue as guest',
-                      style: theme.textTheme.bodySmall,
-                    ),
                   ),
                 ),
                 const SizedBox(height: 32),

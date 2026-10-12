@@ -1,12 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 /// Authentication for Roasted.
 ///
-/// When Firebase is configured, this wraps FirebaseAuth (email/password,
-/// Sign in with Apple, anonymous guest). When it is not configured
-/// (placeholder firebase_options.dart), every method succeeds offline and
-/// the app runs without an account.
+/// When Firebase is configured, this wraps FirebaseAuth (email/password).
+/// When it is not configured (offline builds), sign-in methods succeed
+/// without an account and the app runs on the bundled seed data.
 class AuthService {
   AuthService({required this.firebaseEnabled});
 
@@ -48,32 +46,6 @@ class AuthService {
       email: email.trim(),
       password: password,
     );
-  }
-
-  /// Sign in with Apple. On iOS this uses the native Apple sheet;
-  /// the Xcode "Sign in with Apple" capability must be enabled
-  /// (see FIREBASE_SETUP.md).
-  Future<void> signInWithApple() async {
-    if (!firebaseEnabled) return; // offline: just enter
-    final appleCredential = await SignInWithApple.getAppleIDCredential(
-      scopes: [
-        AppleIDAuthorizationScopes.email,
-        AppleIDAuthorizationScopes.fullName,
-      ],
-    );
-    final oauthCredential = OAuthProvider('apple.com').credential(
-      idToken: appleCredential.identityToken,
-      accessToken: appleCredential.authorizationCode,
-    );
-    await _auth.signInWithCredential(oauthCredential);
-  }
-
-  /// Guest mode: anonymous Firebase session when configured,
-  /// plain offline entry otherwise. Tastings stay on-device unless
-  /// the guest later upgrades to a full account.
-  Future<void> signInAsGuest() async {
-    if (!firebaseEnabled) return;
-    await _auth.signInAnonymously();
   }
 
   Future<void> signOut() async {

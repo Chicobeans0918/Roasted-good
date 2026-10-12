@@ -7,12 +7,12 @@ import '../state/app_state.dart';
 import '../theme/app_theme.dart';
 
 /// Coffee shops and roasteries on a real interactive map
-/// (OpenStreetMap standard tiles — free, no API key), centered on
-/// Gatineau–Ottawa. In dark mode the tiles are dimmed so the map
-/// stays easy on the eyes.
+/// (CARTO minimal basemaps — free, no API key, no POI clutter),
+/// centered on Gatineau–Ottawa. The tile style follows the app theme.
 ///
-/// OpenStreetMap standard tiles — no API key required.
-String osmTileUrl() => 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+/// CARTO basemaps — no API key required.
+String cartoTileUrl({required bool dark}) =>
+    'https://{s}.basemaps.cartocdn.com/${dark ? 'dark_all' : 'light_all'}/{z}/{x}/{y}{r}.png';
 
 class ShopsScreen extends StatefulWidget {
   const ShopsScreen({super.key});
@@ -57,7 +57,7 @@ class _ShopsScreenState extends State<ShopsScreen> {
     final shops = state.shops;
     final selected =
         shops.where((s) => s.id == _selectedShopId).firstOrNull;
-    // OpenStreetMap tiles (no API key); dimmed in dark mode.
+    // CARTO minimal basemaps (no API key); style follows the theme.
     final isDark = theme.brightness == Brightness.dark;
 
     return Scaffold(
@@ -76,20 +76,11 @@ class _ShopsScreenState extends State<ShopsScreen> {
                     ),
                     children: [
                       TileLayer(
-                        urlTemplate: osmTileUrl(),
-                        subdomains: const ['a', 'b', 'c'],
+                        // CARTO minimal basemaps (no API key, no POI clutter);
+                        // the style follows the app theme.
+                        urlTemplate: cartoTileUrl(dark: isDark),
+                        subdomains: const ['a', 'b', 'c', 'd'],
                         userAgentPackageName: 'com.beanquest.coffee_beans',
-                        // Dim tiles in dark mode so the map matches the theme.
-                        tileBuilder: isDark
-                            ? (context, tileWidget, tile) =>
-                                ColorFiltered(
-                                  colorFilter: const ColorFilter.mode(
-                                    Colors.black54,
-                                    BlendMode.darken,
-                                  ),
-                                  child: tileWidget,
-                                )
-                            : null,
                       ),
                       MarkerLayer(
                         markers: [

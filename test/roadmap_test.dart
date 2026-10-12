@@ -115,10 +115,14 @@ void main() {
   });
 
   group('minimal map tiles', () {
-    test('OSM tile URL needs no API key', () {
+    test('CARTO tile URLs need no API key', () {
       expect(
-        osmTileUrl(),
-        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        cartoTileUrl(dark: false),
+        'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+      );
+      expect(
+        cartoTileUrl(dark: true),
+        'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
       );
     });
   });

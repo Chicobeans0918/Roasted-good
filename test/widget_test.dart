@@ -8,6 +8,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+/// Fills the login form and taps "Log in". Tests run with Firebase
+/// disabled, so any non-empty credentials enter offline.
+Future<void> _signIn(WidgetTester tester) async {
+  await tester.enterText(find.byType(TextField).at(0), 'test@roasted.app');
+  await tester.enterText(find.byType(TextField).at(1), 'password123');
+  await tester.tap(find.text('Log in'));
+  await tester.pumpAndSettle();
+}
+
 void main() {
   testWidgets('App boots to the login screen', (tester) async {
     await tester.pumpWidget(RoastedApp(state: AppState()));
@@ -18,8 +27,7 @@ void main() {
 
   testWidgets('Signing in navigates to the tab shell', (tester) async {
     await tester.pumpWidget(RoastedApp(state: AppState()));
-    await tester.tap(find.text('Log in'));
-    await tester.pumpAndSettle();
+    await _signIn(tester);
 
     expect(find.text('Home'), findsOneWidget);
     expect(find.text('Catalogue'), findsOneWidget);
@@ -34,8 +42,7 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     final state = AppState();
     await tester.pumpWidget(RoastedApp(state: state));
-    await tester.tap(find.text('Log in'));
-    await tester.pumpAndSettle();
+    await _signIn(tester);
 
     // No name set: no hardcoded name anywhere, generic greeting.
     expect(find.textContaining('Marc-André'), findsNothing);
@@ -75,8 +82,7 @@ void main() {
   testWidgets('Profile shows the name header and three section rows',
       (tester) async {
     await tester.pumpWidget(RoastedApp(state: AppState()));
-    await tester.tap(find.text('Log in'));
-    await tester.pumpAndSettle();
+    await _signIn(tester);
 
     // Open the Profile tab (the last BottomNavigationBar "Profile" label).
     await tester.tap(find.text('Profile').last);
@@ -111,8 +117,7 @@ void main() {
   testWidgets('Marking a bean as tried opens the tasting form and logs it',
       (tester) async {
     await tester.pumpWidget(RoastedApp(state: AppState()));
-    await tester.tap(find.text('Log in'));
-    await tester.pumpAndSettle();
+    await _signIn(tester);
 
     // Catalogue tab.
     await tester.tap(find.text('Catalogue').last);
@@ -188,8 +193,7 @@ void main() {
   testWidgets('Stats tab shows the journey numbers and hall of fame',
       (tester) async {
     await tester.pumpWidget(RoastedApp(state: AppState()));
-    await tester.tap(find.text('Log in'));
-    await tester.pumpAndSettle();
+    await _signIn(tester);
 
     await tester.tap(find.text('Stats').last);
     await tester.pumpAndSettle();
