@@ -1,19 +1,11 @@
-// Seeds the Firestore `beans` and `shops` collections from the bundled
-// seed JSON (assets/seed/beans.json, assets/seed/shops.json).
-//
-// Usage:
-//   cd tool
-//   npm install firebase-admin
-//   export GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account.json
-//   export FIREBASE_PROJECT_ID=your-project-id
-//   node seed-firestore.mjs
-//
-// Document ids match the seed ids, so re-running refreshes the catalogue.
-
-import admin from 'firebase-admin';
+import { createRequire } from 'module';
 import { readFile } from 'fs/promises';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+
+const require = createRequire(import.meta.url);
+const { initializeApp, applicationDefault } = require('firebase-admin/app');
+const { getFirestore } = require('firebase-admin/firestore');
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const projectId = process.env.FIREBASE_PROJECT_ID;
@@ -22,11 +14,11 @@ if (!projectId) {
   process.exit(1);
 }
 
-admin.initializeApp({
-  credential: admin.credential.applicationDefault(),
+initializeApp({
+  credential: applicationDefault(),
   projectId,
 });
-const db = admin.firestore();
+const db = getFirestore();
 
 async function seed(collection, file) {
   const raw = await readFile(join(__dirname, '..', 'assets', 'seed', file), 'utf8');
