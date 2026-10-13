@@ -1,192 +1,323 @@
 [
- {
-  "id": "bbcr-ethiopia",
-  "name": "Ethiopia — Single Origin",
-  "origin": "Ethiopia",
-  "roastLevel": "Light",
-  "tastingNotes": [
-   "Black tea",
-   "Lemon zest",
-   "Bergamot",
-   "Jasmine",
-   "Honey"
-  ],
-  "rating": null,
-  "description": "Floral and tea-like with a bright citrus lift.",
-  "local": true,
-  "roaster": "Brown Bag Coffee Roasters",
-  "decaf": false
- },
- {
-  "id": "bbcr-dark-roast",
-  "name": "Dark Roast Blend",
-  "origin": "Colombia · Sumatra",
-  "roastLevel": "Dark",
-  "tastingNotes": [
-   "Dark chocolate",
-   "Hazelnut",
-   "Smoky"
-  ],
-  "rating": null,
-  "description": "Bold and smoky with a deep dark-chocolate body.",
-  "local": true,
-  "roaster": "Brown Bag Coffee Roasters",
-  "decaf": false
- },
- {
-  "id": "bbcr-house-blend",
-  "name": "House Blend",
-  "origin": "Guatemala · Tanzania · Brazil",
-  "roastLevel": "Medium",
-  "tastingNotes": [
-   "Caramelized fruits"
-  ],
-  "rating": null,
-  "description": "Easy-drinking and rounded, an everyday crowd-pleaser.",
-  "local": true,
-  "roaster": "Brown Bag Coffee Roasters",
-  "decaf": false
- },
- {
-  "id": "bbcr-colombia",
-  "name": "Colombia — Single Origin",
-  "origin": "Santander, Colombia",
-  "roastLevel": "Medium-Dark",
-  "tastingNotes": [
-   "Milk chocolate",
-   "Cocoa",
-   "Caramel"
-  ],
-  "rating": null,
-  "description": "Smooth and sweet, milk chocolate over caramel.",
-  "local": true,
-  "roaster": "Brown Bag Coffee Roasters",
-  "decaf": false
- },
- {
-  "id": "bbcr-brazil",
-  "name": "Brazil — Single Origin",
-  "origin": "Brazil",
-  "roastLevel": "Light",
-  "tastingNotes": [
-   "Blueberries",
-   "Stone fruit",
-   "Cane sugar"
-  ],
-  "rating": null,
-  "description": "Bright for a Brazilian: blueberry and cane-sugar sweetness.",
-  "local": true,
-  "roaster": "Brown Bag Coffee Roasters",
-  "decaf": false
- },
- {
-  "id": "bbcr-espresso-blend",
-  "name": "Espresso Blend",
-  "origin": "Brazil · Colombia · Ethiopia",
-  "roastLevel": "Medium",
-  "tastingNotes": [
-   "Baked berries",
-   "Cacao"
-  ],
-  "rating": null,
-  "description": "A three-origin blend built to pull sweet, syrupy shots.",
-  "local": true,
-  "roaster": "Brown Bag Coffee Roasters",
-  "decaf": false
- },
- {
-  "id": "bbcr-sumatra",
-  "name": "Sumatra — Single Origin",
-  "origin": "Java Jampit Estate, Indonesia",
-  "roastLevel": "Dark",
-  "tastingNotes": [
-   "Dark chocolate",
-   "Cocoa",
-   "Earthy",
-   "Smoky"
-  ],
-  "rating": null,
-  "description": "Heavy and earthy, dark chocolate with a smoky finish.",
-  "local": true,
-  "roaster": "Brown Bag Coffee Roasters",
-  "decaf": false
- },
- {
-  "id": "bbcr-guatemala",
-  "name": "Guatemala — Single Origin",
-  "origin": "Guatemala",
-  "roastLevel": "Medium",
-  "tastingNotes": [
-   "Nuts",
-   "Toffee"
-  ],
-  "rating": null,
-  "description": "Nutty and sweet with a soft toffee finish.",
-  "local": true,
-  "roaster": "Brown Bag Coffee Roasters",
-  "decaf": false
- },
- {
-  "id": "bbcr-sweet-spot",
-  "name": "Sweet Spot — Half-Caf",
-  "origin": "Santander, Colombia",
-  "roastLevel": "Medium-Dark",
-  "tastingNotes": [
-   "Milk chocolate",
-   "Cocoa",
-   "Caramel",
-   "Black cherry"
-  ],
-  "rating": null,
-  "description": "All the Colombian sweetness with half the caffeine.",
-  "local": true,
-  "roaster": "Brown Bag Coffee Roasters",
-  "decaf": false
- },
- {
-  "id": "bbcr-mexico",
-  "name": "Mexico — Single Origin",
-  "origin": "Yajalón, Chiapas, Mexico",
-  "roastLevel": "Medium-Light",
-  "tastingNotes": [
-   "Sweetness",
-   "Baking spices"
-  ],
-  "rating": null,
-  "description": "Gently roasted, sweet with warm baking-spice notes.",
-  "local": true,
-  "roaster": "Brown Bag Coffee Roasters",
-  "decaf": false
- },
- {
-  "id": "bbcr-tanzania-peaberry",
-  "name": "Tanzania Peaberry — Single Origin",
-  "origin": "Tanzania",
-  "roastLevel": "Medium",
-  "tastingNotes": [
-   "Toasted caramel",
-   "Vanilla",
-   "Fruity"
-  ],
-  "rating": null,
-  "description": "Rich caramel and vanilla with a fruity edge.",
-  "local": true,
-  "roaster": "Brown Bag Coffee Roasters",
-  "decaf": false
- },
- {
-  "id": "bbcr-decaf-colombia",
-  "name": "Decaf — Single Origin Colombia",
-  "origin": "Colombia",
-  "roastLevel": "Medium-Dark",
-  "tastingNotes": [
-   "Chocolate",
-   "Cherry"
-  ],
-  "rating": null,
-  "description": "Full chocolate-cherry flavour, none of the jitters.",
-  "local": true,
-  "roaster": "Brown Bag Coffee Roasters",
-  "decaf": true
- }
+  {
+    "id": "bbcr-ethiopia",
+    "name": "Ethiopia — Single Origin",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Black tea",
+      "Lemon zest",
+      "Bergamot",
+      "Jasmine",
+      "Honey"
+    ],
+    "rating": null,
+    "description": "Floral and tea-like with a bright citrus lift.",
+    "local": true,
+    "roaster": "Brown Bag Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://bbcr.ca/cdn/shop/files/BBCR_Ethiopia-blk_d154f7c0-49af-4d98-aaa6-4fef2cbb8c0a.jpg?v=1789674709&width=1946"
+  },
+  {
+    "id": "bbcr-dark-roast",
+    "name": "Dark Roast Blend",
+    "origin": "Colombia · Sumatra",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Dark chocolate",
+      "Hazelnut",
+      "Smoky"
+    ],
+    "rating": null,
+    "description": "Bold and smoky with a deep dark-chocolate body.",
+    "local": true,
+    "roaster": "Brown Bag Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://bbcr.ca/cdn/shop/files/BBCR_DarkRoast-blk_97dd725b-4223-49a3-83a1-d7894608c151.jpg?v=1789670677"
+  },
+  {
+    "id": "bbcr-house-blend",
+    "name": "House Blend",
+    "origin": "Guatemala · Tanzania · Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Caramelized fruits"
+    ],
+    "rating": null,
+    "description": "Easy-drinking and rounded, an everyday crowd-pleaser.",
+    "local": true,
+    "roaster": "Brown Bag Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://bbcr.ca/cdn/shop/files/BBCR_Signature-blk_94186294-2721-499c-9740-1d29f35d9912.jpg?v=1789673063&width=1946"
+  },
+  {
+    "id": "bbcr-colombia",
+    "name": "Colombia — Single Origin",
+    "origin": "Santander, Colombia",
+    "roastLevel": "Medium-Dark",
+    "tastingNotes": [
+      "Milk chocolate",
+      "Cocoa",
+      "Caramel"
+    ],
+    "rating": null,
+    "description": "Smooth and sweet, milk chocolate over caramel.",
+    "local": true,
+    "roaster": "Brown Bag Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://bbcr.ca/cdn/shop/files/BBCR_Colombia-blk_a97e4a56-523a-4f2a-be2c-454b45ea3ef1.jpg?v=1789671442&width=1946"
+  },
+  {
+    "id": "bbcr-brazil",
+    "name": "Brazil — Single Origin",
+    "origin": "Brazil",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Blueberries",
+      "Stone fruit",
+      "Cane sugar"
+    ],
+    "rating": null,
+    "description": "Bright for a Brazilian: blueberry and cane-sugar sweetness.",
+    "local": true,
+    "roaster": "Brown Bag Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://bbcr.ca/cdn/shop/files/BBCR_Brazil-blk_2054a8d4-0416-4aa5-844e-02326bf3a440.jpg?v=1789671494&width=1946"
+  },
+  {
+    "id": "bbcr-espresso-blend",
+    "name": "Espresso Blend",
+    "origin": "Brazil · Colombia · Ethiopia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Baked berries",
+      "Cacao"
+    ],
+    "rating": null,
+    "description": "A three-origin blend built to pull sweet, syrupy shots.",
+    "local": true,
+    "roaster": "Brown Bag Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://bbcr.ca/cdn/shop/files/BBCR_Espresso-blk_48bba096-d70d-4372-9a07-fc1121575d64.jpg?v=1789666199&width=1946"
+  },
+  {
+    "id": "bbcr-sumatra",
+    "name": "Sumatra — Single Origin",
+    "origin": "Java Jampit Estate, Indonesia",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Dark chocolate",
+      "Cocoa",
+      "Earthy",
+      "Smoky"
+    ],
+    "rating": null,
+    "description": "Heavy and earthy, dark chocolate with a smoky finish.",
+    "local": true,
+    "roaster": "Brown Bag Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://bbcr.ca/cdn/shop/files/BBCR_Sumatra-blk_d52ae32c-ce81-4d40-9d06-da8436cf639f.jpg?v=1789674709&width=1946"
+  },
+  {
+    "id": "bbcr-guatemala",
+    "name": "Guatemala — Single Origin",
+    "origin": "Guatemala",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Nuts",
+      "Toffee"
+    ],
+    "rating": null,
+    "description": "Nutty and sweet with a soft toffee finish.",
+    "local": true,
+    "roaster": "Brown Bag Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://bbcr.ca/cdn/shop/files/BBCR_Guat-blk.jpg?v=1789674709&width=1946"
+  },
+  {
+    "id": "bbcr-sweet-spot",
+    "name": "Sweet Spot — Half-Caf",
+    "origin": "Santander, Colombia",
+    "roastLevel": "Medium-Dark",
+    "tastingNotes": [
+      "Milk chocolate",
+      "Cocoa",
+      "Caramel",
+      "Black cherry"
+    ],
+    "rating": null,
+    "description": "All the Colombian sweetness with half the caffeine.",
+    "local": true,
+    "roaster": "Brown Bag Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://bbcr.ca/cdn/shop/files/BBCR_SweetSpot-blk_885c6e78-a0cb-4375-bfd5-dd868468d476.jpg?v=1790111771&width=1946"
+  },
+  {
+    "id": "bbcr-mexico",
+    "name": "Mexico — Single Origin",
+    "origin": "Yajalón, Chiapas, Mexico",
+    "roastLevel": "Medium-Light",
+    "tastingNotes": [
+      "Sweetness",
+      "Baking spices"
+    ],
+    "rating": null,
+    "description": "Gently roasted, sweet with warm baking-spice notes.",
+    "local": true,
+    "roaster": "Brown Bag Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://bbcr.ca/cdn/shop/files/BBCR_Mexico-blk.png?v=1786044321&width=1946"
+  },
+  {
+    "id": "bbcr-tanzania-peaberry",
+    "name": "Tanzania Peaberry — Single Origin",
+    "origin": "Tanzania",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Toasted caramel",
+      "Vanilla",
+      "Fruity"
+    ],
+    "rating": null,
+    "description": "Rich caramel and vanilla with a fruity edge.",
+    "local": true,
+    "roaster": "Brown Bag Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://bbcr.ca/cdn/shop/files/BBCR_Tanzania-blk_18c71212-1606-4c71-a8ae-acb3f838141f.jpg?v=1789674709&width=1946"
+  },
+  {
+    "id": "bbcr-decaf-colombia",
+    "name": "Decaf — Single Origin Colombia",
+    "origin": "Colombia",
+    "roastLevel": "Medium-Dark",
+    "tastingNotes": [
+      "Chocolate",
+      "Cherry"
+    ],
+    "rating": null,
+    "description": "Full chocolate-cherry flavour, none of the jitters.",
+    "local": true,
+    "roaster": "Brown Bag Coffee Roasters",
+    "decaf": true,
+    "imageUrl": "https://bbcr.ca/cdn/shop/files/BBCR_Decaf-blk_f0ba8408-bc19-4ba8-9bff-96104e24ece9.jpg?v=1789668223&width=1946"
+  },
+  {
+    "id": "edika-mother-melade",
+    "name": "Mother Melade",
+    "origin": "Guatemala & Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Marmalade",
+      "Sweet caramel",
+      "Dates"
+    ],
+    "rating": null,
+    "description": "Vibrant and aromatic — marmalade brightness over sweet caramel and dates.",
+    "local": false,
+    "roaster": "Edika",
+    "decaf": false,
+    "imageUrl": "https://www.edika.com/cdn/shop/files/mere-melade-300g.jpg?v=1722268166"
+  },
+  {
+    "id": "edika-tricote-serre",
+    "name": "Tricoté serré",
+    "origin": "Colombia & Honduras",
+    "roastLevel": "Medium-Dark",
+    "tastingNotes": [
+      "Dark chocolate",
+      "Nuts",
+      "Pear"
+    ],
+    "rating": null,
+    "description": "Bold and balanced — dark chocolate and nuts with a sweet pear lift.",
+    "local": false,
+    "roaster": "Edika",
+    "decaf": false,
+    "imageUrl": "https://www.edika.com/cdn/shop/files/tricote-serre-300g.jpg?v=1729027380"
+  },
+  {
+    "id": "edika-spice-buddy",
+    "name": "Spice buddy",
+    "origin": "Honduras & Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Apple pie",
+      "Caramel",
+      "Gingerbread"
+    ],
+    "rating": null,
+    "description": "Cozy and autumnal — apple-pie warmth with caramelized spice.",
+    "local": false,
+    "roaster": "Edika",
+    "decaf": false,
+    "imageUrl": "https://www.edika.com/cdn/shop/files/copain-depices-300g.jpg?v=1722269870"
+  },
+  {
+    "id": "edika-natural-candour",
+    "name": "Natural candour",
+    "origin": "Brazil & India",
+    "roastLevel": "Medium-Dark",
+    "tastingNotes": [
+      "Toasted seeds",
+      "Hazelnut",
+      "Brown sugar"
+    ],
+    "rating": null,
+    "description": "Warm and full-bodied — brown sugar and hazelnut with a smoky edge.",
+    "local": false,
+    "roaster": "Edika",
+    "decaf": false,
+    "imageUrl": "https://www.edika.com/cdn/shop/files/candeur-nature-300g.jpg?v=1729181059"
+  },
+  {
+    "id": "edika-small-velvet",
+    "name": "Small velvet",
+    "origin": "Costa Rica & Guatemala",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Almonds",
+      "Dark caramel",
+      "Nutmeg"
+    ],
+    "rating": null,
+    "description": "Lusciously smooth — nutty, bittersweet comfort in a cup.",
+    "local": false,
+    "roaster": "Edika",
+    "decaf": false,
+    "imageUrl": "https://www.edika.com/cdn/shop/files/petit-velours-300g.jpg?v=1722269312"
+  },
+  {
+    "id": "edika-fireside-decaf",
+    "name": "Fireside Decaf",
+    "origin": "Peru",
+    "roastLevel": "Medium-Dark",
+    "tastingNotes": [
+      "Orange",
+      "Hazelnut",
+      "Vanilla"
+    ],
+    "rating": null,
+    "description": "Swiss Water decaf — zesty orange and toasted hazelnut, full flavour, no caffeine.",
+    "local": false,
+    "roaster": "Edika",
+    "decaf": true,
+    "imageUrl": "https://www.edika.com/cdn/shop/files/feu-de-foyer-300g-deca.jpg?v=1729025148"
+  },
+  {
+    "id": "edika-love-at-first-sight",
+    "name": "Love at first sight",
+    "origin": "Guatemala & Peru",
+    "roastLevel": "Medium-Light",
+    "tastingNotes": [
+      "Green fruit",
+      "Citrus",
+      "Lemon tart"
+    ],
+    "rating": null,
+    "description": "Tangy and zesty — citrus brightness with a honey-like finish.",
+    "local": false,
+    "roaster": "Edika",
+    "decaf": false,
+    "imageUrl": "https://www.edika.com/cdn/shop/files/gout-de-foudre-300g.jpg?v=1722267929"
+  }
 ]
