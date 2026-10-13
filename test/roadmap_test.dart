@@ -67,15 +67,15 @@ void main() {
   group('bean photo mapping', () {
     test('known beans map to roast-appropriate photos', () {
       expect(
-        beanPhotoAsset(_bean(id: 'yirgacheffe-dawn', origin: 'Ethiopia', roast: 'Light')),
+        beanPhotoAsset(_bean(id: 'bbcr-ethiopia', origin: 'Ethiopia', roast: 'Light')),
         'assets/beans/light_roast_beans.jpg',
       );
       expect(
-        beanPhotoAsset(_bean(id: 'sumatra-night', origin: 'Sumatra', roast: 'Dark')),
-        'assets/beans/dark_roast_beans.jpg',
+        beanPhotoAsset(_bean(id: 'bbcr-sumatra', origin: 'Sumatra', roast: 'Dark')),
+        'assets/beans/dark_roast_bowl.jpg',
       );
       expect(
-        beanPhotoAsset(_bean(id: 'brown-bag-espresso-blend', origin: 'Blend', roast: 'Medium-Dark')),
+        beanPhotoAsset(_bean(id: 'bbcr-colombia', origin: 'Colombia', roast: 'Medium-Dark')),
         'assets/beans/medium_dark_beans.jpg',
       );
     });
@@ -210,8 +210,8 @@ void main() {
   group('taste identity line', () {
     test('summarizes the dominant roast and origin', () {
       final tried = [
-        _tasting(beanId: 'yirgacheffe-dawn', rating: 5, liked: true),
-        _tasting(beanId: 'kenya-aa', rating: 4, liked: true),
+        _tasting(beanId: 'bbcr-ethiopia', rating: 5, liked: true),
+        _tasting(beanId: 'bbcr-brazil', rating: 4, liked: true),
       ];
       CoffeeBean? beanFor(String id) =>
           SampleData.beans.where((b) => b.id == id).firstOrNull;

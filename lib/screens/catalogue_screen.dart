@@ -169,7 +169,9 @@ class _ChipRow extends StatelessWidget {
             label: Text(
               option,
               style: theme.textTheme.bodySmall?.copyWith(
-                color: isSelected ? p.onAccent : p.ink,
+                // Selected chip is cream in dark mode, so the label must
+                // be dark there; onIdentityCard covers both themes.
+                color: isSelected ? p.onIdentityCard : p.ink,
               ),
             ),
             selected: isSelected,

@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:http/http.dart' as http;
 
 import '../theme/app_theme.dart';
 
 /// ============================================================
 /// TESTER FEEDBACK RECIPIENT — change this one line to pick
 /// where tester feedback goes. Marc-André to confirm.
+///
+/// Sending is done in-app via the FormSubmit relay (free):
+/// the app POSTs the feedback, the relay delivers it to
+/// [kFeedbackEmail]. FIRST-RUN ACTIVATION: the relay sends a
+/// confirmation link to [kFeedbackEmail] on the first submission —
+/// someone with that inbox must click it once, then it works.
 /// ============================================================
 const kFeedbackEmail = 'Roasted.service@gmail.com';
 
 /// Profile → Information → Send feedback: a simple form (name optional,
-/// message required). Sending opens the device mail app with a prefilled
-/// email to [kFeedbackEmail]; if no mail app can handle it, the message is
-/// copied to the clipboard instead — then shows a confirmation.
+/// message required). Sending posts the feedback in-app to [kFeedbackEmail]
+/// — no mail app involved — then shows a confirmation.
 class FeedbackScreen extends StatefulWidget {
   const FeedbackScreen({super.key});
 
@@ -25,6 +29,8 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
   final _nameController = TextEditingController();
   final _messageController = TextEditingController();
   bool _sent = false;
+  bool _sending = false;
+  String? _error;
 
   @override
   void dispose() {
@@ -33,44 +39,51 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
     super.dispose();
   }
 
-  bool get _canSend => _messageController.text.trim().isNotEmpty;
+  bool get _canSend =>
+      _messageController.text.trim().isNotEmpty && !_sending;
 
   Future<void> _send() async {
     if (!_canSend) return;
-    final name = _nameController.text.trim();
-    final message = _messageController.text.trim();
-    final body =
-        '${name.isEmpty ? '' : 'Name: $name\n\n'}$message';
-    final uri = Uri(
-      scheme: 'mailto',
-      path: kFeedbackEmail,
-      queryParameters: {
-        'subject': 'Roasted tester feedback',
-        'body': body,
-      },
-    );
-    // Prefer the mail app; fall back to clipboard when unavailable.
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(uri);
-    } else {
-      final emailText = 'To: $kFeedbackEmail\n'
-          'Subject: Roasted tester feedback\n\n$body';
-      await Clipboard.setData(ClipboardData(text: emailText));
+    setState(() {
+      _sending = true;
+      _error = null;
+    });
+    try {
+      final name = _nameController.text.trim();
+      final message = _messageController.text.trim();
+      final response = await http
+          .post(
+            Uri.parse('https://formsubmit.co/ajax/$kFeedbackEmail'),
+            headers: {'Content-Type': 'application/json'},
+            body:
+                '{"name": ${_json(name)}, "message": ${_json(message)}, "_subject": "Roasted tester feedback"}',
+          )
+          .timeout(const Duration(seconds: 15));
+      if (!mounted) return;
+      if (response.statusCode == 200) {
+        setState(() => _sent = true);
+      } else {
+        setState(() => _error =
+            'Couldn\'t send just now (server said ${response.statusCode}). Check your connection and try again.');
+      }
+    } catch (_) {
+      if (!mounted) return;
+      setState(() => _error =
+          'Couldn\'t send just now. Check your connection and try again.');
+    } finally {
+      if (mounted) setState(() => _sending = false);
     }
-    if (!mounted) return;
-    setState(() => _sent = true);
   }
 
-  Future<void> _copyEmail() async {
-    await Clipboard.setData(const ClipboardData(text: kFeedbackEmail));
-    if (!mounted) return;
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Email address copied'),
-        behavior: SnackBarBehavior.floating,
-        duration: Duration(seconds: 2),
-      ),
-    );
+  /// Minimal JSON string escaping for the form fields.
+  String _json(String value) {
+    final escaped = value
+        .replaceAll(r'\', r'\\')
+        .replaceAll('"', r'\"')
+        .replaceAll('\n', r'\n')
+        .replaceAll('\r', r'\r')
+        .replaceAll('\t', r'\t');
+    return '"$escaped"';
   }
 
   @override
@@ -103,44 +116,10 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
               ),
               const SizedBox(height: 12),
               Text(
-                'Your mail app should have opened with the message ready — '
-                'if not, send it to:',
+                'It\'s on its way to the Roasted team — thanks for helping make the app better.',
                 textAlign: TextAlign.center,
                 style: theme.textTheme.bodyMedium?.copyWith(
                   color: p.muted,
-                ),
-              ),
-              const SizedBox(height: 16),
-              InkWell(
-                onTap: _copyEmail,
-                borderRadius: BorderRadius.circular(12),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 14,
-                  ),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: p.line),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Flexible(
-                        child: Text(
-                          kFeedbackEmail,
-                          style: theme.textTheme.bodyLarge,
-                        ),
-                      ),
-                      const SizedBox(width: 8),
-                      Icon(
-                        Icons.copy_outlined,
-                        size: 18,
-                        color: p.muted,
-                      ),
-                    ],
-                  ),
                 ),
               ),
             ] else ...[
@@ -183,13 +162,28 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                 ),
               ),
               const SizedBox(height: 32),
+              if (_error != null) ...[
+                Text(
+                  _error!,
+                  style: theme.textTheme.bodyMedium?.copyWith(
+                    color: theme.colorScheme.error,
+                  ),
+                ),
+                const SizedBox(height: 16),
+              ],
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: _canSend ? _send : null,
-                  child: const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 14),
-                    child: Text('Send feedback'),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 14),
+                    child: _sending
+                        ? const SizedBox(
+                            height: 20,
+                            width: 20,
+                            child: CircularProgressIndicator(strokeWidth: 2),
+                          )
+                        : const Text('Send feedback'),
                   ),
                 ),
               ),

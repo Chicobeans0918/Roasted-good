@@ -123,7 +123,7 @@ void main() {
     await tester.tap(find.text('Catalogue').last);
     await tester.pumpAndSettle();
 
-    // "Mark as tried" on the first bean card (Yirgacheffe Dawn).
+    // "Mark as tried" on the first bean card (Ethiopia — Single Origin).
     final markTried = find.descendant(
       of: find.byType(CatalogueScreen),
       matching: find.widgetWithIcon(OutlinedButton, Icons.coffee_outlined),
@@ -138,7 +138,7 @@ void main() {
     expect(
       find.descendant(
         of: find.byType(TastingFormSheet),
-        matching: find.text('Yirgacheffe Dawn'),
+        matching: find.text('Ethiopia — Single Origin'),
       ),
       findsOneWidget,
     );
@@ -184,7 +184,7 @@ void main() {
     await tester.pumpAndSettle();
 
     // The logged tasting is grouped under its bean with its details.
-    expect(find.text('Yirgacheffe Dawn'), findsWidgets);
+    expect(find.text('Ethiopia — Single Origin'), findsWidgets);
     expect(find.textContaining('V60'), findsOneWidget);
     expect(find.text('“Bright and floral.”'), findsOneWidget);
     expect(find.byIcon(Icons.thumb_up), findsOneWidget);
