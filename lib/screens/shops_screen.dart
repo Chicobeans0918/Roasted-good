@@ -7,12 +7,15 @@ import '../state/app_state.dart';
 import '../theme/app_theme.dart';
 
 /// Coffee shops and roasteries on a real interactive map
-/// (CARTO minimal basemaps — free, no API key, no POI clutter),
+/// (Esri basemaps — free, no API key),
 /// centered on Gatineau–Ottawa. The tile style follows the app theme.
 ///
-/// CARTO basemaps — no API key required.
-String cartoTileUrl({required bool dark}) =>
-    'https://{s}.basemaps.cartocdn.com/${dark ? 'dark_all' : 'light_all'}/{z}/{x}/{y}{r}.png';
+/// Esri basemaps — no API key required.
+/// Free keyless map tiles (Esri). Note the {z}/{y}/{x} order — Esri puts
+/// the row before the column, unlike most tile servers.
+String esriTileUrl({required bool dark}) => dark
+    ? 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}'
+    : 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}';
 
 class ShopsScreen extends StatefulWidget {
   const ShopsScreen({super.key});
@@ -57,7 +60,7 @@ class _ShopsScreenState extends State<ShopsScreen> {
     final shops = state.shops;
     final selected =
         shops.where((s) => s.id == _selectedShopId).firstOrNull;
-    // CARTO minimal basemaps (no API key); style follows the theme.
+    // Esri basemaps (no API key); style follows the theme.
     final isDark = theme.brightness == Brightness.dark;
 
     return Scaffold(
@@ -76,9 +79,9 @@ class _ShopsScreenState extends State<ShopsScreen> {
                     ),
                     children: [
                       TileLayer(
-                        // CARTO minimal basemaps (no API key, no POI clutter);
+                        // Esri basemaps (no API key);
                         // the style follows the app theme.
-                        urlTemplate: cartoTileUrl(dark: isDark),
+                        urlTemplate: esriTileUrl(dark: isDark),
                         subdomains: const ['a', 'b', 'c', 'd'],
                         userAgentPackageName: 'com.beanquest.coffee_beans',
                       ),
@@ -131,12 +134,12 @@ class _ShopsScreenState extends State<ShopsScreen> {
                         onTap: () {},
                       ),
                     ),
-                  // Tile attribution (required by CARTO / OSM).
+                  // Tile attribution (required by Esri).
                   Positioned(
                     right: 8,
                     bottom: 6,
                     child: Text(
-                      '© OpenStreetMap contributors © CARTO',
+                      '© Esri & contributors',
                       style: theme.textTheme.bodySmall?.copyWith(
                         fontSize: 9,
                         color: p.muted,
