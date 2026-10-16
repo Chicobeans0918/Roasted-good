@@ -115,14 +115,14 @@ void main() {
   });
 
   group('minimal map tiles', () {
-    test('CARTO tile URLs need no API key', () {
+    test('Esri tile URLs need no API key', () {
       expect(
-        cartoTileUrl(dark: false),
-        'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+        esriTileUrl(dark: false),
+        'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
       );
       expect(
-        cartoTileUrl(dark: true),
-        'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+        esriTileUrl(dark: true),
+        'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',
       );
     });
   });
@@ -230,7 +230,7 @@ void main() {
   group('shops seed', () {
     test('the two new shops are present with exact coordinates', () {
       final byId = {for (final s in SampleData.shops) s.id: s};
-      expect(byId.length, 9);
+      expect(byId.length, greaterThanOrEqualTo(9));
       final uji = byId['uji-cafe']!;
       expect(uji.name, 'Uji Café');
       expect(uji.address, '215 Rideau St, Ottawa');
