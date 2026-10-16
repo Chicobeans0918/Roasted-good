@@ -176,6 +176,11 @@ workflows:
               <key>method</key><string>app-store</string>
               <key>teamID</key><string>5KF96D48DG</string>
               <key>signingStyle</key><string>manual</string>
+              <key>provisioningProfiles</key>
+              <dict>
+                  <key>$BUNDLE_ID</key>
+                  <string>$PROFILE_UUID</string>
+              </dict>
           </dict>
           </plist>
           EOF
