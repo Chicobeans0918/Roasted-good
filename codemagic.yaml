@@ -34,6 +34,12 @@ workflows:
     scripts:
       - name: Flutter pub get
         script: flutter pub get
+      - name: Install iOS pods
+        script: |
+          # Generates ios/Podfile when missing and runs pod install.
+          # Required because the manual xcodebuild archive below does not
+          # install pods on its own (flutter build ios would).
+          flutter build ios --release --no-codesign
       - name: Set up keychain for code signing
         script: keychain initialize
       - name: Fetch signing files
