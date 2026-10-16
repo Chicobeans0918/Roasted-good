@@ -90,7 +90,8 @@ workflows:
           echo "Key matches profile certificate"
           # Build a clean p12 from the profile's cert + our key (macOS refuses
           # empty-password p12s, so we use a password)
-          openssl pkcs12 -export -in /tmp/profile_cert.der -inform DER -inkey /tmp/cert_key.pem -out /tmp/distribution.p12 -passout pass:dist-p12-pass -name "Apple Distribution"
+          openssl x509 -in /tmp/profile_cert.der -inform DER -out /tmp/profile_cert.pem
+          openssl pkcs12 -export -in /tmp/profile_cert.pem -inkey /tmp/cert_key.pem -out /tmp/distribution.p12 -passout pass:dist-p12-pass -name "Apple Distribution"
           openssl pkcs12 -in /tmp/distribution.p12 -noout -passin pass:dist-p12-pass && echo "p12 verified"
           # Remove the broken CLI-generated p12s so they can't be picked up
           rm -f ~/Library/Developer/Xcode/UserData/Certificates/*.p12
