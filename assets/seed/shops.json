@@ -70,5 +70,661 @@
     "latitude": 45.376811,
     "longitude": -75.751322,
     "approximate": false
+  },
+  {
+    "id": "la-brulerie",
+    "name": "La Brûlerie (Café La Brûlerie)",
+    "address": "69 Boulevard Saint-Joseph, Gatineau",
+    "latitude": 45.42786,
+    "longitude": -75.73372,
+    "approximate": false
+  },
+  {
+    "id": "brulerie-elixir",
+    "name": "Brûlerie Élixir",
+    "address": "97 Av. Gatineau Unit 2, Gatineau",
+    "latitude": 45.48193,
+    "longitude": -75.7213,
+    "approximate": false
+  },
+  {
+    "id": "cafe-cloudforest",
+    "name": "Café Cloudforest",
+    "address": "63 Rue Eddy, Gatineau",
+    "latitude": 45.42704,
+    "longitude": -75.7202,
+    "approximate": false
+  },
+  {
+    "id": "happy-goat-notre-dame",
+    "name": "Maison du Café Happy Goat Coffee Company",
+    "address": "133 Rue Notre-Dame-de-l'île, Gatineau",
+    "latitude": 45.4299,
+    "longitude": -75.71129,
+    "approximate": false
+  },
+  {
+    "id": "cascara-cafe",
+    "name": "Cascara Café & Bistro (Happy Goat)",
+    "address": "425 Boulevard Saint-Joseph, Gatineau",
+    "latitude": 45.44559,
+    "longitude": -75.73377,
+    "approximate": false
+  },
+  {
+    "id": "cafe-trois-licornes",
+    "name": "Café Aux Trois Licornes",
+    "address": "335 Boulevard Saint-Joseph, Gatineau",
+    "latitude": 45.44145,
+    "longitude": -75.73314,
+    "approximate": false
+  },
+  {
+    "id": "moca-loca-tache",
+    "name": "Moca Loca Café Co",
+    "address": "283 Boul Alexandre-Taché, Gatineau",
+    "latitude": 45.42188,
+    "longitude": -75.73937,
+    "approximate": false
+  },
+  {
+    "id": "moca-loca-gappe",
+    "name": "Moca Loca Café Co",
+    "address": "799 Bd de la Gappe, Gatineau",
+    "latitude": 45.48376,
+    "longitude": -75.68502,
+    "approximate": false
+  },
+  {
+    "id": "cafe-mulligan",
+    "name": "Café Mulligan",
+    "address": "149 Rue Principale, Gatineau",
+    "latitude": 45.3955,
+    "longitude": -75.84125,
+    "approximate": false
+  },
+  {
+    "id": "cafe-british",
+    "name": "Café British",
+    "address": "79 Rue Principale, Gatineau",
+    "latitude": 45.39492,
+    "longitude": -75.84672,
+    "approximate": false
+  },
+  {
+    "id": "cafe-3-portages",
+    "name": "Café 3 Portages",
+    "address": "375 Chemin d'Aylmer, Gatineau",
+    "latitude": 45.39653,
+    "longitude": -75.82306,
+    "approximate": false
+  },
+  {
+    "id": "aroma-select",
+    "name": "Les Cafés Aroma Select",
+    "address": "200 Rue Principale, Gatineau",
+    "latitude": 45.39478,
+    "longitude": -75.83451,
+    "approximate": false
+  },
+  {
+    "id": "cafe-bour-joie",
+    "name": "Le Café Bour-Joie",
+    "address": "140 Rue MacLaren E, Gatineau",
+    "latitude": 45.58672,
+    "longitude": -75.41451,
+    "approximate": false
+  },
+  {
+    "id": "happy-goat-laurel",
+    "name": "Happy Goat Coffee Co. (Laurel)",
+    "address": "35 Laurel St, Ottawa",
+    "latitude": 45.40559,
+    "longitude": -75.71761,
+    "approximate": false
+  },
+  {
+    "id": "happy-goat-elgin",
+    "name": "Happy Goat Coffee Co. (Elgin)",
+    "address": "326 Elgin St, Ottawa",
+    "latitude": 45.41602,
+    "longitude": -75.68911,
+    "approximate": false
+  },
+  {
+    "id": "happy-goat-sandy-hill",
+    "name": "Happy Goat Coffee Co. (Sandy Hill)",
+    "address": "317 Wilbrod St, Ottawa",
+    "latitude": 45.42774,
+    "longitude": -75.68072,
+    "approximate": false
+  },
+  {
+    "id": "morning-owl-rochester",
+    "name": "Morning Owl Coffeehouse",
+    "address": "538 Rochester St, Ottawa",
+    "latitude": 45.39963,
+    "longitude": -75.70664,
+    "approximate": false
+  },
+  {
+    "id": "morning-owl-armstrong",
+    "name": "Morning Owl Coffeehouse",
+    "address": "229 Armstrong St, Ottawa",
+    "latitude": 45.40204,
+    "longitude": -75.73033,
+    "approximate": false
+  },
+  {
+    "id": "morning-owl-laurier",
+    "name": "Morning Owl",
+    "address": "219 Laurier Ave W, Ottawa",
+    "latitude": 45.42006,
+    "longitude": -75.69621,
+    "approximate": false
+  },
+  {
+    "id": "ministry-of-coffee",
+    "name": "The Ministry of Coffee",
+    "address": "141 Laurier Ave W, Ottawa",
+    "latitude": 45.4209,
+    "longitude": -75.69409,
+    "approximate": false
+  },
+  {
+    "id": "bridgehead-glebe",
+    "name": "Bridgehead (Glebe)",
+    "address": "750 Bank St, Ottawa",
+    "latitude": 45.40349,
+    "longitude": -75.68897,
+    "approximate": false
+  },
+  {
+    "id": "bridgehead-old-ottawa-south",
+    "name": "Bridgehead (Old Ottawa South)",
+    "address": "1172 Bank St, Ottawa",
+    "latitude": 45.39211,
+    "longitude": -75.68205,
+    "approximate": false
+  },
+  {
+    "id": "bridgehead-little-italy",
+    "name": "Bridgehead (Little Italy / Roastery)",
+    "address": "130 Anderson St, Ottawa",
+    "latitude": 45.40721,
+    "longitude": -75.71301,
+    "approximate": false
+  },
+  {
+    "id": "bridgehead-sparks",
+    "name": "Bridgehead (Sparks)",
+    "address": "96 Sparks St, Ottawa",
+    "latitude": 45.42271,
+    "longitude": -75.69745,
+    "approximate": false
+  },
+  {
+    "id": "little-victories-elgin",
+    "name": "Little Victories Coffee Roasters",
+    "address": "44 Elgin St, Ottawa",
+    "latitude": 45.42315,
+    "longitude": -75.69565,
+    "approximate": false
+  },
+  {
+    "id": "little-victories-glebe",
+    "name": "Little Victories Coffee Roasters",
+    "address": "801 Bank St, Ottawa",
+    "latitude": 45.40282,
+    "longitude": -75.68796,
+    "approximate": false
+  },
+  {
+    "id": "little-victories-queen",
+    "name": "Little Victories Coffee Roasters",
+    "address": "209 Queen St, Ottawa",
+    "latitude": 45.42087,
+    "longitude": -75.70056,
+    "approximate": false
+  },
+  {
+    "id": "arlington-five",
+    "name": "Arlington Five",
+    "address": "5 Arlington Ave, Ottawa",
+    "latitude": 45.41023,
+    "longitude": -75.6928,
+    "approximate": false
+  },
+  {
+    "id": "cafe-cloudforest-ottawa",
+    "name": "Café Cloudforest",
+    "address": "339 Richmond Rd, Ottawa",
+    "latitude": 45.39222,
+    "longitude": -75.75407,
+    "approximate": false
+  },
+  {
+    "id": "ottawa-bike-cafe",
+    "name": "Ottawa Bike Cafe",
+    "address": "79 Sparks St, Ottawa",
+    "latitude": 45.42343,
+    "longitude": -75.69698,
+    "approximate": false
+  },
+  {
+    "id": "ten-toes-somerset",
+    "name": "Ten Toes Coffee House",
+    "address": "837 Somerset St W, Ottawa",
+    "latitude": 45.40909,
+    "longitude": -75.71231,
+    "approximate": false
+  },
+  {
+    "id": "ten-toes-glebe",
+    "name": "Ten Toes Coffee House",
+    "address": "593 Bank St, Ottawa",
+    "latitude": 45.40773,
+    "longitude": -75.69087,
+    "approximate": false
+  },
+  {
+    "id": "ten-toes-cyrville",
+    "name": "Ten Toes Coffee House",
+    "address": "1109 Cyrville Rd, Ottawa",
+    "latitude": 45.42452,
+    "longitude": -75.63342,
+    "approximate": false
+  },
+  {
+    "id": "black-squirrel-books",
+    "name": "Black Squirrel Books & Espresso Bar",
+    "address": "1073 Bank St, Ottawa",
+    "latitude": 45.3946,
+    "longitude": -75.6834,
+    "approximate": false
+  },
+  {
+    "id": "drip-house",
+    "name": "Drip House",
+    "address": "340B Parkdale Ave, Ottawa",
+    "latitude": 45.40226,
+    "longitude": -75.73022,
+    "approximate": false
+  },
+  {
+    "id": "equator-westboro",
+    "name": "Equator Coffee",
+    "address": "412 Churchill Ave N, Ottawa",
+    "latitude": 45.3916,
+    "longitude": -75.75376,
+    "approximate": false
+  },
+  {
+    "id": "equator-nac",
+    "name": "Equator Coffee",
+    "address": "1 Elgin St, Ottawa",
+    "latitude": 45.42313,
+    "longitude": -75.69376,
+    "approximate": false
+  },
+  {
+    "id": "planet-coffee",
+    "name": "Planet Coffee",
+    "address": "24a York St, Ottawa",
+    "latitude": 45.42765,
+    "longitude": -75.69345,
+    "approximate": false
+  },
+  {
+    "id": "bar-robo",
+    "name": "Bar Robo",
+    "address": "170 Queen St, Ottawa",
+    "latitude": 45.42085,
+    "longitude": -75.69917,
+    "approximate": false
+  },
+  {
+    "id": "wise-town-cafe",
+    "name": "Wise Town Cafe",
+    "address": "329a Elgin St, Ottawa",
+    "latitude": 45.41606,
+    "longitude": -75.68859,
+    "approximate": false
+  },
+  {
+    "id": "cafe-morala",
+    "name": "Café Morala",
+    "address": "734 Bank St, Ottawa",
+    "latitude": 45.40401,
+    "longitude": -75.68915,
+    "approximate": false
+  },
+  {
+    "id": "joe-the-dog",
+    "name": "Joe the Dog Coffee",
+    "address": "176 Dalhousie St, Ottawa",
+    "latitude": 45.4325,
+    "longitude": -75.6945,
+    "approximate": false
+  },
+  {
+    "id": "art-house",
+    "name": "Art House",
+    "address": "555 Somerset St W, Ottawa",
+    "latitude": 45.41303,
+    "longitude": -75.70246,
+    "approximate": false
+  },
+  {
+    "id": "origin-trade",
+    "name": "Origin Trade",
+    "address": "111 York St, Ottawa",
+    "latitude": 45.42939,
+    "longitude": -75.69088,
+    "approximate": false
+  },
+  {
+    "id": "parliament-cafe",
+    "name": "Parliament Café",
+    "address": "189 Sparks St, Ottawa",
+    "latitude": 45.42189,
+    "longitude": -75.7006,
+    "approximate": false
+  },
+  {
+    "id": "volume-coffee-house",
+    "name": "Volume Coffee House",
+    "address": "234 Laurier Ave E, Ottawa",
+    "latitude": 45.42585,
+    "longitude": -75.68129,
+    "approximate": false
+  },
+  {
+    "id": "red-door-provisions",
+    "name": "Red Door Provisions",
+    "address": "86 Beechwood Ave, Ottawa",
+    "latitude": 45.44038,
+    "longitude": -75.67458,
+    "approximate": false
+  },
+  {
+    "id": "z3-specialty-coffee",
+    "name": "Z3 Specialty Coffee",
+    "address": "150 Katimavik Rd #149, Ottawa",
+    "latitude": 45.31281,
+    "longitude": -75.89562,
+    "approximate": false
+  },
+  {
+    "id": "beandigen-cafe",
+    "name": "Beandigen Cafe",
+    "address": "900 Exhibition Way, Ottawa",
+    "latitude": 45.39922,
+    "longitude": -75.68437,
+    "approximate": false
+  },
+  {
+    "id": "pilot-wagstaff",
+    "name": "Pilot Coffee Roasters",
+    "address": "50 Wagstaff Dr, Toronto",
+    "latitude": 43.67389,
+    "longitude": -79.32998,
+    "approximate": false
+  },
+  {
+    "id": "pilot-bloor",
+    "name": "Pilot Coffee Roasters",
+    "address": "55 Bloor St W, Toronto",
+    "latitude": 43.66965,
+    "longitude": -79.38874,
+    "approximate": false
+  },
+  {
+    "id": "pilot-richmond",
+    "name": "Pilot Coffee Roasters",
+    "address": "439 Richmond St W, Toronto",
+    "latitude": 43.64767,
+    "longitude": -79.39697,
+    "approximate": false
+  },
+  {
+    "id": "sam-james-harbord",
+    "name": "Sam James Coffee Bar",
+    "address": "297 Harbord St, Toronto",
+    "latitude": 43.66023,
+    "longitude": -79.41544,
+    "approximate": false
+  },
+  {
+    "id": "sam-james-brock",
+    "name": "Sam James Coffee Bar",
+    "address": "6 Brock Ave, Toronto",
+    "latitude": 43.64179,
+    "longitude": -79.43264,
+    "approximate": false
+  },
+  {
+    "id": "sam-james-ossington",
+    "name": "Sam James Coffee Bar",
+    "address": "141 Ossington Ave, Toronto",
+    "latitude": 43.64743,
+    "longitude": -79.41968,
+    "approximate": false
+  },
+  {
+    "id": "boxcar-yonge",
+    "name": "Boxcar Social",
+    "address": "1208 Yonge St, Toronto",
+    "latitude": 43.68172,
+    "longitude": -79.39172,
+    "approximate": false
+  },
+  {
+    "id": "boxcar-richmond",
+    "name": "Boxcar Social",
+    "address": "499 Richmond St W, Toronto",
+    "latitude": 43.64719,
+    "longitude": -79.39929,
+    "approximate": false
+  },
+  {
+    "id": "de-mello-yonge",
+    "name": "De Mello Palheta Coffee Roasters",
+    "address": "2489 Yonge St, Toronto",
+    "latitude": 43.71187,
+    "longitude": -79.3992,
+    "approximate": false
+  },
+  {
+    "id": "de-mello-bloor",
+    "name": "De Mello Palheta Coffee Roasters",
+    "address": "365 Bloor St E Unit 19, Toronto",
+    "latitude": 43.67194,
+    "longitude": -79.37782,
+    "approximate": false
+  },
+  {
+    "id": "jimmys-baldwin",
+    "name": "Jimmy's Coffee",
+    "address": "191 Baldwin St, Toronto",
+    "latitude": 43.6545,
+    "longitude": -79.4012,
+    "approximate": false
+  },
+  {
+    "id": "jimmys-royal-york",
+    "name": "Jimmy's Coffee",
+    "address": "380 Royal York Rd, Toronto",
+    "latitude": 43.61868,
+    "longitude": -79.49967,
+    "approximate": false
+  },
+  {
+    "id": "moonbean",
+    "name": "Moonbean Coffee Company",
+    "address": "30 St Andrew St, Toronto",
+    "latitude": 43.65428,
+    "longitude": -79.40019,
+    "approximate": false
+  },
+  {
+    "id": "hale-campbell",
+    "name": "Hale Coffee Company",
+    "address": "300 Campbell Ave, Toronto",
+    "latitude": 43.66568,
+    "longitude": -79.45011,
+    "approximate": false
+  },
+  {
+    "id": "hale-adelaide",
+    "name": "Hale Coffee Company",
+    "address": "1 Adelaide St E, Toronto",
+    "latitude": 43.65031,
+    "longitude": -79.37801,
+    "approximate": false
+  },
+  {
+    "id": "versus-coffee",
+    "name": "Versus Coffee",
+    "address": "70 Adelaide St E, Toronto",
+    "latitude": 43.65129,
+    "longitude": -79.37541,
+    "approximate": false
+  },
+  {
+    "id": "neo-bay",
+    "name": "Neo Coffee Bar",
+    "address": "770 Bay St, Toronto",
+    "latitude": 43.66013,
+    "longitude": -79.38583,
+    "approximate": false
+  },
+  {
+    "id": "neo-spadina",
+    "name": "Neo Coffee Bar",
+    "address": "61 Spadina Ave, Toronto",
+    "latitude": 43.64507,
+    "longitude": -79.39451,
+    "approximate": false
+  },
+  {
+    "id": "dineen-yonge",
+    "name": "Dineen Coffee Co.",
+    "address": "140 Yonge St, Toronto",
+    "latitude": 43.65112,
+    "longitude": -79.37902,
+    "approximate": false
+  },
+  {
+    "id": "dineen-gerrard",
+    "name": "Dineen Coffee Co.",
+    "address": "1042 Gerrard St E, Toronto",
+    "latitude": 43.66921,
+    "longitude": -79.33677,
+    "approximate": false
+  },
+  {
+    "id": "found-coffee",
+    "name": "Found Coffee",
+    "address": "189 Shaw St, Toronto",
+    "latitude": 43.64707,
+    "longitude": -79.41685,
+    "approximate": false
+  },
+  {
+    "id": "te-aro",
+    "name": "Te Aro Coffee Roasters",
+    "address": "983 Queen St E, Toronto",
+    "latitude": 43.66124,
+    "longitude": -79.33836,
+    "approximate": false
+  },
+  {
+    "id": "quantum-coffee",
+    "name": "Quantum Coffee",
+    "address": "460 King St W, Toronto",
+    "latitude": 43.64562,
+    "longitude": -79.39541,
+    "approximate": false
+  },
+  {
+    "id": "propeller-wade",
+    "name": "Propeller Coffee Co.",
+    "address": "50 Wade Ave, Toronto",
+    "latitude": 43.65941,
+    "longitude": -79.44484,
+    "approximate": false
+  },
+  {
+    "id": "propeller-front",
+    "name": "Propeller Coffee Co.",
+    "address": "486 Front St W, Toronto",
+    "latitude": 43.64205,
+    "longitude": -79.39711,
+    "approximate": false
+  },
+  {
+    "id": "ethica-coffee",
+    "name": "Ethica Coffee Roasters",
+    "address": "213 Sterling Rd, Toronto",
+    "latitude": 43.65552,
+    "longitude": -79.44509,
+    "approximate": false
+  },
+  {
+    "id": "reunion-island",
+    "name": "Reunion Island Coffee Bar",
+    "address": "385 Roncesvalles Ave, Toronto",
+    "latitude": 43.65056,
+    "longitude": -79.45043,
+    "approximate": false
+  },
+  {
+    "id": "goldstruck-cumberland",
+    "name": "Goldstruck Coffee",
+    "address": "130 Cumberland St, Toronto",
+    "latitude": 43.67028,
+    "longitude": -79.39231,
+    "approximate": false
+  },
+  {
+    "id": "goldstruck-richmond",
+    "name": "Goldstruck Coffee",
+    "address": "133 Richmond St W, Toronto",
+    "latitude": 43.65023,
+    "longitude": -79.38483,
+    "approximate": false
+  },
+  {
+    "id": "dark-horse-spadina",
+    "name": "Dark Horse Espresso Bar",
+    "address": "215 Spadina Ave, Toronto",
+    "latitude": 43.65072,
+    "longitude": -79.39657,
+    "approximate": false
+  },
+  {
+    "id": "subtext-coffee",
+    "name": "Subtext Coffee Roasters",
+    "address": "130 Cawthra Ave, Toronto",
+    "latitude": 43.67097,
+    "longitude": -79.46472,
+    "approximate": false
+  },
+  {
+    "id": "rooster-coffee",
+    "name": "Rooster Coffee House",
+    "address": "479 Broadview Ave, Toronto",
+    "latitude": 43.6692,
+    "longitude": -79.3527,
+    "approximate": false
+  },
+  {
+    "id": "library-coffee",
+    "name": "Library Coffee",
+    "address": "281 Dundas St W, Toronto",
+    "latitude": 43.65427,
+    "longitude": -79.39077,
+    "approximate": false
   }
 ]
