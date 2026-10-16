@@ -108,6 +108,7 @@ workflows:
           ls ~/Library/Developer/Xcode/UserData/Provisioning\ Profiles/ 2>/dev/null || echo "(none in Xcode UserData)"
       - name: Build signed IPA
         script: |
+          set -e  # fail fast on any error
           # Bypass use-profiles/flutter signing black boxes: drive xcodebuild directly
           # with explicit manual signing. Cert + profile are verified good above.
           PROFILE_PATH=$(ls ~/Library/Developer/Xcode/UserData/Provisioning\ Profiles/*.mobileprovision | head -1)
@@ -117,7 +118,7 @@ workflows:
           xcodebuild -workspace ios/Runner.xcworkspace \
             -scheme Runner \
             -configuration Release \
-            -archivePath /tmp/Runner.xcarchive \
+            -archivePath "$HOME/Runner.xcarchive" \
             archive \
             CODE_SIGN_STYLE=Manual \
             CODE_SIGN_IDENTITY="Apple Distribution" \
@@ -140,12 +141,12 @@ workflows:
           </dict>
           </plist>
           EOF
+          rm -rf build/ios/ipa
           xcodebuild -exportArchive \
-            -archivePath /tmp/Runner.xcarchive \
-            -exportPath /tmp/ipa_export \
+            -archivePath "$HOME/Runner.xcarchive" \
+            -exportPath build/ios/ipa \
             -exportOptionsPlist /tmp/ExportOptions.plist
-          mkdir -p build/ios/ipa
-          cp /tmp/ipa_export/*.ipa build/ios/ipa/
+          echo "=== IPA built ==="
           ls -la build/ios/ipa/
       - name: Publish to App Store Connect
         script: |
