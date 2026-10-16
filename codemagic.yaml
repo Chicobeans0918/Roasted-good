@@ -109,8 +109,56 @@ workflows:
       - name: Build signed IPA
         script: |
           set -e
-          # Project signing was configured per-target by use-profiles above.
-          # Use our export plist (manual, app-store) for the export step.
+          # Configure the Runner target's Release build settings directly in the
+          # Xcode project (per-target, so Swift Packages are untouched).
+          PROFILE_PATH=$(ls ~/Library/Developer/Xcode/UserData/Provisioning\ Profiles/*.mobileprovision | head -1)
+          security cms -D -i "$PROFILE_PATH" -o /tmp/profile.plist
+          PROFILE_UUID=$(plutil -extract UUID raw /tmp/profile.plist)
+          PROFILE_NAME=$(plutil -extract Name raw /tmp/profile.plist)
+          echo "Using profile: $PROFILE_NAME ($PROFILE_UUID)"
+          python3 <<'PYEOF'
+          import re
+          pbx = 'ios/Runner.xcodeproj/project.pbxproj'
+          with open(pbx) as f:
+              content = f.read()
+          def set_signing(m):
+              block = m.group(0)
+              block = re.sub(r'CODE_SIGN_STYLE\s*=\s*[^;]*;', 'CODE_SIGN_STYLE = Manual;', block)
+              if 'CODE_SIGN_STYLE =' not in block:
+                  block = block.replace('buildSettings = {', 'buildSettings = {\n\t\t\t\tCODE_SIGN_STYLE = Manual;', 1)
+              block = re.sub(r'CODE_SIGN_IDENTITY\s*=\s*[^;]*;', 'CODE_SIGN_IDENTITY = "Apple Distribution";', block)
+              if 'CODE_SIGN_IDENTITY =' not in block:
+                  block = block.replace('buildSettings = {', 'buildSettings = {\n\t\t\t\tCODE_SIGN_IDENTITY = "Apple Distribution";', 1)
+              block = re.sub(r'PROVISIONING_PROFILE_SPECIFIER\s*=\s*[^;]*;', 'PROVISIONING_PROFILE_SPECIFIER = "__UUID__";', block)
+              if 'PROVISIONING_PROFILE_SPECIFIER' not in block:
+                  block = block.replace('buildSettings = {', 'buildSettings = {\n\t\t\t\tPROVISIONING_PROFILE_SPECIFIER = "__UUID__";', 1)
+              block = re.sub(r'DEVELOPMENT_TEAM\s*=\s*[^;]*;', 'DEVELOPMENT_TEAM = 5KF96D48DG;', block)
+              if 'DEVELOPMENT_TEAM =' not in block:
+                  block = block.replace('buildSettings = {', 'buildSettings = {\n\t\t\t\tDEVELOPMENT_TEAM = 5KF96D48DG;', 1)
+              return block
+          new_content = re.sub(
+              r'/\* Release \*/ = \{\s*isa = XCBuildConfiguration;.*?buildSettings = \{.*?\};\s*name = Release;',
+              lambda m: set_signing(m).replace('__UUID__', '__PROFILE_UUID__'),
+              content,
+              flags=re.DOTALL
+          )
+          with open(pbx, 'w') as f:
+              f.write(new_content)
+          print("Updated pbxproj Release configs")
+          PYEOF
+          sed -i '' "s/__PROFILE_UUID__/$PROFILE_UUID/g" ios/Runner.xcodeproj/project.pbxproj
+          echo "--- Verifying ---"
+          grep -A2 'name = Release;' ios/Runner.xcodeproj/project.pbxproj | grep -E 'CODE_SIGN|PROVISIONING|DEVELOPMENT_TEAM' | head -12
+          # Manual archive: identity+team on the command line (safe for packages),
+          # profile comes from the pbxproj (per-target, packages untouched).
+          xcodebuild -workspace ios/Runner.xcworkspace \
+            -scheme Runner \
+            -configuration Release \
+            -archivePath "$HOME/Runner.xcarchive" \
+            archive \
+            CODE_SIGN_STYLE=Manual \
+            CODE_SIGN_IDENTITY="Apple Distribution" \
+            DEVELOPMENT_TEAM=5KF96D48DG
           cat > /tmp/ExportOptions.plist <<EOF
           <?xml version="1.0" encoding="UTF-8"?>
           <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -122,7 +170,11 @@ workflows:
           </dict>
           </plist>
           EOF
-          flutter build ipa --release --export-options-plist=/tmp/ExportOptions.plist
+          rm -rf build/ios/ipa
+          xcodebuild -exportArchive \
+            -archivePath "$HOME/Runner.xcarchive" \
+            -exportPath build/ios/ipa \
+            -exportOptionsPlist /tmp/ExportOptions.plist
           echo "=== IPA built ==="
           ls -la build/ios/ipa/
       - name: Publish to App Store Connect
