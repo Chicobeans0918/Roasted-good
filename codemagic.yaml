@@ -49,9 +49,33 @@ workflows:
           rm -f ~/Library/Developer/Xcode/UserData/Provisioning\ Profiles/*.mobileprovision
           app-store-connect fetch-signing-files "$BUNDLE_ID" --type IOS_APP_STORE --create
       - name: Set up signing certificate
-        script: keychain add-certificates
+        script: |
+          P12=$(ls ~/Library/Developer/Xcode/UserData/Certificates/*.p12 2>/dev/null | head -1)
+          if [ -z "$P12" ]; then
+            echo "ERROR: no p12 found"
+            exit 1
+          fi
+          echo "Found p12: $P12"
+          # The CLI-built p12 can fail macOS import ("Unable to decode the provided
+          # data"). Rebuild it with openssl, which tolerates more formats.
+          if openssl pkcs12 -in "$P12" -noout -passin pass: 2>/dev/null; then
+            echo "p12 readable, rebuilding clean copy with openssl"
+            openssl pkcs12 -in "$P12" -out /tmp/fixed.pem -nodes -passin pass:
+            openssl pkcs12 -export -in /tmp/fixed.pem -out /tmp/fixed.p12 -passout pass:
+            keychain add-certificates --certificate /tmp/fixed.p12
+          else
+            echo "openssl cannot read p12 either, trying direct import"
+            keychain add-certificates --certificate "$P12"
+          fi
       - name: Set up code signing on Xcode project
         script: xcode-project use-profiles
+      - name: Diagnose signing state
+        script: |
+          echo "=== Code signing identities in keychain ==="
+          security find-identity -v -p codesigning || true
+          echo "=== Downloaded provisioning profiles ==="
+          ls ~/Library/MobileDevice/Provisioning\ Profiles/ 2>/dev/null || echo "(none in MobileDevice)"
+          ls ~/Library/Developer/Xcode/UserData/Provisioning\ Profiles/ 2>/dev/null || echo "(none in Xcode UserData)"
       - name: Build signed IPA
         script: flutter build ipa --release
       - name: Publish to App Store Connect
