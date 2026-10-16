@@ -52,12 +52,13 @@ workflows:
         script: |
           # The CLI-generated p12 is unreadable by macOS ("Unable to decode the provided
           # data"). Use our openssl-built p12 from DISTRIBUTION_P12_B64 instead.
+          # (macOS refuses empty-password p12s, so ours uses a password.)
           echo "$DISTRIBUTION_P12_B64" | base64 --decode > /tmp/distribution.p12
-          openssl pkcs12 -in /tmp/distribution.p12 -noout -passin pass: && echo "p12 verified"
+          openssl pkcs12 -in /tmp/distribution.p12 -noout -passin pass:dist-p12-pass && echo "p12 verified"
           # Remove the broken CLI-generated p12s so they can't be picked up
           rm -f ~/Library/Developer/Xcode/UserData/Certificates/*.p12
           rm -f ~/Library/MobileDevice/Certificates/*.p12
-          keychain add-certificates --certificate /tmp/distribution.p12
+          keychain add-certificates --certificate /tmp/distribution.p12 --certificate-password dist-p12-pass
       - name: Set up code signing on Xcode project
         script: xcode-project use-profiles
       - name: Diagnose signing state
