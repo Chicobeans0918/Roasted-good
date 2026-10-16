@@ -11,6 +11,9 @@ class CoffeeBean {
     this.local = false,
     this.roaster,
     this.decaf = false,
+    this.imageUrl,
+    this.barcode,
+    this.whereToBuy,
   });
 
   final String id;
@@ -36,6 +39,19 @@ class CoffeeBean {
   /// True for decaffeinated beans.
   final bool decaf;
 
+  /// Optional remote photo URL (e.g. from Firestore). When set, the app
+  /// shows this image instead of the bundled photo — so bean pictures can
+  /// be updated without a new build.
+  final String? imageUrl;
+
+  /// Optional retail barcode (UPC/EAN) printed on the bag. When set,
+  /// scanning the bag resolves straight to this bean.
+  final String? barcode;
+
+  /// Where the beans can be bought, e.g. a shop name or website.
+  /// Shown in the bean detail sheet.
+  final String? whereToBuy;
+
   Map<String, dynamic> toMap() => {
         'name': name,
         'origin': origin,
@@ -46,6 +62,9 @@ class CoffeeBean {
         'local': local,
         if (roaster != null) 'roaster': roaster,
         'decaf': decaf,
+        if (imageUrl != null) 'imageUrl': imageUrl,
+        if (barcode != null) 'barcode': barcode,
+        if (whereToBuy != null) 'whereToBuy': whereToBuy,
       };
 
   factory CoffeeBean.fromMap(Map<String, dynamic> map, String id) {
@@ -62,6 +81,9 @@ class CoffeeBean {
       local: (map['local'] ?? false) as bool,
       roaster: map['roaster'] as String?,
       decaf: (map['decaf'] ?? false) as bool,
+      imageUrl: map['imageUrl'] as String?,
+      barcode: map['barcode'] as String?,
+      whereToBuy: map['whereToBuy'] as String?,
     );
   }
 }
