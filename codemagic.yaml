@@ -50,23 +50,14 @@ workflows:
           app-store-connect fetch-signing-files "$BUNDLE_ID" --type IOS_APP_STORE --create
       - name: Set up signing certificate
         script: |
-          P12=$(ls ~/Library/Developer/Xcode/UserData/Certificates/*.p12 2>/dev/null | head -1)
-          if [ -z "$P12" ]; then
-            echo "ERROR: no p12 found"
-            exit 1
-          fi
-          echo "Found p12: $P12"
-          # The CLI-built p12 can fail macOS import ("Unable to decode the provided
-          # data"). Rebuild it with openssl, which tolerates more formats.
-          if openssl pkcs12 -in "$P12" -noout -passin pass: 2>/dev/null; then
-            echo "p12 readable, rebuilding clean copy with openssl"
-            openssl pkcs12 -in "$P12" -out /tmp/fixed.pem -nodes -passin pass:
-            openssl pkcs12 -export -in /tmp/fixed.pem -out /tmp/fixed.p12 -passout pass:
-            keychain add-certificates --certificate /tmp/fixed.p12
-          else
-            echo "openssl cannot read p12 either, trying direct import"
-            keychain add-certificates --certificate "$P12"
-          fi
+          # The CLI-generated p12 is unreadable by macOS ("Unable to decode the provided
+          # data"). Use our openssl-built p12 from DISTRIBUTION_P12_B64 instead.
+          echo "$DISTRIBUTION_P12_B64" | base64 --decode > /tmp/distribution.p12
+          openssl pkcs12 -in /tmp/distribution.p12 -noout -passin pass: && echo "p12 verified"
+          # Remove the broken CLI-generated p12s so they can't be picked up
+          rm -f ~/Library/Developer/Xcode/UserData/Certificates/*.p12
+          rm -f ~/Library/MobileDevice/Certificates/*.p12
+          keychain add-certificates --certificate /tmp/distribution.p12
       - name: Set up code signing on Xcode project
         script: xcode-project use-profiles
       - name: Diagnose signing state
