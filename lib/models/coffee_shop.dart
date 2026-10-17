@@ -4,6 +4,7 @@ class CoffeeShop {
     required this.id,
     required this.name,
     required this.address,
+    required this.region,
     this.latitude,
     this.longitude,
     this.approximate = false,
@@ -12,6 +13,10 @@ class CoffeeShop {
   final String id;
   final String name;
   final String address;
+
+  /// City region: 'Gatineau', 'Ottawa' or 'Toronto'. Used to group
+  /// the shop list on the map screen.
+  final String region;
   final double? latitude;
   final double? longitude;
 
@@ -22,6 +27,7 @@ class CoffeeShop {
   Map<String, dynamic> toMap() => {
         'name': name,
         'address': address,
+        'region': region,
         if (latitude != null) 'latitude': latitude,
         if (longitude != null) 'longitude': longitude,
         'approximate': approximate,
@@ -32,6 +38,7 @@ class CoffeeShop {
       id: id,
       name: (map['name'] ?? '') as String,
       address: (map['address'] ?? '') as String,
+      region: (map['region'] ?? 'Ottawa') as String,
       latitude: (map['latitude'] as num?)?.toDouble(),
       longitude: (map['longitude'] as num?)?.toDouble(),
       approximate: (map['approximate'] ?? false) as bool,

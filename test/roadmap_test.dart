@@ -230,8 +230,7 @@ void main() {
   });
 
   group('shops seed', () {
-    test('the two new shops are present with exact coordinates', () {
-      final byId = {for (final s in SampleData.shops) s.id: s};
+    test('the two new shops are present with exact coordinates', () {      final byId = {for (final s in SampleData.shops) s.id: s};
       expect(byId.length, greaterThanOrEqualTo(9));
       final uji = byId['uji-cafe']!;
       expect(uji.name, 'Uji Café');
@@ -243,6 +242,21 @@ void main() {
       expect(kafia.address, '842 Boyd Ave, Ottawa');
       expect(kafia.latitude, 45.376811);
       expect(kafia.longitude, -75.751322);
+    });
+
+    test('every shop has a valid region matching its address', () {
+      const regions = {'Gatineau', 'Ottawa', 'Toronto'};
+      for (final shop in SampleData.shops) {
+        expect(regions, contains(shop.region), reason: shop.id);
+        expect(shop.address, endsWith(', ${shop.region}'), reason: shop.id);
+      }
+      final counts = <String, int>{};
+      for (final shop in SampleData.shops) {
+        counts[shop.region] = (counts[shop.region] ?? 0) + 1;
+      }
+      expect(counts['Gatineau'], 16);
+      expect(counts['Ottawa'], 42);
+      expect(counts['Toronto'], 33);
     });
   });
 

@@ -244,6 +244,7 @@ abstract final class SampleData {
   static const List<CoffeeShop> shops = [
     CoffeeShop(
       id: 'brown-bag',
+      region: 'Gatineau',
       name: 'Brown Bag Coffee Roasters',
       address: '595 Rue de Vernon #7, Gatineau',
       latitude: 45.447293,
@@ -251,6 +252,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'brulerie-aladdin',
+      region: 'Gatineau',
       name: 'Brulerie Aladdin',
       address: '774 Boul Saint-Joseph, Gatineau',
       latitude: 45.460106,
@@ -258,6 +260,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'cafe-vasanti',
+      region: 'Gatineau',
       name: 'Café Vasanti',
       address: '105 Rue de l\'Hôtel-de-Ville, Gatineau',
       latitude: 45.4277195,
@@ -265,6 +268,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'bluebird-coffee',
+      region: 'Ottawa',
       name: 'Bluebird Coffee',
       address: '261 Dalhousie St, Ottawa',
       latitude: 45.4305799,
@@ -272,6 +276,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'fraser-cafe',
+      region: 'Ottawa',
       name: 'Fraser Cafe',
       address: '7 Springfield Rd, Ottawa',
       latitude: 45.4402303,
@@ -279,6 +284,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'happy-goat',
+      region: 'Ottawa',
       name: 'Happy Goat Coffee Co.',
       address: 'Wellington West (Hintonburg), Ottawa',
       latitude: 45.4027,
@@ -287,6 +293,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'morning-owl',
+      region: 'Ottawa',
       name: 'Morning Owl',
       address: 'Parkdale Ave, Ottawa',
       latitude: 45.3989,
@@ -295,6 +302,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'uji-cafe',
+      region: 'Ottawa',
       name: 'Uji Café',
       address: '215 Rideau St, Ottawa',
       latitude: 45.4278363,
@@ -302,6 +310,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'kafia-coffee',
+      region: 'Ottawa',
       name: 'International Kafia Coffee',
       address: '842 Boyd Ave, Ottawa',
       latitude: 45.376811,
@@ -309,6 +318,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'la-brulerie',
+      region: 'Gatineau',
       name: 'La Brûlerie (Café La Brûlerie)',
       address: '69 Boulevard Saint-Joseph, Gatineau',
       latitude: 45.42786,
@@ -316,6 +326,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'brulerie-elixir',
+      region: 'Gatineau',
       name: 'Brûlerie Élixir',
       address: '97 Av. Gatineau Unit 2, Gatineau',
       latitude: 45.48193,
@@ -323,6 +334,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'cafe-cloudforest',
+      region: 'Gatineau',
       name: 'Café Cloudforest',
       address: '63 Rue Eddy, Gatineau',
       latitude: 45.42704,
@@ -330,6 +342,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'happy-goat-notre-dame',
+      region: 'Gatineau',
       name: 'Maison du Café Happy Goat Coffee Company',
       address: '133 Rue Notre-Dame-de-l\'île, Gatineau',
       latitude: 45.4299,
@@ -337,6 +350,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'cascara-cafe',
+      region: 'Gatineau',
       name: 'Cascara Café & Bistro (Happy Goat)',
       address: '425 Boulevard Saint-Joseph, Gatineau',
       latitude: 45.44559,
@@ -344,6 +358,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'cafe-trois-licornes',
+      region: 'Gatineau',
       name: 'Café Aux Trois Licornes',
       address: '335 Boulevard Saint-Joseph, Gatineau',
       latitude: 45.44145,
@@ -351,6 +366,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'moca-loca-tache',
+      region: 'Gatineau',
       name: 'Moca Loca Café Co',
       address: '283 Boul Alexandre-Taché, Gatineau',
       latitude: 45.42188,
@@ -358,6 +374,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'moca-loca-gappe',
+      region: 'Gatineau',
       name: 'Moca Loca Café Co',
       address: '799 Bd de la Gappe, Gatineau',
       latitude: 45.48376,
@@ -365,6 +382,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'cafe-mulligan',
+      region: 'Gatineau',
       name: 'Café Mulligan',
       address: '149 Rue Principale, Gatineau',
       latitude: 45.3955,
@@ -372,6 +390,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'cafe-british',
+      region: 'Gatineau',
       name: 'Café British',
       address: '79 Rue Principale, Gatineau',
       latitude: 45.39492,
@@ -379,6 +398,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'cafe-3-portages',
+      region: 'Gatineau',
       name: 'Café 3 Portages',
       address: '375 Chemin d\'Aylmer, Gatineau',
       latitude: 45.39653,
@@ -386,6 +406,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'aroma-select',
+      region: 'Gatineau',
       name: 'Les Cafés Aroma Select',
       address: '200 Rue Principale, Gatineau',
       latitude: 45.39478,
@@ -393,6 +414,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'cafe-bour-joie',
+      region: 'Gatineau',
       name: 'Le Café Bour-Joie',
       address: '140 Rue MacLaren E, Gatineau',
       latitude: 45.58672,
@@ -400,6 +422,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'happy-goat-laurel',
+      region: 'Ottawa',
       name: 'Happy Goat Coffee Co. (Laurel)',
       address: '35 Laurel St, Ottawa',
       latitude: 45.40559,
@@ -407,6 +430,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'happy-goat-elgin',
+      region: 'Ottawa',
       name: 'Happy Goat Coffee Co. (Elgin)',
       address: '326 Elgin St, Ottawa',
       latitude: 45.41602,
@@ -414,6 +438,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'happy-goat-sandy-hill',
+      region: 'Ottawa',
       name: 'Happy Goat Coffee Co. (Sandy Hill)',
       address: '317 Wilbrod St, Ottawa',
       latitude: 45.42774,
@@ -421,6 +446,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'morning-owl-rochester',
+      region: 'Ottawa',
       name: 'Morning Owl Coffeehouse',
       address: '538 Rochester St, Ottawa',
       latitude: 45.39963,
@@ -428,6 +454,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'morning-owl-armstrong',
+      region: 'Ottawa',
       name: 'Morning Owl Coffeehouse',
       address: '229 Armstrong St, Ottawa',
       latitude: 45.40204,
@@ -435,6 +462,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'morning-owl-laurier',
+      region: 'Ottawa',
       name: 'Morning Owl',
       address: '219 Laurier Ave W, Ottawa',
       latitude: 45.42006,
@@ -442,6 +470,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'ministry-of-coffee',
+      region: 'Ottawa',
       name: 'The Ministry of Coffee',
       address: '141 Laurier Ave W, Ottawa',
       latitude: 45.4209,
@@ -449,6 +478,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'bridgehead-glebe',
+      region: 'Ottawa',
       name: 'Bridgehead (Glebe)',
       address: '750 Bank St, Ottawa',
       latitude: 45.40349,
@@ -456,6 +486,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'bridgehead-old-ottawa-south',
+      region: 'Ottawa',
       name: 'Bridgehead (Old Ottawa South)',
       address: '1172 Bank St, Ottawa',
       latitude: 45.39211,
@@ -463,6 +494,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'bridgehead-little-italy',
+      region: 'Ottawa',
       name: 'Bridgehead (Little Italy / Roastery)',
       address: '130 Anderson St, Ottawa',
       latitude: 45.40721,
@@ -470,6 +502,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'bridgehead-sparks',
+      region: 'Ottawa',
       name: 'Bridgehead (Sparks)',
       address: '96 Sparks St, Ottawa',
       latitude: 45.42271,
@@ -477,6 +510,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'little-victories-elgin',
+      region: 'Ottawa',
       name: 'Little Victories Coffee Roasters',
       address: '44 Elgin St, Ottawa',
       latitude: 45.42315,
@@ -484,6 +518,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'little-victories-glebe',
+      region: 'Ottawa',
       name: 'Little Victories Coffee Roasters',
       address: '801 Bank St, Ottawa',
       latitude: 45.40282,
@@ -491,6 +526,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'little-victories-queen',
+      region: 'Ottawa',
       name: 'Little Victories Coffee Roasters',
       address: '209 Queen St, Ottawa',
       latitude: 45.42087,
@@ -498,6 +534,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'arlington-five',
+      region: 'Ottawa',
       name: 'Arlington Five',
       address: '5 Arlington Ave, Ottawa',
       latitude: 45.41023,
@@ -505,6 +542,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'cafe-cloudforest-ottawa',
+      region: 'Ottawa',
       name: 'Café Cloudforest',
       address: '339 Richmond Rd, Ottawa',
       latitude: 45.39222,
@@ -512,6 +550,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'ottawa-bike-cafe',
+      region: 'Ottawa',
       name: 'Ottawa Bike Cafe',
       address: '79 Sparks St, Ottawa',
       latitude: 45.42343,
@@ -519,6 +558,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'ten-toes-somerset',
+      region: 'Ottawa',
       name: 'Ten Toes Coffee House',
       address: '837 Somerset St W, Ottawa',
       latitude: 45.40909,
@@ -526,6 +566,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'ten-toes-glebe',
+      region: 'Ottawa',
       name: 'Ten Toes Coffee House',
       address: '593 Bank St, Ottawa',
       latitude: 45.40773,
@@ -533,6 +574,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'ten-toes-cyrville',
+      region: 'Ottawa',
       name: 'Ten Toes Coffee House',
       address: '1109 Cyrville Rd, Ottawa',
       latitude: 45.42452,
@@ -540,6 +582,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'black-squirrel-books',
+      region: 'Ottawa',
       name: 'Black Squirrel Books & Espresso Bar',
       address: '1073 Bank St, Ottawa',
       latitude: 45.3946,
@@ -547,6 +590,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'drip-house',
+      region: 'Ottawa',
       name: 'Drip House',
       address: '340B Parkdale Ave, Ottawa',
       latitude: 45.40226,
@@ -554,6 +598,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'equator-westboro',
+      region: 'Ottawa',
       name: 'Equator Coffee',
       address: '412 Churchill Ave N, Ottawa',
       latitude: 45.3916,
@@ -561,6 +606,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'equator-nac',
+      region: 'Ottawa',
       name: 'Equator Coffee',
       address: '1 Elgin St, Ottawa',
       latitude: 45.42313,
@@ -568,6 +614,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'planet-coffee',
+      region: 'Ottawa',
       name: 'Planet Coffee',
       address: '24a York St, Ottawa',
       latitude: 45.42765,
@@ -575,6 +622,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'bar-robo',
+      region: 'Ottawa',
       name: 'Bar Robo',
       address: '170 Queen St, Ottawa',
       latitude: 45.42085,
@@ -582,6 +630,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'wise-town-cafe',
+      region: 'Ottawa',
       name: 'Wise Town Cafe',
       address: '329a Elgin St, Ottawa',
       latitude: 45.41606,
@@ -589,6 +638,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'cafe-morala',
+      region: 'Ottawa',
       name: 'Café Morala',
       address: '734 Bank St, Ottawa',
       latitude: 45.40401,
@@ -596,6 +646,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'joe-the-dog',
+      region: 'Ottawa',
       name: 'Joe the Dog Coffee',
       address: '176 Dalhousie St, Ottawa',
       latitude: 45.4325,
@@ -603,6 +654,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'art-house',
+      region: 'Ottawa',
       name: 'Art House',
       address: '555 Somerset St W, Ottawa',
       latitude: 45.41303,
@@ -610,6 +662,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'origin-trade',
+      region: 'Ottawa',
       name: 'Origin Trade',
       address: '111 York St, Ottawa',
       latitude: 45.42939,
@@ -617,6 +670,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'parliament-cafe',
+      region: 'Ottawa',
       name: 'Parliament Café',
       address: '189 Sparks St, Ottawa',
       latitude: 45.42189,
@@ -624,6 +678,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'volume-coffee-house',
+      region: 'Ottawa',
       name: 'Volume Coffee House',
       address: '234 Laurier Ave E, Ottawa',
       latitude: 45.42585,
@@ -631,6 +686,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'red-door-provisions',
+      region: 'Ottawa',
       name: 'Red Door Provisions',
       address: '86 Beechwood Ave, Ottawa',
       latitude: 45.44038,
@@ -638,6 +694,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'z3-specialty-coffee',
+      region: 'Ottawa',
       name: 'Z3 Specialty Coffee',
       address: '150 Katimavik Rd #149, Ottawa',
       latitude: 45.31281,
@@ -645,6 +702,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'beandigen-cafe',
+      region: 'Ottawa',
       name: 'Beandigen Cafe',
       address: '900 Exhibition Way, Ottawa',
       latitude: 45.39922,
@@ -652,6 +710,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'pilot-wagstaff',
+      region: 'Toronto',
       name: 'Pilot Coffee Roasters',
       address: '50 Wagstaff Dr, Toronto',
       latitude: 43.67389,
@@ -659,6 +718,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'pilot-bloor',
+      region: 'Toronto',
       name: 'Pilot Coffee Roasters',
       address: '55 Bloor St W, Toronto',
       latitude: 43.66965,
@@ -666,6 +726,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'pilot-richmond',
+      region: 'Toronto',
       name: 'Pilot Coffee Roasters',
       address: '439 Richmond St W, Toronto',
       latitude: 43.64767,
@@ -673,6 +734,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'sam-james-harbord',
+      region: 'Toronto',
       name: 'Sam James Coffee Bar',
       address: '297 Harbord St, Toronto',
       latitude: 43.66023,
@@ -680,6 +742,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'sam-james-brock',
+      region: 'Toronto',
       name: 'Sam James Coffee Bar',
       address: '6 Brock Ave, Toronto',
       latitude: 43.64179,
@@ -687,6 +750,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'sam-james-ossington',
+      region: 'Toronto',
       name: 'Sam James Coffee Bar',
       address: '141 Ossington Ave, Toronto',
       latitude: 43.64743,
@@ -694,6 +758,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'boxcar-yonge',
+      region: 'Toronto',
       name: 'Boxcar Social',
       address: '1208 Yonge St, Toronto',
       latitude: 43.68172,
@@ -701,6 +766,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'boxcar-richmond',
+      region: 'Toronto',
       name: 'Boxcar Social',
       address: '499 Richmond St W, Toronto',
       latitude: 43.64719,
@@ -708,6 +774,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'de-mello-yonge',
+      region: 'Toronto',
       name: 'De Mello Palheta Coffee Roasters',
       address: '2489 Yonge St, Toronto',
       latitude: 43.71187,
@@ -715,6 +782,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'de-mello-bloor',
+      region: 'Toronto',
       name: 'De Mello Palheta Coffee Roasters',
       address: '365 Bloor St E Unit 19, Toronto',
       latitude: 43.67194,
@@ -722,6 +790,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'jimmys-baldwin',
+      region: 'Toronto',
       name: 'Jimmy\'s Coffee',
       address: '191 Baldwin St, Toronto',
       latitude: 43.6545,
@@ -729,6 +798,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'jimmys-royal-york',
+      region: 'Toronto',
       name: 'Jimmy\'s Coffee',
       address: '380 Royal York Rd, Toronto',
       latitude: 43.61868,
@@ -736,6 +806,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'moonbean',
+      region: 'Toronto',
       name: 'Moonbean Coffee Company',
       address: '30 St Andrew St, Toronto',
       latitude: 43.65428,
@@ -743,6 +814,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'hale-campbell',
+      region: 'Toronto',
       name: 'Hale Coffee Company',
       address: '300 Campbell Ave, Toronto',
       latitude: 43.66568,
@@ -750,6 +822,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'hale-adelaide',
+      region: 'Toronto',
       name: 'Hale Coffee Company',
       address: '1 Adelaide St E, Toronto',
       latitude: 43.65031,
@@ -757,6 +830,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'versus-coffee',
+      region: 'Toronto',
       name: 'Versus Coffee',
       address: '70 Adelaide St E, Toronto',
       latitude: 43.65129,
@@ -764,6 +838,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'neo-bay',
+      region: 'Toronto',
       name: 'Neo Coffee Bar',
       address: '770 Bay St, Toronto',
       latitude: 43.66013,
@@ -771,6 +846,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'neo-spadina',
+      region: 'Toronto',
       name: 'Neo Coffee Bar',
       address: '61 Spadina Ave, Toronto',
       latitude: 43.64507,
@@ -778,6 +854,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'dineen-yonge',
+      region: 'Toronto',
       name: 'Dineen Coffee Co.',
       address: '140 Yonge St, Toronto',
       latitude: 43.65112,
@@ -785,6 +862,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'dineen-gerrard',
+      region: 'Toronto',
       name: 'Dineen Coffee Co.',
       address: '1042 Gerrard St E, Toronto',
       latitude: 43.66921,
@@ -792,6 +870,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'found-coffee',
+      region: 'Toronto',
       name: 'Found Coffee',
       address: '189 Shaw St, Toronto',
       latitude: 43.64707,
@@ -799,6 +878,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'te-aro',
+      region: 'Toronto',
       name: 'Te Aro Coffee Roasters',
       address: '983 Queen St E, Toronto',
       latitude: 43.66124,
@@ -806,6 +886,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'quantum-coffee',
+      region: 'Toronto',
       name: 'Quantum Coffee',
       address: '460 King St W, Toronto',
       latitude: 43.64562,
@@ -813,6 +894,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'propeller-wade',
+      region: 'Toronto',
       name: 'Propeller Coffee Co.',
       address: '50 Wade Ave, Toronto',
       latitude: 43.65941,
@@ -820,6 +902,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'propeller-front',
+      region: 'Toronto',
       name: 'Propeller Coffee Co.',
       address: '486 Front St W, Toronto',
       latitude: 43.64205,
@@ -827,6 +910,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'ethica-coffee',
+      region: 'Toronto',
       name: 'Ethica Coffee Roasters',
       address: '213 Sterling Rd, Toronto',
       latitude: 43.65552,
@@ -834,6 +918,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'reunion-island',
+      region: 'Toronto',
       name: 'Reunion Island Coffee Bar',
       address: '385 Roncesvalles Ave, Toronto',
       latitude: 43.65056,
@@ -841,6 +926,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'goldstruck-cumberland',
+      region: 'Toronto',
       name: 'Goldstruck Coffee',
       address: '130 Cumberland St, Toronto',
       latitude: 43.67028,
@@ -848,6 +934,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'goldstruck-richmond',
+      region: 'Toronto',
       name: 'Goldstruck Coffee',
       address: '133 Richmond St W, Toronto',
       latitude: 43.65023,
@@ -855,6 +942,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'dark-horse-spadina',
+      region: 'Toronto',
       name: 'Dark Horse Espresso Bar',
       address: '215 Spadina Ave, Toronto',
       latitude: 43.65072,
@@ -862,6 +950,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'subtext-coffee',
+      region: 'Toronto',
       name: 'Subtext Coffee Roasters',
       address: '130 Cawthra Ave, Toronto',
       latitude: 43.67097,
@@ -869,6 +958,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'rooster-coffee',
+      region: 'Toronto',
       name: 'Rooster Coffee House',
       address: '479 Broadview Ave, Toronto',
       latitude: 43.6692,
@@ -876,6 +966,7 @@ abstract final class SampleData {
     ),
     CoffeeShop(
       id: 'library-coffee',
+      region: 'Toronto',
       name: 'Library Coffee',
       address: '281 Dundas St W, Toronto',
       latitude: 43.65427,

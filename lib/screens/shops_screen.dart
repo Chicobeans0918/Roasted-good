@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../models/coffee_bean.dart';
 import '../models/coffee_shop.dart';
@@ -31,6 +32,17 @@ List<CoffeeBean> beansForShop(List<CoffeeBean> beans, CoffeeShop shop) {
   return beans
       .where((b) => (b.whereToBuy ?? '').toLowerCase() == name)
       .toList();
+}
+
+/// Opens Apple Maps with driving directions to [shop].
+/// Uses coordinates when available, falling back to the address query.
+Future<void> openShopDirections(CoffeeShop shop) async {
+  final uri = shop.latitude != null && shop.longitude != null
+      ? Uri.parse(
+          'https://maps.apple.com/?daddr=${shop.latitude},${shop.longitude}')
+      : Uri.parse(
+          'https://maps.apple.com/?daddr=${Uri.encodeComponent(shop.address)}');
+  await launchUrl(uri, mode: LaunchMode.externalApplication);
 }
 
 /// Bottom sheet listing the coffees available at [shop].
@@ -375,30 +387,36 @@ class _ShopsScreenState extends State<ShopsScreen> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(28, 24, 28, 4),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'GATINEAU–OTTAWA ROASTERS',
-                  style: theme.textTheme.labelSmall,
-                ),
-              ),
-            ),
             Expanded(
-              child: ListView.separated(
-                padding: const EdgeInsets.fromLTRB(28, 4, 28, 48),
-                itemCount: shops.length,
-                separatorBuilder: (_, _) => const SizedBox(height: 8),
-                itemBuilder: (context, index) {
-                  final shop = shops[index];
-                  return _ShopCard(
-                    shop: shop,
-                    distanceKm: _distanceKm(shop),
-                    highlighted: shop.id == _selectedShopId,
-                    onTap: () => _selectShop(shop),
-                  );
-                },
+              child: ListView(
+                padding: const EdgeInsets.fromLTRB(28, 24, 28, 48),
+                children: [
+                  for (final region in const [
+                    'Gatineau',
+                    'Ottawa',
+                    'Toronto'
+                  ])
+                    if (shops.any((s) => s.region == region)) ...[
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 4),
+                        child: Text(
+                          '${region.toUpperCase()} ROASTERS',
+                          style: theme.textTheme.labelSmall,
+                        ),
+                      ),
+                      for (final shop
+                          in shops.where((s) => s.region == region)) ...[
+                        _ShopCard(
+                          shop: shop,
+                          distanceKm: _distanceKm(shop),
+                          highlighted: shop.id == _selectedShopId,
+                          onTap: () => _selectShop(shop),
+                        ),
+                        const SizedBox(height: 8),
+                      ],
+                      const SizedBox(height: 16),
+                    ],
+                ],
               ),
             ),
           ],
@@ -500,9 +518,28 @@ class _ShopCard extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 8),
-            Text(
-              '${distanceKm.toStringAsFixed(1)} km',
-              style: theme.textTheme.bodySmall,
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  '${distanceKm.toStringAsFixed(1)} km',
+                  style: theme.textTheme.bodySmall,
+                ),
+                const SizedBox(height: 4),
+                Material(
+                  color: p.surfaceVariant.withValues(alpha: 0.5),
+                  shape: const CircleBorder(),
+                  child: IconButton(
+                    tooltip: 'Get directions',
+                    icon: Icon(
+                      Icons.directions_outlined,
+                      size: 20,
+                      color: p.ink,
+                    ),
+                    onPressed: () => openShopDirections(shop),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
