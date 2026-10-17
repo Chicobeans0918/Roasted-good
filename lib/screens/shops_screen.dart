@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
 
 import '../models/coffee_shop.dart';
@@ -7,12 +10,15 @@ import '../state/app_state.dart';
 import '../theme/app_theme.dart';
 
 /// Coffee shops and roasteries on a real interactive map
-/// (CARTO minimal basemaps — free, no API key, no POI clutter),
+/// (Esri basemaps — free, no API key),
 /// centered on Gatineau–Ottawa. The tile style follows the app theme.
 ///
-/// CARTO basemaps — no API key required.
-String cartoTileUrl({required bool dark}) =>
-    'https://{s}.basemaps.cartocdn.com/${dark ? 'dark_all' : 'light_all'}/{z}/{x}/{y}{r}.png';
+/// Esri basemaps — no API key required.
+/// Free keyless map tiles (Esri). Note the {z}/{y}/{x} order — Esri puts
+/// the row before the column, unlike most tile servers.
+String esriTileUrl({required bool dark}) => dark
+    ? 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}'
+    : 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}';
 
 class ShopsScreen extends StatefulWidget {
   const ShopsScreen({super.key});
@@ -27,17 +33,104 @@ class _ShopsScreenState extends State<ShopsScreen> {
   /// Gatineau–Ottawa midpoint, covering both cities.
   static const LatLng _regionCenter = LatLng(45.431, -75.72);
 
-  /// Sample "you are here" point (downtown Hull).
-  static const LatLng _userLocation = LatLng(45.43, -75.716);
+  /// Real GPS position once location permission is granted; null until then.
+  Position? _position;
+  StreamSubscription<Position>? _positionSub;
+
+  /// When true, the map recenters on the user as they move.
+  bool _following = false;
+
+  /// Last map-focus request consumed from AppState (bean → shop links).
+  String? _lastFocusId;
 
   String? _selectedShopId;
+
+  @override
+  void initState() {
+    super.initState();
+    _initLocation();
+  }
+
+  @override
+  void dispose() {
+    _positionSub?.cancel();
+    super.dispose();
+  }
+
+  /// If location was already granted in a previous session, start
+  /// tracking silently. Otherwise the user opts in via the locate button
+  /// (which triggers the iOS permission prompt in context).
+  Future<void> _initLocation() async {
+    if (!await Geolocator.isLocationServiceEnabled()) return;
+    final permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.whileInUse ||
+        permission == LocationPermission.always) {
+      _startTracking(follow: true);
+    }
+  }
+
+  /// Locate button: asks for permission if needed, then centers the map
+  /// on the user and follows them.
+  Future<void> _onLocatePressed() async {
+    if (!await Geolocator.isLocationServiceEnabled()) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Turn on Location Services to see where you are.'),
+        ),
+      );
+      return;
+    }
+    var permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+    }
+    if (permission == LocationPermission.denied ||
+        permission == LocationPermission.deniedForever) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text(
+            'Location permission is needed to show you on the map. '
+            'You can enable it in Settings.',
+          ),
+        ),
+      );
+      return;
+    }
+    _startTracking(follow: true);
+  }
+
+  void _startTracking({required bool follow}) {
+    _positionSub?.cancel();
+    setState(() => _following = follow);
+    _positionSub = Geolocator.getPositionStream(
+      locationSettings: const LocationSettings(
+        accuracy: LocationAccuracy.high,
+        distanceFilter: 10,
+      ),
+    ).listen((position) {
+      if (!mounted) return;
+      setState(() => _position = position);
+      if (_following) {
+        _mapController.move(
+          LatLng(position.latitude, position.longitude),
+          _mapController.camera.zoom,
+        );
+      }
+    });
+  }
+
+  LatLng get _userLatLng => _position == null
+      ? _regionCenter
+      : LatLng(_position!.latitude, _position!.longitude);
 
   double _distanceKm(CoffeeShop shop) {
     if (shop.latitude == null || shop.longitude == null) return 0;
     const distance = Distance();
     return distance.as(
       LengthUnit.Kilometer,
-      _userLocation,
+      _userLatLng,
       LatLng(shop.latitude!, shop.longitude!),
     );
   }
@@ -49,15 +142,32 @@ class _ShopsScreenState extends State<ShopsScreen> {
     }
   }
 
+  /// Consumes a pending "focus this shop" request (from a bean's
+  /// "where to buy" link) exactly once.
+  void _consumeMapFocus(AppState state) {
+    final focusId = state.mapFocusShopId;
+    if (focusId == null || focusId == _lastFocusId) return;
+    _lastFocusId = focusId;
+    final shop = state.shops.where((s) => s.id == focusId).firstOrNull;
+    if (shop == null) return;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      setState(() => _following = false);
+      _selectShop(shop);
+      state.clearMapFocus();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final p = context.palette;
     final state = AppState.of(context);
+    _consumeMapFocus(state);
     final shops = state.shops;
     final selected =
         shops.where((s) => s.id == _selectedShopId).firstOrNull;
-    // CARTO minimal basemaps (no API key); style follows the theme.
+    // Esri basemaps (no API key); style follows the theme.
     final isDark = theme.brightness == Brightness.dark;
 
     return Scaffold(
@@ -70,30 +180,42 @@ class _ShopsScreenState extends State<ShopsScreen> {
                 children: [
                   FlutterMap(
                     mapController: _mapController,
-                    options: const MapOptions(
+                    options: MapOptions(
                       initialCenter: _regionCenter,
                       initialZoom: 12,
+                      // A manual drag breaks follow mode — the user took over.
+                      onPositionChanged: (pos, hasGesture) {
+                        if (hasGesture && _following) {
+                          setState(() => _following = false);
+                        }
+                      },
                     ),
                     children: [
                       TileLayer(
-                        // CARTO minimal basemaps (no API key, no POI clutter);
+                        // Esri basemaps (no API key);
                         // the style follows the app theme.
-                        urlTemplate: cartoTileUrl(dark: isDark),
+                        urlTemplate: esriTileUrl(dark: isDark),
                         subdomains: const ['a', 'b', 'c', 'd'],
                         userAgentPackageName: 'com.beanquest.coffee_beans',
                       ),
                       MarkerLayer(
                         markers: [
-                          Marker(
-                            point: _userLocation,
-                            width: 32,
-                            height: 32,
-                            child: const Icon(
-                              Icons.my_location,
-                              color: Colors.blue,
-                              size: 24,
+                          // Real user location — only shown once we
+                          // actually have a GPS fix (no more fake dot).
+                          if (_position != null)
+                            Marker(
+                              point: LatLng(
+                                _position!.latitude,
+                                _position!.longitude,
+                              ),
+                              width: 32,
+                              height: 32,
+                              child: const Icon(
+                                Icons.my_location,
+                                color: Colors.blue,
+                                size: 24,
+                              ),
                             ),
-                          ),
                           for (final shop in shops)
                             if (shop.latitude != null &&
                                 shop.longitude != null)
@@ -131,15 +253,37 @@ class _ShopsScreenState extends State<ShopsScreen> {
                         onTap: () {},
                       ),
                     ),
-                  // Tile attribution (required by CARTO / OSM).
+                  // Tile attribution (required by Esri).
                   Positioned(
                     right: 8,
                     bottom: 6,
                     child: Text(
-                      '© OpenStreetMap contributors © CARTO',
+                      '© Esri & contributors',
                       style: theme.textTheme.bodySmall?.copyWith(
                         fontSize: 9,
                         color: p.muted,
+                      ),
+                    ),
+                  ),
+                  // Locate / follow-me button.
+                  Positioned(
+                    right: 12,
+                    top: 12,
+                    child: Material(
+                      color: p.surface,
+                      shape: const CircleBorder(),
+                      elevation: 2,
+                      child: IconButton(
+                        tooltip: _following
+                            ? 'Following you — tap to stop'
+                            : 'Show my location',
+                        icon: Icon(
+                          _following
+                              ? Icons.my_location
+                              : Icons.location_searching,
+                          color: _following ? Colors.blue : p.ink,
+                        ),
+                        onPressed: _onLocatePressed,
                       ),
                     ),
                   ),

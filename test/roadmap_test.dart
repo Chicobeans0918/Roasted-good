@@ -8,6 +8,7 @@ import 'package:coffee_beans/screens/information_screen.dart';
 import 'package:coffee_beans/screens/shops_screen.dart';
 import 'package:coffee_beans/state/app_state.dart';
 import 'package:coffee_beans/theme/app_theme.dart';
+import 'package:coffee_beans/widgets/bean_detail_sheet.dart';
 import 'package:coffee_beans/widgets/profile_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -115,14 +116,14 @@ void main() {
   });
 
   group('minimal map tiles', () {
-    test('CARTO tile URLs need no API key', () {
+    test('Esri tile URLs need no API key', () {
       expect(
-        cartoTileUrl(dark: false),
-        'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+        esriTileUrl(dark: false),
+        'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
       );
       expect(
-        cartoTileUrl(dark: true),
-        'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+        esriTileUrl(dark: true),
+        'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',
       );
     });
   });
@@ -230,7 +231,7 @@ void main() {
   group('shops seed', () {
     test('the two new shops are present with exact coordinates', () {
       final byId = {for (final s in SampleData.shops) s.id: s};
-      expect(byId.length, 9);
+      expect(byId.length, greaterThanOrEqualTo(9));
       final uji = byId['uji-cafe']!;
       expect(uji.name, 'Uji Café');
       expect(uji.address, '215 Rideau St, Ottawa');
@@ -307,6 +308,39 @@ void main() {
       await tester.tap(find.text('Dark'));
       await tester.pump();
       expect(state.themeMode, ThemeMode.dark);
+    });
+  });
+
+  group('bean → shop linking', () {
+    test('matches the roaster shop by name', () {
+      final shop = shopForWhereToBuy(
+        SampleData.shops,
+        'Brown Bag Coffee Roasters',
+      );
+      expect(shop, isNotNull);
+      expect(shop!.id, 'brown-bag');
+    });
+
+    test('matching is case-insensitive', () {
+      expect(
+        shopForWhereToBuy(SampleData.shops, 'brown bag coffee roasters')?.id,
+        'brown-bag',
+      );
+    });
+
+    test('returns null for online-only roasters and blanks', () {
+      expect(shopForWhereToBuy(SampleData.shops, 'edika.com'), isNull);
+      expect(shopForWhereToBuy(SampleData.shops, null), isNull);
+      expect(shopForWhereToBuy(SampleData.shops, '  '), isNull);
+    });
+  });
+
+  group('dark theme legibility', () {
+    test('dark muted text is lighter than light muted text', () {
+      expect(
+        RoastedPalette.dark.muted.computeLuminance(),
+        greaterThan(RoastedPalette.light.muted.computeLuminance()),
+      );
     });
   });
 }

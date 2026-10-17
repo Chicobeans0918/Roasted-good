@@ -16,9 +16,17 @@ class UserDataSync {
   DocumentReference<Map<String, dynamic>> _wishlist(String uid) =>
       _db.collection('users').doc(uid).collection('wishlist').doc('main');
 
-  /// Loads remote tastings + wishlist into memory. Returns the pair so
-  /// the caller can replace local state.
-  Future<({List<TriedCoffee> tastings, Set<String> wishlist})> pull(
+  DocumentReference<Map<String, dynamic>> _barcodeLinks(String uid) =>
+      _db.collection('users').doc(uid).collection('barcodes').doc('main');
+
+  /// Loads remote tastings + wishlist + barcode links into memory.
+  /// Returns the triple so the caller can replace local state.
+  Future<
+      ({
+        List<TriedCoffee> tastings,
+        Set<String> wishlist,
+        Map<String, String> barcodeLinks,
+      })> pull(
     String uid,
   ) async {
     try {
@@ -32,9 +40,23 @@ class UserDataSync {
       final wishlist = {
         for (final id in (ids as List? ?? [])) id as String,
       };
-      return (tastings: tastings, wishlist: wishlist);
+      final linksSnap = await _barcodeLinks(uid).get();
+      final rawLinks = linksSnap.data()?['links'];
+      final barcodeLinks = {
+        for (final e in (rawLinks as Map? ?? {}).entries)
+          e.key as String: e.value as String,
+      };
+      return (
+        tastings: tastings,
+        wishlist: wishlist,
+        barcodeLinks: barcodeLinks
+      );
     } catch (_) {
-      return (tastings: <TriedCoffee>[], wishlist: <String>{});
+      return (
+        tastings: <TriedCoffee>[],
+        wishlist: <String>{},
+        barcodeLinks: <String, String>{},
+      );
     }
   }
 
@@ -54,6 +76,19 @@ class UserDataSync {
     try {
       await _wishlist(uid).set({
         'beanIds': beanIds.toList(),
+        'updatedAt': FieldValue.serverTimestamp(),
+      });
+    } catch (_) {/* offline: keep local only */}
+  }
+
+  /// barcode -> beanId links the user created by scanning bags.
+  Future<void> pushBarcodeLinks(
+    String uid,
+    Map<String, String> links,
+  ) async {
+    try {
+      await _barcodeLinks(uid).set({
+        'links': links,
         'updatedAt': FieldValue.serverTimestamp(),
       });
     } catch (_) {/* offline: keep local only */}

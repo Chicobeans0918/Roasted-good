@@ -1,6 +1,7 @@
 import 'dart:async' show unawaited;
 
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart' as ads;
 
 import 'navigation/app_shell.dart';
 import 'screens/login_screen.dart';
@@ -8,6 +9,7 @@ import 'services/auth_service.dart';
 import 'services/firebase_bootstrap.dart';
 import 'state/app_state.dart';
 import 'theme/app_theme.dart';
+import 'ads/interstitial_manager.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,6 +19,9 @@ Future<void> main() async {
   final firebaseReady = await FirebaseBootstrap.init();
   AuthService.instance = AuthService(firebaseEnabled: firebaseReady);
 
+  // AdMob banners (test ids until real ones are configured).
+  unawaited(ads.MobileAds.instance.initialize());
+  InterstitialManager.instance.preload();
   final state = AppState();
   await state.loadPreferences();
   // Try the remote catalogue (Firestore) when Firebase is ready;

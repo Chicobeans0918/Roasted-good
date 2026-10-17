@@ -6,7 +6,9 @@ import '../screens/profile_screen.dart';
 import '../screens/scan_screen.dart';
 import '../screens/shops_screen.dart';
 import '../screens/stats_screen.dart';
+import '../state/app_state.dart';
 import '../theme/app_theme.dart';
+import '../widgets/ad_banner.dart';
 
 /// Bottom tab bar shell hosting the five main sections.
 class AppShell extends StatefulWidget {
@@ -19,8 +21,6 @@ class AppShell extends StatefulWidget {
 }
 
 class _AppShellState extends State<AppShell> {
-  int _index = 0;
-
   static const List<_Tab> _tabs = [
     _Tab(
       label: 'Home',
@@ -57,11 +57,12 @@ class _AppShellState extends State<AppShell> {
   @override
   Widget build(BuildContext context) {
     final p = context.palette;
+    final state = AppState.of(context);
     return Scaffold(
       body: Stack(
         children: [
           IndexedStack(
-            index: _index,
+            index: state.tabIndex,
             children: [for (final tab in _tabs) tab.screen],
           ),
           // Scan-a-bag shortcut, top right of every main screen.
@@ -83,32 +84,38 @@ class _AppShellState extends State<AppShell> {
           ),
         ],
       ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: p.surface,
-          border: Border(
-            top: BorderSide(color: p.line),
-          ),
-        ),
-        child: BottomNavigationBar(
-          currentIndex: _index,
-          type: BottomNavigationBarType.fixed,
-          backgroundColor: p.surface,
-          selectedItemColor: p.ink,
-          unselectedItemColor: p.muted,
-          elevation: 0,
-          selectedLabelStyle: const TextStyle(fontSize: 11),
-          unselectedLabelStyle: const TextStyle(fontSize: 11),
-          onTap: (index) => setState(() => _index = index),
-          items: [
-            for (final tab in _tabs)
-              BottomNavigationBarItem(
-                icon: Icon(tab.icon),
-                activeIcon: Icon(tab.activeIcon),
-                label: tab.label,
+      bottomNavigationBar: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const AdBanner(),
+          Container(
+            decoration: BoxDecoration(
+              color: p.surface,
+              border: Border(
+                top: BorderSide(color: p.line),
               ),
-          ],
-        ),
+            ),
+            child: BottomNavigationBar(
+              currentIndex: state.tabIndex,
+              type: BottomNavigationBarType.fixed,
+              backgroundColor: p.surface,
+              selectedItemColor: p.ink,
+              unselectedItemColor: p.muted,
+              elevation: 0,
+              selectedLabelStyle: const TextStyle(fontSize: 11),
+              unselectedLabelStyle: const TextStyle(fontSize: 11),
+              onTap: (index) => state.setTabIndex(index),
+              items: [
+                for (final tab in _tabs)
+                  BottomNavigationBarItem(
+                    icon: Icon(tab.icon),
+                    activeIcon: Icon(tab.activeIcon),
+                    label: tab.label,
+                  ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

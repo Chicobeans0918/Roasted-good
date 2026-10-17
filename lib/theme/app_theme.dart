@@ -111,7 +111,7 @@ class RoastedPalette extends ThemeExtension<RoastedPalette> {
     surfaceVariant: Color(0xFF3A2A18),
     line: Color(0xFF4A3524),
     ink: Color(0xFFECE0D1),
-    muted: Color(0xFFA98F6F),
+    muted: Color(0xFFCDB088),
     accent: Color(0xFF4A3220),
     onAccent: Color(0xFFECE0D1),
     identityCard: Color(0xFFECE0D1),
@@ -313,7 +313,7 @@ abstract final class AppTheme {
       colorScheme: const ColorScheme.dark(
         primary: Color(0xFFECE0D1),
         onPrimary: Color(0xFF1C130C),
-        secondary: Color(0xFFA98F6F),
+        secondary: Color(0xFFCDB088),
         onSecondary: Color(0xFF1C130C),
         surface: Color(0xFF2A1D12),
         onSurface: Color(0xFFECE0D1),
@@ -331,7 +331,7 @@ abstract final class AppTheme {
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         backgroundColor: Color(0xFF2A1D12),
         selectedItemColor: Color(0xFFECE0D1),
-        unselectedItemColor: Color(0xFFA98F6F),
+        unselectedItemColor: Color(0xFFCDB088),
         elevation: 0,
       ),
       textTheme: TextTheme(
@@ -346,10 +346,10 @@ abstract final class AppTheme {
         titleSmall: AppType.serifStyle(size: 14, color: p.ink),
         bodyLarge: const TextStyle(color: Color(0xFFECE0D1)),
         bodyMedium: const TextStyle(color: Color(0xFFECE0D1)),
-        bodySmall: const TextStyle(color: Color(0xFFA98F6F)),
+        bodySmall: const TextStyle(color: Color(0xFFCDB088)),
         labelLarge: const TextStyle(color: Color(0xFFECE0D1)),
         labelSmall: const TextStyle(
-          color: Color(0xFFA98F6F),
+          color: Color(0xFFCDB088),
           letterSpacing: 1.2,
         ),
       ),
@@ -374,9 +374,9 @@ abstract final class AppTheme {
         ),
       ),
       inputDecorationTheme: const InputDecorationTheme(
-        labelStyle: TextStyle(color: Color(0xFFA98F6F)),
-        hintStyle: TextStyle(color: Color(0xFFA98F6F)),
-        prefixIconColor: Color(0xFFA98F6F),
+        labelStyle: TextStyle(color: Color(0xFFCDB088)),
+        hintStyle: TextStyle(color: Color(0xFFCDB088)),
+        prefixIconColor: Color(0xFFCDB088),
         filled: false,
         enabledBorder: UnderlineInputBorder(
           borderSide: BorderSide(color: Color(0xFF4A3524)),

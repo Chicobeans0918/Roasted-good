@@ -1,5 +1,8 @@
+import 'dart:async' show unawaited;
+
 import 'package:flutter/material.dart';
 
+import '../ads/interstitial_manager.dart';
 import '../models/coffee_bean.dart';
 import '../models/tried_coffee.dart';
 import '../state/app_state.dart';
@@ -57,6 +60,8 @@ class _TastingFormSheetState extends State<TastingFormSheet> {
       ),
     );
     Navigator.of(context).pop();
+    // Capped interstitial at this natural break point (max once/day).
+    unawaited(InterstitialManager.instance.maybeShow());
   }
 
   @override

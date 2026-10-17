@@ -21,6 +21,14 @@ const Map<String, String> _photoByBeanId = {
   // Dark roast.
   'bbcr-dark-roast': 'dark_roast_beans.jpg',
   'bbcr-sumatra': 'dark_roast_bowl.jpg',
+  // Edika (Montréal) — ordered to match catalogue alternation.
+  'edika-mother-melade': 'medium_roast_scatter.jpg',
+  'edika-tricote-serre': 'medium_dark_beans.jpg',
+  'edika-spice-buddy': 'medium_roast_beans.jpg',
+  'edika-natural-candour': 'medium_dark_beans.jpg',
+  'edika-small-velvet': 'beans_pouring.jpg',
+  'edika-fireside-decaf': 'medium_dark_beans.jpg',
+  'edika-love-at-first-sight': 'light_roast_texture.jpg',
 };
 
 /// Asset path of the photo for [bean], e.g. 'assets/beans/dark_roast_beans.jpg'.

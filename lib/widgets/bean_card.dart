@@ -33,6 +33,50 @@ List<Color> roastGradient(String roastLevel) {
   }
 }
 
+/// Bean photo widget: shows the bean's remote [imageUrl] when it has one
+/// (Firestore-driven — pictures update with no rebuild needed), otherwise
+/// the bundled photo asset. Falls back to the roast gradient if the
+/// image can't load.
+Widget beanImage(
+  CoffeeBean bean, {
+  BoxFit fit = BoxFit.cover,
+  double? width,
+  double? height,
+}) {
+  Widget fallback() {
+    final gradient = roastGradient(bean.roastLevel);
+    return Container(
+      width: width,
+      height: height,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: gradient,
+        ),
+      ),
+    );
+  }
+
+  final url = bean.imageUrl;
+  if (url != null && url.isNotEmpty) {
+    return Image.network(
+      url,
+      width: width,
+      height: height,
+      fit: fit,
+      errorBuilder: (_, _, _) => fallback(),
+    );
+  }
+  return Image.asset(
+    beanPhotoAsset(bean),
+    width: width,
+    height: height,
+    fit: fit,
+    errorBuilder: (_, _, _) => fallback(),
+  );
+}
+
 /// Bean photo thumbnail — the real bean photograph, with the roast
 /// gradient as a fallback if the asset can't load.
 class BeanThumb extends StatelessWidget {
@@ -51,26 +95,7 @@ class BeanThumb extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(borderRadius),
-      child: Image.asset(
-        beanPhotoAsset(bean),
-        width: size,
-        height: size,
-        fit: BoxFit.cover,
-        errorBuilder: (_, _, _) {
-          final gradient = roastGradient(bean.roastLevel);
-          return Container(
-            width: size,
-            height: size,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: gradient,
-              ),
-            ),
-          );
-        },
-      ),
+      child: beanImage(bean, width: size, height: size),
     );
   }
 }
@@ -124,22 +149,7 @@ class BeanGridCard extends StatelessWidget {
             child: Stack(
               fit: StackFit.expand,
               children: [
-                Image.asset(
-                  beanPhotoAsset(bean),
-                  fit: BoxFit.cover,
-                  errorBuilder: (_, _, _) {
-                    final gradient = roastGradient(bean.roastLevel);
-                    return Container(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors: gradient,
-                        ),
-                      ),
-                    );
-                  },
-                ),
+                beanImage(bean),
                 if (tried)
                   Positioned(
                     top: 8,

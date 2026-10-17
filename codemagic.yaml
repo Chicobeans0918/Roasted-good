@@ -34,6 +34,12 @@ workflows:
     scripts:
       - name: Flutter pub get
         script: flutter pub get
+      - name: Install iOS pods
+        script: |
+          # Generates ios/Podfile when missing and runs pod install.
+          # Required because the manual xcodebuild archive below does not
+          # install pods on its own (flutter build ios would).
+          flutter build ios --release --no-codesign
       - name: Set up keychain for code signing
         script: keychain initialize
       - name: Fetch signing files
@@ -50,10 +56,48 @@ workflows:
           app-store-connect fetch-signing-files "$BUNDLE_ID" --type IOS_APP_STORE --create
       - name: Set up signing certificate
         script: |
-          # The CLI-generated p12 is unreadable by macOS ("Unable to decode the provided
-          # data"). Use our openssl-built p12 from DISTRIBUTION_P12_B64 instead.
-          # (macOS refuses empty-password p12s, so ours uses a password.)
-          echo "$DISTRIBUTION_P12_B64" | base64 --decode > /tmp/distribution.p12
+          # Decode our RSA private key and verify it's valid
+          echo "$CERTIFICATE_PRIVATE_KEY" | base64 --decode > /tmp/cert_key.pem
+          if ! openssl rsa -in /tmp/cert_key.pem -check -noout 2>/dev/null; then
+            echo "ERROR: CERTIFICATE_PRIVATE_KEY is not a valid RSA key."
+            echo "Re-paste the contents of ios_distribution_private_key.b64.txt into Codemagic."
+            exit 1
+          fi
+          echo "Private key OK"
+          # Find the provisioning profile downloaded by fetch
+          PROFILE=$(ls ~/Library/Developer/Xcode/UserData/Provisioning\ Profiles/*.mobileprovision 2>/dev/null | head -1)
+          if [ -z "$PROFILE" ]; then
+            echo "ERROR: no provisioning profile found"
+            exit 1
+          fi
+          echo "Profile: $PROFILE"
+          # Extract the certificate embedded in the profile
+          security cms -D -i "$PROFILE" -o /tmp/profile.plist
+          python3 -c "
+          import plistlib, sys
+          with open('/tmp/profile.plist','rb') as f:
+              p = plistlib.load(f)
+          certs = p.get('DeveloperCertificates', [])
+          if not certs:
+              print('ERROR: no certificates in profile')
+              sys.exit(1)
+          with open('/tmp/profile_cert.der','wb') as f:
+              f.write(certs[0])
+          print('Extracted certificate from profile')
+          "
+          # Verify our private key matches the profile's certificate
+          PROFILE_PUB=$(openssl x509 -in /tmp/profile_cert.der -inform DER -noout -pubkey)
+          KEY_PUB=$(openssl rsa -in /tmp/cert_key.pem -pubout 2>/dev/null)
+          if [ "$PROFILE_PUB" != "$KEY_PUB" ]; then
+            echo "ERROR: CERTIFICATE_PRIVATE_KEY does not match the profile's certificate."
+            echo "Re-paste ios_distribution_private_key.b64.txt into the Codemagic variable."
+            exit 1
+          fi
+          echo "Key matches profile certificate"
+          # Build a clean p12 from the profile's cert + our key (macOS refuses
+          # empty-password p12s, so we use a password)
+          openssl x509 -in /tmp/profile_cert.der -inform DER -out /tmp/profile_cert.pem
+          openssl pkcs12 -export -in /tmp/profile_cert.pem -inkey /tmp/cert_key.pem -out /tmp/distribution.p12 -passout pass:dist-p12-pass -name "Apple Distribution"
           openssl pkcs12 -in /tmp/distribution.p12 -noout -passin pass:dist-p12-pass && echo "p12 verified"
           # Remove the broken CLI-generated p12s so they can't be picked up
           rm -f ~/Library/Developer/Xcode/UserData/Certificates/*.p12
@@ -69,7 +113,84 @@ workflows:
           ls ~/Library/MobileDevice/Provisioning\ Profiles/ 2>/dev/null || echo "(none in MobileDevice)"
           ls ~/Library/Developer/Xcode/UserData/Provisioning\ Profiles/ 2>/dev/null || echo "(none in Xcode UserData)"
       - name: Build signed IPA
-        script: flutter build ipa --release
+        script: |
+          set -e
+          # Configure the Runner target's Release build settings directly in the
+          # Xcode project (per-target, so Swift Packages are untouched).
+          PROFILE_PATH=$(ls ~/Library/Developer/Xcode/UserData/Provisioning\ Profiles/*.mobileprovision | head -1)
+          security cms -D -i "$PROFILE_PATH" -o /tmp/profile.plist
+          PROFILE_UUID=$(plutil -extract UUID raw /tmp/profile.plist)
+          PROFILE_NAME=$(plutil -extract Name raw /tmp/profile.plist)
+          echo "Using profile: $PROFILE_NAME ($PROFILE_UUID)"
+          echo "=== Profile app ID check ==="
+          plutil -extract Entitlements.application-identifier raw /tmp/profile.plist || echo "no application-identifier"
+          plutil -extract AppIDName raw /tmp/profile.plist || true
+          python3 <<'PYEOF'
+          import re
+          pbx = 'ios/Runner.xcodeproj/project.pbxproj'
+          with open(pbx) as f:
+              content = f.read()
+          def set_signing(m):
+              block = m.group(0)
+              block = re.sub(r'CODE_SIGN_STYLE\s*=\s*[^;]*;', 'CODE_SIGN_STYLE = Manual;', block)
+              if 'CODE_SIGN_STYLE =' not in block:
+                  block = block.replace('buildSettings = {', 'buildSettings = {\n\t\t\t\tCODE_SIGN_STYLE = Manual;', 1)
+              block = re.sub(r'CODE_SIGN_IDENTITY\s*=\s*[^;]*;', 'CODE_SIGN_IDENTITY = "Apple Distribution";', block)
+              if 'CODE_SIGN_IDENTITY =' not in block:
+                  block = block.replace('buildSettings = {', 'buildSettings = {\n\t\t\t\tCODE_SIGN_IDENTITY = "Apple Distribution";', 1)
+              block = re.sub(r'PROVISIONING_PROFILE_SPECIFIER\s*=\s*[^;]*;', 'PROVISIONING_PROFILE_SPECIFIER = "__UUID__";', block)
+              if 'PROVISIONING_PROFILE_SPECIFIER' not in block:
+                  block = block.replace('buildSettings = {', 'buildSettings = {\n\t\t\t\tPROVISIONING_PROFILE_SPECIFIER = "__UUID__";', 1)
+              block = re.sub(r'DEVELOPMENT_TEAM\s*=\s*[^;]*;', 'DEVELOPMENT_TEAM = 5KF96D48DG;', block)
+              if 'DEVELOPMENT_TEAM =' not in block:
+                  block = block.replace('buildSettings = {', 'buildSettings = {\n\t\t\t\tDEVELOPMENT_TEAM = 5KF96D48DG;', 1)
+              return block
+          new_content = re.sub(
+              r'/\* Release \*/ = \{\s*isa = XCBuildConfiguration;.*?buildSettings = \{.*?\};\s*name = Release;',
+              lambda m: set_signing(m).replace('__UUID__', '__PROFILE_UUID__'),
+              content,
+              flags=re.DOTALL
+          )
+          with open(pbx, 'w') as f:
+              f.write(new_content)
+          print("Updated pbxproj Release configs")
+          PYEOF
+          sed -i '' "s/__PROFILE_UUID__/$PROFILE_UUID/g" ios/Runner.xcodeproj/project.pbxproj
+          echo "--- Verifying ---"
+          grep -A2 'name = Release;' ios/Runner.xcodeproj/project.pbxproj | grep -E 'CODE_SIGN|PROVISIONING|DEVELOPMENT_TEAM' | head -12
+          # Manual archive: identity+team on the command line (safe for packages),
+          # profile comes from the pbxproj (per-target, packages untouched).
+          xcodebuild -workspace ios/Runner.xcworkspace \
+            -scheme Runner \
+            -configuration Release \
+            -archivePath "$HOME/Runner.xcarchive" \
+            archive \
+            CODE_SIGN_STYLE=Manual \
+            CODE_SIGN_IDENTITY="Apple Distribution" \
+            DEVELOPMENT_TEAM=5KF96D48DG
+          cat > /tmp/ExportOptions.plist <<EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+              <key>method</key><string>app-store</string>
+              <key>teamID</key><string>5KF96D48DG</string>
+              <key>signingStyle</key><string>manual</string>
+              <key>provisioningProfiles</key>
+              <dict>
+                  <key>$BUNDLE_ID</key>
+                  <string>$PROFILE_UUID</string>
+              </dict>
+          </dict>
+          </plist>
+          EOF
+          rm -rf build/ios/ipa
+          xcodebuild -exportArchive \
+            -archivePath "$HOME/Runner.xcarchive" \
+            -exportPath build/ios/ipa \
+            -exportOptionsPlist /tmp/ExportOptions.plist
+          echo "=== IPA built ==="
+          ls -la build/ios/ipa/
       - name: Publish to App Store Connect
         script: |
           export APP_STORE_CONNECT_PRIVATE_KEY="$(echo "$APP_STORE_CONNECT_PRIVATE_KEY" | base64 --decode)"

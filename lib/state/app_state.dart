@@ -22,6 +22,10 @@ class AppState extends ChangeNotifier {
   final Map<String, double> _ratings = {};
   final List<TriedCoffee> _tried = [];
 
+  /// Barcode -> beanId links the user created by scanning bags.
+  /// Catalogue beans can also carry a roaster-provided [CoffeeBean.barcode].
+  final Map<String, String> _barcodeLinks = {};
+
   String roastPreference = 'Medium';
   double surpriseMe = 0.5;
   bool decafOnly = false;
@@ -35,6 +39,35 @@ class AppState extends ChangeNotifier {
     if (_themeMode == mode) return;
     _themeMode = mode;
     notifyListeners();
+  }
+
+  // ——— Navigation ———
+
+  /// Active bottom-tab index. Owned here (not in AppShell) so any
+  /// screen — e.g. the bean detail sheet — can jump tabs.
+  /// Tab order: 0 Home, 1 Catalogue, 2 Map, 3 Stats, 4 Profile.
+  int _tabIndex = 0;
+  int get tabIndex => _tabIndex;
+
+  void setTabIndex(int index) {
+    if (_tabIndex == index) return;
+    _tabIndex = index;
+    notifyListeners();
+  }
+
+  /// Shop the Map tab should focus next (bean detail "where to buy"
+  /// link). Consumed once by ShopsScreen, then cleared.
+  String? _mapFocusShopId;
+  String? get mapFocusShopId => _mapFocusShopId;
+
+  void focusShopOnMap(String shopId) {
+    _mapFocusShopId = shopId;
+    _tabIndex = 2; // Map tab.
+    notifyListeners();
+  }
+
+  void clearMapFocus() {
+    _mapFocusShopId = null;
   }
 
   /// The user's display name, editable from Profile → Information.
@@ -86,7 +119,7 @@ class AppState extends ChangeNotifier {
   // ——— Remote sync ———
 
   /// Attaches Firestore sync for a signed-in user and pulls their
-  /// remote tastings + wishlist into local state.
+  /// remote tastings + wishlist + barcode links into local state.
   Future<void> attachRemote({
     required String uid,
     required UserDataSync sync,
@@ -106,6 +139,11 @@ class AppState extends ChangeNotifier {
       _wishlistBeanIds
         ..clear()
         ..addAll(remote.wishlist);
+    }
+    if (remote.barcodeLinks.isNotEmpty) {
+      _barcodeLinks
+        ..clear()
+        ..addAll(remote.barcodeLinks);
     }
     notifyListeners();
   }
@@ -136,6 +174,30 @@ class AppState extends ChangeNotifier {
     final uid = _uid;
     if (uid != null) {
       _sync?.pushWishlist(uid, _wishlistBeanIds);
+    }
+  }
+
+  // ——— Barcode links ———
+
+  /// Resolves a scanned barcode to a catalogue bean: first the
+  /// roaster-provided [CoffeeBean.barcode], then the user's own links.
+  CoffeeBean? beanForBarcode(String barcode) {
+    for (final bean in _beans) {
+      if (bean.barcode == barcode) return bean;
+    }
+    final beanId = _barcodeLinks[barcode];
+    if (beanId != null) return beanFor(beanId);
+    return null;
+  }
+
+  /// Links a scanned barcode to a catalogue bean. Remembered for the
+  /// user (and synced when signed in) so the next scan resolves instantly.
+  void linkBarcode(String barcode, String beanId) {
+    _barcodeLinks[barcode] = beanId;
+    notifyListeners();
+    final uid = _uid;
+    if (uid != null) {
+      _sync?.pushBarcodeLinks(uid, Map.unmodifiable(_barcodeLinks));
     }
   }
 

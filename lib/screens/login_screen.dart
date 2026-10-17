@@ -1,9 +1,12 @@
+import 'dart:async' show unawaited;
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../navigation/app_shell.dart';
 import '../services/auth_service.dart';
+import '../services/biometric_auth.dart';
 import '../services/user_data_sync.dart';
 import '../state/app_state.dart';
 import '../theme/app_theme.dart';
@@ -25,14 +28,55 @@ class _LoginScreenState extends State<LoginScreen> {
   bool _obscurePassword = true;
   bool _registerMode = false;
   bool _busy = false;
+  bool _faceIdAvailable = false;
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _checkFaceId();
+  }
+
+  Future<void> _checkFaceId() async {
+    final bio = BiometricAuth.instance;
+    final available = await bio.canUseBiometrics;
+    final saved = await bio.hasSavedCredentials;
+    if (mounted) setState(() => _faceIdAvailable = available && saved);
+  }
 
   @override
   void dispose() {
     _emailController.dispose();
     _passwordController.dispose();
     super.dispose();
+  }
+
+  /// Face ID login: scan, then sign in with the saved credentials.
+  Future<void> _loginWithFaceId(BuildContext context) async {
+    final bio = BiometricAuth.instance;
+    final auth = AuthService.instance;
+    final state = AppState.of(context);
+    final navigator = Navigator.of(context);
+    setState(() => _busy = true);
+    try {
+      final ok = await bio.authenticate();
+      if (!ok) return;
+      final creds = await bio.getCredentials();
+      if (creds == null) {
+        _snack('No saved login found. Use your password instead.');
+        return;
+      }
+      await auth.signInWithEmail(creds.email, creds.password);
+      await _attachRemote(state, auth);
+      navigator.pushReplacementNamed(AppShell.routeName);
+    } on FirebaseAuthException catch (e) {
+      _snack(_friendlyAuthError(e));
+    } catch (e) {
+      _snack('Something went wrong. Please try again.');
+    } finally {
+      if (mounted) setState(() => _busy = false);
+    }
   }
 
   Future<void> _enter(BuildContext context) async {
@@ -52,6 +96,13 @@ class _LoginScreenState extends State<LoginScreen> {
       } else {
         await auth.signInWithEmail(email, password);
       }
+      // Remember this login so Face ID can reuse it next time.
+      // Fire-and-forget: the secure-storage write must never block login.
+      unawaited(
+        BiometricAuth.instance
+            .saveCredentials(email, password)
+            .catchError((_) {}),
+      );
       await _attachRemote(state, auth);
       navigator.pushReplacementNamed(AppShell.routeName);
     } on FirebaseAuthException catch (e) {
@@ -209,6 +260,20 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 const SizedBox(height: 12),
+                if (_faceIdAvailable)
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlinedButton.icon(
+                      onPressed:
+                          _busy ? null : () => _loginWithFaceId(context),
+                      icon: const Icon(Icons.face_outlined, size: 20),
+                      label: const Padding(
+                        padding: EdgeInsets.symmetric(vertical: 14),
+                        child: Text('Log in with Face ID'),
+                      ),
+                    ),
+                  ),
+                if (_faceIdAvailable) const SizedBox(height: 12),
                 Center(
                   child: Wrap(
                     alignment: WrapAlignment.center,
