@@ -194,11 +194,14 @@ class _WrappedRow extends StatelessWidget {
     final p = context.palette;
     final state = AppState.of(context);
     final year = DateTime.now().year;
+    final locked = !isWrappedUnlocked(month: DateTime.now().month);
 
-    final subtitle = state.triedCoffees.isEmpty
-        ? 'Log tastings to unlock it'
-        : '$year · ${state.triedCoffees.length} tasting'
-            '${state.triedCoffees.length == 1 ? '' : 's'}';
+    final subtitle = locked
+        ? 'Unlocks in December'
+        : state.triedCoffees.isEmpty
+            ? 'Log tastings to unlock it'
+            : '$year · ${state.triedCoffees.length} tasting'
+                '${state.triedCoffees.length == 1 ? '' : 's'}';
 
     return InkWell(
       onTap: () => Navigator.of(context).push(
@@ -215,7 +218,13 @@ class _WrappedRow extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Icon(Icons.auto_awesome_outlined, size: 26, color: p.ink),
+            Icon(
+              locked
+                  ? Icons.lock_outline
+                  : Icons.auto_awesome_outlined,
+              size: 26,
+              color: p.ink,
+            ),
             const SizedBox(width: 16),
             Expanded(
               child: Column(

@@ -111,7 +111,7 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(find.text('Wishlist'));
     await tester.pumpAndSettle();
-    expect(find.textContaining('Nothing saved yet'), findsOneWidget);
+    expect(find.text('No favorites yet'), findsOneWidget);
   });
 
   testWidgets('Marking a bean as tried opens the tasting form and logs it',
@@ -198,18 +198,9 @@ void main() {
     await tester.tap(find.text('Stats').last);
     await tester.pumpAndSettle();
 
+    // Fresh user: inviting empty state instead of a screen of zeros.
     expect(find.text('Coffee stats'), findsOneWidget);
-    expect(find.text('TASTINGS'), findsOneWidget);
-    expect(find.text('DAY STREAK'), findsOneWidget);
-
-    // Hall of fame is below the fold (lazy-built). Scope the scrollable:
-    // the brew calendar's GridView is a Scrollable too.
-    await tester.scrollUntilVisible(
-      find.text('Hall of fame'),
-      500,
-      scrollable: find.byType(Scrollable).first,
-    );
-    await tester.pumpAndSettle();
-    expect(find.text('Hall of fame'), findsOneWidget);
+    expect(find.text('Your coffee story starts here'), findsOneWidget);
+    expect(find.text('Log your first coffee'), findsOneWidget);
   });
 }

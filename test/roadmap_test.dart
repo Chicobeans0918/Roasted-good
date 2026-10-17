@@ -6,6 +6,7 @@ import 'package:coffee_beans/models/tried_coffee.dart';
 import 'package:coffee_beans/screens/discover_screen.dart';
 import 'package:coffee_beans/screens/information_screen.dart';
 import 'package:coffee_beans/screens/shops_screen.dart';
+import 'package:coffee_beans/screens/wrapped_screen.dart';
 import 'package:coffee_beans/state/app_state.dart';
 import 'package:coffee_beans/theme/app_theme.dart';
 import 'package:coffee_beans/widgets/bean_detail_sheet.dart';
@@ -333,6 +334,18 @@ void main() {
       expect(shopForWhereToBuy(SampleData.shops, null), isNull);
       expect(shopForWhereToBuy(SampleData.shops, '  '), isNull);
     });
+
+    test('beansForShop lists the roastery beans', () {
+      final shop = SampleData.shops.firstWhere((s) => s.id == 'brown-bag');
+      final beans = beansForShop(SampleData.beans, shop);
+      expect(beans.length, 12);
+      expect(beans.every((b) => b.roaster == 'Brown Bag Coffee Roasters'), isTrue);
+    });
+
+    test('beansForShop is empty for shops with no catalogue beans', () {
+      final shop = SampleData.shops.firstWhere((s) => s.id != 'brown-bag');
+      expect(beansForShop(SampleData.beans, shop), isEmpty);
+    });
   });
 
   group('dark theme legibility', () {
@@ -341,6 +354,15 @@ void main() {
         RoastedPalette.dark.muted.computeLuminance(),
         greaterThan(RoastedPalette.light.muted.computeLuminance()),
       );
+    });
+  });
+
+  group('wrapped season lock', () {
+    test('wrapped unlocks only in December', () {
+      expect(isWrappedUnlocked(month: 12), isTrue);
+      expect(isWrappedUnlocked(month: 1), isFalse);
+      expect(isWrappedUnlocked(month: 6), isFalse);
+      expect(isWrappedUnlocked(month: 11), isFalse);
     });
   });
 }

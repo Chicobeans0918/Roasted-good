@@ -55,6 +55,43 @@ class StatsScreen extends StatelessWidget {
         : '${(tried.where((t) => t.liked).length / tried.length * 100).round()}%';
     final topOrigins = _topOrigins(state, tried);
 
+    // First-time user: one inviting hero instead of a screen of zeros.
+    if (tried.isEmpty) {
+      return Scaffold(
+        body: SafeArea(
+          child: ListView(
+            padding: const EdgeInsets.fromLTRB(24, 20, 24, 48),
+            children: [
+              Text(
+                'Coffee stats',
+                style: AppType.serifFor(
+                  context,
+                  size: 34,
+                  weight: FontWeight.w500,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Your journey in numbers',
+                style: theme.textTheme.bodyMedium?.copyWith(
+                  color: p.muted,
+                ),
+              ),
+              const SizedBox(height: 32),
+              EmptyState(
+                icon: Icons.bar_chart_outlined,
+                headline: 'Your coffee story starts here',
+                body:
+                    'Log tastings and watch your stats, streaks, and hall of fame come to life.',
+                ctaLabel: 'Log your first coffee',
+                onCta: () => AppState.of(context).setTabIndex(1),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     return Scaffold(
       body: SafeArea(
         child: ListView(

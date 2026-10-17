@@ -9,12 +9,18 @@ import '../theme/app_theme.dart';
 /// Year in Coffee: a swipeable, story-style carousel of the year's
 /// coffee stats, computed from the tasting log. Ends with a shareable
 /// summary card (copied to the clipboard).
+///
+/// The Wrapped unlocks in December — outside December it shows a
+/// teaser screen instead (see [isWrappedUnlocked]).
 class WrappedScreen extends StatefulWidget {
   const WrappedScreen({super.key});
 
   @override
   State<WrappedScreen> createState() => _WrappedScreenState();
 }
+
+/// Wrapped season is December. Extracted for testing.
+bool isWrappedUnlocked({required int month}) => month == 12;
 
 class _WrappedScreenState extends State<WrappedScreen> {
   final _controller = PageController();
@@ -28,6 +34,11 @@ class _WrappedScreenState extends State<WrappedScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // Outside December, show the teaser instead of the carousel.
+    if (!isWrappedUnlocked(month: DateTime.now().month)) {
+      return const _WrappedLockedScreen();
+    }
+
     final p = context.palette;
     final state = AppState.of(context);
     final tried = state.triedCoffees;
@@ -359,6 +370,84 @@ class _SummaryPage extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// Teaser shown when Wrapped is locked (January–November).
+/// "Come back in December for your delicious Wrapped!"
+class _WrappedLockedScreen extends StatelessWidget {
+  const _WrappedLockedScreen();
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final p = context.palette;
+    final tastings = AppState.of(context).triedCoffees.length;
+
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(24, 12, 24, 0),
+              child: Row(
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.close),
+                    color: p.ink,
+                    onPressed: () => Navigator.of(context).pop(),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 120,
+                      height: 120,
+                      decoration: BoxDecoration(
+                        color: p.surfaceVariant,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        Icons.card_giftcard_outlined,
+                        size: 56,
+                        color: p.ink,
+                      ),
+                    ),
+                    const SizedBox(height: 32),
+                    Text(
+                      'Your Wrapped is brewing',
+                      style: theme.textTheme.headlineSmall,
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 12),
+                    Text(
+                      'Come back in December for your delicious Wrapped!',
+                      style: theme.textTheme.bodyLarge,
+                      textAlign: TextAlign.center,
+                    ),
+                    if (tastings > 0) ...[
+                      const SizedBox(height: 16),
+                      Text(
+                        '$tastings tasting${tastings == 1 ? '' : 's'} '
+                        'logged so far — keep sipping.',
+                        style: theme.textTheme.bodySmall,
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

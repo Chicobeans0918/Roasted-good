@@ -1,22 +1,20 @@
 /// AdMob configuration.
 ///
-/// Currently wired with Google's official TEST ids, so banners load
-/// immediately during development. To monetize:
-///   1. Create an AdMob account (admob.com) and register the Roasted iOS app.
-///   2. Create a banner ad unit and replace the two ids below.
-///   3. Put the real app id in ios/Runner/Info.plist (GADApplicationIdentifier).
+/// Live production ids (Marc-André's AdMob account, Oct 16 2026).
+/// To go back to test ads, restore Google's test ids and set
+/// [usingTestAds] back to true.
 abstract final class AdConfig {
-  /// Test only — replace with the real AdMob app id.
-  static const String appId = 'ca-app-pub-3940256099942544~3347511713';
+  /// Roasted iOS app id (AdMob).
+  static const String appId = 'ca-app-pub-3048189417999433~2981230944';
 
-  /// Test only — replace with the real banner ad unit id.
+  /// Banner ad unit id.
   static const String bannerAdUnitId =
-      'ca-app-pub-3940256099942544/2934735716';
+      'ca-app-pub-3048189417999433/4850961792';
 
-  /// Test only — replace with the real interstitial ad unit id.
+  /// Interstitial ad unit id.
   static const String interstitialAdUnitId =
-      'ca-app-pub-3940256099942544/4411468910';
+      'ca-app-pub-3048189417999433/4583368482';
 
   /// True while the ids above are Google's test ids.
-  static const bool usingTestAds = true;
+  static const bool usingTestAds = false;
 }
