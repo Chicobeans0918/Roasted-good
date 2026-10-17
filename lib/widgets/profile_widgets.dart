@@ -90,6 +90,82 @@ class EmptyCard extends StatelessWidget {
   }
 }
 
+/// Rich empty state for first-time users: icon, serif headline,
+/// explanatory body, and an optional call-to-action.
+/// Sells the vision instead of just stating the emptiness.
+class EmptyState extends StatelessWidget {
+  const EmptyState({
+    super.key,
+    required this.icon,
+    required this.headline,
+    required this.body,
+    this.ctaLabel,
+    this.onCta,
+  });
+
+  final IconData icon;
+  final String headline;
+  final String body;
+  final String? ctaLabel;
+  final VoidCallback? onCta;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final p = context.palette;
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 36),
+      decoration: BoxDecoration(
+        border: Border.all(color: p.line),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Column(
+        children: [
+          Container(
+            width: 72,
+            height: 72,
+            decoration: BoxDecoration(
+              color: p.surfaceVariant,
+              shape: BoxShape.circle,
+            ),
+            child: Icon(icon, size: 32, color: p.ink),
+          ),
+          const SizedBox(height: 20),
+          Text(
+            headline,
+            style: AppType.serifFor(
+              context,
+              size: 22,
+              weight: FontWeight.w600,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 8),
+          Text(
+            body,
+            style: theme.textTheme.bodyMedium?.copyWith(color: p.muted),
+            textAlign: TextAlign.center,
+          ),
+          if (ctaLabel != null && onCta != null) ...[
+            const SizedBox(height: 24),
+            ElevatedButton(
+              onPressed: onCta,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 8,
+                  vertical: 4,
+                ),
+                child: Text(ctaLabel!),
+              ),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+}
+
 /// Dark espresso taste identity card.
 class TasteIdentityCard extends StatelessWidget {
   const TasteIdentityCard({
