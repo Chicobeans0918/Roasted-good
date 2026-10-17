@@ -10,8 +10,11 @@
 	<string>ca-app-pub-3940256099942544~3347511713</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Roasted uses the camera to scan barcodes on coffee bags.</string>
+<<<<<<< HEAD
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Roasted uses your location to show you on the map and measure distances to nearby coffee shops.</string>
+=======
+>>>>>>> 0cda044c5486aceb5d3706479c788cb7b9ccaae7
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
