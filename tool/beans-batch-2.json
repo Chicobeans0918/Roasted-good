@@ -1,0 +1,808 @@
+[
+  {
+    "id": "happy-goat-colombia-finca-san-gabriel",
+    "name": "Colombia Finca San Gabriel",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Crisp",
+      "Raspberry Jam",
+      "Rich & Sweet"
+    ],
+    "rating": null,
+    "description": "Bright and crisp with raspberry-jam sweetness and a delicate, well-balanced body.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/DSC08623_1a1024d7-1030-427c-9a20-afa9f9cd9d94.jpg?v=1777570774&width=3904",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-ethiopia-yirgacheffe",
+    "name": "Ethiopia Yirgacheffe",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Floral",
+      "Spicy",
+      "Dark Berries"
+    ],
+    "rating": null,
+    "description": "Floral and tea-like with bright citrus, dark berries and lively acidity.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Eth_Yirg.jpg?v=1759251061&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-colombia-popayan",
+    "name": "Colombia Popayan",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Sweet",
+      "Chocolate",
+      "Fruity"
+    ],
+    "rating": null,
+    "description": "Smooth and approachable, with chocolatey sweetness, gentle acidity and subtle fruit.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Colombia.jpg?v=1762457065&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-brazil-mogiana",
+    "name": "Brazil Mogiana",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fruity",
+      "Dark Berries",
+      "Nutty"
+    ],
+    "rating": null,
+    "description": "Smooth and full-bodied, with roasted nut notes and mellow fruit sweetness.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/brazil_mogiana_94d88fd3-1cb7-4550-add7-965061076cb7.jpg?v=1759251076&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-brazil-mogiana-espresso",
+    "name": "Brazil Mogiana Espresso",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolate",
+      "Bittersweet",
+      "Nutty"
+    ],
+    "rating": null,
+    "description": "A rich, well-rounded espresso with roasted nuts, dark chocolate and subtle red fruit.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Brazil_Espresso_7ff724e4-0563-445e-a5dc-2b997eedc30b.jpg?v=1759264269&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-brazil-peaberry",
+    "name": "Brazil Peaberry",
+    "origin": "Brazil",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Dark Chocolate",
+      "Fruity",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Bold and full-bodied, with deep roasted character and low acidity — the signature dark roast.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Peaberry_5521e5b6-bc9d-478b-9c6a-65e12ef94f91.jpg?v=1759263422&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-guatemala-huehuetenango",
+    "name": "Guatemala Huehuetenango",
+    "origin": "Guatemala",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Green Apples",
+      "Citrus",
+      "Chocolate",
+      "Juicy",
+      "Sweet"
+    ],
+    "rating": null,
+    "description": "A beautifully balanced cup with toasted nut, gentle acidity and a clean, sweet finish.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Guatemala3.jpg?v=1762888638&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-tesseract-espresso",
+    "name": "Tesseract Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Lemon",
+      "Nutty",
+      "Complex"
+    ],
+    "rating": null,
+    "description": "Bright lemon acidity melting into roasted almond — an Ethiopia and Brazil espresso blend.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Tesseract_Espresso4.jpg?v=1759251173&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-the-g",
+    "name": "The G",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Spicy",
+      "Citrus",
+      "Bittersweet"
+    ],
+    "rating": null,
+    "description": "A balanced house blend of Brazilian and Guatemalan beans with subtle spice and delicate sweetness.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/The_G_7d0e9662-d835-4e82-91a6-21475193c3f2.jpg?v=1759251067&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-colombia-decaf",
+    "name": "Colombia Decaf",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Smooth",
+      "Floral",
+      "Good Body"
+    ],
+    "rating": null,
+    "description": "All the flavour without the caffeine — smooth and balanced with chocolate and light florals.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": true,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/colombia_decaf_9e075654-f17e-4ac5-8d73-418a713ce1de.jpg?v=1762457060&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-laurel-colombia-finca-san-gabriel",
+    "name": "Colombia Finca San Gabriel",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Crisp",
+      "Raspberry Jam",
+      "Rich & Sweet"
+    ],
+    "rating": null,
+    "description": "Bright and crisp with raspberry-jam sweetness and a delicate, well-balanced body.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/DSC08623_1a1024d7-1030-427c-9a20-afa9f9cd9d94.jpg?v=1777570774&width=3904",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-ethiopia-yirgacheffe",
+    "name": "Ethiopia Yirgacheffe",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Floral",
+      "Spicy",
+      "Dark Berries"
+    ],
+    "rating": null,
+    "description": "Floral and tea-like with bright citrus, dark berries and lively acidity.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Eth_Yirg.jpg?v=1759251061&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-colombia-popayan",
+    "name": "Colombia Popayan",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Sweet",
+      "Chocolate",
+      "Fruity"
+    ],
+    "rating": null,
+    "description": "Smooth and approachable, with chocolatey sweetness, gentle acidity and subtle fruit.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Colombia.jpg?v=1762457065&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-brazil-mogiana",
+    "name": "Brazil Mogiana",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fruity",
+      "Dark Berries",
+      "Nutty"
+    ],
+    "rating": null,
+    "description": "Smooth and full-bodied, with roasted nut notes and mellow fruit sweetness.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/brazil_mogiana_94d88fd3-1cb7-4550-add7-965061076cb7.jpg?v=1759251076&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-brazil-mogiana-espresso",
+    "name": "Brazil Mogiana Espresso",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolate",
+      "Bittersweet",
+      "Nutty"
+    ],
+    "rating": null,
+    "description": "A rich, well-rounded espresso with roasted nuts, dark chocolate and subtle red fruit.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Brazil_Espresso_7ff724e4-0563-445e-a5dc-2b997eedc30b.jpg?v=1759264269&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-brazil-peaberry",
+    "name": "Brazil Peaberry",
+    "origin": "Brazil",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Dark Chocolate",
+      "Fruity",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Bold and full-bodied, with deep roasted character and low acidity — the signature dark roast.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Peaberry_5521e5b6-bc9d-478b-9c6a-65e12ef94f91.jpg?v=1759263422&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-guatemala-huehuetenango",
+    "name": "Guatemala Huehuetenango",
+    "origin": "Guatemala",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Green Apples",
+      "Citrus",
+      "Chocolate",
+      "Juicy",
+      "Sweet"
+    ],
+    "rating": null,
+    "description": "A beautifully balanced cup with toasted nut, gentle acidity and a clean, sweet finish.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Guatemala3.jpg?v=1762888638&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-tesseract-espresso",
+    "name": "Tesseract Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Lemon",
+      "Nutty",
+      "Complex"
+    ],
+    "rating": null,
+    "description": "Bright lemon acidity melting into roasted almond — an Ethiopia and Brazil espresso blend.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Tesseract_Espresso4.jpg?v=1759251173&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-the-g",
+    "name": "The G",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Spicy",
+      "Citrus",
+      "Bittersweet"
+    ],
+    "rating": null,
+    "description": "A balanced house blend of Brazilian and Guatemalan beans with subtle spice and delicate sweetness.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/The_G_7d0e9662-d835-4e82-91a6-21475193c3f2.jpg?v=1759251067&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-colombia-decaf",
+    "name": "Colombia Decaf",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Smooth",
+      "Floral",
+      "Good Body"
+    ],
+    "rating": null,
+    "description": "All the flavour without the caffeine — smooth and balanced with chocolate and light florals.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": true,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/colombia_decaf_9e075654-f17e-4ac5-8d73-418a713ce1de.jpg?v=1762457060&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-elgin-colombia-finca-san-gabriel",
+    "name": "Colombia Finca San Gabriel",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Crisp",
+      "Raspberry Jam",
+      "Rich & Sweet"
+    ],
+    "rating": null,
+    "description": "Bright and crisp with raspberry-jam sweetness and a delicate, well-balanced body.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/DSC08623_1a1024d7-1030-427c-9a20-afa9f9cd9d94.jpg?v=1777570774&width=3904",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-ethiopia-yirgacheffe",
+    "name": "Ethiopia Yirgacheffe",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Floral",
+      "Spicy",
+      "Dark Berries"
+    ],
+    "rating": null,
+    "description": "Floral and tea-like with bright citrus, dark berries and lively acidity.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Eth_Yirg.jpg?v=1759251061&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-colombia-popayan",
+    "name": "Colombia Popayan",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Sweet",
+      "Chocolate",
+      "Fruity"
+    ],
+    "rating": null,
+    "description": "Smooth and approachable, with chocolatey sweetness, gentle acidity and subtle fruit.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Colombia.jpg?v=1762457065&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-brazil-mogiana",
+    "name": "Brazil Mogiana",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fruity",
+      "Dark Berries",
+      "Nutty"
+    ],
+    "rating": null,
+    "description": "Smooth and full-bodied, with roasted nut notes and mellow fruit sweetness.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/brazil_mogiana_94d88fd3-1cb7-4550-add7-965061076cb7.jpg?v=1759251076&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-brazil-mogiana-espresso",
+    "name": "Brazil Mogiana Espresso",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolate",
+      "Bittersweet",
+      "Nutty"
+    ],
+    "rating": null,
+    "description": "A rich, well-rounded espresso with roasted nuts, dark chocolate and subtle red fruit.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Brazil_Espresso_7ff724e4-0563-445e-a5dc-2b997eedc30b.jpg?v=1759264269&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-brazil-peaberry",
+    "name": "Brazil Peaberry",
+    "origin": "Brazil",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Dark Chocolate",
+      "Fruity",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Bold and full-bodied, with deep roasted character and low acidity — the signature dark roast.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Peaberry_5521e5b6-bc9d-478b-9c6a-65e12ef94f91.jpg?v=1759263422&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-guatemala-huehuetenango",
+    "name": "Guatemala Huehuetenango",
+    "origin": "Guatemala",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Green Apples",
+      "Citrus",
+      "Chocolate",
+      "Juicy",
+      "Sweet"
+    ],
+    "rating": null,
+    "description": "A beautifully balanced cup with toasted nut, gentle acidity and a clean, sweet finish.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Guatemala3.jpg?v=1762888638&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-tesseract-espresso",
+    "name": "Tesseract Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Lemon",
+      "Nutty",
+      "Complex"
+    ],
+    "rating": null,
+    "description": "Bright lemon acidity melting into roasted almond — an Ethiopia and Brazil espresso blend.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Tesseract_Espresso4.jpg?v=1759251173&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-the-g",
+    "name": "The G",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Spicy",
+      "Citrus",
+      "Bittersweet"
+    ],
+    "rating": null,
+    "description": "A balanced house blend of Brazilian and Guatemalan beans with subtle spice and delicate sweetness.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/The_G_7d0e9662-d835-4e82-91a6-21475193c3f2.jpg?v=1759251067&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-colombia-decaf",
+    "name": "Colombia Decaf",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Smooth",
+      "Floral",
+      "Good Body"
+    ],
+    "rating": null,
+    "description": "All the flavour without the caffeine — smooth and balanced with chocolate and light florals.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": true,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/colombia_decaf_9e075654-f17e-4ac5-8d73-418a713ce1de.jpg?v=1762457060&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-colombia-finca-san-gabriel",
+    "name": "Colombia Finca San Gabriel",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Crisp",
+      "Raspberry Jam",
+      "Rich & Sweet"
+    ],
+    "rating": null,
+    "description": "Bright and crisp with raspberry-jam sweetness and a delicate, well-balanced body.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/DSC08623_1a1024d7-1030-427c-9a20-afa9f9cd9d94.jpg?v=1777570774&width=3904",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-ethiopia-yirgacheffe",
+    "name": "Ethiopia Yirgacheffe",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Floral",
+      "Spicy",
+      "Dark Berries"
+    ],
+    "rating": null,
+    "description": "Floral and tea-like with bright citrus, dark berries and lively acidity.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Eth_Yirg.jpg?v=1759251061&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-colombia-popayan",
+    "name": "Colombia Popayan",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Sweet",
+      "Chocolate",
+      "Fruity"
+    ],
+    "rating": null,
+    "description": "Smooth and approachable, with chocolatey sweetness, gentle acidity and subtle fruit.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Colombia.jpg?v=1762457065&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-brazil-mogiana",
+    "name": "Brazil Mogiana",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fruity",
+      "Dark Berries",
+      "Nutty"
+    ],
+    "rating": null,
+    "description": "Smooth and full-bodied, with roasted nut notes and mellow fruit sweetness.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/brazil_mogiana_94d88fd3-1cb7-4550-add7-965061076cb7.jpg?v=1759251076&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-brazil-mogiana-espresso",
+    "name": "Brazil Mogiana Espresso",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolate",
+      "Bittersweet",
+      "Nutty"
+    ],
+    "rating": null,
+    "description": "A rich, well-rounded espresso with roasted nuts, dark chocolate and subtle red fruit.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Brazil_Espresso_7ff724e4-0563-445e-a5dc-2b997eedc30b.jpg?v=1759264269&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-brazil-peaberry",
+    "name": "Brazil Peaberry",
+    "origin": "Brazil",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Dark Chocolate",
+      "Fruity",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Bold and full-bodied, with deep roasted character and low acidity — the signature dark roast.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Peaberry_5521e5b6-bc9d-478b-9c6a-65e12ef94f91.jpg?v=1759263422&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-guatemala-huehuetenango",
+    "name": "Guatemala Huehuetenango",
+    "origin": "Guatemala",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Green Apples",
+      "Citrus",
+      "Chocolate",
+      "Juicy",
+      "Sweet"
+    ],
+    "rating": null,
+    "description": "A beautifully balanced cup with toasted nut, gentle acidity and a clean, sweet finish.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Guatemala3.jpg?v=1762888638&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-tesseract-espresso",
+    "name": "Tesseract Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Lemon",
+      "Nutty",
+      "Complex"
+    ],
+    "rating": null,
+    "description": "Bright lemon acidity melting into roasted almond — an Ethiopia and Brazil espresso blend.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Tesseract_Espresso4.jpg?v=1759251173&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-the-g",
+    "name": "The G",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Spicy",
+      "Citrus",
+      "Bittersweet"
+    ],
+    "rating": null,
+    "description": "A balanced house blend of Brazilian and Guatemalan beans with subtle spice and delicate sweetness.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/The_G_7d0e9662-d835-4e82-91a6-21475193c3f2.jpg?v=1759251067&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-colombia-decaf",
+    "name": "Colombia Decaf",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Smooth",
+      "Floral",
+      "Good Body"
+    ],
+    "rating": null,
+    "description": "All the flavour without the caffeine — smooth and balanced with chocolate and light florals.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": true,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/colombia_decaf_9e075654-f17e-4ac5-8d73-418a713ce1de.jpg?v=1762457060&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "morning-owl-dark-roast",
+    "name": "Dark Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Roasted fresh in-house in small batches for rich flavour and vibrant aroma.",
+    "local": true,
+    "roaster": "Morning Owl",
+    "decaf": false,
+    "whereToBuy": "Morning Owl"
+  },
+  {
+    "id": "morning-owl-medium-roast",
+    "name": "Medium Roast",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Roasted fresh in-house in small batches for rich flavour and vibrant aroma.",
+    "local": true,
+    "roaster": "Morning Owl",
+    "decaf": false,
+    "whereToBuy": "Morning Owl"
+  },
+  {
+    "id": "morning-owl-espresso-roast",
+    "name": "Espresso Roast",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Roasted fresh in-house in small batches for rich flavour and vibrant aroma.",
+    "local": true,
+    "roaster": "Morning Owl",
+    "decaf": false,
+    "whereToBuy": "Morning Owl"
+  },
+  {
+    "id": "morning-owl-rochester-dark-roast",
+    "name": "Dark Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Roasted fresh in-house in small batches for rich flavour and vibrant aroma.",
+    "local": true,
+    "roaster": "Morning Owl",
+    "decaf": false,
+    "whereToBuy": "Morning Owl Coffeehouse"
+  },
+  {
+    "id": "morning-owl-rochester-medium-roast",
+    "name": "Medium Roast",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Roasted fresh in-house in small batches for rich flavour and vibrant aroma.",
+    "local": true,
+    "roaster": "Morning Owl",
+    "decaf": false,
+    "whereToBuy": "Morning Owl Coffeehouse"
+  },
+  {
+    "id": "morning-owl-rochester-espresso-roast",
+    "name": "Espresso Roast",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Roasted fresh in-house in small batches for rich flavour and vibrant aroma.",
+    "local": true,
+    "roaster": "Morning Owl",
+    "decaf": false,
+    "whereToBuy": "Morning Owl Coffeehouse"
+  }
+]

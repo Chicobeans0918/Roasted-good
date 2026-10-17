@@ -35,6 +35,7 @@ class _CatalogueScreenState extends State<CatalogueScreen> {
           bean.origin.toLowerCase().contains(q) ||
           bean.description.toLowerCase().contains(q) ||
           (bean.roaster ?? '').toLowerCase().contains(q) ||
+          (bean.whereToBuy ?? '').toLowerCase().contains(q) ||
           bean.tastingNotes.any((n) => n.toLowerCase().contains(q));
       final matchesRoast =
           _roastFilter == 'All' || bean.roastLevel == _roastFilter;

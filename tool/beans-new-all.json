@@ -1,0 +1,4219 @@
+[
+  {
+    "id": "brulerie-aladdin-ethiopien-leger",
+    "name": "Éthiopien léger",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Chocolat",
+      "Agrumes",
+      "Fruits à noyau",
+      "Érable"
+    ],
+    "rating": null,
+    "description": "Vibrant et complexe, au corps souple et à l'acidité vive, avec des notes de chocolat, d'agrumes, de fruits à noyau et d'érable.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_111f4aac-2e93-4bdc-82fc-2212e2af26d3.png?v=1704394153",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-colombien-leger",
+    "name": "Colombien léger",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Chocolat noir",
+      "Fruits à noyau",
+      "Sucre brun"
+    ],
+    "rating": null,
+    "description": "Corsé et équilibré, au corps plein, à l'acidité vive et à l'arôme sucré.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_68414e52-9403-493a-a6a5-0cf783a30535.png?v=1704394188",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-guatemalteque-fonce",
+    "name": "Guatémaltèque foncé",
+    "origin": "Guatemala",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Fruits sucrés",
+      "Noisette",
+      "Toffee",
+      "Chocolat"
+    ],
+    "rating": null,
+    "description": "Riche et profond, aux notes fruitées sucrées de noisette, de toffee et de chocolat.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_ee685720-e566-4ce5-98ef-618b902d3b9d.png?v=1704394220",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-sumatra-fonce",
+    "name": "Sumatra foncé",
+    "origin": "Indonesia",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Poivre doux",
+      "Épices brunes",
+      "Noix"
+    ],
+    "rating": null,
+    "description": "Audacieux et sauvage, au corps plein, avec du poivre doux, des épices brunes et des noix.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g.png?v=1704393889",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-peruvien-leger",
+    "name": "Péruvien léger",
+    "origin": "Peru",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Abricot",
+      "Caramel",
+      "Cacao"
+    ],
+    "rating": null,
+    "description": "Notes d'abricot, de caramel et de cacao, avec une acidité juteuse et un arôme fruité.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_2c271b52-d926-49e9-87b4-97e95a53d2cb.png?v=1704394157",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-nicaraguayen-fonce",
+    "name": "Nicaraguayen foncé",
+    "origin": "Nicaragua",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Chocolat",
+      "Agrumes",
+      "Miel"
+    ],
+    "rating": null,
+    "description": "Chocolat alléchant, arôme sucré et nuances d'agrumes, avec une douceur miellée bien équilibrée.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_a3833da2-c324-4701-b7a9-1030f85086f6.png?v=1704394166",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-moka-java-fonce",
+    "name": "Moka Java foncé",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Chocolat noir",
+      "Fruits à noyau",
+      "Myrtille",
+      "Cerise"
+    ],
+    "rating": null,
+    "description": "Mélange intense et complexe au chocolat noir riche, aux fruits à noyau et à la myrtille.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_367245ae-20ff-4b10-8a89-bce643ed3564.png?v=1704394236",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-espresso-moyen",
+    "name": "Espresso moyen",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Noisette",
+      "Toffee-chocolat",
+      "Poivre doux",
+      "Épices brunes"
+    ],
+    "rating": null,
+    "description": "Mélange espresso bio-équitable d'Amérique latine et d'Indonésie, aux notes de noisette et de toffee-chocolat.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_e3d1fc03-1875-4fa7-ad84-2230ee1d93f4.png?v=1704394179",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-espresso-fonce",
+    "name": "Espresso foncé",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Noisette",
+      "Toffee-chocolat",
+      "Poivre doux",
+      "Épices brunes"
+    ],
+    "rating": null,
+    "description": "Mélange espresso intense d'Amérique latine et d'Indonésie, aux notes de noisette, de toffee-chocolat et d'épices.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_090ae72e-2d70-407c-83fd-643844bfa7f5.png?v=1704394183",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-espresso-decafeine-leger",
+    "name": "Espresso décaféiné léger",
+    "origin": "Blend",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Notes herbacées",
+      "Chocolat noir",
+      "Agrumes",
+      "Cerise"
+    ],
+    "rating": null,
+    "description": "Espresso décaféiné au procédé d'eau suisse, aux notes herbacées, de chocolat noir, d'agrumes et de cerise.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_91059963-b7e0-442c-8671-21426577984c.png?v=1704394200",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-choix-du-rotisseur",
+    "name": "Choix du Rôtisseur",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Amande grillée",
+      "Fruits",
+      "Sucre brun",
+      "Vanille",
+      "Chocolat noir"
+    ],
+    "rating": null,
+    "description": "Le mélange signature de la brûlerie (25 % léger, 75 % foncé), aux notes d'amande grillée, de vanille et de chocolat noir.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_b290798b-df54-4800-a60d-d3d20af2b2a5.png?v=1704394298",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-melange-des-montagnes",
+    "name": "Mélange des Montagnes",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Caramel",
+      "Citron",
+      "Cacao",
+      "Chocolat noir",
+      "Agrumes"
+    ],
+    "rating": null,
+    "description": "Mélange équitable animé et robuste d'Amérique centrale et du Sud, aux notes de cacao, de citron et de caramel.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_825935c6-2045-4b9f-bcf7-2fed2ca9f39f.png?v=1704394143",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "la-brulerie-ethiopie-guji-gr1-naturel",
+    "name": "Éthiopie Guji GR1 Naturel",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Bleuet",
+      "Canneberge séchée",
+      "Cacao"
+    ],
+    "rating": null,
+    "description": "Édition limitée d'un Guji naturel cultivé à 1 800–2 150 m d'altitude, à la tasse vibrante et fruitée.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/files/gujisquare.jpg?v=1789519259",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-tanzanie-peaberry",
+    "name": "Tanzanie Peaberry",
+    "origin": "Tanzania",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Corsé et sans acidité, avec beaucoup de corps — une origine unique pour les amateurs de tasses audacieuses.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/regular-dark-roast-health-food-store-la-brulerie_7098f24a-b520-4bf1-a714-e54369fafa75.jpg?v=1635342735",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-melange-de-la-brulerie",
+    "name": "Mélange de la Brûlerie",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Mélange moyennement corsé aux riches saveurs sud-américaines, parfait avec une touche de crème.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/house-blends-regular-health-food-store-la-brulerie.2w_4bbab009-dd62-4e90-8b20-846c1c1f29f0.jpg?v=1635253906",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-espresso-macio",
+    "name": "Espresso Macio",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolat",
+      "Noisette"
+    ],
+    "rating": null,
+    "description": "Nouvel espresso à torréfaction moyenne-légère, aux notes de chocolat et de noisette, parfait pour les machines automatiques.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/files/medium-roast-regular-health-food-store-la-brulerie_983fb79a-e93e-463b-bd0c-8a8da21ddc42.jpg?v=1699556109",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-parfum-des-andes",
+    "name": "Parfum des Andes",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Mélange maison de La Brûlerie (la description détaillée est à venir sur leur site).",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/house-blends-regular-health-food-store-la-brulerie.2w_bfdccccb-52dc-4455-a960-c7d178ba0da4.jpg?v=1588690172",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-colombien-supremo",
+    "name": "Colombien Suprémo",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Classique de très grande qualité au goût parfumé, légèrement sucré et peu acidulé.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/light-roast-regular-health-food-store-la-brulerie_92c6c144-e9c3-4b88-8bd0-264d7c930a6b.jpg?v=1520461695",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-costa-rica-tarrazu",
+    "name": "Costa Rica Tarrazu",
+    "origin": "Costa Rica",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Café excellent et complet, à la fois corsé, parfumé et velouté, issu de sols volcaniques.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/light-roast-regular-health-food-store-la-brulerie.jpg?v=1520461342",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-guatemala-antigua-equitable",
+    "name": "Guatémala Antigua Équitable",
+    "origin": "Guatemala",
+    "roastLevel": "Light",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Excellent café équitable au goût franc et au corps généreux, avec un subtil parfum de fleur.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/fairtrade-light-roast-health-food-store-la-brulerie_815fd084-545e-407c-a2e4-ef88fd1aa7b3.jpg?v=1520461333",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-perou-chanchamayo",
+    "name": "Pérou Chanchamayo",
+    "origin": "Peru",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Café doux et neutre à l'acidité appréciée, idéal en assemblage — un bon café équilibré.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/regular-dark-roast-health-food-store-la-brulerie_d0bc80b5-e4de-4705-9b17-5cff8de44aa7.jpg?v=1534776437",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-sumatra-mandheling",
+    "name": "Sumatra Mandheling",
+    "origin": "Indonesia",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Chocolat"
+    ],
+    "rating": null,
+    "description": "Velouté et corsé, pratiquement sans acidité, au goût légèrement chocolaté.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/regular-dark-roast-health-food-store-la-brulerie_26b66076-4e66-49af-b64e-2084da8c9927.jpg?v=1520375642",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-bresilien-santos-decafeine-eau-suisse",
+    "name": "Brésilien Santos Décaféiné Eau Suisse®",
+    "origin": "Brazil",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Décaféiné doux au procédé d'eau suisse, au parfum exceptionnel et sans amertume.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/decaf-swiss-dark-roast-health-food-store-la-brulerie_962d70cd-9f0d-4973-8eaa-b22e5c64b8cc.jpg?v=1520375574",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-kenya-aa",
+    "name": "Kenya AA",
+    "origin": "Kenya",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Fruité"
+    ],
+    "rating": null,
+    "description": "Considéré comme l'un des meilleurs cafés au monde : fruité, bien corsé, à l'acidité moyenne.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/dark-roast-regular-health-food-store-la-brulerie.jpg?v=1525821123",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "brulerie-elixir-panacee",
+    "name": "Panacée",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Mélange conçu pour l'espresso : crema dorée et épaisse, arômes familiers et goût équilibré, ni trop acide ni trop amer.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Photoroom_20250909_161026.jpg?v=1758128000",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-souffle-de-vie",
+    "name": "Souffle de vie",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Mélange torréfié selon une recette propre à la Brûlerie Élixir, pour une tasse exceptionnelle au filtre.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Souffle-de-vie-ok.jpg?v=1758128043",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-melange-abuela",
+    "name": "Mélange Abuela",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Mélange espresso au crema doré et épais, équilibré, ni trop acide ni trop amer.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Abuela.png?v=1791840419",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-indonesie-sumatra-mi-corse",
+    "name": "Indonésie - Sumatra, Mi-Corsé",
+    "origin": "Indonesia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolat noir",
+      "Cèdre doux"
+    ],
+    "rating": null,
+    "description": "Arabica de Sumatra aux arômes uniques : chocolat noir et cèdre doux, en torréfaction mi-corsée.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Sumatra-1.png?v=1758128094",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-ethiopie-yirgacheffe-mi-corse",
+    "name": "Éthiopie - Yirgacheffe, Mi-Corsé",
+    "origin": "Ethiopia",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Éthiopien du berceau de l'arabica, aux arômes fins et à l'acidité d'une remarquable vivacité.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Yirgacheffe_a19e3f61-ca70-4d45-909e-980252191ebd.png?v=1758128376",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-ethiopie-sidamo-mi-corse",
+    "name": "Éthiopie - Sidamo, Mi-Corsé",
+    "origin": "Ethiopia",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Le café du pays où, selon la légende, le berger Kaldi découvrit les vertus du café.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Sidamo_9bb85d9e-b75a-48f1-9e55-6d0b134b8cf2.png?v=1758128777",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-guatemala-mi-corse",
+    "name": "Guatemala, Mi-Corsé",
+    "origin": "Guatemala",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolat",
+      "Caramel"
+    ],
+    "rating": null,
+    "description": "Douceur naturelle, arômes épicés, notes de chocolat et de caramel, acidité modérée.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Guatemala_b857ffdd-e030-437f-9da2-be7d0c7edd08.png?v=1758128229",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-mexique-mi-corse",
+    "name": "Mexique Mi-Corsé",
+    "origin": "Mexico",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolat",
+      "Caramel",
+      "Noisette"
+    ],
+    "rating": null,
+    "description": "Équilibré et doux, aux notes de chocolat, de caramel et de noisettes — à déguster à tout moment.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Mexique-1.png?v=1758128712",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-nicaragua-mi-corse",
+    "name": "Nicaragua Mi-Corsé",
+    "origin": "Nicaragua",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolat au lait",
+      "Caramel"
+    ],
+    "rating": null,
+    "description": "Fines notes de chocolat au lait et de caramel, pour toutes les machines à café.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Nicaragua.png?v=1758128806",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-honduras-encarnacion-mi-corse",
+    "name": "Honduras - Encarnación Mi-Corsé",
+    "origin": "Honduras",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fruité",
+      "Floral"
+    ],
+    "rating": null,
+    "description": "Faible acidité, corps équilibré et doux, aux arômes fruités et floraux.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Honduras.png?v=1758128759",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-perou-decaf-mi-corse",
+    "name": "Pérou Décaf, Mi-Corsé",
+    "origin": "Peru",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Décaféiné au procédé Swiss Water, sans produits chimiques : goût bien balancé et délicatement torréfié.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Perou-Decaf.png?v=1758128021",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-costa-rica-honey-process-mi-corse",
+    "name": "Costa Rica \"Honey process\" Mi-Corsé",
+    "origin": "Costa Rica",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Édition limitée certifiée biologique et équitable, du terroir de Tarrazú, traité par le procédé « honey » (en quantité limitée).",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/products/costa.jpg?v=1637889145",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "cafe-cloudforest-dark-roast",
+    "name": "Dark Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Chocolat",
+      "Noix",
+      "Sirop d'érable"
+    ],
+    "rating": null,
+    "description": "Torréfaction maximale aux notes audacieuses de chocolat, de noix et de sirop d'érable.",
+    "local": true,
+    "roaster": "CloudForest",
+    "decaf": false,
+    "imageUrl": "https://cloudforestcoffee.ca/wp-content/uploads/2020/09/cloudforest-400x400.jpg",
+    "whereToBuy": "Café Cloudforest"
+  },
+  {
+    "id": "cafe-cloudforest-extra-dark-roast",
+    "name": "Extra Dark Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Pour ceux qui n'ont pas peur du noir : un café riche et savoureux, jamais brûlé.",
+    "local": true,
+    "roaster": "CloudForest",
+    "decaf": false,
+    "imageUrl": "https://cloudforestcoffee.ca/wp-content/uploads/2020/09/cloudforest3978-400x400.jpg",
+    "whereToBuy": "Café Cloudforest"
+  },
+  {
+    "id": "cafe-cloudforest-medium-roast",
+    "name": "Medium Roast",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Caramel",
+      "Amaretto",
+      "Toffee"
+    ],
+    "rating": null,
+    "description": "Doux et nuancé — caramel, amaretto et toffee — pour toutes les méthodes d'infusion.",
+    "local": true,
+    "roaster": "CloudForest",
+    "decaf": false,
+    "imageUrl": "https://cloudforestcoffee.ca/wp-content/uploads/2020/09/cloudforest4001-400x400.jpg",
+    "whereToBuy": "Café Cloudforest"
+  },
+  {
+    "id": "cafe-cloudforest-golden-roast",
+    "name": "Golden Roast",
+    "origin": "Blend",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Agrumes",
+      "Fruité"
+    ],
+    "rating": null,
+    "description": "Lumineux et fruité, aux notes d'agrumes — pour les amateurs de café aventureux.",
+    "local": true,
+    "roaster": "CloudForest",
+    "decaf": false,
+    "imageUrl": "https://cloudforestcoffee.ca/wp-content/uploads/2020/09/cloudforest3986-400x400.jpg",
+    "whereToBuy": "Café Cloudforest"
+  },
+  {
+    "id": "cafe-cloudforest-espresso-roast",
+    "name": "Espresso Roast",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Un classique bien équilibré entre mi et foncé : ni acide, ni amer — tout simplement juste.",
+    "local": true,
+    "roaster": "CloudForest",
+    "decaf": false,
+    "imageUrl": "https://cloudforestcoffee.ca/wp-content/uploads/2020/09/cloudforest3991-400x400.jpg",
+    "whereToBuy": "Café Cloudforest"
+  },
+  {
+    "id": "cafe-cloudforest-decaf-roasts",
+    "name": "Decaf Roasts",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Tout le corps et la saveur de CloudForest, sans caféine.",
+    "local": true,
+    "roaster": "CloudForest",
+    "decaf": true,
+    "imageUrl": "https://cloudforestcoffee.ca/wp-content/uploads/2020/09/cloudforest3999-400x400.jpg",
+    "whereToBuy": "Café Cloudforest"
+  },
+  {
+    "id": "moca-loca-tache-melange-maison",
+    "name": "Mélange Maison",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Le mélange signature : grains du Pérou et du Honduras, torréfié en petits lots jusqu'à ce que les huiles fassent surface.",
+    "local": true,
+    "roaster": "Moca Loca",
+    "decaf": false,
+    "whereToBuy": "Moca Loca Café Co"
+  },
+  {
+    "id": "moca-loca-tache-espresso",
+    "name": "Espresso",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Mélange de grains d'Amérique centrale et de l'Honduras, parfait pour les lattés et cappuccinos maison.",
+    "local": true,
+    "roaster": "Moca Loca",
+    "decaf": false,
+    "whereToBuy": "Moca Loca Café Co"
+  },
+  {
+    "id": "moca-loca-tache-colombien-supreme",
+    "name": "Colombien Suprême",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Colombien des Andes à la belle acidité, riche en saveur et en arôme, à la finale veloutée.",
+    "local": true,
+    "roaster": "Moca Loca",
+    "decaf": false,
+    "whereToBuy": "Moca Loca Café Co"
+  },
+  {
+    "id": "moca-loca-tache-bolivien",
+    "name": "Bolivien",
+    "origin": "Bolivia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolat"
+    ],
+    "rating": null,
+    "description": "Bolivien d'altitude, harmonieux et équilibré, à l'arôme de chocolat et à la saveur sucrée.",
+    "local": true,
+    "roaster": "Moca Loca",
+    "decaf": false,
+    "whereToBuy": "Moca Loca Café Co"
+  },
+  {
+    "id": "moca-loca-tache-femenino",
+    "name": "Féménino",
+    "origin": "Peru",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Caramel",
+      "Chocolat"
+    ],
+    "rating": null,
+    "description": "Cultivé par des femmes sur leurs propres fermes : arômes de caramel et de chocolat, goût mi-amer.",
+    "local": true,
+    "roaster": "Moca Loca",
+    "decaf": false,
+    "whereToBuy": "Moca Loca Café Co"
+  },
+  {
+    "id": "moca-loca-tache-french-roast",
+    "name": "French Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "La torréfaction la plus noire de la sélection : riche, corsée, au goût intense de fumé.",
+    "local": true,
+    "roaster": "Moca Loca",
+    "decaf": false,
+    "whereToBuy": "Moca Loca Café Co"
+  },
+  {
+    "id": "moca-loca-tache-colombien-decafeine",
+    "name": "Colombien Décaféiné",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Décaféiné au procédé d'eau suisse, sans produits chimiques : grains d'Indonésie, d'Afrique et d'Amérique du Sud.",
+    "local": true,
+    "roaster": "Moca Loca",
+    "decaf": true,
+    "whereToBuy": "Moca Loca Café Co"
+  },
+  {
+    "id": "moca-loca-tache-espresso-decafeine",
+    "name": "Espresso Décaféiné",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Espresso décaféiné au procédé d'eau suisse, sans produits chimiques : grains d'Indonésie, d'Afrique et d'Amérique du Sud.",
+    "local": true,
+    "roaster": "Moca Loca",
+    "decaf": true,
+    "whereToBuy": "Moca Loca Café Co"
+  },
+  {
+    "id": "happy-goat-notre-dame-colombia-finca-san-gabriel",
+    "name": "Colombia Finca San Gabriel",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Crisp",
+      "Raspberry Jam",
+      "Rich & Sweet"
+    ],
+    "rating": null,
+    "description": "Leur premier café colombien de la série Small Batch : lavé, de Huila, à l'acidité vive et à la douceur riche.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/DSC08623_1a1024d7-1030-427c-9a20-afa9f9cd9d94.jpg?v=1777570774",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-tesseract-espresso",
+    "name": "Tesseract Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Citron",
+      "Amande grillée"
+    ],
+    "rating": null,
+    "description": "Espresso complexe au Guji éthiopien et Mogiana brésilien : acidité vive de citron, puis amande grillée.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/Tesseract_Espresso4.jpg?v=1759251173",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-ethiopia-guji",
+    "name": "Ethiopia Guji",
+    "origin": "Ethiopia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Épicé",
+      "Réglisse",
+      "Bleuet"
+    ],
+    "rating": null,
+    "description": "Guji à torréfaction moyenne aux notes épicées de réglisse et de baies, à l'acidité légère et au corps moyen.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/Eth_Guji_d05fc853-4122-4db1-b93d-0aa711d7b185.jpg?v=1759251071",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-ethiopia-yirgacheffe",
+    "name": "Ethiopia Yirgacheffe",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Floral",
+      "Agrumes",
+      "Thé noir",
+      "Baies"
+    ],
+    "rating": null,
+    "description": "Yirgacheffe à torréfaction claire, d'une grande complexité : floral, agrumes, thé noir et baies.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/Eth_Yirg.jpg?v=1759251061",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-forza-espresso",
+    "name": "Forza Espresso",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Mélange d'arabica et de robusta au crema épais, dans la tradition du véritable espresso italien.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/forza2.jpg?v=1759264271",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-brazil-mogiana",
+    "name": "Brazil Mogiana",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Noix grillée"
+    ],
+    "rating": null,
+    "description": "Arabica du Mogiana brésilien, torréfaction moyenne : équilibré et lisse, aux notes de noix grillées.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/brazil_mogiana_94d88fd3-1cb7-4550-add7-965061076cb7.jpg?v=1759251076",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-brazil-peaberry",
+    "name": "Brazil Peaberry",
+    "origin": "Brazil",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Leur torréfaction signature : rare peaberry brésilien, corsé et lisse, à faible acidité.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/Peaberry_5521e5b6-bc9d-478b-9c6a-65e12ef94f91.jpg?v=1759263422",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-the-g",
+    "name": "The \"G\"",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Épice",
+      "Douceur"
+    ],
+    "rating": null,
+    "description": "Mélange maison de grains du Brésil et du Guatemala (mi-corsé et corsé), parfait pour la cafetière à piston.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/The_G_7d0e9662-d835-4e82-91a6-21475193c3f2.jpg?v=1759251067",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-colombia-decaf",
+    "name": "Colombia Decaf",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolat",
+      "Floral"
+    ],
+    "rating": null,
+    "description": "Décaféiné au procédé naturel de canne à sucre, lisse et équilibré, aux notes de chocolat et de fleurs.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/colombia_decaf_9e075654-f17e-4ac5-8d73-418a713ce1de.jpg?v=1762457060",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-guatemala-huehuetenango",
+    "name": "Guatemala Huehuetenango",
+    "origin": "Guatemala",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Noix grillée"
+    ],
+    "rating": null,
+    "description": "Guatémaltèque des hautes terres du nord : noix grillée, acidité douce et finale propre et sucrée.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/Guatemala3.jpg?v=1762888638",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-colombia-popayan",
+    "name": "Colombia Popayan",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Douceur",
+      "Fruité"
+    ],
+    "rating": null,
+    "description": "Colombien lisse et accessible de Popayan, à la douceur délicate et aux notes fruitées subtiles.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/Colombia.jpg?v=1762457065",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-ethiopia-guji-espresso",
+    "name": "Ethiopia Guji Espresso",
+    "origin": "Ethiopia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Douceur naturelle"
+    ],
+    "rating": null,
+    "description": "Espresso d'origine éthiopienne à l'acidité vive et à la douceur naturelle, au corps bien rond.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/eth_espresso_7b507398-e690-45fc-97aa-ca8007df98d3.jpg?v=1759264270",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-colombia-finca-san-gabriel",
+    "name": "Colombia Finca San Gabriel",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Crisp",
+      "Raspberry Jam",
+      "Rich & Sweet"
+    ],
+    "rating": null,
+    "description": "Bright and crisp with raspberry-jam sweetness and a delicate, well-balanced body.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/DSC08623_1a1024d7-1030-427c-9a20-afa9f9cd9d94.jpg?v=1777570774&width=3904",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-ethiopia-yirgacheffe",
+    "name": "Ethiopia Yirgacheffe",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Floral",
+      "Spicy",
+      "Dark Berries"
+    ],
+    "rating": null,
+    "description": "Floral and tea-like with bright citrus, dark berries and lively acidity.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Eth_Yirg.jpg?v=1759251061&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-colombia-popayan",
+    "name": "Colombia Popayan",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Sweet",
+      "Chocolate",
+      "Fruity"
+    ],
+    "rating": null,
+    "description": "Smooth and approachable, with chocolatey sweetness, gentle acidity and subtle fruit.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Colombia.jpg?v=1762457065&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-brazil-mogiana",
+    "name": "Brazil Mogiana",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fruity",
+      "Dark Berries",
+      "Nutty"
+    ],
+    "rating": null,
+    "description": "Smooth and full-bodied, with roasted nut notes and mellow fruit sweetness.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/brazil_mogiana_94d88fd3-1cb7-4550-add7-965061076cb7.jpg?v=1759251076&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-brazil-mogiana-espresso",
+    "name": "Brazil Mogiana Espresso",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolate",
+      "Bittersweet",
+      "Nutty"
+    ],
+    "rating": null,
+    "description": "A rich, well-rounded espresso with roasted nuts, dark chocolate and subtle red fruit.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Brazil_Espresso_7ff724e4-0563-445e-a5dc-2b997eedc30b.jpg?v=1759264269&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-brazil-peaberry",
+    "name": "Brazil Peaberry",
+    "origin": "Brazil",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Dark Chocolate",
+      "Fruity",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Bold and full-bodied, with deep roasted character and low acidity — the signature dark roast.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Peaberry_5521e5b6-bc9d-478b-9c6a-65e12ef94f91.jpg?v=1759263422&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-guatemala-huehuetenango",
+    "name": "Guatemala Huehuetenango",
+    "origin": "Guatemala",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Green Apples",
+      "Citrus",
+      "Chocolate",
+      "Juicy",
+      "Sweet"
+    ],
+    "rating": null,
+    "description": "A beautifully balanced cup with toasted nut, gentle acidity and a clean, sweet finish.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Guatemala3.jpg?v=1762888638&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-tesseract-espresso",
+    "name": "Tesseract Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Lemon",
+      "Nutty",
+      "Complex"
+    ],
+    "rating": null,
+    "description": "Bright lemon acidity melting into roasted almond — an Ethiopia and Brazil espresso blend.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Tesseract_Espresso4.jpg?v=1759251173&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-the-g",
+    "name": "The G",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Spicy",
+      "Citrus",
+      "Bittersweet"
+    ],
+    "rating": null,
+    "description": "A balanced house blend of Brazilian and Guatemalan beans with subtle spice and delicate sweetness.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/The_G_7d0e9662-d835-4e82-91a6-21475193c3f2.jpg?v=1759251067&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-colombia-decaf",
+    "name": "Colombia Decaf",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Smooth",
+      "Floral",
+      "Good Body"
+    ],
+    "rating": null,
+    "description": "All the flavour without the caffeine — smooth and balanced with chocolate and light florals.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": true,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/colombia_decaf_9e075654-f17e-4ac5-8d73-418a713ce1de.jpg?v=1762457060&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co."
+  },
+  {
+    "id": "happy-goat-laurel-colombia-finca-san-gabriel",
+    "name": "Colombia Finca San Gabriel",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Crisp",
+      "Raspberry Jam",
+      "Rich & Sweet"
+    ],
+    "rating": null,
+    "description": "Bright and crisp with raspberry-jam sweetness and a delicate, well-balanced body.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/DSC08623_1a1024d7-1030-427c-9a20-afa9f9cd9d94.jpg?v=1777570774&width=3904",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-ethiopia-yirgacheffe",
+    "name": "Ethiopia Yirgacheffe",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Floral",
+      "Spicy",
+      "Dark Berries"
+    ],
+    "rating": null,
+    "description": "Floral and tea-like with bright citrus, dark berries and lively acidity.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Eth_Yirg.jpg?v=1759251061&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-colombia-popayan",
+    "name": "Colombia Popayan",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Sweet",
+      "Chocolate",
+      "Fruity"
+    ],
+    "rating": null,
+    "description": "Smooth and approachable, with chocolatey sweetness, gentle acidity and subtle fruit.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Colombia.jpg?v=1762457065&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-brazil-mogiana",
+    "name": "Brazil Mogiana",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fruity",
+      "Dark Berries",
+      "Nutty"
+    ],
+    "rating": null,
+    "description": "Smooth and full-bodied, with roasted nut notes and mellow fruit sweetness.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/brazil_mogiana_94d88fd3-1cb7-4550-add7-965061076cb7.jpg?v=1759251076&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-brazil-mogiana-espresso",
+    "name": "Brazil Mogiana Espresso",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolate",
+      "Bittersweet",
+      "Nutty"
+    ],
+    "rating": null,
+    "description": "A rich, well-rounded espresso with roasted nuts, dark chocolate and subtle red fruit.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Brazil_Espresso_7ff724e4-0563-445e-a5dc-2b997eedc30b.jpg?v=1759264269&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-brazil-peaberry",
+    "name": "Brazil Peaberry",
+    "origin": "Brazil",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Dark Chocolate",
+      "Fruity",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Bold and full-bodied, with deep roasted character and low acidity — the signature dark roast.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Peaberry_5521e5b6-bc9d-478b-9c6a-65e12ef94f91.jpg?v=1759263422&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-guatemala-huehuetenango",
+    "name": "Guatemala Huehuetenango",
+    "origin": "Guatemala",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Green Apples",
+      "Citrus",
+      "Chocolate",
+      "Juicy",
+      "Sweet"
+    ],
+    "rating": null,
+    "description": "A beautifully balanced cup with toasted nut, gentle acidity and a clean, sweet finish.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Guatemala3.jpg?v=1762888638&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-tesseract-espresso",
+    "name": "Tesseract Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Lemon",
+      "Nutty",
+      "Complex"
+    ],
+    "rating": null,
+    "description": "Bright lemon acidity melting into roasted almond — an Ethiopia and Brazil espresso blend.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Tesseract_Espresso4.jpg?v=1759251173&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-the-g",
+    "name": "The G",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Spicy",
+      "Citrus",
+      "Bittersweet"
+    ],
+    "rating": null,
+    "description": "A balanced house blend of Brazilian and Guatemalan beans with subtle spice and delicate sweetness.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/The_G_7d0e9662-d835-4e82-91a6-21475193c3f2.jpg?v=1759251067&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-laurel-colombia-decaf",
+    "name": "Colombia Decaf",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Smooth",
+      "Floral",
+      "Good Body"
+    ],
+    "rating": null,
+    "description": "All the flavour without the caffeine — smooth and balanced with chocolate and light florals.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": true,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/colombia_decaf_9e075654-f17e-4ac5-8d73-418a713ce1de.jpg?v=1762457060&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Laurel)"
+  },
+  {
+    "id": "happy-goat-elgin-colombia-finca-san-gabriel",
+    "name": "Colombia Finca San Gabriel",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Crisp",
+      "Raspberry Jam",
+      "Rich & Sweet"
+    ],
+    "rating": null,
+    "description": "Bright and crisp with raspberry-jam sweetness and a delicate, well-balanced body.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/DSC08623_1a1024d7-1030-427c-9a20-afa9f9cd9d94.jpg?v=1777570774&width=3904",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-ethiopia-yirgacheffe",
+    "name": "Ethiopia Yirgacheffe",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Floral",
+      "Spicy",
+      "Dark Berries"
+    ],
+    "rating": null,
+    "description": "Floral and tea-like with bright citrus, dark berries and lively acidity.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Eth_Yirg.jpg?v=1759251061&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-colombia-popayan",
+    "name": "Colombia Popayan",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Sweet",
+      "Chocolate",
+      "Fruity"
+    ],
+    "rating": null,
+    "description": "Smooth and approachable, with chocolatey sweetness, gentle acidity and subtle fruit.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Colombia.jpg?v=1762457065&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-brazil-mogiana",
+    "name": "Brazil Mogiana",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fruity",
+      "Dark Berries",
+      "Nutty"
+    ],
+    "rating": null,
+    "description": "Smooth and full-bodied, with roasted nut notes and mellow fruit sweetness.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/brazil_mogiana_94d88fd3-1cb7-4550-add7-965061076cb7.jpg?v=1759251076&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-brazil-mogiana-espresso",
+    "name": "Brazil Mogiana Espresso",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolate",
+      "Bittersweet",
+      "Nutty"
+    ],
+    "rating": null,
+    "description": "A rich, well-rounded espresso with roasted nuts, dark chocolate and subtle red fruit.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Brazil_Espresso_7ff724e4-0563-445e-a5dc-2b997eedc30b.jpg?v=1759264269&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-brazil-peaberry",
+    "name": "Brazil Peaberry",
+    "origin": "Brazil",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Dark Chocolate",
+      "Fruity",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Bold and full-bodied, with deep roasted character and low acidity — the signature dark roast.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Peaberry_5521e5b6-bc9d-478b-9c6a-65e12ef94f91.jpg?v=1759263422&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-guatemala-huehuetenango",
+    "name": "Guatemala Huehuetenango",
+    "origin": "Guatemala",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Green Apples",
+      "Citrus",
+      "Chocolate",
+      "Juicy",
+      "Sweet"
+    ],
+    "rating": null,
+    "description": "A beautifully balanced cup with toasted nut, gentle acidity and a clean, sweet finish.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Guatemala3.jpg?v=1762888638&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-tesseract-espresso",
+    "name": "Tesseract Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Lemon",
+      "Nutty",
+      "Complex"
+    ],
+    "rating": null,
+    "description": "Bright lemon acidity melting into roasted almond — an Ethiopia and Brazil espresso blend.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Tesseract_Espresso4.jpg?v=1759251173&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-the-g",
+    "name": "The G",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Spicy",
+      "Citrus",
+      "Bittersweet"
+    ],
+    "rating": null,
+    "description": "A balanced house blend of Brazilian and Guatemalan beans with subtle spice and delicate sweetness.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/The_G_7d0e9662-d835-4e82-91a6-21475193c3f2.jpg?v=1759251067&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-elgin-colombia-decaf",
+    "name": "Colombia Decaf",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Smooth",
+      "Floral",
+      "Good Body"
+    ],
+    "rating": null,
+    "description": "All the flavour without the caffeine — smooth and balanced with chocolate and light florals.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": true,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/colombia_decaf_9e075654-f17e-4ac5-8d73-418a713ce1de.jpg?v=1762457060&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Elgin)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-colombia-finca-san-gabriel",
+    "name": "Colombia Finca San Gabriel",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Crisp",
+      "Raspberry Jam",
+      "Rich & Sweet"
+    ],
+    "rating": null,
+    "description": "Bright and crisp with raspberry-jam sweetness and a delicate, well-balanced body.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/DSC08623_1a1024d7-1030-427c-9a20-afa9f9cd9d94.jpg?v=1777570774&width=3904",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-ethiopia-yirgacheffe",
+    "name": "Ethiopia Yirgacheffe",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Floral",
+      "Spicy",
+      "Dark Berries"
+    ],
+    "rating": null,
+    "description": "Floral and tea-like with bright citrus, dark berries and lively acidity.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Eth_Yirg.jpg?v=1759251061&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-colombia-popayan",
+    "name": "Colombia Popayan",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Sweet",
+      "Chocolate",
+      "Fruity"
+    ],
+    "rating": null,
+    "description": "Smooth and approachable, with chocolatey sweetness, gentle acidity and subtle fruit.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Colombia.jpg?v=1762457065&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-brazil-mogiana",
+    "name": "Brazil Mogiana",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fruity",
+      "Dark Berries",
+      "Nutty"
+    ],
+    "rating": null,
+    "description": "Smooth and full-bodied, with roasted nut notes and mellow fruit sweetness.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/brazil_mogiana_94d88fd3-1cb7-4550-add7-965061076cb7.jpg?v=1759251076&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-brazil-mogiana-espresso",
+    "name": "Brazil Mogiana Espresso",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolate",
+      "Bittersweet",
+      "Nutty"
+    ],
+    "rating": null,
+    "description": "A rich, well-rounded espresso with roasted nuts, dark chocolate and subtle red fruit.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Brazil_Espresso_7ff724e4-0563-445e-a5dc-2b997eedc30b.jpg?v=1759264269&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-brazil-peaberry",
+    "name": "Brazil Peaberry",
+    "origin": "Brazil",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Dark Chocolate",
+      "Fruity",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Bold and full-bodied, with deep roasted character and low acidity — the signature dark roast.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Peaberry_5521e5b6-bc9d-478b-9c6a-65e12ef94f91.jpg?v=1759263422&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-guatemala-huehuetenango",
+    "name": "Guatemala Huehuetenango",
+    "origin": "Guatemala",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Green Apples",
+      "Citrus",
+      "Chocolate",
+      "Juicy",
+      "Sweet"
+    ],
+    "rating": null,
+    "description": "A beautifully balanced cup with toasted nut, gentle acidity and a clean, sweet finish.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Guatemala3.jpg?v=1762888638&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-tesseract-espresso",
+    "name": "Tesseract Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Lemon",
+      "Nutty",
+      "Complex"
+    ],
+    "rating": null,
+    "description": "Bright lemon acidity melting into roasted almond — an Ethiopia and Brazil espresso blend.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/Tesseract_Espresso4.jpg?v=1759251173&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-the-g",
+    "name": "The G",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Spicy",
+      "Citrus",
+      "Bittersweet"
+    ],
+    "rating": null,
+    "description": "A balanced house blend of Brazilian and Guatemalan beans with subtle spice and delicate sweetness.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/The_G_7d0e9662-d835-4e82-91a6-21475193c3f2.jpg?v=1759251067&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "happy-goat-sandy-hill-colombia-decaf",
+    "name": "Colombia Decaf",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Smooth",
+      "Floral",
+      "Good Body"
+    ],
+    "rating": null,
+    "description": "All the flavour without the caffeine — smooth and balanced with chocolate and light florals.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": true,
+    "imageUrl": "https://www.happygoatcoffee.com/cdn/shop/files/colombia_decaf_9e075654-f17e-4ac5-8d73-418a713ce1de.jpg?v=1762457060&width=1900",
+    "whereToBuy": "Happy Goat Coffee Co. (Sandy Hill)"
+  },
+  {
+    "id": "morning-owl-dark-roast",
+    "name": "Dark Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Roasted fresh in-house in small batches for rich flavour and vibrant aroma.",
+    "local": true,
+    "roaster": "Morning Owl",
+    "decaf": false,
+    "whereToBuy": "Morning Owl"
+  },
+  {
+    "id": "morning-owl-medium-roast",
+    "name": "Medium Roast",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Roasted fresh in-house in small batches for rich flavour and vibrant aroma.",
+    "local": true,
+    "roaster": "Morning Owl",
+    "decaf": false,
+    "whereToBuy": "Morning Owl"
+  },
+  {
+    "id": "morning-owl-espresso-roast",
+    "name": "Espresso Roast",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Roasted fresh in-house in small batches for rich flavour and vibrant aroma.",
+    "local": true,
+    "roaster": "Morning Owl",
+    "decaf": false,
+    "whereToBuy": "Morning Owl"
+  },
+  {
+    "id": "morning-owl-rochester-dark-roast",
+    "name": "Dark Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Roasted fresh in-house in small batches for rich flavour and vibrant aroma.",
+    "local": true,
+    "roaster": "Morning Owl",
+    "decaf": false,
+    "whereToBuy": "Morning Owl Coffeehouse"
+  },
+  {
+    "id": "morning-owl-rochester-medium-roast",
+    "name": "Medium Roast",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Roasted fresh in-house in small batches for rich flavour and vibrant aroma.",
+    "local": true,
+    "roaster": "Morning Owl",
+    "decaf": false,
+    "whereToBuy": "Morning Owl Coffeehouse"
+  },
+  {
+    "id": "morning-owl-rochester-espresso-roast",
+    "name": "Espresso Roast",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Roasted fresh in-house in small batches for rich flavour and vibrant aroma.",
+    "local": true,
+    "roaster": "Morning Owl",
+    "decaf": false,
+    "whereToBuy": "Morning Owl Coffeehouse"
+  },
+  {
+    "id": "bridgehead-glebe-centro-house",
+    "name": "Centro House",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Swiss Chocolate",
+      "Plum",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Best-selling medium roast with smooth chocolate and a hint of plum sweetness.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Centro_House_300g_WB_9511c33b-845e-4589-84a4-9c9f906a280d.jpg?v=1759450876&width=1024",
+    "whereToBuy": "Bridgehead (Glebe)"
+  },
+  {
+    "id": "bridgehead-glebe-logdriver-espresso",
+    "name": "Logdriver Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Toffee",
+      "Hazelnut",
+      "Round"
+    ],
+    "rating": null,
+    "description": "Balanced everyday espresso with rich notes of caramel and cocoa.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Logdriver_300g_WB.jpg?v=1759450876&width=1024",
+    "whereToBuy": "Bridgehead (Glebe)"
+  },
+  {
+    "id": "bridgehead-glebe-bytown-boom",
+    "name": "Bytown Boom",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Cacao Nibs",
+      "Dried Cherry",
+      "Bold"
+    ],
+    "rating": null,
+    "description": "Signature dark roast, bold yet balanced with dried cherry and cacao.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Bytown_Boom_300g_WB.jpg?v=1759438567&width=1024",
+    "whereToBuy": "Bridgehead (Glebe)"
+  },
+  {
+    "id": "bridgehead-glebe-french-roast",
+    "name": "French Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Toasted Walnuts",
+      "Molasses",
+      "Creamy"
+    ],
+    "rating": null,
+    "description": "Smoky, full-bodied dark roast with molasses and toasted walnuts.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_French_Roast_300g_WB_12d31af8-54d3-481f-ab96-65fb4b2a4176.jpg?v=1759438588&width=1024",
+    "whereToBuy": "Bridgehead (Glebe)"
+  },
+  {
+    "id": "bridgehead-glebe-honduras",
+    "name": "Honduras",
+    "origin": "Honduras",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Poached Pears",
+      "Milk Chocolate",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Medium roast from Marcala, Honduras, opening with poached pear and settling into milk chocolate.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Web_Carousel_Honduras_1.jpg?v=1787772983&width=2048",
+    "whereToBuy": "Bridgehead (Glebe)"
+  },
+  {
+    "id": "bridgehead-glebe-steady-hands-decaf",
+    "name": "Steady Hands Decaf",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fudge",
+      "Cashew",
+      "Buttery"
+    ],
+    "rating": null,
+    "description": "Swiss Water decaf with notes of cocoa and toasted nuts, smooth morning to night.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": true,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Steady_Hands_300g_WB.jpg?v=1759450878&width=1024",
+    "whereToBuy": "Bridgehead (Glebe)"
+  },
+  {
+    "id": "bridgehead-old-ottawa-south-centro-house",
+    "name": "Centro House",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Swiss Chocolate",
+      "Plum",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Best-selling medium roast with smooth chocolate and a hint of plum sweetness.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Centro_House_300g_WB_9511c33b-845e-4589-84a4-9c9f906a280d.jpg?v=1759450876&width=1024",
+    "whereToBuy": "Bridgehead (Old Ottawa South)"
+  },
+  {
+    "id": "bridgehead-old-ottawa-south-logdriver-espresso",
+    "name": "Logdriver Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Toffee",
+      "Hazelnut",
+      "Round"
+    ],
+    "rating": null,
+    "description": "Balanced everyday espresso with rich notes of caramel and cocoa.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Logdriver_300g_WB.jpg?v=1759450876&width=1024",
+    "whereToBuy": "Bridgehead (Old Ottawa South)"
+  },
+  {
+    "id": "bridgehead-old-ottawa-south-bytown-boom",
+    "name": "Bytown Boom",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Cacao Nibs",
+      "Dried Cherry",
+      "Bold"
+    ],
+    "rating": null,
+    "description": "Signature dark roast, bold yet balanced with dried cherry and cacao.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Bytown_Boom_300g_WB.jpg?v=1759438567&width=1024",
+    "whereToBuy": "Bridgehead (Old Ottawa South)"
+  },
+  {
+    "id": "bridgehead-old-ottawa-south-french-roast",
+    "name": "French Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Toasted Walnuts",
+      "Molasses",
+      "Creamy"
+    ],
+    "rating": null,
+    "description": "Smoky, full-bodied dark roast with molasses and toasted walnuts.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_French_Roast_300g_WB_12d31af8-54d3-481f-ab96-65fb4b2a4176.jpg?v=1759438588&width=1024",
+    "whereToBuy": "Bridgehead (Old Ottawa South)"
+  },
+  {
+    "id": "bridgehead-old-ottawa-south-honduras",
+    "name": "Honduras",
+    "origin": "Honduras",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Poached Pears",
+      "Milk Chocolate",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Medium roast from Marcala, Honduras, opening with poached pear and settling into milk chocolate.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Web_Carousel_Honduras_1.jpg?v=1787772983&width=2048",
+    "whereToBuy": "Bridgehead (Old Ottawa South)"
+  },
+  {
+    "id": "bridgehead-old-ottawa-south-steady-hands-decaf",
+    "name": "Steady Hands Decaf",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fudge",
+      "Cashew",
+      "Buttery"
+    ],
+    "rating": null,
+    "description": "Swiss Water decaf with notes of cocoa and toasted nuts, smooth morning to night.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": true,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Steady_Hands_300g_WB.jpg?v=1759450878&width=1024",
+    "whereToBuy": "Bridgehead (Old Ottawa South)"
+  },
+  {
+    "id": "bridgehead-little-italy-centro-house",
+    "name": "Centro House",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Swiss Chocolate",
+      "Plum",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Best-selling medium roast with smooth chocolate and a hint of plum sweetness.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Centro_House_300g_WB_9511c33b-845e-4589-84a4-9c9f906a280d.jpg?v=1759450876&width=1024",
+    "whereToBuy": "Bridgehead (Little Italy / Roastery)"
+  },
+  {
+    "id": "bridgehead-little-italy-logdriver-espresso",
+    "name": "Logdriver Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Toffee",
+      "Hazelnut",
+      "Round"
+    ],
+    "rating": null,
+    "description": "Balanced everyday espresso with rich notes of caramel and cocoa.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Logdriver_300g_WB.jpg?v=1759450876&width=1024",
+    "whereToBuy": "Bridgehead (Little Italy / Roastery)"
+  },
+  {
+    "id": "bridgehead-little-italy-bytown-boom",
+    "name": "Bytown Boom",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Cacao Nibs",
+      "Dried Cherry",
+      "Bold"
+    ],
+    "rating": null,
+    "description": "Signature dark roast, bold yet balanced with dried cherry and cacao.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Bytown_Boom_300g_WB.jpg?v=1759438567&width=1024",
+    "whereToBuy": "Bridgehead (Little Italy / Roastery)"
+  },
+  {
+    "id": "bridgehead-little-italy-french-roast",
+    "name": "French Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Toasted Walnuts",
+      "Molasses",
+      "Creamy"
+    ],
+    "rating": null,
+    "description": "Smoky, full-bodied dark roast with molasses and toasted walnuts.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_French_Roast_300g_WB_12d31af8-54d3-481f-ab96-65fb4b2a4176.jpg?v=1759438588&width=1024",
+    "whereToBuy": "Bridgehead (Little Italy / Roastery)"
+  },
+  {
+    "id": "bridgehead-little-italy-honduras",
+    "name": "Honduras",
+    "origin": "Honduras",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Poached Pears",
+      "Milk Chocolate",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Medium roast from Marcala, Honduras, opening with poached pear and settling into milk chocolate.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Web_Carousel_Honduras_1.jpg?v=1787772983&width=2048",
+    "whereToBuy": "Bridgehead (Little Italy / Roastery)"
+  },
+  {
+    "id": "bridgehead-little-italy-steady-hands-decaf",
+    "name": "Steady Hands Decaf",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fudge",
+      "Cashew",
+      "Buttery"
+    ],
+    "rating": null,
+    "description": "Swiss Water decaf with notes of cocoa and toasted nuts, smooth morning to night.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": true,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Steady_Hands_300g_WB.jpg?v=1759450878&width=1024",
+    "whereToBuy": "Bridgehead (Little Italy / Roastery)"
+  },
+  {
+    "id": "bridgehead-sparks-centro-house",
+    "name": "Centro House",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Swiss Chocolate",
+      "Plum",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Best-selling medium roast with smooth chocolate and a hint of plum sweetness.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Centro_House_300g_WB_9511c33b-845e-4589-84a4-9c9f906a280d.jpg?v=1759450876&width=1024",
+    "whereToBuy": "Bridgehead (Sparks)"
+  },
+  {
+    "id": "bridgehead-sparks-logdriver-espresso",
+    "name": "Logdriver Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Toffee",
+      "Hazelnut",
+      "Round"
+    ],
+    "rating": null,
+    "description": "Balanced everyday espresso with rich notes of caramel and cocoa.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Logdriver_300g_WB.jpg?v=1759450876&width=1024",
+    "whereToBuy": "Bridgehead (Sparks)"
+  },
+  {
+    "id": "bridgehead-sparks-bytown-boom",
+    "name": "Bytown Boom",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Cacao Nibs",
+      "Dried Cherry",
+      "Bold"
+    ],
+    "rating": null,
+    "description": "Signature dark roast, bold yet balanced with dried cherry and cacao.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Bytown_Boom_300g_WB.jpg?v=1759438567&width=1024",
+    "whereToBuy": "Bridgehead (Sparks)"
+  },
+  {
+    "id": "bridgehead-sparks-french-roast",
+    "name": "French Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Toasted Walnuts",
+      "Molasses",
+      "Creamy"
+    ],
+    "rating": null,
+    "description": "Smoky, full-bodied dark roast with molasses and toasted walnuts.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_French_Roast_300g_WB_12d31af8-54d3-481f-ab96-65fb4b2a4176.jpg?v=1759438588&width=1024",
+    "whereToBuy": "Bridgehead (Sparks)"
+  },
+  {
+    "id": "bridgehead-sparks-honduras",
+    "name": "Honduras",
+    "origin": "Honduras",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Poached Pears",
+      "Milk Chocolate",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Medium roast from Marcala, Honduras, opening with poached pear and settling into milk chocolate.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Web_Carousel_Honduras_1.jpg?v=1787772983&width=2048",
+    "whereToBuy": "Bridgehead (Sparks)"
+  },
+  {
+    "id": "bridgehead-sparks-steady-hands-decaf",
+    "name": "Steady Hands Decaf",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fudge",
+      "Cashew",
+      "Buttery"
+    ],
+    "rating": null,
+    "description": "Swiss Water decaf with notes of cocoa and toasted nuts, smooth morning to night.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": true,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Steady_Hands_300g_WB.jpg?v=1759450878&width=1024",
+    "whereToBuy": "Bridgehead (Sparks)"
+  },
+  {
+    "id": "little-victories-elgin-colombia-victor-bermudez-gesha-100g-jar",
+    "name": "Colombia Victor Bermúdez - Gesha (100g Jar)",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Earl Grey tea",
+      "Lavender",
+      "Blackberry"
+    ],
+    "rating": null,
+    "description": "Limited washed Gesha from Finca Buenos Aires in Huila, sold in a 100g jar.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/lvc_limited_columbia.png?v=1784496929",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-guatemala-tadeo-lopez-pacamara",
+    "name": "Guatemala Tadeo Lopez - Pacamara",
+    "origin": "Guatemala",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Golden raisin",
+      "Caramel",
+      "Bran flakes"
+    ],
+    "rating": null,
+    "description": "Washed Pacamara from a biodiverse father-son farm in San Antonio Huista.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/bag04.png?v=1776195653",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-kenya-kamwangi-ab",
+    "name": "Kenya Kamwangi - AB",
+    "origin": "Kenya",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Blood orange",
+      "Sweet pea",
+      "Peach"
+    ],
+    "rating": null,
+    "description": "Washed AB lot from the Kamwangi washing station in Kirinyaga County.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/bag05.png?v=1762581768",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-colombia-granja-paraiso-92-sudan-rume-100g-jar",
+    "name": "Colombia Granja Paraíso 92 - Sudan Rume (100g Jar)",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Peach",
+      "Cantaloupe",
+      "Allspice"
+    ],
+    "rating": null,
+    "description": "Limited double-anaerobic Sudan Rume from Wilton Benitez, in a 100g jar.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/lvcjar4.png?v=1765209231",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-panama-hachi-coffee-project-kaze-natural-gesha-100g-jar",
+    "name": "Panama Hachi Coffee Project - Kaze Natural Gesha (100g Jar)",
+    "origin": "Panama",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Candied cherry",
+      "Blood orange",
+      "Hibiscus"
+    ],
+    "rating": null,
+    "description": "Limited natural Gesha from the Chiriqui highlands, in a 100g jar.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/lvc_limited_panama.png?v=1784496929",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-colombia-granja-paraiso-92-sl-28-100g-jar",
+    "name": "Colombia Granja Paraíso 92 - SL-28 (100g Jar)",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Concord grape",
+      "Cherry cola",
+      "Candy apple"
+    ],
+    "rating": null,
+    "description": "Limited double-anaerobic SL-28 from Wilton Benitez, in a 100g jar.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/lvcjar3.png?v=1765209325",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-bright-eyed-espresso",
+    "name": "Bright Eyed Espresso",
+    "origin": "Peru · Ethiopia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Caramel",
+      "Hazelnut",
+      "Citrus"
+    ],
+    "rating": null,
+    "description": "Bright, sweet espresso pillar built for black coffee, americanos and long blacks.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/MG_1080-3.png?v=1746115325",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-decaf-colombia-amigos-del-huila-sugar-process",
+    "name": "Decaf // Colombia Amigos del Huila - Sugar Process",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Dark chocolate",
+      "Cherry",
+      "Almond"
+    ],
+    "rating": null,
+    "description": "Sugar-process decaf blend from smallholder producers in Huila.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/bag09.png?v=1725929573",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-sunshine",
+    "name": "Sunshine",
+    "origin": "Guatemala",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Bright",
+      "Caramel",
+      "Clean"
+    ],
+    "rating": null,
+    "description": "House light roast pillar: bright, sweet and easy drinking.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/bag01.png?v=1725929573",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-perfect-dark",
+    "name": "Perfect Dark",
+    "origin": "Guatemala",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Sweet",
+      "Smoky"
+    ],
+    "rating": null,
+    "description": "Their love letter to the dark roast: sweet and smokey, never ashy.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/bag02.png?v=1725929573",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-7-10-split-espresso",
+    "name": "7-10 Split Espresso",
+    "origin": "Brazil · Guatemala",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Tangerine",
+      "Cherry",
+      "Raw cacao",
+      "Sage"
+    ],
+    "rating": null,
+    "description": "Do-it-all espresso blend, smooth and sweet with a tangerine-cherry pop.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/bag03.png?v=1725929573",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "equator-westboro-guatemala-huehuetenango",
+    "name": "Guatemala Huehuetenango",
+    "origin": "Guatemala",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Lime",
+      "Milk chocolate",
+      "Cherry"
+    ],
+    "rating": null,
+    "description": "Single origin from Huehuetenango with lime, milk chocolate and cherry.",
+    "local": true,
+    "roaster": "Equator Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0349/7682/5389/files/Guat340g.webp?v=1789397068",
+    "whereToBuy": "Equator Coffee"
+  },
+  {
+    "id": "equator-westboro-fall-seasonal-blend",
+    "name": "Fall Seasonal Blend",
+    "origin": "Guatemala · Sumatra",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Cherry",
+      "Brown sugar",
+      "Almond"
+    ],
+    "rating": null,
+    "description": "Medium roast seasonal blend from Guatemala and Sumatra.",
+    "local": true,
+    "roaster": "Equator Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0349/7682/5389/files/Fall_Seasonal_Bag_340g_2026.webp?v=1788880477",
+    "whereToBuy": "Equator Coffee"
+  },
+  {
+    "id": "equator-westboro-ethiopia-sidama",
+    "name": "Ethiopia Sidama",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Blueberry pie",
+      "Rose",
+      "Black currant"
+    ],
+    "rating": null,
+    "description": "Naturally processed light roast from the Telamo Cooperative in Sidama.",
+    "local": true,
+    "roaster": "Equator Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0349/7682/5389/files/Ethiopia_SO_340g_2025.png?v=1734546111",
+    "whereToBuy": "Equator Coffee"
+  },
+  {
+    "id": "equator-westboro-colombia-cauca",
+    "name": "Colombia Cauca",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Lime",
+      "Demerara sugar",
+      "Apricot"
+    ],
+    "rating": null,
+    "description": "Washed light-medium roast from the Fondo Paez Cooperative in Cauca.",
+    "local": true,
+    "roaster": "Equator Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0349/7682/5389/files/340g_Colombia_Cauca_Coffee_Beans.webp?v=1787146817",
+    "whereToBuy": "Equator Coffee"
+  },
+  {
+    "id": "equator-westboro-peru-geisha-microlot",
+    "name": "Peru Geisha Microlot",
+    "origin": "Peru",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Strawberry",
+      "Cocoa",
+      "Plum",
+      "Coconut"
+    ],
+    "rating": null,
+    "description": "Naturally processed Geisha microlot from Cajamarca, Peru.",
+    "local": true,
+    "roaster": "Equator Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0349/7682/5389/files/PeruGeishaMicrolotCanCoffeeBeans.png?v=1777992170",
+    "whereToBuy": "Equator Coffee"
+  },
+  {
+    "id": "equator-westboro-mexico-chiapas",
+    "name": "Mexico Chiapas",
+    "origin": "Mexico",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Lime",
+      "Brown sugar",
+      "Nougat"
+    ],
+    "rating": null,
+    "description": "Highland Chiapas coffee from the Triunfo Verde cooperative.",
+    "local": true,
+    "roaster": "Equator Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0349/7682/5389/files/Mexico_Chiapas_340g_Bag.png?v=1765910543",
+    "whereToBuy": "Equator Coffee"
+  },
+  {
+    "id": "equator-westboro-hang-loose-half-caf",
+    "name": "Hang Loose Half-Caf",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Half-caf blend with full-on flavour and half the caffeine.",
+    "local": true,
+    "roaster": "Equator Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0349/7682/5389/files/Hang_Loose_340g.png?v=1764258146",
+    "whereToBuy": "Equator Coffee"
+  },
+  {
+    "id": "equator-westboro-polaris-espresso",
+    "name": "Polaris Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Fair trade and organic espresso blend, bold yet smooth.",
+    "local": true,
+    "roaster": "Equator Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0349/7682/5389/files/340g_Polaris.png?v=1746203832",
+    "whereToBuy": "Equator Coffee"
+  },
+  {
+    "decaf": false,
+    "description": "An everyday blend built to taste great brewed any way, and to hold up in milk drinks.",
+    "id": "ministry-of-coffee-dark-matter",
+    "local": true,
+    "name": "Dark Matter",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "The Ministry of Coffee",
+    "tastingNotes": [],
+    "whereToBuy": "The Ministry of Coffee"
+  },
+  {
+    "decaf": false,
+    "description": "A rotating low-waste social blend; $5 from every bag is donated to CMHA Ottawa.",
+    "id": "ministry-of-coffee-ground-work",
+    "local": true,
+    "name": "Ground Work",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "The Ministry of Coffee",
+    "tastingNotes": [],
+    "whereToBuy": "The Ministry of Coffee"
+  },
+  {
+    "decaf": false,
+    "description": "A house blend from Ottawa's canine-themed roaster, roasted to order.",
+    "id": "joe-the-dog-best-in-show",
+    "local": true,
+    "name": "Best in Show",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Joe the Dog Coffee",
+    "tastingNotes": [],
+    "whereToBuy": "Joe the Dog Coffee"
+  },
+  {
+    "decaf": false,
+    "description": "A house blend from Ottawa's canine-themed roaster, roasted to order.",
+    "id": "joe-the-dog-diggin-it",
+    "local": true,
+    "name": "Diggin' It",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Joe the Dog Coffee",
+    "tastingNotes": [],
+    "whereToBuy": "Joe the Dog Coffee"
+  },
+  {
+    "decaf": false,
+    "description": "A house blend from Ottawa's canine-themed roaster, roasted to order.",
+    "id": "joe-the-dog-red-sea",
+    "local": true,
+    "name": "Red Sea",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Joe the Dog Coffee",
+    "tastingNotes": [],
+    "whereToBuy": "Joe the Dog Coffee"
+  },
+  {
+    "decaf": false,
+    "description": "Joe the Dog Coffee's darkest roast.",
+    "id": "joe-the-dog-princess-of-darkness",
+    "local": true,
+    "name": "Princess of Darkness",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Dark",
+    "roaster": "Joe the Dog Coffee",
+    "tastingNotes": [],
+    "whereToBuy": "Joe the Dog Coffee"
+  },
+  {
+    "decaf": true,
+    "description": "Joe the Dog Coffee's decaf offering.",
+    "id": "joe-the-dog-neutered-dog",
+    "local": true,
+    "name": "Neutered Dog",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Joe the Dog Coffee",
+    "tastingNotes": [],
+    "whereToBuy": "Joe the Dog Coffee"
+  },
+  {
+    "decaf": false,
+    "description": "A house blend from Ottawa's canine-themed roaster, roasted to order.",
+    "id": "joe-the-dog-gotta-go",
+    "local": true,
+    "name": "Gotta Go",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Joe the Dog Coffee",
+    "tastingNotes": [],
+    "whereToBuy": "Joe the Dog Coffee"
+  },
+  {
+    "decaf": false,
+    "description": "Z3's house blend of fully washed Peru and Ethiopia lots with toffee and citrus notes.",
+    "id": "z3-specialty-coffee-z3-blend",
+    "local": true,
+    "name": "Z3 Blend",
+    "origin": "Peru & Ethiopia",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Z3 Specialty Coffee",
+    "tastingNotes": [
+      "Toffee",
+      "Lemon",
+      "Chocolate",
+      "Orange"
+    ],
+    "whereToBuy": "Z3 Specialty Coffee"
+  },
+  {
+    "decaf": false,
+    "description": "Co-fermented Tolima lot bursting with wine-like grape and whisky notes.",
+    "id": "z3-specialty-coffee-grape-lollipop",
+    "local": true,
+    "name": "Grape Lollipop",
+    "origin": "Colombia",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Z3 Specialty Coffee",
+    "tastingNotes": [
+      "Red grape",
+      "Dried plum",
+      "Red floral",
+      "Muscat grape",
+      "Whisky"
+    ],
+    "whereToBuy": "Z3 Specialty Coffee"
+  },
+  {
+    "decaf": false,
+    "description": "Semi-washed Geisha Village lot with cherry, tangerine and guava juice notes.",
+    "id": "z3-specialty-coffee-geisha",
+    "local": true,
+    "name": "Geisha",
+    "origin": "Ethiopia",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Z3 Specialty Coffee",
+    "tastingNotes": [
+      "Cherry",
+      "Clove",
+      "Tangerine",
+      "Lime",
+      "Mint",
+      "Guava juice"
+    ],
+    "whereToBuy": "Z3 Specialty Coffee"
+  },
+  {
+    "decaf": false,
+    "description": "Washed Green Tip Geisha from Loja with apple, peach and floral honey notes.",
+    "id": "z3-specialty-coffee-the-last-apple",
+    "local": true,
+    "name": "The Last Apple",
+    "origin": "Ecuador",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Z3 Specialty Coffee",
+    "tastingNotes": [
+      "White flower",
+      "Empire apple",
+      "Peach",
+      "Persimmon",
+      "Red honey"
+    ],
+    "whereToBuy": "Z3 Specialty Coffee"
+  },
+  {
+    "decaf": false,
+    "description": "Grade 1 natural from West Arsi with plum, blueberry and a green-tea finish.",
+    "id": "z3-specialty-coffee-yirgacheffe",
+    "local": true,
+    "name": "Yirgacheffe",
+    "origin": "Ethiopia",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Z3 Specialty Coffee",
+    "tastingNotes": [
+      "Juicy plum",
+      "Red apple",
+      "Blueberry",
+      "Green tea finish"
+    ],
+    "whereToBuy": "Z3 Specialty Coffee"
+  },
+  {
+    "decaf": false,
+    "description": "Ondarez blend honouring the owner's mother and the coffee shared with her aunts.",
+    "id": "beandigen-cafe-coffee-with-my-aunties",
+    "local": true,
+    "name": "Coffee with My Aunties",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Ondarez Coffee",
+    "tastingNotes": [],
+    "whereToBuy": "Beandigen Cafe"
+  },
+  {
+    "decaf": false,
+    "description": "A bold dark roast symbolizing the strength gathered from the land and nature.",
+    "id": "beandigen-cafe-on-the-land",
+    "local": true,
+    "name": "On the Land",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Dark",
+    "roaster": "Ondarez Coffee",
+    "tastingNotes": [],
+    "whereToBuy": "Beandigen Cafe"
+  },
+  {
+    "decaf": false,
+    "description": "A dedication to the love shared during an Indigenous Pow Wow.",
+    "id": "beandigen-cafe-pow-wow-love",
+    "local": true,
+    "name": "Pow Wow Love",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Ondarez Coffee",
+    "tastingNotes": [],
+    "whereToBuy": "Beandigen Cafe"
+  },
+  {
+    "decaf": false,
+    "description": "Café William's arabica espresso blend with chocolate and black cherry notes.",
+    "id": "volume-coffee-house-vision",
+    "local": false,
+    "name": "Vision",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Café William",
+    "tastingNotes": [
+      "Chocolate",
+      "Black cherry"
+    ],
+    "whereToBuy": "Volume Coffee House"
+  },
+  {
+    "decaf": true,
+    "description": "Café William's water-decaffeinated coffee with juicy berries and herbs.",
+    "id": "volume-coffee-house-evolution",
+    "local": false,
+    "name": "Evolution",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Café William",
+    "tastingNotes": [
+      "Berries",
+      "Herbs"
+    ],
+    "whereToBuy": "Volume Coffee House"
+  },
+  {
+    "decaf": false,
+    "description": "Our signature roast — dark fruit, Swiss chocolate and nutty tones with medium acidity; our feature cafe espresso.",
+    "id": "pilot-wagstaff-heritage-blend",
+    "imageUrl": "https://pilotcoffeeroasters.com/cdn/shop/files/Product_Badge_Heritage_300g_WB.jpg?v=1740712482&width=1024",
+    "local": false,
+    "name": "Heritage Blend",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Pilot Coffee Roasters",
+    "tastingNotes": [
+      "Toffee",
+      "Milk Chocolate",
+      "Creamy"
+    ],
+    "whereToBuy": "Pilot Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "Our most developed blend — bold, nostalgic and full of character, without the harsh bitterness of a typical dark roast.",
+    "id": "pilot-wagstaff-monument-blend",
+    "imageUrl": "https://pilotcoffeeroasters.com/cdn/shop/files/Product_Badge_Monument_300g_WB.jpg?v=1740712701&width=1024",
+    "local": false,
+    "name": "Monument Blend",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Dark",
+    "roaster": "Pilot Coffee Roasters",
+    "tastingNotes": [
+      "Cocoa",
+      "Molasses",
+      "Full-Bodied"
+    ],
+    "whereToBuy": "Pilot Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "A certified crowd-pleaser and our 'everyday blend' — just enough acidity and fruitiness to pique your curiosity.",
+    "id": "pilot-wagstaff-academy-blend",
+    "imageUrl": "https://pilotcoffeeroasters.com/cdn/shop/files/Product_Badge_Academy_300g_WB.jpg?v=1740712643&width=1024",
+    "local": false,
+    "name": "Academy Blend",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Pilot Coffee Roasters",
+    "tastingNotes": [
+      "Tangerine",
+      "Caramel",
+      "Bright"
+    ],
+    "whereToBuy": "Pilot Coffee Roasters"
+  },
+  {
+    "decaf": true,
+    "description": "Naturally decaffeinated in Huila, Colombia — rich and chocolatey, with all the complexity of a caffeinated coffee.",
+    "id": "pilot-wagstaff-catalyst-decaf-blend",
+    "imageUrl": "https://pilotcoffeeroasters.com/cdn/shop/files/Product_Badge_Catalyst_300g_WB.jpg?v=1740712820&width=1024",
+    "local": false,
+    "name": "Catalyst Blend – Decaf",
+    "origin": "Colombia",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Pilot Coffee Roasters",
+    "tastingNotes": [
+      "Milk Chocolate",
+      "Brown Sugar",
+      "Familiar"
+    ],
+    "whereToBuy": "Pilot Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "An incredibly smooth, easy-drinking cup from two long-standing Direct Trade partners, with just enough red fruit sweetness.",
+    "id": "pilot-wagstaff-community-blend",
+    "imageUrl": "https://pilotcoffeeroasters.com/cdn/shop/files/Product_Badge_Community_300g_WB.jpg?v=1740712739&width=1024",
+    "local": false,
+    "name": "Community Blend",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Pilot Coffee Roasters",
+    "tastingNotes": [
+      "Red Plum",
+      "Pecan",
+      "Versatile"
+    ],
+    "whereToBuy": "Pilot Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "Limited-edition experimental microlot from Francisco Mena — an otherworldly cup from one of coffee's brightest minds.",
+    "id": "pilot-wagstaff-sumava-black-moon",
+    "imageUrl": "https://pilotcoffeeroasters.com/cdn/shop/files/Web-badges-SumavaBlackMoon-WB.jpg?v=1789160807&width=1024",
+    "local": false,
+    "name": "Sumava 'Black Moon' – Costa Rica",
+    "origin": "Costa Rica",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Pilot Coffee Roasters",
+    "tastingNotes": [
+      "Mangosteen",
+      "Vanilla",
+      "Lychee"
+    ],
+    "whereToBuy": "Pilot Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "Our signature blend — milk chocolate, vanilla and dark cherry, unchanged for 10 years, from small family farms in Minas Gerais, Brazil.",
+    "id": "de-mello-yonge-dancing-goats",
+    "local": false,
+    "name": "Dancing Goats",
+    "origin": "Brazil",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "De Mello Palheta Coffee Roasters",
+    "tastingNotes": [
+      "Milk Chocolate",
+      "Vanilla",
+      "Dark Cherry"
+    ],
+    "whereToBuy": "De Mello Palheta Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "From 480 smallholder farmers on Rwanda's volcanic hillsides — peach, nectarine and pomegranate.",
+    "id": "de-mello-yonge-rwanda-cyiya",
+    "local": false,
+    "name": "Rwanda Cyiya",
+    "origin": "Rwanda",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "De Mello Palheta Coffee Roasters",
+    "tastingNotes": [
+      "Peach",
+      "Nectarine",
+      "Pomegranate"
+    ],
+    "whereToBuy": "De Mello Palheta Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "From the mineral-rich slopes of East Java's Mt Ijen — soft strawberry, tangerine acidity and a velvet body.",
+    "id": "de-mello-yonge-indonesia-mt-ijen",
+    "local": false,
+    "name": "Indonesia Mt Ijen",
+    "origin": "Indonesia",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "De Mello Palheta Coffee Roasters",
+    "tastingNotes": [
+      "Strawberry",
+      "Tangerine"
+    ],
+    "whereToBuy": "De Mello Palheta Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "Roasted on the lighter side in small batches — full body and intense flavour without harshness.",
+    "id": "te-aro-little-bro",
+    "local": false,
+    "name": "Little Bro",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Te Aro Coffee Roasters",
+    "tastingNotes": [],
+    "whereToBuy": "Te Aro Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "Te Aro's espresso blend, roasted on the lighter side for full body and intense flavour without harshness.",
+    "id": "te-aro-big-bro-espresso-blend",
+    "local": false,
+    "name": "Big Bro Espresso Blend",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Te Aro Coffee Roasters",
+    "tastingNotes": [],
+    "whereToBuy": "Te Aro Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "A medium-dark seasonal blend of Brazil and Colombia — mellow acidity, rich sweetness and bold flavour.",
+    "id": "propeller-wade-turbo-espresso",
+    "local": false,
+    "name": "Turbo Espresso",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Dark",
+    "roaster": "Propeller Coffee Co.",
+    "tastingNotes": [
+      "Nougat",
+      "Chocolate",
+      "Toffee"
+    ],
+    "whereToBuy": "Propeller Coffee Co."
+  },
+  {
+    "decaf": false,
+    "description": "A breakfast blend roasted like our single origins — seasonally sourced, blended for balance, sweetness and flavour year-round.",
+    "id": "propeller-wade-foundry",
+    "local": false,
+    "name": "Foundry",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Propeller Coffee Co.",
+    "tastingNotes": [
+      "Stone Fruit",
+      "Milk Chocolate",
+      "Vanilla"
+    ],
+    "whereToBuy": "Propeller Coffee Co."
+  },
+  {
+    "decaf": false,
+    "description": "A collaboration with the John Tavares Foundation — organic Peruvian beans, with $1 per bag supporting the foundation.",
+    "id": "propeller-wade-tavares-signature-roast",
+    "local": false,
+    "name": "Tavares Signature Roast",
+    "origin": "Peru",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Propeller Coffee Co.",
+    "tastingNotes": [
+      "Chocolate",
+      "Cherry"
+    ],
+    "whereToBuy": "Propeller Coffee Co."
+  },
+  {
+    "decaf": false,
+    "description": "Washed organic coffee from the El Palto cooperative in Peru's Amazonian Andes — chocolate, hazelnut and caramel.",
+    "id": "propeller-wade-organic-peru-el-palto",
+    "local": false,
+    "name": "Organic Peru El Palto",
+    "origin": "Peru",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Propeller Coffee Co.",
+    "tastingNotes": [
+      "Chocolate",
+      "Hazelnut",
+      "Caramel"
+    ],
+    "whereToBuy": "Propeller Coffee Co."
+  },
+  {
+    "decaf": false,
+    "description": "Washed coffee from the family-owned Fara Estate in Nicaragua's Matagalpa region — hazelnut, cocoa and peach.",
+    "id": "propeller-wade-nicaragua-fara-estate",
+    "local": false,
+    "name": "Nicaragua Fara Estate",
+    "origin": "Nicaragua",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Propeller Coffee Co.",
+    "tastingNotes": [
+      "Hazelnut",
+      "Cocoa",
+      "Peach"
+    ],
+    "whereToBuy": "Propeller Coffee Co."
+  },
+  {
+    "decaf": false,
+    "description": "Washed coffee from smallholders in San Antonio Huista, Huehuetenango — milk chocolate, orange and toffee.",
+    "id": "propeller-wade-guatemala-candelaria",
+    "local": false,
+    "name": "Guatemala Candelaria",
+    "origin": "Guatemala",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Propeller Coffee Co.",
+    "tastingNotes": [
+      "Milk Chocolate",
+      "Orange",
+      "Toffee"
+    ],
+    "whereToBuy": "Propeller Coffee Co."
+  },
+  {
+    "decaf": false,
+    "description": "Washed field blend from Mexico, built on Typica, Marsellesa and Sarchimor varieties.",
+    "id": "subtext-coffee-mexico-nabor-gallardo",
+    "local": false,
+    "name": "Nabor Gallardo, Mexico Washed Field Blend",
+    "origin": "Mexico",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Subtext Coffee Roasters",
+    "tastingNotes": [],
+    "whereToBuy": "Subtext Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "Washed field blend from San Antonio Ozolotepec, Mexico.",
+    "id": "subtext-coffee-mexico-san-antonio-ozolotepec-filter",
+    "local": false,
+    "name": "San Antonio Ozolotepec, Mexico Washed Field Blend",
+    "origin": "Mexico",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Subtext Coffee Roasters",
+    "tastingNotes": [],
+    "whereToBuy": "Subtext Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "Washed Walega lot from Daye Bensa's COE-winning Rumudamo station in Sidama, Ethiopia.",
+    "id": "subtext-coffee-ethiopia-arbegona-rumudamo-washed",
+    "local": false,
+    "name": "Arbegona Rumudamo, Ethiopia Washed Walega",
+    "origin": "Ethiopia",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Subtext Coffee Roasters",
+    "tastingNotes": [],
+    "whereToBuy": "Subtext Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "Natural-processed Walega from Daye Bensa's COE-winning Rumudamo station in Sidama, grown at 2,200 masl.",
+    "id": "subtext-coffee-ethiopia-arbegona-rumudamo-natural",
+    "local": false,
+    "name": "Arbegona Rumudamo, Ethiopia Natural Walega",
+    "origin": "Ethiopia",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Subtext Coffee Roasters",
+    "tastingNotes": [],
+    "whereToBuy": "Subtext Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "White-honey-processed coffee from Reshad Ababulgu, Ethiopia.",
+    "id": "subtext-coffee-ethiopia-reshad-ababulgu",
+    "local": false,
+    "name": "Ethiopia Reshad Ababulgu, White Honey Gibirinna",
+    "origin": "Ethiopia",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Subtext Coffee Roasters",
+    "tastingNotes": [],
+    "whereToBuy": "Subtext Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "Anaerobic natural Walega lot from Mullugeta Muntasha, Ethiopia.",
+    "id": "subtext-coffee-ethiopia-mullugeta-muntasha",
+    "local": false,
+    "name": "Ethiopia Mullugeta Muntasha, Anaerobic Natural Walega",
+    "origin": "Ethiopia",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Subtext Coffee Roasters",
+    "tastingNotes": [],
+    "whereToBuy": "Subtext Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "Washed Sidra variety coffee from Alirio Ortega, Colombia.",
+    "id": "subtext-coffee-colombia-alirio-ortega",
+    "local": false,
+    "name": "Alirio Ortega, Colombia Washed Sidra",
+    "origin": "Colombia",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Subtext Coffee Roasters",
+    "tastingNotes": [],
+    "whereToBuy": "Subtext Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "Washed field blend from San Antonio Ozolotepec, Mexico, roasted for espresso.",
+    "id": "subtext-coffee-mexico-san-antonio-ozolotepec-espresso",
+    "local": false,
+    "name": "San Antonio Ozolotepec, Mexico Espresso Washed Field Blend",
+    "origin": "Mexico",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Subtext Coffee Roasters",
+    "tastingNotes": [],
+    "whereToBuy": "Subtext Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "Washed Caturra from Tony Medina, Guatemala, roasted for espresso.",
+    "id": "subtext-coffee-guatemala-tony-medina",
+    "local": false,
+    "name": "Tony Medina, Guatemala Espresso Washed Caturra",
+    "origin": "Guatemala",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Subtext Coffee Roasters",
+    "tastingNotes": [],
+    "whereToBuy": "Subtext Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "Anaerobic honey-processed Villa Sarchi from Castro Kahle, Costa Rica, roasted for espresso.",
+    "id": "subtext-coffee-costa-rica-castro-kahle",
+    "local": false,
+    "name": "Castro Kahle, Costa Rica Anaerobic Honey Villa Sarchi",
+    "origin": "Costa Rica",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Subtext Coffee Roasters",
+    "tastingNotes": [],
+    "whereToBuy": "Subtext Coffee Roasters"
+  },
+  {
+    "decaf": false,
+    "description": "Signature espresso blend — rich milk chocolate, almond and mixed berries with a full body.",
+    "id": "hale-campbell-hale-espresso",
+    "imageUrl": "https://www.halecoffee.com/cdn/shop/files/halebags1527-Recovered.jpg?v=1779897589",
+    "local": false,
+    "name": "Hale Espresso",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Hale Coffee Company",
+    "tastingNotes": [
+      "Milk Chocolate",
+      "Almonds",
+      "Mixed Berries"
+    ],
+    "whereToBuy": "Hale Coffee Company"
+  },
+  {
+    "decaf": false,
+    "description": "From Huehuetenango — 'star that shines in the sky at night' in the local Maya dialect — clean, crisp regional lots, true to place.",
+    "id": "hale-campbell-waykan-guatemala",
+    "imageUrl": "https://www.halecoffee.com/cdn/shop/files/halebags1525.jpg?v=1779898271",
+    "local": false,
+    "name": "Waykan - Guatemala",
+    "origin": "Guatemala",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Hale Coffee Company",
+    "tastingNotes": [
+      "Toffee",
+      "Peanut Butter"
+    ],
+    "whereToBuy": "Hale Coffee Company"
+  },
+  {
+    "decaf": false,
+    "description": "Dark chocolate hazelnut heaven — a dark roast of high-density beans that highlights rather than kills the quality.",
+    "id": "hale-campbell-hale-noir-dark-roast",
+    "imageUrl": "https://www.halecoffee.com/cdn/shop/files/halebags1532.jpg?v=1779898453",
+    "local": false,
+    "name": "Hale Noir - Dark Roast Blend",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Dark",
+    "roaster": "Hale Coffee Company",
+    "tastingNotes": [
+      "Dark Chocolate",
+      "Toasted Hazelnut",
+      "Nutmeg"
+    ],
+    "whereToBuy": "Hale Coffee Company"
+  },
+  {
+    "decaf": true,
+    "description": "A medium-roast decaffeinated Colombian blend, European-process — honey glazed pecans without the caffeine.",
+    "id": "hale-campbell-decaf-colombia",
+    "imageUrl": "https://www.halecoffee.com/cdn/shop/files/halebags1528.jpg?v=1779898609",
+    "local": false,
+    "name": "Decaf Colombia",
+    "origin": "Colombia",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Hale Coffee Company",
+    "tastingNotes": [
+      "Honey Glazed Pecans"
+    ],
+    "whereToBuy": "Hale Coffee Company"
+  },
+  {
+    "decaf": false,
+    "description": "Washed heirloom coffee from the Abenet Alemayehu washing station in Guji, Ethiopia (1,900–2,100 masl).",
+    "id": "hale-campbell-reji-kebele-ethiopia",
+    "imageUrl": "https://www.halecoffee.com/cdn/shop/files/halebags1529.jpg?v=1779898358",
+    "local": false,
+    "name": "Reji Kebele - Ethiopia",
+    "origin": "Ethiopia",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Hale Coffee Company",
+    "tastingNotes": [
+      "Lemon Candy",
+      "Black Tea"
+    ],
+    "whereToBuy": "Hale Coffee Company"
+  },
+  {
+    "decaf": false,
+    "description": "Natural Yellow Catuai from Maria Lucia's São Pedro farm in Alta Mogiana — full-bodied, low-medium acidity.",
+    "id": "hale-campbell-sao-pedro-brazil",
+    "imageUrl": "https://www.halecoffee.com/cdn/shop/files/halebags1519_4.jpg?v=1779898022",
+    "local": false,
+    "name": "São Pedro - Brazil",
+    "origin": "Brazil",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Hale Coffee Company",
+    "tastingNotes": [
+      "Chocolate",
+      "Hazelnut"
+    ],
+    "whereToBuy": "Hale Coffee Company"
+  },
+  {
+    "decaf": false,
+    "description": "Natural heirloom coffee from smallholder cooperatives in Edido, Gedeo Zone — blueberry and stewed peach.",
+    "id": "hale-campbell-yirgacheffe-edido-ethiopia",
+    "imageUrl": "https://www.halecoffee.com/cdn/shop/files/halebags1522.jpg?v=1779897677",
+    "local": false,
+    "name": "Yirgacheffe Edido - Ethiopia",
+    "origin": "Ethiopia",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Hale Coffee Company",
+    "tastingNotes": [
+      "Blueberry",
+      "Stewed Peach"
+    ],
+    "whereToBuy": "Hale Coffee Company"
+  },
+  {
+    "decaf": false,
+    "description": "Single origin from Estelí, Nicaragua — chocolate, grapefruit and orange.",
+    "id": "hale-campbell-esteli-nicaragua",
+    "local": false,
+    "name": "Estelí - Nicaragua",
+    "origin": "Nicaragua",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Hale Coffee Company",
+    "tastingNotes": [
+      "Chocolate",
+      "Grapefruit",
+      "Orange"
+    ],
+    "whereToBuy": "Hale Coffee Company"
+  },
+  {
+    "decaf": false,
+    "description": "Limited single origin from Brazil — ripened papaya and toffee.",
+    "id": "hale-campbell-anahi-brazil",
+    "local": false,
+    "name": "Anahi - Brazil",
+    "origin": "Brazil",
+    "rating": null,
+    "roastLevel": "Light",
+    "roaster": "Hale Coffee Company",
+    "tastingNotes": [
+      "Ripened Papaya",
+      "Toffee"
+    ],
+    "whereToBuy": "Hale Coffee Company"
+  },
+  {
+    "decaf": false,
+    "description": "Peanut butter, berry jam, and toffee — Toronto's house espresso for over a decade.",
+    "id": "sam-james-harbord-butter-knife-espresso",
+    "local": false,
+    "name": "Butter Knife Espresso",
+    "origin": "Brazil · Guatemala",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Sam James Coffee Bar",
+    "tastingNotes": [
+      "Peanut Butter",
+      "Berry Jam",
+      "Toffee"
+    ],
+    "whereToBuy": "Sam James Coffee Bar"
+  },
+  {
+    "decaf": false,
+    "description": "Bright fruit, dark chocolate — a seasonal espresso blend with nothing missing.",
+    "id": "sam-james-harbord-espresso-in-bloom",
+    "local": false,
+    "name": "Espresso In Bloom: Ethiopia + Guatemala",
+    "origin": "Ethiopia · Guatemala",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Sam James Coffee Bar",
+    "tastingNotes": [
+      "Grilled Peach",
+      "Apricot",
+      "Dark Chocolate"
+    ],
+    "whereToBuy": "Sam James Coffee Bar"
+  },
+  {
+    "decaf": false,
+    "description": "Dried mango, molasses, and buckwheat honey — this is what Huehuetenango does.",
+    "id": "sam-james-harbord-guatemala-quetzal",
+    "local": false,
+    "name": "Guatemala: Quetzal",
+    "origin": "Guatemala",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Sam James Coffee Bar",
+    "tastingNotes": [
+      "Dried Mango",
+      "Molasses",
+      "Buckwheat Honey"
+    ],
+    "whereToBuy": "Sam James Coffee Bar"
+  },
+  {
+    "decaf": false,
+    "description": "Peach tea, animal crackers, caramel, and pear — one farmer, one farm, Yirgacheffe.",
+    "id": "sam-james-harbord-ethiopia-banko-gotiti",
+    "local": false,
+    "name": "Ethiopia: Banko Gotiti",
+    "origin": "Ethiopia",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Sam James Coffee Bar",
+    "tastingNotes": [
+      "Peach Tea",
+      "Animal Crackers",
+      "Caramel",
+      "Pear"
+    ],
+    "whereToBuy": "Sam James Coffee Bar"
+  },
+  {
+    "decaf": false,
+    "description": "Pear tart, milk chocolate, and brown sugar — fifty-seven farmers, one beautiful cup.",
+    "id": "sam-james-harbord-colombia-tolima",
+    "local": false,
+    "name": "Colombia: Tolima",
+    "origin": "Colombia",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Sam James Coffee Bar",
+    "tastingNotes": [
+      "Pear Tart",
+      "Milk Chocolate",
+      "Brown Sugar"
+    ],
+    "whereToBuy": "Sam James Coffee Bar"
+  },
+  {
+    "decaf": false,
+    "description": "Apple crumble, dates, and dried cherry — juicy and dried fruit, together.",
+    "id": "sam-james-harbord-burundi-kibingo",
+    "local": false,
+    "name": "Burundi: Kibingo",
+    "origin": "Burundi",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Sam James Coffee Bar",
+    "tastingNotes": [
+      "Apple Crumble",
+      "Dates",
+      "Dried Cherry"
+    ],
+    "whereToBuy": "Sam James Coffee Bar"
+  },
+  {
+    "decaf": false,
+    "description": "Strawberry pie, graham cracker, dark chocolate, and plum — black honey at its most expressive.",
+    "id": "sam-james-harbord-costa-rica-las-lajas",
+    "local": false,
+    "name": "Costa Rica: Las Lajas",
+    "origin": "Costa Rica",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Sam James Coffee Bar",
+    "tastingNotes": [
+      "Strawberry Pie",
+      "Graham Cracker",
+      "Dark Chocolate",
+      "Plum"
+    ],
+    "whereToBuy": "Sam James Coffee Bar"
+  },
+  {
+    "decaf": false,
+    "description": "Full coffee flavour, half the caffeine — rich, sweet, and creamy with a nutty roasted depth.",
+    "id": "sam-james-harbord-buzz-lite",
+    "local": false,
+    "name": "Buzz Lite",
+    "origin": "Brazil · Colombia",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Sam James Coffee Bar",
+    "tastingNotes": [
+      "Grape Soda",
+      "Toasted Marshmallow",
+      "Peanut Brittle"
+    ],
+    "whereToBuy": "Sam James Coffee Bar"
+  },
+  {
+    "decaf": true,
+    "description": "Creme brûlée, buttered toast, and Guinness stout — Huila coffee, with the caffeine taken out.",
+    "id": "sam-james-harbord-decaf-colombia",
+    "local": false,
+    "name": "Decaf: Colombia",
+    "origin": "Colombia",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Sam James Coffee Bar",
+    "tastingNotes": [
+      "Creme Brûlée",
+      "Buttered Toast",
+      "Guinness Stout"
+    ],
+    "whereToBuy": "Sam James Coffee Bar"
+  },
+  {
+    "decaf": false,
+    "description": "A Jimmy's house blend named after a famous Jimmy, sold in bags in-café.",
+    "id": "jimmys-baldwin-dean",
+    "local": false,
+    "name": "Dean",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Jimmy's Coffee",
+    "tastingNotes": [],
+    "whereToBuy": "Jimmy's Coffee"
+  },
+  {
+    "decaf": false,
+    "description": "A Jimmy's house blend named after a famous Jimmy, sold in bags in-café.",
+    "id": "jimmys-baldwin-hendrix",
+    "local": false,
+    "name": "Hendrix",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Jimmy's Coffee",
+    "tastingNotes": [],
+    "whereToBuy": "Jimmy's Coffee"
+  },
+  {
+    "decaf": false,
+    "description": "A Jimmy's house blend named after a famous Jimmy, sold in bags in-café.",
+    "id": "jimmys-baldwin-carter",
+    "local": false,
+    "name": "Carter",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Jimmy's Coffee",
+    "tastingNotes": [],
+    "whereToBuy": "Jimmy's Coffee"
+  },
+  {
+    "decaf": false,
+    "description": "Sweet, caramel and cocoa — a Jimmy's house blend described as pleasant and well balanced.",
+    "id": "jimmys-baldwin-hoffa",
+    "local": false,
+    "name": "Hoffa",
+    "origin": "Blend",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Jimmy's Coffee",
+    "tastingNotes": [
+      "Sweet",
+      "Caramel",
+      "Cocoa"
+    ],
+    "whereToBuy": "Jimmy's Coffee"
+  },
+  {
+    "decaf": false,
+    "description": "Dineen's signature roast, a single-origin Brazilian with hazelnut, caramel and chocolate.",
+    "id": "dineen-yonge-temperance-roast",
+    "local": false,
+    "name": "Temperance Roast",
+    "origin": "Brazil",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Dineen Coffee Co.",
+    "tastingNotes": [
+      "Hazelnut",
+      "Caramel",
+      "Chocolate"
+    ],
+    "whereToBuy": "Dineen Coffee Co."
+  },
+  {
+    "decaf": false,
+    "description": "Neo's house blend: 100% Brazil, medium roast, sold as whole beans.",
+    "id": "neo-bay-neo-blend",
+    "local": false,
+    "name": "Neo Blend",
+    "origin": "Brazil",
+    "rating": null,
+    "roastLevel": "Medium",
+    "roaster": "Neo Coffee Bar",
+    "tastingNotes": [],
+    "whereToBuy": "Neo Coffee Bar"
+  },
+  {
+    "id": "reunion-island-bullet-espresso",
+    "name": "Bullet Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Black currant",
+      "Milk chocolate",
+      "Jammy"
+    ],
+    "rating": null,
+    "description": "A meticulously crafted medium-roast espresso blend, smooth and balanced.",
+    "local": false,
+    "roaster": "Reunion Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0508/8881/files/RCR-12oz-Bullet-2026-White.jpg?v=1781735791",
+    "whereToBuy": "Reunion Island Coffee Bar"
+  },
+  {
+    "id": "reunion-island-colombia-las-hermosas",
+    "name": "Colombia Las Hermosas",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Creamy",
+      "Orange",
+      "Milk chocolate"
+    ],
+    "rating": null,
+    "description": "A sweet, balanced Colombian classic with brown sugar, orange and cocoa notes.",
+    "local": false,
+    "roaster": "Reunion Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0508/8881/files/RCR-12oz-LasHermosas-2026-White.png?v=1782339584",
+    "whereToBuy": "Reunion Island Coffee Bar"
+  },
+  {
+    "id": "reunion-island-flagship",
+    "name": "Flagship",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Apple",
+      "Milk chocolate",
+      "Caramel"
+    ],
+    "rating": null,
+    "description": "Balanced and roasted for sweetness, with chocolate, almond and berry notes.",
+    "local": false,
+    "roaster": "Reunion Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0508/8881/files/RCR-12oz-Flagship-2024-White.jpg?v=1726167493",
+    "whereToBuy": "Reunion Island Coffee Bar"
+  },
+  {
+    "id": "reunion-island-firefly-decaf",
+    "name": "Firefly Decaf",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Buttery",
+      "Dark chocolate",
+      "Caramelized sugar"
+    ],
+    "rating": null,
+    "description": "Swiss Water Processed decaf that keeps its rich brown-sugar, nut and cocoa flavor.",
+    "local": false,
+    "roaster": "Reunion Coffee Roasters",
+    "decaf": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0508/8881/files/RCR-12oz-Firefly-2026-White.jpg?v=1780170763",
+    "whereToBuy": "Reunion Island Coffee Bar"
+  },
+  {
+    "id": "reunion-island-sunday-morning-breakfast-blend",
+    "name": "Sunday Morning Breakfast Blend",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Grapefruit",
+      "Walnut",
+      "Chocolate"
+    ],
+    "rating": null,
+    "description": "A smooth, easy-drinking breakfast blend of high-grown Central and South American coffees.",
+    "local": false,
+    "roaster": "Reunion Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0508/8881/files/RI08014-Sunday-Morning-2026.png?v=1770650832",
+    "whereToBuy": "Reunion Island Coffee Bar"
+  },
+  {
+    "id": "reunion-island-sumatra-ketambe",
+    "name": "Sumatra Ketambe",
+    "origin": "Indonesia",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Raisin",
+      "Clove",
+      "Pepper"
+    ],
+    "rating": null,
+    "description": "Exotic dark roast from the rainforest-clad highlands of Aceh, Sumatra.",
+    "local": false,
+    "roaster": "Reunion Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0508/8881/files/RI2805-Sumatra-2026.png?v=1770650957",
+    "whereToBuy": "Reunion Island Coffee Bar"
+  },
+  {
+    "id": "reunion-island-sierra-verde",
+    "name": "Sierra Verde",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chestnut",
+      "Citrus",
+      "Herbaceous"
+    ],
+    "rating": null,
+    "description": "A creamy, balanced organic and Fairtrade blend with notes of nut, molasses and chocolate.",
+    "local": false,
+    "roaster": "Reunion Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0508/8881/files/RCR-12oz-Sierra-2024-White.jpg?v=1726167664",
+    "whereToBuy": "Reunion Island Coffee Bar"
+  },
+  {
+    "id": "reunion-island-privateer-dark",
+    "name": "Privateer Dark",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Smoky",
+      "Burnt marshmallow",
+      "Balanced"
+    ],
+    "rating": null,
+    "description": "Reunion's classic dark roast, deep and heavy with Rainforest Alliance certified coffees.",
+    "local": false,
+    "roaster": "Reunion Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0508/8881/files/RCR-12oz-Privateer-2024-White.jpg?v=1726167652",
+    "whereToBuy": "Reunion Island Coffee Bar"
+  },
+  {
+    "id": "reunion-island-organic-french-roast",
+    "name": "Organic French Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Bittersweet coffee",
+      "Smoky caramel",
+      "Creamy"
+    ],
+    "rating": null,
+    "description": "A rich, dark, bold organic blend from small family farms across Central and South America.",
+    "local": false,
+    "roaster": "Reunion Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0508/8881/files/RCR-12oz-French-2024-White.jpg?v=1726167646",
+    "whereToBuy": "Reunion Island Coffee Bar"
+  },
+  {
+    "id": "reunion-island-cannonball-espresso",
+    "name": "Cannonball Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Dark chocolate",
+      "Floral",
+      "Buttery"
+    ],
+    "rating": null,
+    "description": "An organic espresso with citrus, brown sugar and raisin, clear as a straight shot or in milk.",
+    "local": false,
+    "roaster": "Reunion Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0508/8881/files/RI2544-Cannonball-Espresso-2026.png?v=1770651643",
+    "whereToBuy": "Reunion Island Coffee Bar"
+  },
+  {
+    "id": "reunion-island-arrow-espresso",
+    "name": "Arrow Espresso",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Caramel",
+      "Burnt orange",
+      "Walnuts"
+    ],
+    "rating": null,
+    "description": "A medium-dark modern espresso from high-altitude Rainforest Alliance farms, smooth and balanced.",
+    "local": false,
+    "roaster": "Reunion Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0508/8881/files/RI2540-Arrow-Espresso-2026.png?v=1770652157",
+    "whereToBuy": "Reunion Island Coffee Bar"
+  },
+  {
+    "id": "reunion-island-heirloom-collection",
+    "name": "Heirloom Collection",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Balanced",
+      "Fruity"
+    ],
+    "rating": null,
+    "description": "A balanced, fruit-forward naturally processed Ethiopian coffee, each release unique.",
+    "local": false,
+    "roaster": "Reunion Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0508/8881/files/RCR-12oz-Heirloom-2026-White.jpg?v=1781735749",
+    "whereToBuy": "Reunion Island Coffee Bar"
+  },
+  {
+    "id": "library-coffee-las-lajas-costa-rica",
+    "name": "Las Lajas - Costa Rica",
+    "origin": "Costa Rica",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Brown sugar",
+      "Almond",
+      "Stone fruit"
+    ],
+    "rating": null,
+    "description": "Honey-processed Villa Sarchi from third-generation producers Oscar and Francisca Chacón.",
+    "local": false,
+    "roaster": "Library Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/4069/0496/files/LasLajas_46a7791c-f1c8-4416-856f-08e6e61ac344.jpg?v=1790642521",
+    "whereToBuy": "Library Coffee"
+  },
+  {
+    "id": "library-coffee-elida-estate-panama",
+    "name": "Elida Estate - Panama",
+    "origin": "Panama",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Yellow peach",
+      "Mango",
+      "Jackfruit"
+    ],
+    "rating": null,
+    "description": "Natural-processed lot from the Lamastus family's estate in Boquete.",
+    "local": false,
+    "roaster": "Library Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/4069/0496/files/ElidaEstate.jpg?v=1788130139",
+    "whereToBuy": "Library Coffee"
+  },
+  {
+    "id": "library-coffee-bishan-wate-ethiopia",
+    "name": "Bishan Wate - Ethiopia",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Apricot",
+      "Roasted lemon",
+      "Chamomile"
+    ],
+    "rating": null,
+    "description": "Washed special-prep heirloom lot from the Bishan Wate washing station in Guji.",
+    "local": false,
+    "roaster": "Library Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/4069/0496/files/BishanWate.jpg?v=1788129187",
+    "whereToBuy": "Library Coffee"
+  },
+  {
+    "id": "library-coffee-strawberry-cake-co-fermented-blend",
+    "name": "Strawberry Cake - Co-fermented blend",
+    "origin": "Colombia · Ethiopia · Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Strawberry",
+      "Cherry",
+      "Black tea"
+    ],
+    "rating": null,
+    "description": "An innovation blend of co-fermented coffees — strawberry, cherry and black tea in the cup.",
+    "local": false,
+    "roaster": "Library Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/4069/0496/files/StrawberryCake_f6377c3d-952f-49df-9396-74708514d101.jpg?v=1787109153",
+    "whereToBuy": "Library Coffee"
+  },
+  {
+    "id": "library-coffee-las-flores-colombia",
+    "name": "Las Flores - Colombia",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Cherry jam",
+      "Black currant",
+      "Cocoa"
+    ],
+    "rating": null,
+    "description": "Anaerobic natural lot from brothers Johan and Diego Vergara at Las Flores.",
+    "local": false,
+    "roaster": "Library Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/4069/0496/files/LasFlores.jpg?v=1784680910",
+    "whereToBuy": "Library Coffee"
+  },
+  {
+    "id": "library-coffee-claudio-nakamura-brazil",
+    "name": "Claudio Nakamura - Brazil",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Red fruit",
+      "Winey",
+      "Dark chocolate"
+    ],
+    "rating": null,
+    "description": "Natural anaerobic Red Catuai from the Nakamura family farm in Chapada de Minas.",
+    "local": false,
+    "roaster": "Library Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/4069/0496/files/ClaudioNakamura.jpg?v=1783650081",
+    "whereToBuy": "Library Coffee"
+  },
+  {
+    "id": "library-coffee-businde-burundi",
+    "name": "Businde - Burundi",
+    "origin": "Burundi",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Red fruit",
+      "Caramel",
+      "Sweet lime"
+    ],
+    "rating": null,
+    "description": "Washed Bourbon from Matsitsi Trading's Kayanza washing stations.",
+    "local": false,
+    "roaster": "Library Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/4069/0496/files/Businde.jpg?v=1776309591",
+    "whereToBuy": "Library Coffee"
+  },
+  {
+    "id": "library-coffee-el-injerto-guatemala",
+    "name": "El Injerto - Auction Lot EL08 - Geisha - La Calaca - Guatemala",
+    "origin": "Guatemala",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Grapefruit",
+      "Lime zest",
+      "Sugarcane"
+    ],
+    "rating": null,
+    "description": "Washed Geisha auction lot from the historic Finca El Injerto.",
+    "local": false,
+    "roaster": "Library Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/4069/0496/files/ElInjerto.jpg?v=1768247177",
+    "whereToBuy": "Library Coffee"
+  },
+  {
+    "id": "library-coffee-moonlight-blend",
+    "name": "Moonlight Blend",
+    "origin": "Brazil · Ethiopia",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Caramel",
+      "Roasted nuts",
+      "Chocolate"
+    ],
+    "rating": null,
+    "description": "A rich and bold blend built for espresso — caramel, roasted nuts and chocolate.",
+    "local": false,
+    "roaster": "Library Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/4069/0496/files/MB.jpg?v=1768247320",
+    "whereToBuy": "Library Coffee"
+  },
+  {
+    "id": "library-coffee-seasonal-blend",
+    "name": "Seasonal Blend",
+    "origin": "Guatemala · Ethiopia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Cherry",
+      "Plum",
+      "Cocoa"
+    ],
+    "rating": null,
+    "description": "A balanced, sweet blend for espresso and filter.",
+    "local": false,
+    "roaster": "Library Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/4069/0496/files/SB.jpg?v=1768247292",
+    "whereToBuy": "Library Coffee"
+  },
+  {
+    "id": "library-coffee-zz-decaf",
+    "name": "ZZ - Decaf",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Molasses",
+      "Chocolate",
+      "Raisin"
+    ],
+    "rating": null,
+    "description": "Swiss Water decaf from Brazil — molasses, chocolate and raisin.",
+    "local": false,
+    "roaster": "Library Coffee",
+    "decaf": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/4069/0496/files/ZZ.jpg?v=1768247341",
+    "whereToBuy": "Library Coffee"
+  },
+  {
+    "id": "dark-horse-spadina-northern-dancer",
+    "name": "Northern Dancer",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "One of Dark Horse's exclusive old-skool house blends, sold as whole beans in their cafés.",
+    "local": false,
+    "roaster": "Dark Horse Espresso Bar",
+    "decaf": false,
+    "whereToBuy": "Dark Horse Espresso Bar"
+  },
+  {
+    "id": "dark-horse-spadina-20-grand-espresso",
+    "name": "20 Grand Espresso",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Dark Horse's signature old-skool espresso blend, sold as whole beans in their cafés.",
+    "local": false,
+    "roaster": "Dark Horse Espresso Bar",
+    "decaf": false,
+    "whereToBuy": "Dark Horse Espresso Bar"
+  },
+  {
+    "id": "dark-horse-spadina-touch-gold",
+    "name": "Touch Gold",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "One of Dark Horse's exclusive roasts, sold as whole beans in their cafés.",
+    "local": false,
+    "roaster": "Dark Horse Espresso Bar",
+    "decaf": false,
+    "whereToBuy": "Dark Horse Espresso Bar"
+  },
+  {
+    "id": "dark-horse-spadina-easy-goer-decaf",
+    "name": "Easy Goer Decaf",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Dark Horse's exclusive decaf roast, sold as whole beans in their cafés.",
+    "local": false,
+    "roaster": "Dark Horse Espresso Bar",
+    "decaf": true,
+    "whereToBuy": "Dark Horse Espresso Bar"
+  },
+  {
+    "id": "rooster-coffee-house-blend",
+    "name": "House Blend",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Rooster's signature house blend, roasted by Pilot Coffee Roasters and sold for home brewing at their cafés.",
+    "local": false,
+    "roaster": "Pilot Coffee Roasters",
+    "decaf": false,
+    "whereToBuy": "Rooster Coffee House"
+  },
+  {
+    "id": "rooster-coffee-atomic-rooster-blend",
+    "name": "Atomic Rooster Blend",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "One of Rooster's bold signature blends, roasted by Pilot Coffee Roasters and sold for home brewing at their cafés.",
+    "local": false,
+    "roaster": "Pilot Coffee Roasters",
+    "decaf": false,
+    "whereToBuy": "Rooster Coffee House"
+  },
+  {
+    "id": "rooster-coffee-bold-beaver-blend",
+    "name": "Bold Beaver Blend",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "One of Rooster's bold signature blends, roasted by Pilot Coffee Roasters and sold for home brewing at their cafés.",
+    "local": false,
+    "roaster": "Pilot Coffee Roasters",
+    "decaf": false,
+    "whereToBuy": "Rooster Coffee House"
+  },
+  {
+    "id": "boxcar-yonge-san-antonio-ozolotepec-espresso-mexico",
+    "name": "San Antonio Ozolotepec Espresso, Mexico Washed Field Blend",
+    "origin": "Mexico",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Washed field blend lot from Mexico, roasted by Subtext for espresso.",
+    "local": false,
+    "roaster": "Subtext Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0267/9953/8273/files/EarlySept.Tiles-101.png?v=1789047474",
+    "whereToBuy": "Boxcar Social"
+  },
+  {
+    "id": "boxcar-yonge-didier-pajoy-colombia",
+    "name": "Didier Pajoy, Colombia Washed Pink Bourbon",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Washed Pink Bourbon lot from Colombia, roasted in Toronto by Subtext.",
+    "local": false,
+    "roaster": "Subtext Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0267/9953/8273/files/DidierPajoy.png?v=1790694836",
+    "whereToBuy": "Boxcar Social"
+  },
+  {
+    "id": "boxcar-yonge-mavila-peralta-peru",
+    "name": "Mavila Peralta, Peru Washed Catuai",
+    "origin": "Peru",
+    "roastLevel": "Light",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Washed Catuai lot from Peru, roasted in Toronto by Subtext.",
+    "local": false,
+    "roaster": "Subtext Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0267/9953/8273/files/EarlySept.Tiles-104.png?v=1790685341",
+    "whereToBuy": "Boxcar Social"
+  },
+  {
+    "id": "boxcar-yonge-arbegona-rumudamo-ethiopia-anaerobic",
+    "name": "Arbegona Rumudamo, Ethiopia Anaerobic Washed Walega",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Anaerobic washed Walega lot from Ethiopia, roasted in Toronto by Subtext.",
+    "local": false,
+    "roaster": "Subtext Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0267/9953/8273/files/EarlySept.Tiles-100.png?v=1789046578",
+    "whereToBuy": "Boxcar Social"
+  },
+  {
+    "id": "boxcar-yonge-castro-kahle-costa-rica",
+    "name": "Castro-Kahle Family, Costa Rica Anaerobic Honey Villa Sarchi",
+    "origin": "Costa Rica",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Anaerobic honey Villa Sarchi lot from Costa Rica, roasted by Subtext for espresso.",
+    "local": false,
+    "roaster": "Subtext Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0267/9953/8273/files/VolcanAzulVSAH.png?v=1789053424",
+    "whereToBuy": "Boxcar Social"
+  }
+]

@@ -1,0 +1,994 @@
+[
+  {
+    "id": "brulerie-aladdin-ethiopien-leger",
+    "name": "Éthiopien léger",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Chocolat",
+      "Agrumes",
+      "Fruits à noyau",
+      "Érable"
+    ],
+    "rating": null,
+    "description": "Vibrant et complexe, au corps souple et à l'acidité vive, avec des notes de chocolat, d'agrumes, de fruits à noyau et d'érable.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_111f4aac-2e93-4bdc-82fc-2212e2af26d3.png?v=1704394153",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-colombien-leger",
+    "name": "Colombien léger",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Chocolat noir",
+      "Fruits à noyau",
+      "Sucre brun"
+    ],
+    "rating": null,
+    "description": "Corsé et équilibré, au corps plein, à l'acidité vive et à l'arôme sucré.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_68414e52-9403-493a-a6a5-0cf783a30535.png?v=1704394188",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-guatemalteque-fonce",
+    "name": "Guatémaltèque foncé",
+    "origin": "Guatemala",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Fruits sucrés",
+      "Noisette",
+      "Toffee",
+      "Chocolat"
+    ],
+    "rating": null,
+    "description": "Riche et profond, aux notes fruitées sucrées de noisette, de toffee et de chocolat.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_ee685720-e566-4ce5-98ef-618b902d3b9d.png?v=1704394220",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-sumatra-fonce",
+    "name": "Sumatra foncé",
+    "origin": "Indonesia",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Poivre doux",
+      "Épices brunes",
+      "Noix"
+    ],
+    "rating": null,
+    "description": "Audacieux et sauvage, au corps plein, avec du poivre doux, des épices brunes et des noix.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g.png?v=1704393889",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-peruvien-leger",
+    "name": "Péruvien léger",
+    "origin": "Peru",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Abricot",
+      "Caramel",
+      "Cacao"
+    ],
+    "rating": null,
+    "description": "Notes d'abricot, de caramel et de cacao, avec une acidité juteuse et un arôme fruité.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_2c271b52-d926-49e9-87b4-97e95a53d2cb.png?v=1704394157",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-nicaraguayen-fonce",
+    "name": "Nicaraguayen foncé",
+    "origin": "Nicaragua",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Chocolat",
+      "Agrumes",
+      "Miel"
+    ],
+    "rating": null,
+    "description": "Chocolat alléchant, arôme sucré et nuances d'agrumes, avec une douceur miellée bien équilibrée.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_a3833da2-c324-4701-b7a9-1030f85086f6.png?v=1704394166",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-moka-java-fonce",
+    "name": "Moka Java foncé",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Chocolat noir",
+      "Fruits à noyau",
+      "Myrtille",
+      "Cerise"
+    ],
+    "rating": null,
+    "description": "Mélange intense et complexe au chocolat noir riche, aux fruits à noyau et à la myrtille.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_367245ae-20ff-4b10-8a89-bce643ed3564.png?v=1704394236",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-espresso-moyen",
+    "name": "Espresso moyen",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Noisette",
+      "Toffee-chocolat",
+      "Poivre doux",
+      "Épices brunes"
+    ],
+    "rating": null,
+    "description": "Mélange espresso bio-équitable d'Amérique latine et d'Indonésie, aux notes de noisette et de toffee-chocolat.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_e3d1fc03-1875-4fa7-ad84-2230ee1d93f4.png?v=1704394179",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-espresso-fonce",
+    "name": "Espresso foncé",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Noisette",
+      "Toffee-chocolat",
+      "Poivre doux",
+      "Épices brunes"
+    ],
+    "rating": null,
+    "description": "Mélange espresso intense d'Amérique latine et d'Indonésie, aux notes de noisette, de toffee-chocolat et d'épices.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_090ae72e-2d70-407c-83fd-643844bfa7f5.png?v=1704394183",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-espresso-decafeine-leger",
+    "name": "Espresso décaféiné léger",
+    "origin": "Blend",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Notes herbacées",
+      "Chocolat noir",
+      "Agrumes",
+      "Cerise"
+    ],
+    "rating": null,
+    "description": "Espresso décaféiné au procédé d'eau suisse, aux notes herbacées, de chocolat noir, d'agrumes et de cerise.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_91059963-b7e0-442c-8671-21426577984c.png?v=1704394200",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-choix-du-rotisseur",
+    "name": "Choix du Rôtisseur",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Amande grillée",
+      "Fruits",
+      "Sucre brun",
+      "Vanille",
+      "Chocolat noir"
+    ],
+    "rating": null,
+    "description": "Le mélange signature de la brûlerie (25 % léger, 75 % foncé), aux notes d'amande grillée, de vanille et de chocolat noir.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_b290798b-df54-4800-a60d-d3d20af2b2a5.png?v=1704394298",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "brulerie-aladdin-melange-des-montagnes",
+    "name": "Mélange des Montagnes",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Caramel",
+      "Citron",
+      "Cacao",
+      "Chocolat noir",
+      "Agrumes"
+    ],
+    "rating": null,
+    "description": "Mélange équitable animé et robuste d'Amérique centrale et du Sud, aux notes de cacao, de citron et de caramel.",
+    "local": true,
+    "roaster": "Brûlerie Aladdin",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0248/6095/0627/products/Aladdin_Sac_340g_825935c6-2045-4b9f-bcf7-2fed2ca9f39f.png?v=1704394143",
+    "whereToBuy": "Brulerie Aladdin"
+  },
+  {
+    "id": "la-brulerie-ethiopie-guji-gr1-naturel",
+    "name": "Éthiopie Guji GR1 Naturel",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Bleuet",
+      "Canneberge séchée",
+      "Cacao"
+    ],
+    "rating": null,
+    "description": "Édition limitée d'un Guji naturel cultivé à 1 800–2 150 m d'altitude, à la tasse vibrante et fruitée.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/files/gujisquare.jpg?v=1789519259",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-tanzanie-peaberry",
+    "name": "Tanzanie Peaberry",
+    "origin": "Tanzania",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Corsé et sans acidité, avec beaucoup de corps — une origine unique pour les amateurs de tasses audacieuses.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/regular-dark-roast-health-food-store-la-brulerie_7098f24a-b520-4bf1-a714-e54369fafa75.jpg?v=1635342735",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-melange-de-la-brulerie",
+    "name": "Mélange de la Brûlerie",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Mélange moyennement corsé aux riches saveurs sud-américaines, parfait avec une touche de crème.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/house-blends-regular-health-food-store-la-brulerie.2w_4bbab009-dd62-4e90-8b20-846c1c1f29f0.jpg?v=1635253906",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-espresso-macio",
+    "name": "Espresso Macio",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolat",
+      "Noisette"
+    ],
+    "rating": null,
+    "description": "Nouvel espresso à torréfaction moyenne-légère, aux notes de chocolat et de noisette, parfait pour les machines automatiques.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/files/medium-roast-regular-health-food-store-la-brulerie_983fb79a-e93e-463b-bd0c-8a8da21ddc42.jpg?v=1699556109",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-parfum-des-andes",
+    "name": "Parfum des Andes",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Mélange maison de La Brûlerie (la description détaillée est à venir sur leur site).",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/house-blends-regular-health-food-store-la-brulerie.2w_bfdccccb-52dc-4455-a960-c7d178ba0da4.jpg?v=1588690172",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-colombien-supremo",
+    "name": "Colombien Suprémo",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Classique de très grande qualité au goût parfumé, légèrement sucré et peu acidulé.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/light-roast-regular-health-food-store-la-brulerie_92c6c144-e9c3-4b88-8bd0-264d7c930a6b.jpg?v=1520461695",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-costa-rica-tarrazu",
+    "name": "Costa Rica Tarrazu",
+    "origin": "Costa Rica",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Café excellent et complet, à la fois corsé, parfumé et velouté, issu de sols volcaniques.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/light-roast-regular-health-food-store-la-brulerie.jpg?v=1520461342",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-guatemala-antigua-equitable",
+    "name": "Guatémala Antigua Équitable",
+    "origin": "Guatemala",
+    "roastLevel": "Light",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Excellent café équitable au goût franc et au corps généreux, avec un subtil parfum de fleur.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/fairtrade-light-roast-health-food-store-la-brulerie_815fd084-545e-407c-a2e4-ef88fd1aa7b3.jpg?v=1520461333",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-perou-chanchamayo",
+    "name": "Pérou Chanchamayo",
+    "origin": "Peru",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Café doux et neutre à l'acidité appréciée, idéal en assemblage — un bon café équilibré.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/regular-dark-roast-health-food-store-la-brulerie_d0bc80b5-e4de-4705-9b17-5cff8de44aa7.jpg?v=1534776437",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-sumatra-mandheling",
+    "name": "Sumatra Mandheling",
+    "origin": "Indonesia",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Chocolat"
+    ],
+    "rating": null,
+    "description": "Velouté et corsé, pratiquement sans acidité, au goût légèrement chocolaté.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/regular-dark-roast-health-food-store-la-brulerie_26b66076-4e66-49af-b64e-2084da8c9927.jpg?v=1520375642",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-bresilien-santos-decafeine-eau-suisse",
+    "name": "Brésilien Santos Décaféiné Eau Suisse®",
+    "origin": "Brazil",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Décaféiné doux au procédé d'eau suisse, au parfum exceptionnel et sans amertume.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/decaf-swiss-dark-roast-health-food-store-la-brulerie_962d70cd-9f0d-4973-8eaa-b22e5c64b8cc.jpg?v=1520375574",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "la-brulerie-kenya-aa",
+    "name": "Kenya AA",
+    "origin": "Kenya",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Fruité"
+    ],
+    "rating": null,
+    "description": "Considéré comme l'un des meilleurs cafés au monde : fruité, bien corsé, à l'acidité moyenne.",
+    "local": true,
+    "roaster": "La Brûlerie",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2932/7038/products/dark-roast-regular-health-food-store-la-brulerie.jpg?v=1525821123",
+    "whereToBuy": "La Brûlerie (Café La Brûlerie)"
+  },
+  {
+    "id": "brulerie-elixir-panacee",
+    "name": "Panacée",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Mélange conçu pour l'espresso : crema dorée et épaisse, arômes familiers et goût équilibré, ni trop acide ni trop amer.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Photoroom_20250909_161026.jpg?v=1758128000",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-souffle-de-vie",
+    "name": "Souffle de vie",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Mélange torréfié selon une recette propre à la Brûlerie Élixir, pour une tasse exceptionnelle au filtre.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Souffle-de-vie-ok.jpg?v=1758128043",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-melange-abuela",
+    "name": "Mélange Abuela",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Mélange espresso au crema doré et épais, équilibré, ni trop acide ni trop amer.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Abuela.png?v=1791840419",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-indonesie-sumatra-mi-corse",
+    "name": "Indonésie - Sumatra, Mi-Corsé",
+    "origin": "Indonesia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolat noir",
+      "Cèdre doux"
+    ],
+    "rating": null,
+    "description": "Arabica de Sumatra aux arômes uniques : chocolat noir et cèdre doux, en torréfaction mi-corsée.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Sumatra-1.png?v=1758128094",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-ethiopie-yirgacheffe-mi-corse",
+    "name": "Éthiopie - Yirgacheffe, Mi-Corsé",
+    "origin": "Ethiopia",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Éthiopien du berceau de l'arabica, aux arômes fins et à l'acidité d'une remarquable vivacité.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Yirgacheffe_a19e3f61-ca70-4d45-909e-980252191ebd.png?v=1758128376",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-ethiopie-sidamo-mi-corse",
+    "name": "Éthiopie - Sidamo, Mi-Corsé",
+    "origin": "Ethiopia",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Le café du pays où, selon la légende, le berger Kaldi découvrit les vertus du café.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Sidamo_9bb85d9e-b75a-48f1-9e55-6d0b134b8cf2.png?v=1758128777",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-guatemala-mi-corse",
+    "name": "Guatemala, Mi-Corsé",
+    "origin": "Guatemala",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolat",
+      "Caramel"
+    ],
+    "rating": null,
+    "description": "Douceur naturelle, arômes épicés, notes de chocolat et de caramel, acidité modérée.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Guatemala_b857ffdd-e030-437f-9da2-be7d0c7edd08.png?v=1758128229",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-mexique-mi-corse",
+    "name": "Mexique Mi-Corsé",
+    "origin": "Mexico",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolat",
+      "Caramel",
+      "Noisette"
+    ],
+    "rating": null,
+    "description": "Équilibré et doux, aux notes de chocolat, de caramel et de noisettes — à déguster à tout moment.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Mexique-1.png?v=1758128712",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-nicaragua-mi-corse",
+    "name": "Nicaragua Mi-Corsé",
+    "origin": "Nicaragua",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolat au lait",
+      "Caramel"
+    ],
+    "rating": null,
+    "description": "Fines notes de chocolat au lait et de caramel, pour toutes les machines à café.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Nicaragua.png?v=1758128806",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-honduras-encarnacion-mi-corse",
+    "name": "Honduras - Encarnación Mi-Corsé",
+    "origin": "Honduras",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fruité",
+      "Floral"
+    ],
+    "rating": null,
+    "description": "Faible acidité, corps équilibré et doux, aux arômes fruités et floraux.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Honduras.png?v=1758128759",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-perou-decaf-mi-corse",
+    "name": "Pérou Décaf, Mi-Corsé",
+    "origin": "Peru",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Décaféiné au procédé Swiss Water, sans produits chimiques : goût bien balancé et délicatement torréfié.",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/files/Perou-Decaf.png?v=1758128021",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "brulerie-elixir-costa-rica-honey-process-mi-corse",
+    "name": "Costa Rica \"Honey process\" Mi-Corsé",
+    "origin": "Costa Rica",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Édition limitée certifiée biologique et équitable, du terroir de Tarrazú, traité par le procédé « honey » (en quantité limitée).",
+    "local": true,
+    "roaster": "Brûlerie Élixir",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0470/1732/8795/products/costa.jpg?v=1637889145",
+    "whereToBuy": "Brûlerie Élixir"
+  },
+  {
+    "id": "cafe-cloudforest-dark-roast",
+    "name": "Dark Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Chocolat",
+      "Noix",
+      "Sirop d'érable"
+    ],
+    "rating": null,
+    "description": "Torréfaction maximale aux notes audacieuses de chocolat, de noix et de sirop d'érable.",
+    "local": true,
+    "roaster": "CloudForest",
+    "decaf": false,
+    "imageUrl": "https://cloudforestcoffee.ca/wp-content/uploads/2020/09/cloudforest-400x400.jpg",
+    "whereToBuy": "Café Cloudforest"
+  },
+  {
+    "id": "cafe-cloudforest-extra-dark-roast",
+    "name": "Extra Dark Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Pour ceux qui n'ont pas peur du noir : un café riche et savoureux, jamais brûlé.",
+    "local": true,
+    "roaster": "CloudForest",
+    "decaf": false,
+    "imageUrl": "https://cloudforestcoffee.ca/wp-content/uploads/2020/09/cloudforest3978-400x400.jpg",
+    "whereToBuy": "Café Cloudforest"
+  },
+  {
+    "id": "cafe-cloudforest-medium-roast",
+    "name": "Medium Roast",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Caramel",
+      "Amaretto",
+      "Toffee"
+    ],
+    "rating": null,
+    "description": "Doux et nuancé — caramel, amaretto et toffee — pour toutes les méthodes d'infusion.",
+    "local": true,
+    "roaster": "CloudForest",
+    "decaf": false,
+    "imageUrl": "https://cloudforestcoffee.ca/wp-content/uploads/2020/09/cloudforest4001-400x400.jpg",
+    "whereToBuy": "Café Cloudforest"
+  },
+  {
+    "id": "cafe-cloudforest-golden-roast",
+    "name": "Golden Roast",
+    "origin": "Blend",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Agrumes",
+      "Fruité"
+    ],
+    "rating": null,
+    "description": "Lumineux et fruité, aux notes d'agrumes — pour les amateurs de café aventureux.",
+    "local": true,
+    "roaster": "CloudForest",
+    "decaf": false,
+    "imageUrl": "https://cloudforestcoffee.ca/wp-content/uploads/2020/09/cloudforest3986-400x400.jpg",
+    "whereToBuy": "Café Cloudforest"
+  },
+  {
+    "id": "cafe-cloudforest-espresso-roast",
+    "name": "Espresso Roast",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Un classique bien équilibré entre mi et foncé : ni acide, ni amer — tout simplement juste.",
+    "local": true,
+    "roaster": "CloudForest",
+    "decaf": false,
+    "imageUrl": "https://cloudforestcoffee.ca/wp-content/uploads/2020/09/cloudforest3991-400x400.jpg",
+    "whereToBuy": "Café Cloudforest"
+  },
+  {
+    "id": "cafe-cloudforest-decaf-roasts",
+    "name": "Decaf Roasts",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Tout le corps et la saveur de CloudForest, sans caféine.",
+    "local": true,
+    "roaster": "CloudForest",
+    "decaf": true,
+    "imageUrl": "https://cloudforestcoffee.ca/wp-content/uploads/2020/09/cloudforest3999-400x400.jpg",
+    "whereToBuy": "Café Cloudforest"
+  },
+  {
+    "id": "moca-loca-tache-melange-maison",
+    "name": "Mélange Maison",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Le mélange signature : grains du Pérou et du Honduras, torréfié en petits lots jusqu'à ce que les huiles fassent surface.",
+    "local": true,
+    "roaster": "Moca Loca",
+    "decaf": false,
+    "whereToBuy": "Moca Loca Café Co"
+  },
+  {
+    "id": "moca-loca-tache-espresso",
+    "name": "Espresso",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Mélange de grains d'Amérique centrale et de l'Honduras, parfait pour les lattés et cappuccinos maison.",
+    "local": true,
+    "roaster": "Moca Loca",
+    "decaf": false,
+    "whereToBuy": "Moca Loca Café Co"
+  },
+  {
+    "id": "moca-loca-tache-colombien-supreme",
+    "name": "Colombien Suprême",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Colombien des Andes à la belle acidité, riche en saveur et en arôme, à la finale veloutée.",
+    "local": true,
+    "roaster": "Moca Loca",
+    "decaf": false,
+    "whereToBuy": "Moca Loca Café Co"
+  },
+  {
+    "id": "moca-loca-tache-bolivien",
+    "name": "Bolivien",
+    "origin": "Bolivia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolat"
+    ],
+    "rating": null,
+    "description": "Bolivien d'altitude, harmonieux et équilibré, à l'arôme de chocolat et à la saveur sucrée.",
+    "local": true,
+    "roaster": "Moca Loca",
+    "decaf": false,
+    "whereToBuy": "Moca Loca Café Co"
+  },
+  {
+    "id": "moca-loca-tache-femenino",
+    "name": "Féménino",
+    "origin": "Peru",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Caramel",
+      "Chocolat"
+    ],
+    "rating": null,
+    "description": "Cultivé par des femmes sur leurs propres fermes : arômes de caramel et de chocolat, goût mi-amer.",
+    "local": true,
+    "roaster": "Moca Loca",
+    "decaf": false,
+    "whereToBuy": "Moca Loca Café Co"
+  },
+  {
+    "id": "moca-loca-tache-french-roast",
+    "name": "French Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "La torréfaction la plus noire de la sélection : riche, corsée, au goût intense de fumé.",
+    "local": true,
+    "roaster": "Moca Loca",
+    "decaf": false,
+    "whereToBuy": "Moca Loca Café Co"
+  },
+  {
+    "id": "moca-loca-tache-colombien-decafeine",
+    "name": "Colombien Décaféiné",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Décaféiné au procédé d'eau suisse, sans produits chimiques : grains d'Indonésie, d'Afrique et d'Amérique du Sud.",
+    "local": true,
+    "roaster": "Moca Loca",
+    "decaf": true,
+    "whereToBuy": "Moca Loca Café Co"
+  },
+  {
+    "id": "moca-loca-tache-espresso-decafeine",
+    "name": "Espresso Décaféiné",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Espresso décaféiné au procédé d'eau suisse, sans produits chimiques : grains d'Indonésie, d'Afrique et d'Amérique du Sud.",
+    "local": true,
+    "roaster": "Moca Loca",
+    "decaf": true,
+    "whereToBuy": "Moca Loca Café Co"
+  },
+  {
+    "id": "happy-goat-notre-dame-colombia-finca-san-gabriel",
+    "name": "Colombia Finca San Gabriel",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Crisp",
+      "Raspberry Jam",
+      "Rich & Sweet"
+    ],
+    "rating": null,
+    "description": "Leur premier café colombien de la série Small Batch : lavé, de Huila, à l'acidité vive et à la douceur riche.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/DSC08623_1a1024d7-1030-427c-9a20-afa9f9cd9d94.jpg?v=1777570774",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-tesseract-espresso",
+    "name": "Tesseract Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Citron",
+      "Amande grillée"
+    ],
+    "rating": null,
+    "description": "Espresso complexe au Guji éthiopien et Mogiana brésilien : acidité vive de citron, puis amande grillée.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/Tesseract_Espresso4.jpg?v=1759251173",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-ethiopia-guji",
+    "name": "Ethiopia Guji",
+    "origin": "Ethiopia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Épicé",
+      "Réglisse",
+      "Bleuet"
+    ],
+    "rating": null,
+    "description": "Guji à torréfaction moyenne aux notes épicées de réglisse et de baies, à l'acidité légère et au corps moyen.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/Eth_Guji_d05fc853-4122-4db1-b93d-0aa711d7b185.jpg?v=1759251071",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-ethiopia-yirgacheffe",
+    "name": "Ethiopia Yirgacheffe",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Floral",
+      "Agrumes",
+      "Thé noir",
+      "Baies"
+    ],
+    "rating": null,
+    "description": "Yirgacheffe à torréfaction claire, d'une grande complexité : floral, agrumes, thé noir et baies.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/Eth_Yirg.jpg?v=1759251061",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-forza-espresso",
+    "name": "Forza Espresso",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Mélange d'arabica et de robusta au crema épais, dans la tradition du véritable espresso italien.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/forza2.jpg?v=1759264271",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-brazil-mogiana",
+    "name": "Brazil Mogiana",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Noix grillée"
+    ],
+    "rating": null,
+    "description": "Arabica du Mogiana brésilien, torréfaction moyenne : équilibré et lisse, aux notes de noix grillées.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/brazil_mogiana_94d88fd3-1cb7-4550-add7-965061076cb7.jpg?v=1759251076",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-brazil-peaberry",
+    "name": "Brazil Peaberry",
+    "origin": "Brazil",
+    "roastLevel": "Dark",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Leur torréfaction signature : rare peaberry brésilien, corsé et lisse, à faible acidité.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/Peaberry_5521e5b6-bc9d-478b-9c6a-65e12ef94f91.jpg?v=1759263422",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-the-g",
+    "name": "The \"G\"",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Épice",
+      "Douceur"
+    ],
+    "rating": null,
+    "description": "Mélange maison de grains du Brésil et du Guatemala (mi-corsé et corsé), parfait pour la cafetière à piston.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/The_G_7d0e9662-d835-4e82-91a6-21475193c3f2.jpg?v=1759251067",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-colombia-decaf",
+    "name": "Colombia Decaf",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Chocolat",
+      "Floral"
+    ],
+    "rating": null,
+    "description": "Décaféiné au procédé naturel de canne à sucre, lisse et équilibré, aux notes de chocolat et de fleurs.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/colombia_decaf_9e075654-f17e-4ac5-8d73-418a713ce1de.jpg?v=1762457060",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-guatemala-huehuetenango",
+    "name": "Guatemala Huehuetenango",
+    "origin": "Guatemala",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Noix grillée"
+    ],
+    "rating": null,
+    "description": "Guatémaltèque des hautes terres du nord : noix grillée, acidité douce et finale propre et sucrée.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/Guatemala3.jpg?v=1762888638",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-colombia-popayan",
+    "name": "Colombia Popayan",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Douceur",
+      "Fruité"
+    ],
+    "rating": null,
+    "description": "Colombien lisse et accessible de Popayan, à la douceur délicate et aux notes fruitées subtiles.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/Colombia.jpg?v=1762457065",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  },
+  {
+    "id": "happy-goat-notre-dame-ethiopia-guji-espresso",
+    "name": "Ethiopia Guji Espresso",
+    "origin": "Ethiopia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Douceur naturelle"
+    ],
+    "rating": null,
+    "description": "Espresso d'origine éthiopienne à l'acidité vive et à la douceur naturelle, au corps bien rond.",
+    "local": true,
+    "roaster": "Happy Goat Coffee Co.",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0061/3302/files/eth_espresso_7b507398-e690-45fc-97aa-ca8007df98d3.jpg?v=1759264270",
+    "whereToBuy": "Maison du Café Happy Goat Coffee Company"
+  }
+]

@@ -1,0 +1,209 @@
+[
+ {
+  "id": "ethica-espresso",
+  "name": "Ethica Espresso",
+  "origin": "Brazil",
+  "roastLevel": "Medium",
+  "tastingNotes": [
+   "Chocolate",
+   "Nuts",
+   "Stone Fruits"
+  ],
+  "rating": null,
+  "description": "Classic chocolatey, nutty espresso with a bold, lingering finish — good with milk or straight.",
+  "local": false,
+  "roaster": "Ethica Coffee Roasters",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0359/3129/1781/files/espresso_250g_1f8fa60f-93f9-49d6-bad3-4be87cb2348c.png?v=1786559025",
+  "whereToBuy": "Ethica Coffee Roasters"
+ },
+ {
+  "id": "ethica-vantage-espresso",
+  "name": "Vantage Espresso",
+  "origin": "Colombia",
+  "roastLevel": "Medium",
+  "tastingNotes": [
+   "Marmalade",
+   "Almond",
+   "Milk Chocolate"
+  ],
+  "rating": null,
+  "description": "Washed-process espresso blend from high-altitude Colombian farms.",
+  "local": false,
+  "roaster": "Ethica Coffee Roasters",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0359/3129/1781/files/vantage_250g_a2bea638-5ad4-42b1-aa64-e142dd9f55b6.png?v=1776791530",
+  "whereToBuy": "Ethica Coffee Roasters"
+ },
+ {
+  "id": "ethica-decaf",
+  "name": "Ethica Decaf",
+  "origin": "Colombia",
+  "roastLevel": "Medium",
+  "tastingNotes": [
+   "Chocolate",
+   "Sweet Apple",
+   "Hazelnut"
+  ],
+  "rating": null,
+  "description": "Smooth, rounded decaf made with the sugarcane process — works as filter or espresso.",
+  "local": false,
+  "roaster": "Ethica Coffee Roasters",
+  "decaf": true,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0359/3129/1781/files/decaf_250g_57f1cb5b-886b-45b4-8773-33d921b49048.png?v=1776791952",
+  "whereToBuy": "Ethica Coffee Roasters"
+ },
+ {
+  "id": "ethica-israel-degefa",
+  "name": "Israel Degefa",
+  "origin": "Ethiopia",
+  "roastLevel": "Medium",
+  "tastingNotes": [
+   "Ripe Peach",
+   "Honey",
+   "Plum"
+  ],
+  "rating": null,
+  "description": "Juicy natural-process espresso from Guji with ripe stone fruit and honeyed sweetness.",
+  "local": false,
+  "roaster": "Ethica Coffee Roasters",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0359/3129/1781/files/israel_250g.png?v=1785338489",
+  "whereToBuy": "Ethica Coffee Roasters"
+ },
+ {
+  "id": "ethica-andres-martinez",
+  "name": "Andres Martinez",
+  "origin": "Colombia",
+  "roastLevel": "Light",
+  "tastingNotes": [],
+  "rating": null,
+  "description": "Crisp, light and refreshing washed Colombian coffee from two family farms in Cauca.",
+  "local": false,
+  "roaster": "Ethica Coffee Roasters",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0359/3129/1781/files/martinez_250g.png?v=1788274995",
+  "whereToBuy": "Ethica Coffee Roasters"
+ },
+ {
+  "id": "ethica-filter",
+  "name": "Ethica Filter",
+  "origin": "Brazil",
+  "roastLevel": "Medium",
+  "tastingNotes": [
+   "Chocolate",
+   "Hazelnut",
+   "Stone Fruits"
+  ],
+  "rating": null,
+  "description": "Classic chocolatey, nutty filter coffee with a bold, lingering finish.",
+  "local": false,
+  "roaster": "Ethica Coffee Roasters",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0359/3129/1781/files/filter_250g_green.png?v=1791051227",
+  "whereToBuy": "Ethica Coffee Roasters"
+ },
+ {
+  "id": "ethica-el-tempixque",
+  "name": "El Tempixque",
+  "origin": "Guatemala",
+  "roastLevel": "Medium",
+  "tastingNotes": [
+   "Red Apple",
+   "Soft Caramel",
+   "Pomegranate"
+  ],
+  "rating": null,
+  "description": "Washed Bourbon and Caturra from Antigua valley — caramel sweetness with red apple acidity.",
+  "local": false,
+  "roaster": "Ethica Coffee Roasters",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0359/3129/1781/files/el_tempixque_250g_3802fb4d-e437-473b-ae81-97a34361d9db.png?v=1787229115",
+  "whereToBuy": "Ethica Coffee Roasters"
+ },
+ {
+  "id": "ethica-el-sendero",
+  "name": "El Sendero",
+  "origin": "Colombia",
+  "roastLevel": "Light",
+  "tastingNotes": [
+   "Cantaloupe",
+   "Jasmine",
+   "Honey"
+  ],
+  "rating": null,
+  "description": "Floral, well-balanced washed Caturra from Nariño — honey-sweet and delicate.",
+  "local": false,
+  "roaster": "Ethica Coffee Roasters",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0359/3129/1781/files/sendero_250g.png?v=1776775536",
+  "whereToBuy": "Ethica Coffee Roasters"
+ },
+ {
+  "id": "ethica-bahire",
+  "name": "Bahire",
+  "origin": "Burundi",
+  "roastLevel": "Light",
+  "tastingNotes": [],
+  "rating": null,
+  "description": "Elegant tea-like washed Red Bourbon from a single hillside lot — refined acidity, pleasant finish.",
+  "local": false,
+  "roaster": "Ethica Coffee Roasters",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0359/3129/1781/files/bahire_250g.png?v=1789655484",
+  "whereToBuy": "Ethica Coffee Roasters"
+ },
+ {
+  "id": "ethica-yabitu-koba",
+  "name": "Yabitu Koba",
+  "origin": "Ethiopia",
+  "roastLevel": "Light",
+  "tastingNotes": [
+   "Meyer Lemon",
+   "Cola",
+   "Raisin"
+  ],
+  "rating": null,
+  "description": "Bright, sweet washed coffee from a remote kebele in Guji — lemon up front, raisin finish.",
+  "local": false,
+  "roaster": "Ethica Coffee Roasters",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0359/3129/1781/files/yabitu_250g.png?v=1791659447",
+  "whereToBuy": "Ethica Coffee Roasters"
+ },
+ {
+  "id": "ethica-nuevo-paraiso",
+  "name": "Nuevo Paraiso",
+  "origin": "Mexico",
+  "roastLevel": "Medium",
+  "tastingNotes": [
+   "Stewed Pear",
+   "Cocoa",
+   "Florals"
+  ],
+  "rating": null,
+  "description": "Soft, sweet washed coffee from small family farms in Chiapas — pear and cocoa with gentle florals.",
+  "local": false,
+  "roaster": "Ethica Coffee Roasters",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0359/3129/1781/files/nuevo_paraiso_250g.png?v=1791051232",
+  "whereToBuy": "Ethica Coffee Roasters"
+ },
+ {
+  "id": "ethica-spectrum-peru-geisha",
+  "name": "SPECTRUM — Peru Geisha",
+  "origin": "Peru",
+  "roastLevel": "Light",
+  "tastingNotes": [
+   "Jasmine",
+   "Pomelo"
+  ],
+  "rating": null,
+  "description": "Delicate washed Geisha from Cajamarca — floral with jasmine and pomelo sweetness, tea-like finish.",
+  "local": false,
+  "roaster": "Ethica Coffee Roasters",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0359/3129/1781/files/spectrum_box_65a3baa8-95bc-4941-b19e-62db17b40585.png?v=1780575659",
+  "whereToBuy": "Ethica Coffee Roasters"
+ }
+]

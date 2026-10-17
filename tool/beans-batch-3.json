@@ -1,0 +1,769 @@
+[
+  {
+    "id": "bridgehead-glebe-centro-house",
+    "name": "Centro House",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Swiss Chocolate",
+      "Plum",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Best-selling medium roast with smooth chocolate and a hint of plum sweetness.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Centro_House_300g_WB_9511c33b-845e-4589-84a4-9c9f906a280d.jpg?v=1759450876&width=1024",
+    "whereToBuy": "Bridgehead (Glebe)"
+  },
+  {
+    "id": "bridgehead-glebe-logdriver-espresso",
+    "name": "Logdriver Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Toffee",
+      "Hazelnut",
+      "Round"
+    ],
+    "rating": null,
+    "description": "Balanced everyday espresso with rich notes of caramel and cocoa.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Logdriver_300g_WB.jpg?v=1759450876&width=1024",
+    "whereToBuy": "Bridgehead (Glebe)"
+  },
+  {
+    "id": "bridgehead-glebe-bytown-boom",
+    "name": "Bytown Boom",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Cacao Nibs",
+      "Dried Cherry",
+      "Bold"
+    ],
+    "rating": null,
+    "description": "Signature dark roast, bold yet balanced with dried cherry and cacao.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Bytown_Boom_300g_WB.jpg?v=1759438567&width=1024",
+    "whereToBuy": "Bridgehead (Glebe)"
+  },
+  {
+    "id": "bridgehead-glebe-french-roast",
+    "name": "French Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Toasted Walnuts",
+      "Molasses",
+      "Creamy"
+    ],
+    "rating": null,
+    "description": "Smoky, full-bodied dark roast with molasses and toasted walnuts.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_French_Roast_300g_WB_12d31af8-54d3-481f-ab96-65fb4b2a4176.jpg?v=1759438588&width=1024",
+    "whereToBuy": "Bridgehead (Glebe)"
+  },
+  {
+    "id": "bridgehead-glebe-honduras",
+    "name": "Honduras",
+    "origin": "Honduras",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Poached Pears",
+      "Milk Chocolate",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Medium roast from Marcala, Honduras, opening with poached pear and settling into milk chocolate.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Web_Carousel_Honduras_1.jpg?v=1787772983&width=2048",
+    "whereToBuy": "Bridgehead (Glebe)"
+  },
+  {
+    "id": "bridgehead-glebe-steady-hands-decaf",
+    "name": "Steady Hands Decaf",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fudge",
+      "Cashew",
+      "Buttery"
+    ],
+    "rating": null,
+    "description": "Swiss Water decaf with notes of cocoa and toasted nuts, smooth morning to night.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": true,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Steady_Hands_300g_WB.jpg?v=1759450878&width=1024",
+    "whereToBuy": "Bridgehead (Glebe)"
+  },
+  {
+    "id": "bridgehead-old-ottawa-south-centro-house",
+    "name": "Centro House",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Swiss Chocolate",
+      "Plum",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Best-selling medium roast with smooth chocolate and a hint of plum sweetness.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Centro_House_300g_WB_9511c33b-845e-4589-84a4-9c9f906a280d.jpg?v=1759450876&width=1024",
+    "whereToBuy": "Bridgehead (Old Ottawa South)"
+  },
+  {
+    "id": "bridgehead-old-ottawa-south-logdriver-espresso",
+    "name": "Logdriver Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Toffee",
+      "Hazelnut",
+      "Round"
+    ],
+    "rating": null,
+    "description": "Balanced everyday espresso with rich notes of caramel and cocoa.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Logdriver_300g_WB.jpg?v=1759450876&width=1024",
+    "whereToBuy": "Bridgehead (Old Ottawa South)"
+  },
+  {
+    "id": "bridgehead-old-ottawa-south-bytown-boom",
+    "name": "Bytown Boom",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Cacao Nibs",
+      "Dried Cherry",
+      "Bold"
+    ],
+    "rating": null,
+    "description": "Signature dark roast, bold yet balanced with dried cherry and cacao.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Bytown_Boom_300g_WB.jpg?v=1759438567&width=1024",
+    "whereToBuy": "Bridgehead (Old Ottawa South)"
+  },
+  {
+    "id": "bridgehead-old-ottawa-south-french-roast",
+    "name": "French Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Toasted Walnuts",
+      "Molasses",
+      "Creamy"
+    ],
+    "rating": null,
+    "description": "Smoky, full-bodied dark roast with molasses and toasted walnuts.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_French_Roast_300g_WB_12d31af8-54d3-481f-ab96-65fb4b2a4176.jpg?v=1759438588&width=1024",
+    "whereToBuy": "Bridgehead (Old Ottawa South)"
+  },
+  {
+    "id": "bridgehead-old-ottawa-south-honduras",
+    "name": "Honduras",
+    "origin": "Honduras",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Poached Pears",
+      "Milk Chocolate",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Medium roast from Marcala, Honduras, opening with poached pear and settling into milk chocolate.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Web_Carousel_Honduras_1.jpg?v=1787772983&width=2048",
+    "whereToBuy": "Bridgehead (Old Ottawa South)"
+  },
+  {
+    "id": "bridgehead-old-ottawa-south-steady-hands-decaf",
+    "name": "Steady Hands Decaf",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fudge",
+      "Cashew",
+      "Buttery"
+    ],
+    "rating": null,
+    "description": "Swiss Water decaf with notes of cocoa and toasted nuts, smooth morning to night.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": true,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Steady_Hands_300g_WB.jpg?v=1759450878&width=1024",
+    "whereToBuy": "Bridgehead (Old Ottawa South)"
+  },
+  {
+    "id": "bridgehead-little-italy-centro-house",
+    "name": "Centro House",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Swiss Chocolate",
+      "Plum",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Best-selling medium roast with smooth chocolate and a hint of plum sweetness.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Centro_House_300g_WB_9511c33b-845e-4589-84a4-9c9f906a280d.jpg?v=1759450876&width=1024",
+    "whereToBuy": "Bridgehead (Little Italy / Roastery)"
+  },
+  {
+    "id": "bridgehead-little-italy-logdriver-espresso",
+    "name": "Logdriver Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Toffee",
+      "Hazelnut",
+      "Round"
+    ],
+    "rating": null,
+    "description": "Balanced everyday espresso with rich notes of caramel and cocoa.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Logdriver_300g_WB.jpg?v=1759450876&width=1024",
+    "whereToBuy": "Bridgehead (Little Italy / Roastery)"
+  },
+  {
+    "id": "bridgehead-little-italy-bytown-boom",
+    "name": "Bytown Boom",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Cacao Nibs",
+      "Dried Cherry",
+      "Bold"
+    ],
+    "rating": null,
+    "description": "Signature dark roast, bold yet balanced with dried cherry and cacao.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Bytown_Boom_300g_WB.jpg?v=1759438567&width=1024",
+    "whereToBuy": "Bridgehead (Little Italy / Roastery)"
+  },
+  {
+    "id": "bridgehead-little-italy-french-roast",
+    "name": "French Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Toasted Walnuts",
+      "Molasses",
+      "Creamy"
+    ],
+    "rating": null,
+    "description": "Smoky, full-bodied dark roast with molasses and toasted walnuts.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_French_Roast_300g_WB_12d31af8-54d3-481f-ab96-65fb4b2a4176.jpg?v=1759438588&width=1024",
+    "whereToBuy": "Bridgehead (Little Italy / Roastery)"
+  },
+  {
+    "id": "bridgehead-little-italy-honduras",
+    "name": "Honduras",
+    "origin": "Honduras",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Poached Pears",
+      "Milk Chocolate",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Medium roast from Marcala, Honduras, opening with poached pear and settling into milk chocolate.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Web_Carousel_Honduras_1.jpg?v=1787772983&width=2048",
+    "whereToBuy": "Bridgehead (Little Italy / Roastery)"
+  },
+  {
+    "id": "bridgehead-little-italy-steady-hands-decaf",
+    "name": "Steady Hands Decaf",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fudge",
+      "Cashew",
+      "Buttery"
+    ],
+    "rating": null,
+    "description": "Swiss Water decaf with notes of cocoa and toasted nuts, smooth morning to night.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": true,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Steady_Hands_300g_WB.jpg?v=1759450878&width=1024",
+    "whereToBuy": "Bridgehead (Little Italy / Roastery)"
+  },
+  {
+    "id": "bridgehead-sparks-centro-house",
+    "name": "Centro House",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Swiss Chocolate",
+      "Plum",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Best-selling medium roast with smooth chocolate and a hint of plum sweetness.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Centro_House_300g_WB_9511c33b-845e-4589-84a4-9c9f906a280d.jpg?v=1759450876&width=1024",
+    "whereToBuy": "Bridgehead (Sparks)"
+  },
+  {
+    "id": "bridgehead-sparks-logdriver-espresso",
+    "name": "Logdriver Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Toffee",
+      "Hazelnut",
+      "Round"
+    ],
+    "rating": null,
+    "description": "Balanced everyday espresso with rich notes of caramel and cocoa.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Logdriver_300g_WB.jpg?v=1759450876&width=1024",
+    "whereToBuy": "Bridgehead (Sparks)"
+  },
+  {
+    "id": "bridgehead-sparks-bytown-boom",
+    "name": "Bytown Boom",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Cacao Nibs",
+      "Dried Cherry",
+      "Bold"
+    ],
+    "rating": null,
+    "description": "Signature dark roast, bold yet balanced with dried cherry and cacao.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Bytown_Boom_300g_WB.jpg?v=1759438567&width=1024",
+    "whereToBuy": "Bridgehead (Sparks)"
+  },
+  {
+    "id": "bridgehead-sparks-french-roast",
+    "name": "French Roast",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Toasted Walnuts",
+      "Molasses",
+      "Creamy"
+    ],
+    "rating": null,
+    "description": "Smoky, full-bodied dark roast with molasses and toasted walnuts.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_French_Roast_300g_WB_12d31af8-54d3-481f-ab96-65fb4b2a4176.jpg?v=1759438588&width=1024",
+    "whereToBuy": "Bridgehead (Sparks)"
+  },
+  {
+    "id": "bridgehead-sparks-honduras",
+    "name": "Honduras",
+    "origin": "Honduras",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Poached Pears",
+      "Milk Chocolate",
+      "Smooth"
+    ],
+    "rating": null,
+    "description": "Medium roast from Marcala, Honduras, opening with poached pear and settling into milk chocolate.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": false,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Web_Carousel_Honduras_1.jpg?v=1787772983&width=2048",
+    "whereToBuy": "Bridgehead (Sparks)"
+  },
+  {
+    "id": "bridgehead-sparks-steady-hands-decaf",
+    "name": "Steady Hands Decaf",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Fudge",
+      "Cashew",
+      "Buttery"
+    ],
+    "rating": null,
+    "description": "Swiss Water decaf with notes of cocoa and toasted nuts, smooth morning to night.",
+    "local": true,
+    "roaster": "Bridgehead",
+    "decaf": true,
+    "imageUrl": "https://www.bridgehead.ca/cdn/shop/files/Product_Badge_Steady_Hands_300g_WB.jpg?v=1759450878&width=1024",
+    "whereToBuy": "Bridgehead (Sparks)"
+  },
+  {
+    "id": "little-victories-elgin-colombia-victor-bermudez-gesha-100g-jar",
+    "name": "Colombia Victor Bermúdez - Gesha (100g Jar)",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Earl Grey tea",
+      "Lavender",
+      "Blackberry"
+    ],
+    "rating": null,
+    "description": "Limited washed Gesha from Finca Buenos Aires in Huila, sold in a 100g jar.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/lvc_limited_columbia.png?v=1784496929",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-guatemala-tadeo-lopez-pacamara",
+    "name": "Guatemala Tadeo Lopez - Pacamara",
+    "origin": "Guatemala",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Golden raisin",
+      "Caramel",
+      "Bran flakes"
+    ],
+    "rating": null,
+    "description": "Washed Pacamara from a biodiverse father-son farm in San Antonio Huista.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/bag04.png?v=1776195653",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-kenya-kamwangi-ab",
+    "name": "Kenya Kamwangi - AB",
+    "origin": "Kenya",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Blood orange",
+      "Sweet pea",
+      "Peach"
+    ],
+    "rating": null,
+    "description": "Washed AB lot from the Kamwangi washing station in Kirinyaga County.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/bag05.png?v=1762581768",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-colombia-granja-paraiso-92-sudan-rume-100g-jar",
+    "name": "Colombia Granja Paraíso 92 - Sudan Rume (100g Jar)",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Peach",
+      "Cantaloupe",
+      "Allspice"
+    ],
+    "rating": null,
+    "description": "Limited double-anaerobic Sudan Rume from Wilton Benitez, in a 100g jar.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/lvcjar4.png?v=1765209231",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-panama-hachi-coffee-project-kaze-natural-gesha-100g-jar",
+    "name": "Panama Hachi Coffee Project - Kaze Natural Gesha (100g Jar)",
+    "origin": "Panama",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Candied cherry",
+      "Blood orange",
+      "Hibiscus"
+    ],
+    "rating": null,
+    "description": "Limited natural Gesha from the Chiriqui highlands, in a 100g jar.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/lvc_limited_panama.png?v=1784496929",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-colombia-granja-paraiso-92-sl-28-100g-jar",
+    "name": "Colombia Granja Paraíso 92 - SL-28 (100g Jar)",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Concord grape",
+      "Cherry cola",
+      "Candy apple"
+    ],
+    "rating": null,
+    "description": "Limited double-anaerobic SL-28 from Wilton Benitez, in a 100g jar.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/lvcjar3.png?v=1765209325",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-bright-eyed-espresso",
+    "name": "Bright Eyed Espresso",
+    "origin": "Peru · Ethiopia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Caramel",
+      "Hazelnut",
+      "Citrus"
+    ],
+    "rating": null,
+    "description": "Bright, sweet espresso pillar built for black coffee, americanos and long blacks.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/MG_1080-3.png?v=1746115325",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-decaf-colombia-amigos-del-huila-sugar-process",
+    "name": "Decaf // Colombia Amigos del Huila - Sugar Process",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Dark chocolate",
+      "Cherry",
+      "Almond"
+    ],
+    "rating": null,
+    "description": "Sugar-process decaf blend from smallholder producers in Huila.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/bag09.png?v=1725929573",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-sunshine",
+    "name": "Sunshine",
+    "origin": "Guatemala",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Bright",
+      "Caramel",
+      "Clean"
+    ],
+    "rating": null,
+    "description": "House light roast pillar: bright, sweet and easy drinking.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/bag01.png?v=1725929573",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-perfect-dark",
+    "name": "Perfect Dark",
+    "origin": "Guatemala",
+    "roastLevel": "Dark",
+    "tastingNotes": [
+      "Sweet",
+      "Smoky"
+    ],
+    "rating": null,
+    "description": "Their love letter to the dark roast: sweet and smokey, never ashy.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/bag02.png?v=1725929573",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "little-victories-elgin-7-10-split-espresso",
+    "name": "7-10 Split Espresso",
+    "origin": "Brazil · Guatemala",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Tangerine",
+      "Cherry",
+      "Raw cacao",
+      "Sage"
+    ],
+    "rating": null,
+    "description": "Do-it-all espresso blend, smooth and sweet with a tangerine-cherry pop.",
+    "local": true,
+    "roaster": "Little Victories Coffee Roasters",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1529/5527/files/bag03.png?v=1725929573",
+    "whereToBuy": "Little Victories Coffee Roasters"
+  },
+  {
+    "id": "equator-westboro-guatemala-huehuetenango",
+    "name": "Guatemala Huehuetenango",
+    "origin": "Guatemala",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Lime",
+      "Milk chocolate",
+      "Cherry"
+    ],
+    "rating": null,
+    "description": "Single origin from Huehuetenango with lime, milk chocolate and cherry.",
+    "local": true,
+    "roaster": "Equator Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0349/7682/5389/files/Guat340g.webp?v=1789397068",
+    "whereToBuy": "Equator Coffee"
+  },
+  {
+    "id": "equator-westboro-fall-seasonal-blend",
+    "name": "Fall Seasonal Blend",
+    "origin": "Guatemala · Sumatra",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Cherry",
+      "Brown sugar",
+      "Almond"
+    ],
+    "rating": null,
+    "description": "Medium roast seasonal blend from Guatemala and Sumatra.",
+    "local": true,
+    "roaster": "Equator Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0349/7682/5389/files/Fall_Seasonal_Bag_340g_2026.webp?v=1788880477",
+    "whereToBuy": "Equator Coffee"
+  },
+  {
+    "id": "equator-westboro-ethiopia-sidama",
+    "name": "Ethiopia Sidama",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Blueberry pie",
+      "Rose",
+      "Black currant"
+    ],
+    "rating": null,
+    "description": "Naturally processed light roast from the Telamo Cooperative in Sidama.",
+    "local": true,
+    "roaster": "Equator Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0349/7682/5389/files/Ethiopia_SO_340g_2025.png?v=1734546111",
+    "whereToBuy": "Equator Coffee"
+  },
+  {
+    "id": "equator-westboro-colombia-cauca",
+    "name": "Colombia Cauca",
+    "origin": "Colombia",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Lime",
+      "Demerara sugar",
+      "Apricot"
+    ],
+    "rating": null,
+    "description": "Washed light-medium roast from the Fondo Paez Cooperative in Cauca.",
+    "local": true,
+    "roaster": "Equator Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0349/7682/5389/files/340g_Colombia_Cauca_Coffee_Beans.webp?v=1787146817",
+    "whereToBuy": "Equator Coffee"
+  },
+  {
+    "id": "equator-westboro-peru-geisha-microlot",
+    "name": "Peru Geisha Microlot",
+    "origin": "Peru",
+    "roastLevel": "Light",
+    "tastingNotes": [
+      "Strawberry",
+      "Cocoa",
+      "Plum",
+      "Coconut"
+    ],
+    "rating": null,
+    "description": "Naturally processed Geisha microlot from Cajamarca, Peru.",
+    "local": true,
+    "roaster": "Equator Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0349/7682/5389/files/PeruGeishaMicrolotCanCoffeeBeans.png?v=1777992170",
+    "whereToBuy": "Equator Coffee"
+  },
+  {
+    "id": "equator-westboro-mexico-chiapas",
+    "name": "Mexico Chiapas",
+    "origin": "Mexico",
+    "roastLevel": "Medium",
+    "tastingNotes": [
+      "Lime",
+      "Brown sugar",
+      "Nougat"
+    ],
+    "rating": null,
+    "description": "Highland Chiapas coffee from the Triunfo Verde cooperative.",
+    "local": true,
+    "roaster": "Equator Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0349/7682/5389/files/Mexico_Chiapas_340g_Bag.png?v=1765910543",
+    "whereToBuy": "Equator Coffee"
+  },
+  {
+    "id": "equator-westboro-hang-loose-half-caf",
+    "name": "Hang Loose Half-Caf",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Half-caf blend with full-on flavour and half the caffeine.",
+    "local": true,
+    "roaster": "Equator Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0349/7682/5389/files/Hang_Loose_340g.png?v=1764258146",
+    "whereToBuy": "Equator Coffee"
+  },
+  {
+    "id": "equator-westboro-polaris-espresso",
+    "name": "Polaris Espresso",
+    "origin": "Blend",
+    "roastLevel": "Medium",
+    "tastingNotes": [],
+    "rating": null,
+    "description": "Fair trade and organic espresso blend, bold yet smooth.",
+    "local": true,
+    "roaster": "Equator Coffee",
+    "decaf": false,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0349/7682/5389/files/340g_Polaris.png?v=1746203832",
+    "whereToBuy": "Equator Coffee"
+  }
+]

@@ -1,0 +1,161 @@
+[
+ {
+  "id": "moonbean-ethiopia-yirgacheffe-edido",
+  "name": "Ethiopia Yirgacheffe Edido — Washed",
+  "origin": "Ethiopia",
+  "roastLevel": "Light",
+  "tastingNotes": [
+   "Kiwi",
+   "Guava",
+   "Honey"
+  ],
+  "rating": null,
+  "description": "Washed single-origin lot from the Edido area of Yirgacheffe, grown by smallholders and processed by a family-run mill.",
+  "local": false,
+  "roaster": "Moonbean Coffee Company",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0421/9486/2229/files/ethiopiayirgacheffewashed2026ja.png?v=1789584456",
+  "whereToBuy": "Moonbean Coffee Company"
+ },
+ {
+  "id": "moonbean-ethiopia-guji-natural",
+  "name": "Ethiopia Guji — Natural",
+  "origin": "Ethiopia",
+  "roastLevel": "Light",
+  "tastingNotes": [
+   "Berry",
+   "Chocolate"
+  ],
+  "rating": null,
+  "description": "Natural-process coffee from the Guji zone of Oromia, grown among dense forest vegetation in rich volcanic soil.",
+  "local": false,
+  "roaster": "Moonbean Coffee Company",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0421/9486/2229/files/ethiopia_guji_natural_2025.png?v=1762640450",
+  "whereToBuy": "Moonbean Coffee Company"
+ },
+ {
+  "id": "moonbean-kenya-kii-rungeto",
+  "name": "Kenya Kii — Rungeto Co-op",
+  "origin": "Kenya",
+  "roastLevel": "Light",
+  "tastingNotes": [
+   "Cranberry",
+   "Pomelo",
+   "Honey"
+  ],
+  "rating": null,
+  "description": "Fully washed coffee from the Kii washing station at the foot of Mount Kenya, grown by 1,000+ smallholder farmers.",
+  "local": false,
+  "roaster": "Moonbean Coffee Company",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0421/9486/2229/files/Copyofkenyaabkirinyagakii2026.png?v=1789580957",
+  "whereToBuy": "Moonbean Coffee Company"
+ },
+ {
+  "id": "moonbean-colombia-guamo-natural",
+  "name": "Colombia Innovation Series — Guamo Natural",
+  "origin": "Colombia",
+  "roastLevel": "Medium",
+  "tastingNotes": [
+   "Tropical fruits",
+   "Cherry",
+   "Green apple"
+  ],
+  "rating": null,
+  "description": "Experimental fermented natural from Caldas, tied to a reforestation project planting native trees in the region.",
+  "local": false,
+  "roaster": "Moonbean Coffee Company",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0421/9486/2229/files/Colombia_natural_guamo.jpg?v=1777481615",
+  "whereToBuy": "Moonbean Coffee Company"
+ },
+ {
+  "id": "moonbean-colombia-juicy-strawberry",
+  "name": "Colombia Innovation Series — Juicy Strawberry",
+  "origin": "Colombia",
+  "roastLevel": "Medium",
+  "tastingNotes": [
+   "Strawberry",
+   "Milk chocolate"
+  ],
+  "rating": null,
+  "description": "Anaerobic honey-process coffee co-fermented with strawberry for five days — a bold experimental lot.",
+  "local": false,
+  "roaster": "Moonbean Coffee Company",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0421/9486/2229/files/Colombia_juicy_strawberry.jpg?v=1777481068",
+  "whereToBuy": "Moonbean Coffee Company"
+ },
+ {
+  "id": "moonbean-brazil-jewel-blossom",
+  "name": "Brazil Jewel Blossom — Natural",
+  "origin": "Brazil",
+  "roastLevel": "Medium",
+  "tastingNotes": [
+   "Hazelnut",
+   "Cocoa",
+   "Chocolate"
+  ],
+  "rating": null,
+  "description": "Natural-process Brazilian coffee from ten farming families in Minas Gerais, mild-bodied and nutty.",
+  "local": false,
+  "roaster": "Moonbean Coffee Company",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0421/9486/2229/files/Brazil_jewel_blossom.jpg?v=1777480505",
+  "whereToBuy": "Moonbean Coffee Company"
+ },
+ {
+  "id": "moonbean-peru-montegrande",
+  "name": "Peru Montegrande — Fair Trade Organic",
+  "origin": "Peru",
+  "roastLevel": "Medium",
+  "tastingNotes": [
+   "Cocoa",
+   "Nutty",
+   "Soft caramel",
+   "Buttery"
+  ],
+  "rating": null,
+  "description": "High-altitude washed coffee from the Montegrande producer association in Jaén-Cajamarca. Fair Trade and Organic.",
+  "local": false,
+  "roaster": "Moonbean Coffee Company",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0421/9486/2229/files/6_perumontegrandefto2026.jpg?v=1777481205",
+  "whereToBuy": "Moonbean Coffee Company"
+ },
+ {
+  "id": "moonbean-midnight-darkness",
+  "name": "Midnight Darkness — Dark Roast",
+  "origin": "Central America",
+  "roastLevel": "Dark",
+  "tastingNotes": [
+   "Dark chocolate",
+   "Caramel"
+  ],
+  "rating": null,
+  "description": "Roasted to second crack for a bold, full-bodied cup — rich without smokiness. Fair Trade and Organic.",
+  "local": false,
+  "roaster": "Moonbean Coffee Company",
+  "decaf": false,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0421/9486/2229/files/midnightdarkness1lbcoffeebag.png?v=1693421800",
+  "whereToBuy": "Moonbean Coffee Company"
+ },
+ {
+  "id": "moonbean-majestic-decaf",
+  "name": "Majestic Decaf — Swiss Water Dark Roast",
+  "origin": "Peru",
+  "roastLevel": "Dark",
+  "tastingNotes": [
+   "Dark roast",
+   "Aromatic"
+  ],
+  "rating": null,
+  "description": "Swiss Water decaf, roasted dark for full flavour. Fair Trade and Organic.",
+  "local": false,
+  "roaster": "Moonbean Coffee Company",
+  "decaf": true,
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0421/9486/2229/files/majestic1lbcoffeebag.png?v=1693420901",
+  "whereToBuy": "Moonbean Coffee Company"
+ }
+]
