@@ -19,10 +19,19 @@ class WishlistScreen extends StatelessWidget {
       body: beans.isEmpty
           ? ListView(
               padding: const EdgeInsets.fromLTRB(24, 8, 24, 48),
-              children: const [
-                EmptyCard(
-                  text:
-                      'Nothing saved yet — tap the heart on any bean to add it here',
+              children: [
+                const SizedBox(height: 32),
+                EmptyState(
+                  icon: Icons.favorite_border,
+                  headline: 'No favorites yet',
+                  body:
+                      'Tap the heart on any coffee to keep it here for later.',
+                  ctaLabel: 'Browse the catalogue',
+                  onCta: () {
+                    final appState = AppState.of(context);
+                    Navigator.of(context).pop();
+                    appState.setTabIndex(1);
+                  },
                 ),
               ],
             )

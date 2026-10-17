@@ -19,6 +19,31 @@ class TriedScreen extends StatelessWidget {
         : state.triedCoffees
             .reduce((a, b) => a.rating >= b.rating ? a : b);
 
+    // First-time user: one inviting hero instead of empty sections.
+    if (state.triedCoffees.isEmpty) {
+      return Scaffold(
+        appBar: AppBar(title: const Text('Coffees tried')),
+        body: ListView(
+          padding: const EdgeInsets.fromLTRB(24, 8, 24, 48),
+          children: [
+            const SizedBox(height: 32),
+            EmptyState(
+              icon: Icons.coffee_outlined,
+              headline: 'No tastings yet',
+              body:
+                  'Every coffee you taste builds your story — your top pick and history will live here.',
+              ctaLabel: 'Log your first coffee',
+              onCta: () {
+                final appState = AppState.of(context);
+                Navigator.of(context).pop();
+                appState.setTabIndex(1);
+              },
+            ),
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(title: const Text('Coffees tried')),
       body: ListView(
