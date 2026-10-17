@@ -5,9 +5,12 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
 
+import '../models/coffee_bean.dart';
 import '../models/coffee_shop.dart';
 import '../state/app_state.dart';
 import '../theme/app_theme.dart';
+import '../widgets/bean_card.dart';
+import '../widgets/bean_detail_sheet.dart';
 
 /// Coffee shops and roasteries on a real interactive map
 /// (Esri basemaps — free, no API key),
@@ -19,6 +22,76 @@ import '../theme/app_theme.dart';
 String esriTileUrl({required bool dark}) => dark
     ? 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}'
     : 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}';
+
+/// Beans sold at [shop], matched by the bean's "where to buy" label.
+/// The reverse of [shopForWhereToBuy]: powers the "coffees available"
+/// list on the shop card.
+List<CoffeeBean> beansForShop(List<CoffeeBean> beans, CoffeeShop shop) {
+  final name = shop.name.toLowerCase();
+  return beans
+      .where((b) => (b.whereToBuy ?? '').toLowerCase() == name)
+      .toList();
+}
+
+/// Bottom sheet listing the coffees available at [shop].
+/// Each row opens the bean detail sheet.
+Future<void> showShopBeansSheet(BuildContext context, CoffeeShop shop) {
+  final p = context.palette;
+  final theme = Theme.of(context);
+  final beans = beansForShop(AppState.of(context).beans, shop);
+  return showModalBottomSheet<void>(
+    context: context,
+    isScrollControlled: true,
+    backgroundColor: p.surface,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+    ),
+    builder: (sheetContext) => SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(24, 12, 24, 32),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: Container(
+                width: 40,
+                height: 4,
+                decoration: BoxDecoration(
+                  color: p.line,
+                  borderRadius: BorderRadius.circular(2),
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            Text(shop.name, style: theme.textTheme.headlineSmall),
+            const SizedBox(height: 2),
+            Text(shop.address, style: theme.textTheme.bodySmall),
+            const SizedBox(height: 20),
+            Text('COFFEES AVAILABLE', style: theme.textTheme.labelSmall),
+            const SizedBox(height: 4),
+            Flexible(
+              child: ListView(
+                shrinkWrap: true,
+                children: [
+                  for (final bean in beans)
+                    BeanRow(
+                      bean: bean,
+                      trailing: BeanThumb(bean: bean, size: 40),
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        showBeanDetailSheet(context, bean);
+                      },
+                    ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
+}
 
 class ShopsScreen extends StatefulWidget {
   const ShopsScreen({super.key});
@@ -246,12 +319,23 @@ class _ShopsScreenState extends State<ShopsScreen> {
                       left: 16,
                       right: 16,
                       bottom: 12,
-                      child: _ShopCard(
-                        shop: selected,
-                        distanceKm: _distanceKm(selected),
-                        backgroundColor: p.surface,
-                        onTap: () {},
-                      ),
+                      child: Builder(builder: (cardContext) {
+                        final available =
+                            beansForShop(state.beans, selected);
+                        return _ShopCard(
+                          shop: selected,
+                          distanceKm: _distanceKm(selected),
+                          backgroundColor: p.surface,
+                          onTap: () {},
+                          beansCount: available.length,
+                          onViewBeans: available.isEmpty
+                              ? null
+                              : () => showShopBeansSheet(
+                                    cardContext,
+                                    selected,
+                                  ),
+                        );
+                      }),
                     ),
                   // Tile attribution (required by Esri).
                   Positioned(
@@ -265,9 +349,10 @@ class _ShopsScreenState extends State<ShopsScreen> {
                       ),
                     ),
                   ),
-                  // Locate / follow-me button.
+                  // Locate / follow-me button — top-left, clear of the
+                  // scan-a-bag camera shortcut (top-right, from AppShell).
                   Positioned(
-                    right: 12,
+                    left: 12,
                     top: 12,
                     child: Material(
                       color: p.surface,
@@ -330,6 +415,8 @@ class _ShopCard extends StatelessWidget {
     required this.onTap,
     this.highlighted = false,
     this.backgroundColor,
+    this.beansCount = 0,
+    this.onViewBeans,
   });
 
   final CoffeeShop shop;
@@ -337,6 +424,11 @@ class _ShopCard extends StatelessWidget {
   final VoidCallback onTap;
   final bool highlighted;
   final Color? backgroundColor;
+
+  /// Number of catalogue coffees available at this shop; when > 0 and
+  /// [onViewBeans] is set, the card shows a tappable "coffees" row.
+  final int beansCount;
+  final VoidCallback? onViewBeans;
 
   @override
   Widget build(BuildContext context) {
@@ -370,6 +462,38 @@ class _ShopCard extends StatelessWidget {
                       'Approximate location',
                       style: theme.textTheme.bodySmall?.copyWith(
                         fontStyle: FontStyle.italic,
+                      ),
+                    ),
+                  if (onViewBeans != null && beansCount > 0)
+                    InkWell(
+                      onTap: onViewBeans,
+                      borderRadius: BorderRadius.circular(8),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 8),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.coffee_outlined,
+                              size: 16,
+                              color: p.ink,
+                            ),
+                            const SizedBox(width: 6),
+                            Text(
+                              '$beansCount coffees available',
+                              style: theme.textTheme.bodyMedium?.copyWith(
+                                color: p.ink,
+                                decoration: TextDecoration.underline,
+                                decorationColor: p.muted,
+                              ),
+                            ),
+                            const SizedBox(width: 4),
+                            Icon(
+                              Icons.arrow_forward_ios,
+                              size: 12,
+                              color: p.muted,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                 ],
