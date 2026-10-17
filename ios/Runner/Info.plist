@@ -7,7 +7,7 @@
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-3940256099942544~3347511713</string>
+	<string>ca-app-pub-3048189417999433~2981230944</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Roasted uses the camera to scan barcodes on coffee bags.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
