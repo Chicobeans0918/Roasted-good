@@ -72,23 +72,24 @@ class _AppShellState extends State<AppShell> {
             index: state.tabIndex,
             children: [for (final tab in _tabs) tab.screen],
           ),
-          // Scan-a-bag shortcut, top right of every main screen.
-          Positioned(
-            top: 4,
-            right: 8,
-            child: SafeArea(
-              child: IconButton(
-                tooltip: 'Scan a bag',
-                icon: const Icon(Icons.photo_camera_outlined),
-                color: p.ink,
-                onPressed: () => Navigator.of(context).push(
-                  MaterialPageRoute<void>(
-                    builder: (_) => const ScanScreen(),
+          // Scan-a-bag shortcut, top right of the Catalogue screen only.
+          if (state.tabIndex == 1)
+            Positioned(
+              top: 4,
+              right: 8,
+              child: SafeArea(
+                child: IconButton(
+                  tooltip: 'Scan a bag',
+                  icon: const Icon(Icons.photo_camera_outlined),
+                  color: p.ink,
+                  onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const ScanScreen(),
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
         ],
       ),
       bottomNavigationBar: Column(
