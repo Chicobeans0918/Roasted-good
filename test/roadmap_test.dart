@@ -3,7 +3,9 @@ import 'package:coffee_beans/data/recommendations.dart';
 import 'package:coffee_beans/data/sample_data.dart';
 import 'package:coffee_beans/models/coffee_bean.dart';
 import 'package:coffee_beans/models/community_post.dart';
+import 'package:coffee_beans/models/post_comment.dart';
 import 'package:coffee_beans/models/tried_coffee.dart';
+import 'package:coffee_beans/services/community_service.dart';
 import 'package:coffee_beans/screens/discover_screen.dart';
 import 'package:coffee_beans/screens/information_screen.dart';
 import 'package:coffee_beans/screens/shops_screen.dart';
@@ -428,8 +430,7 @@ void main() {
   });
 
   group('community posts', () {
-    test('post survives a toMap/fromMap round trip', () {
-      final post = CommunityPost(
+    test('post survives a toMap/fromMap round trip', () {      final post = CommunityPost(
         id: 'p1',
         userId: 'u1',
         userName: 'Marc-André',
@@ -447,6 +448,57 @@ void main() {
       expect(restored.likedByUser('u2'), isTrue);
       expect(restored.likedByUser('u9'), isFalse);
       expect(restored.likedByUser(null), isFalse);
+    });
+
+    test('comment survives a toMap/fromMap round trip', () {
+      final comment = PostComment(
+        id: 'c1',
+        userId: 'u1',
+        userName: 'Marc-André',
+        body: 'Try a coarser grind!',
+        createdAt: DateTime(2026, 10, 18, 22, 10),
+      );
+      final restored =
+          PostComment.fromMap(comment.toMap(), 'c1');
+      expect(restored.userName, 'Marc-André');
+      expect(restored.body, 'Try a coarser grind!');
+    });
+
+    test('leaderboard entry reads points and counters', () {
+      final entry = LeaderboardEntry.fromMap(
+        {
+          'userName': 'Marc-André',
+          'points': 27,
+          'postCount': 2,
+          'likeCount': 1,
+          'commentCount': 1,
+        },
+        'u1',
+      );
+      expect(entry.points, 27);
+      // 2 posts (20) + 1 like (2) + 1 comment (5) = 27.
+      expect(
+        entry.postCount * CommunityPoints.perPost +
+            entry.likeCount * CommunityPoints.perLike +
+            entry.commentCount * CommunityPoints.perComment,
+        entry.points,
+      );
+    });
+
+    test('post carries a comment count', () {
+      final post = CommunityPost(
+        id: 'p1',
+        userId: 'u1',
+        userName: 'Marc-André',
+        kind: 'question',
+        body: 'Best grinder under 200?',
+        createdAt: DateTime(2026, 10, 18),
+        commentCount: 4,
+      );
+      expect(
+        CommunityPost.fromMap(post.toMap(), 'p1').commentCount,
+        4,
+      );
     });
   });
 }

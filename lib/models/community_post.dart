@@ -10,8 +10,10 @@ class CommunityPost {
     required this.kind,
     required this.body,
     required this.createdAt,
+    this.imageUrl,
     this.likeCount = 0,
     this.likedBy = const [],
+    this.commentCount = 0,
   });
 
   final String id;
@@ -22,8 +24,14 @@ class CommunityPost {
   final String kind;
   final String body;
   final DateTime createdAt;
+
+  /// Firebase Storage download URL, null when the post has no photo.
+  final String? imageUrl;
   final int likeCount;
   final List<String> likedBy;
+
+  /// Denormalized comment count, maintained by the service.
+  final int commentCount;
 
   bool likedByUser(String? uid) => uid != null && likedBy.contains(uid);
 
@@ -32,9 +40,11 @@ class CommunityPost {
         'userName': userName,
         'kind': kind,
         'body': body,
+        if (imageUrl != null) 'imageUrl': imageUrl,
         'createdAt': Timestamp.fromDate(createdAt),
         'likeCount': likeCount,
         'likedBy': likedBy,
+        'commentCount': commentCount,
       };
 
   factory CommunityPost.fromMap(Map<String, dynamic> map, String id) {
@@ -45,6 +55,7 @@ class CommunityPost {
       userName: (map['userName'] ?? 'Coffee lover') as String,
       kind: (map['kind'] ?? 'chat') as String,
       body: (map['body'] ?? '') as String,
+      imageUrl: map['imageUrl'] as String?,
       createdAt: ts is Timestamp
           ? ts.toDate()
           : DateTime.fromMillisecondsSinceEpoch(0),
@@ -52,6 +63,7 @@ class CommunityPost {
       likedBy: [
         for (final u in (map['likedBy'] as List? ?? [])) u as String,
       ],
+      commentCount: (map['commentCount'] ?? 0) as int,
     );
   }
 }

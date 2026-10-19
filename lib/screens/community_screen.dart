@@ -1,11 +1,16 @@
+import 'dart:typed_data';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../models/community_post.dart';
+import '../models/post_comment.dart';
 import '../services/community_service.dart';
 import '../state/app_state.dart';
 import '../theme/app_theme.dart';
 import '../widgets/profile_widgets.dart';
+import 'leaderboard_screen.dart';
 
 /// Community: a minimalist forum for brew notes, tastings,
 /// questions and coffee chat. Backed by the shared `posts`
@@ -28,7 +33,21 @@ class CommunityScreen extends StatelessWidget {
     final svc = service;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Community')),
+      appBar: AppBar(
+        title: const Text('Community'),
+        actions: [
+          if (svc != null)
+            IconButton(
+              tooltip: 'Leaderboard',
+              icon: const Icon(Icons.emoji_events_outlined),
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const LeaderboardScreen(),
+                ),
+              ),
+            ),
+        ],
+      ),
       floatingActionButton: svc == null || state.uid == null
           ? null
           : FloatingActionButton(
@@ -87,6 +106,9 @@ class CommunityScreen extends StatelessWidget {
                 post: posts[index],
                 service: svc,
                 uid: state.uid,
+                userName: state.userName.isEmpty
+                    ? 'Coffee lover'
+                    : state.userName,
               ),
             );
           },
@@ -119,12 +141,13 @@ class CommunityScreen extends StatelessWidget {
           bottom: MediaQuery.of(sheetContext).viewInsets.bottom + 32,
         ),
         child: _ComposeForm(
-          onPost: (kind, body) async {
+          onPost: (kind, body, image) async {
             final ok = await service.createPost(
               userId: uid,
               userName: name,
               kind: kind,
               body: body,
+              image: image,
             );
             if (sheetContext.mounted) {
               Navigator.of(sheetContext).pop();
@@ -149,11 +172,13 @@ class _PostCard extends StatelessWidget {
     required this.post,
     required this.service,
     required this.uid,
+    required this.userName,
   });
 
   final CommunityPost post;
   final CommunityService service;
   final String? uid;
+  final String userName;
 
   @override
   Widget build(BuildContext context) {
@@ -199,14 +224,72 @@ class _PostCard extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Text(post.body, style: theme.textTheme.bodyMedium),
+          if (post.imageUrl != null) ...[
+            const SizedBox(height: 10),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.network(
+                post.imageUrl!,
+                width: double.infinity,
+                fit: BoxFit.cover,
+                loadingBuilder: (context, child, progress) =>
+                    progress == null
+                        ? child
+                        : const SizedBox(
+                            height: 180,
+                            child: Center(
+                                child:
+                                    CircularProgressIndicator()),
+                          ),
+                errorBuilder: (context, error, stackTrace) =>
+                    const SizedBox(
+                  height: 120,
+                  child: Center(
+                    child: Icon(Icons.broken_image_outlined),
+                  ),
+                ),
+              ),
+            ),
+          ],
           const SizedBox(height: 8),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               InkWell(
+                onTap: () => showCommentsSheet(context, post, service),
+                borderRadius: BorderRadius.circular(16),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                    vertical: 4,
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(
+                        Icons.chat_bubble_outline,
+                        size: 18,
+                        color: p.muted,
+                      ),
+                      const SizedBox(width: 4),
+                      Text(
+                        '${post.commentCount}',
+                        style: theme.textTheme.bodySmall?.copyWith(
+                          color: p.muted,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              InkWell(
                 onTap: uid == null
                     ? null
-                    : () => service.toggleLike(post, uid!),
+                    : () => service.toggleLike(
+                          post,
+                          uid!,
+                          userName: userName,
+                        ),
                 borderRadius: BorderRadius.circular(16),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
@@ -245,7 +328,8 @@ class _PostCard extends StatelessWidget {
 class _ComposeForm extends StatefulWidget {
   const _ComposeForm({required this.onPost});
 
-  final Future<void> Function(String kind, String body) onPost;
+  final Future<void> Function(String kind, String body, XFile? image)
+      onPost;
 
   @override
   State<_ComposeForm> createState() => _ComposeFormState();
@@ -254,12 +338,56 @@ class _ComposeForm extends StatefulWidget {
 class _ComposeFormState extends State<_ComposeForm> {
   String _kind = 'brewing';
   final _controller = TextEditingController();
+  final _picker = ImagePicker();
+  XFile? _image;
   bool _posting = false;
 
   @override
   void dispose() {
     _controller.dispose();
     super.dispose();
+  }
+
+  Future<void> _pickImage(ImageSource source) async {
+    try {
+      final file = await _picker.pickImage(
+        source: source,
+        maxWidth: 1600,
+        imageQuality: 85,
+      );
+      if (file != null && mounted) setState(() => _image = file);
+    } catch (_) {
+      // Picker cancelled or unavailable — stay on the form.
+    }
+  }
+
+  void _chooseImageSource() {
+    showModalBottomSheet<void>(
+      context: context,
+      builder: (ctx) => SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              leading: const Icon(Icons.photo_library_outlined),
+              title: const Text('Choose from library'),
+              onTap: () {
+                Navigator.of(ctx).pop();
+                _pickImage(ImageSource.gallery);
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.photo_camera_outlined),
+              title: const Text('Take a photo'),
+              onTap: () {
+                Navigator.of(ctx).pop();
+                _pickImage(ImageSource.camera);
+              },
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   @override
@@ -309,6 +437,54 @@ class _ComposeFormState extends State<_ComposeForm> {
           ),
           onChanged: (_) => setState(() {}),
         ),
+        const SizedBox(height: 8),
+        // Photo attachment.
+        if (_image != null)
+          Stack(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: FutureBuilder<Uint8List>(
+                  future: _image!.readAsBytes(),
+                  builder: (context, snap) => snap.hasData
+                      ? Image.memory(
+                          snap.data!,
+                          height: 160,
+                          width: double.infinity,
+                          fit: BoxFit.cover,
+                        )
+                      : const SizedBox(
+                          height: 160,
+                          child: Center(
+                              child: CircularProgressIndicator()),
+                        ),
+                ),
+              ),
+              Positioned(
+                right: 8,
+                top: 8,
+                child: Material(
+                  color: Colors.black54,
+                  shape: const CircleBorder(),
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.close,
+                      color: Colors.white,
+                      size: 18,
+                    ),
+                    onPressed: () =>
+                        setState(() => _image = null),
+                  ),
+                ),
+              ),
+            ],
+          )
+        else
+          OutlinedButton.icon(
+            icon: const Icon(Icons.add_a_photo_outlined, size: 20),
+            label: const Text('Add a photo'),
+            onPressed: _chooseImageSource,
+          ),
         const SizedBox(height: 12),
         SizedBox(
           width: double.infinity,
@@ -318,7 +494,10 @@ class _ComposeFormState extends State<_ComposeForm> {
                 : () async {
                     setState(() => _posting = true);
                     await widget.onPost(
-                        _kind, _controller.text.trim());
+                      _kind,
+                      _controller.text.trim(),
+                      _image,
+                    );
                   },
             child: _posting
                 ? const SizedBox(
@@ -341,4 +520,200 @@ String _timeAgo(DateTime date) {
   if (diff.inDays < 1) return '${diff.inHours}h ago';
   if (diff.inDays < 7) return '${diff.inDays}d ago';
   return '${date.month}/${date.day}/${date.year}';
+}
+
+/// Opens the comments thread for [post] as a bottom sheet.
+void showCommentsSheet(
+  BuildContext context,
+  CommunityPost post,
+  CommunityService service,
+) {
+  final state = AppState.of(context);
+  final uid = state.uid;
+  final userName =
+      state.userName.isEmpty ? 'Coffee lover' : state.userName;
+  showModalBottomSheet<void>(
+    context: context,
+    isScrollControlled: true,
+    backgroundColor: context.palette.surface,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+    ),
+    builder: (sheetContext) => Padding(
+      padding: EdgeInsets.only(
+        bottom: MediaQuery.of(sheetContext).viewInsets.bottom,
+      ),
+      child: _CommentsSheet(
+        post: post,
+        service: service,
+        uid: uid,
+        userName: userName,
+      ),
+    ),
+  );
+}
+
+class _CommentsSheet extends StatefulWidget {
+  const _CommentsSheet({
+    required this.post,
+    required this.service,
+    required this.uid,
+    required this.userName,
+  });
+
+  final CommunityPost post;
+  final CommunityService service;
+  final String? uid;
+  final String userName;
+
+  @override
+  State<_CommentsSheet> createState() => _CommentsSheetState();
+}
+
+class _CommentsSheetState extends State<_CommentsSheet> {
+  final _controller = TextEditingController();
+  bool _sending = false;
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final p = context.palette;
+    return SafeArea(
+      child: SizedBox(
+        height: MediaQuery.of(context).size.height * 0.7,
+        child: Column(
+          children: [
+            const SizedBox(height: 12),
+            Container(
+              width: 40,
+              height: 4,
+              decoration: BoxDecoration(
+                color: p.line,
+                borderRadius: BorderRadius.circular(2),
+              ),
+            ),
+            const SizedBox(height: 12),
+            Text('Comments', style: theme.textTheme.titleMedium),
+            const SizedBox(height: 8),
+            Expanded(
+              child: StreamBuilder<List<PostComment>>(
+                stream:
+                    widget.service.watchComments(widget.post.id),
+                builder: (context, snapshot) {
+                  final comments = snapshot.data ?? [];
+                  if (comments.isEmpty) {
+                    return Center(
+                      child: Text(
+                        'No comments yet — start the conversation.',
+                        style: theme.textTheme.bodyMedium?.copyWith(
+                          color: p.muted,
+                        ),
+                      ),
+                    );
+                  }
+                  return ListView.separated(
+                    padding:
+                        const EdgeInsets.fromLTRB(24, 8, 24, 16),
+                    itemCount: comments.length,
+                    separatorBuilder: (_, _) =>
+                        const SizedBox(height: 12),
+                    itemBuilder: (context, index) {
+                      final c = comments[index];
+                      return Column(
+                        crossAxisAlignment:
+                            CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '${c.userName} · ${_timeAgo(c.createdAt)}',
+                            style:
+                                theme.textTheme.bodySmall?.copyWith(
+                              color: p.muted,
+                            ),
+                          ),
+                          const SizedBox(height: 2),
+                          Text(c.body,
+                              style: theme.textTheme.bodyMedium),
+                        ],
+                      );
+                    },
+                  );
+                },
+              ),
+            ),
+            if (widget.uid != null)
+              Padding(
+                padding:
+                    const EdgeInsets.fromLTRB(16, 8, 16, 16),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        controller: _controller,
+                        maxLength: 300,
+                        decoration: const InputDecoration(
+                          hintText: 'Write a comment…',
+                          border: OutlineInputBorder(),
+                          counterText: '',
+                        ),
+                        onChanged: (_) => setState(() {}),
+                        onSubmitted: (_) => _send(),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    IconButton.filled(
+                      icon: _sending
+                          ? const SizedBox(
+                              width: 18,
+                              height: 18,
+                              child: CircularProgressIndicator(
+                                strokeWidth: 2,
+                                color: Colors.white,
+                              ),
+                            )
+                          : const Icon(Icons.send, size: 20),
+                      onPressed:
+                          _controller.text.trim().isEmpty ||
+                                  _sending
+                              ? null
+                              : _send,
+                    ),
+                  ],
+                ),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Future<void> _send() async {
+    final text = _controller.text.trim();
+    if (text.isEmpty || _sending || widget.uid == null) return;
+    setState(() => _sending = true);
+    final ok = await widget.service.addComment(
+      postId: widget.post.id,
+      userId: widget.uid!,
+      userName: widget.userName,
+      body: text,
+    );
+    if (mounted) {
+      setState(() => _sending = false);
+      if (ok) {
+        _controller.clear();
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content:
+                Text('Could not post — check your connection.'),
+          ),
+        );
+      }
+    }
+  }
 }
