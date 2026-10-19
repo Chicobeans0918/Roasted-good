@@ -46,6 +46,10 @@ class CommunityScreen extends StatelessWidget {
                 ),
               ),
             ),
+          // The app shell overlays the "Scan a bag" camera shortcut at the
+          // top-right of every main screen — keep this space clear so the
+          // trophy doesn't sit underneath it.
+          const SizedBox(width: 56),
         ],
       ),
       floatingActionButton: svc == null || state.uid == null
