@@ -130,6 +130,8 @@ class _ShopsScreenState extends State<ShopsScreen> {
 
   String? _selectedShopId;
 
+  String _shopQuery = '';
+
   @override
   void initState() {
     super.initState();
@@ -241,6 +243,94 @@ class _ShopsScreenState extends State<ShopsScreen> {
       _selectShop(shop);
       state.clearMapFocus();
     });
+  }
+
+  /// Shop list: when searching, a flat distance-sorted result list;
+  /// otherwise region sections (Gatineau / Ottawa / Toronto) ordered by
+  /// how close each region's nearest shop is, with shops nearest-first
+  /// inside each region. Distances come from the real GPS position when
+  /// available, otherwise the Gatineau–Ottawa midpoint.
+  Widget _buildShopList(
+    BuildContext context,
+    ThemeData theme,
+    List<CoffeeShop> shops,
+    String query,
+  ) {
+    final visible = query.isEmpty
+        ? shops
+        : shops
+            .where((s) =>
+                s.name.toLowerCase().contains(query) ||
+                s.address.toLowerCase().contains(query))
+            .toList();
+
+    List<CoffeeShop> byDistance(Iterable<CoffeeShop> list) {
+      final sorted = list.toList();
+      sorted.sort((a, b) => _distanceKm(a).compareTo(_distanceKm(b)));
+      return sorted;
+    }
+
+    Widget shopCard(CoffeeShop shop) => Padding(
+          padding: const EdgeInsets.only(bottom: 8),
+          child: _ShopCard(
+            shop: shop,
+            distanceKm: _distanceKm(shop),
+            highlighted: shop.id == _selectedShopId,
+            onTap: () => _selectShop(shop),
+          ),
+        );
+
+    if (visible.isEmpty) {
+      return Center(
+        child: Text(
+          query.isEmpty ? 'No shops yet.' : 'No shops match your search.',
+          style: theme.textTheme.bodyMedium?.copyWith(
+            color: context.palette.muted,
+          ),
+        ),
+      );
+    }
+
+    // Searching: flat list, nearest first.
+    if (query.isNotEmpty) {
+      final sorted = byDistance(visible);
+      return ListView(
+        padding: const EdgeInsets.fromLTRB(28, 24, 28, 48),
+        children: [for (final shop in sorted) shopCard(shop)],
+      );
+    }
+
+    // Browsing: region sections ordered by nearest shop distance.
+    double nearestIn(String region) {
+      final inRegion = visible.where((s) => s.region == region);
+      if (inRegion.isEmpty) return double.infinity;
+      return inRegion
+          .map(_distanceKm)
+          .reduce((a, b) => a < b ? a : b);
+    }
+
+    final regions = ['Gatineau', 'Ottawa', 'Toronto']
+      ..sort((a, b) => nearestIn(a).compareTo(nearestIn(b)));
+
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(28, 24, 28, 48),
+      children: [
+        for (final region in regions)
+          if (visible.any((s) => s.region == region)) ...[
+            Padding(
+              padding: const EdgeInsets.only(bottom: 4),
+              child: Text(
+                '${region.toUpperCase()} ROASTERS',
+                style: theme.textTheme.labelSmall,
+              ),
+            ),
+            for (final shop
+                in byDistance(visible.where((s) => s.region == region)))
+              shopCard(shop),
+            const SizedBox(height: 16),
+          ],
+      ],
+    );
   }
 
   @override
@@ -387,36 +477,48 @@ class _ShopsScreenState extends State<ShopsScreen> {
                 ],
               ),
             ),
+            // Shop search.
+            Padding(
+              padding: const EdgeInsets.fromLTRB(28, 16, 28, 0),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Search shops...',
+                  prefixIcon: const Icon(Icons.search, size: 22),
+                  suffixIcon: _shopQuery.isEmpty
+                      ? null
+                      : IconButton(
+                          icon: const Icon(Icons.clear, size: 20),
+                          onPressed: () =>
+                              setState(() => _shopQuery = ''),
+                        ),
+                  filled: true,
+                  fillColor: p.surfaceVariant.withValues(alpha: 0.45),
+                  contentPadding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 14,
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(28),
+                    borderSide: BorderSide(color: p.line),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(28),
+                    borderSide: BorderSide(
+                      color: p.ink,
+                      width: 1.5,
+                    ),
+                  ),
+                ),
+                onChanged: (value) =>
+                    setState(() => _shopQuery = value),
+              ),
+            ),
             Expanded(
-              child: ListView(
-                padding: const EdgeInsets.fromLTRB(28, 24, 28, 48),
-                children: [
-                  for (final region in const [
-                    'Gatineau',
-                    'Ottawa',
-                    'Toronto'
-                  ])
-                    if (shops.any((s) => s.region == region)) ...[
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 4),
-                        child: Text(
-                          '${region.toUpperCase()} ROASTERS',
-                          style: theme.textTheme.labelSmall,
-                        ),
-                      ),
-                      for (final shop
-                          in shops.where((s) => s.region == region)) ...[
-                        _ShopCard(
-                          shop: shop,
-                          distanceKm: _distanceKm(shop),
-                          highlighted: shop.id == _selectedShopId,
-                          onTap: () => _selectShop(shop),
-                        ),
-                        const SizedBox(height: 8),
-                      ],
-                      const SizedBox(height: 16),
-                    ],
-                ],
+              child: _buildShopList(
+                context,
+                theme,
+                shops,
+                _shopQuery.trim().toLowerCase(),
               ),
             ),
           ],

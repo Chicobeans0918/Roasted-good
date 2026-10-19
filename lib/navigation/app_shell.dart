@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../screens/catalogue_screen.dart';
+import '../screens/community_screen.dart';
 import '../screens/discover_screen.dart';
 import '../screens/profile_screen.dart';
 import '../screens/scan_screen.dart';
@@ -10,7 +11,7 @@ import '../state/app_state.dart';
 import '../theme/app_theme.dart';
 import '../widgets/ad_banner.dart';
 
-/// Bottom tab bar shell hosting the five main sections.
+/// Bottom tab bar shell hosting the main sections.
 class AppShell extends StatefulWidget {
   const AppShell({super.key});
 
@@ -39,6 +40,12 @@ class _AppShellState extends State<AppShell> {
       icon: Icons.map_outlined,
       activeIcon: Icons.map,
       screen: ShopsScreen(),
+    ),
+    _Tab(
+      label: 'Community',
+      icon: Icons.forum_outlined,
+      activeIcon: Icons.forum,
+      screen: CommunityScreen(),
     ),
     _Tab(
       label: 'Stats',

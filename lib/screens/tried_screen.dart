@@ -1,7 +1,22 @@
 import 'package:flutter/material.dart';
 
+import '../models/coffee_bean.dart';
+import '../models/tried_coffee.dart';
 import '../state/app_state.dart';
 import '../widgets/profile_widgets.dart';
+
+/// Highest-rated tasting whose bean is still in the catalogue.
+/// Tastings logged for beans that were later removed from the catalogue
+/// (orphaned ids) are skipped instead of blanking the #1 pick card.
+TriedCoffee? topPickFor(
+  List<TriedCoffee> tastings,
+  CoffeeBean? Function(String id) beanFor,
+) {
+  final valid =
+      tastings.where((t) => beanFor(t.beanId) != null).toList();
+  if (valid.isEmpty) return null;
+  return valid.reduce((a, b) => a.rating >= b.rating ? a : b);
+}
 
 /// Profile → Coffees tried: each bean once, with all of its tastings
 /// nested underneath, newest first.
@@ -14,10 +29,9 @@ class TriedScreen extends StatelessWidget {
     final state = AppState.of(context);
     final grouped = state.tastingsByBean;
 
-    final topPick = state.triedCoffees.isEmpty
-        ? null
-        : state.triedCoffees
-            .reduce((a, b) => a.rating >= b.rating ? a : b);
+    // #1 pick: highest-rated tasting whose bean is still in the
+    // catalogue (see [topPickFor]).
+    final topPick = topPickFor(state.triedCoffees, state.beanFor);
 
     // First-time user: one inviting hero instead of empty sections.
     if (state.triedCoffees.isEmpty) {
@@ -54,8 +68,7 @@ class TriedScreen extends StatelessWidget {
             text: 'Your #1 Pick',
           ),
           const SizedBox(height: 16),
-          if (topPick == null ||
-              state.beanFor(topPick.beanId) == null)
+          if (topPick == null)
             const EmptyCard(text: 'No tastings logged yet')
           else
             PickCard(

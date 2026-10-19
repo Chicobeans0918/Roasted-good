@@ -2,10 +2,12 @@ import 'package:coffee_beans/data/bean_photos.dart';
 import 'package:coffee_beans/data/recommendations.dart';
 import 'package:coffee_beans/data/sample_data.dart';
 import 'package:coffee_beans/models/coffee_bean.dart';
+import 'package:coffee_beans/models/community_post.dart';
 import 'package:coffee_beans/models/tried_coffee.dart';
 import 'package:coffee_beans/screens/discover_screen.dart';
 import 'package:coffee_beans/screens/information_screen.dart';
 import 'package:coffee_beans/screens/shops_screen.dart';
+import 'package:coffee_beans/screens/tried_screen.dart';
 import 'package:coffee_beans/screens/wrapped_screen.dart';
 import 'package:coffee_beans/state/app_state.dart';
 import 'package:coffee_beans/theme/app_theme.dart';
@@ -377,6 +379,74 @@ void main() {
       expect(isWrappedUnlocked(month: 1), isFalse);
       expect(isWrappedUnlocked(month: 6), isFalse);
       expect(isWrappedUnlocked(month: 11), isFalse);
+    });
+  });
+
+  group('#1 pick', () {
+    TriedCoffee tasting(String id, String beanId, double rating) =>
+        TriedCoffee(
+          id: id,
+          beanId: beanId,
+          brewMethod: 'Pour over',
+          rating: rating,
+          liked: true,
+          date: DateTime(2026, 10, 17),
+        );
+
+    CoffeeBean? beanFor(Map<String, CoffeeBean> byId, String id) => byId[id];
+
+    test('skips tastings for beans removed from the catalogue', () {
+      final beans = {
+        for (final b in SampleData.beans.take(3)) b.id: b,
+      };
+      final ids = beans.keys.toList();
+      final tastings = [
+        // Orphaned: highest rated, but its bean is gone.
+        tasting('t1', 'gone-bean', 5.0),
+        tasting('t2', ids[0], 4.0),
+        tasting('t3', ids[1], 3.0),
+      ];
+      final pick = topPickFor(tastings, (id) => beanFor(beans, id));
+      expect(pick, isNotNull);
+      expect(pick!.id, 't2');
+      expect(pick.beanId, ids[0]);
+    });
+
+    test('returns null when no tastings or all orphaned', () {
+      final beans = {
+        for (final b in SampleData.beans.take(3)) b.id: b,
+      };
+      expect(topPickFor([], (id) => beanFor(beans, id)), isNull);
+      expect(
+        topPickFor(
+          [tasting('t1', 'gone-bean', 5.0)],
+          (id) => beanFor(beans, id),
+        ),
+        isNull,
+      );
+    });
+  });
+
+  group('community posts', () {
+    test('post survives a toMap/fromMap round trip', () {
+      final post = CommunityPost(
+        id: 'p1',
+        userId: 'u1',
+        userName: 'Marc-André',
+        kind: 'brewing',
+        body: 'V60, 15g, 250ml — sweet and clean.',
+        createdAt: DateTime(2026, 10, 18, 21, 30),
+        likeCount: 3,
+        likedBy: const ['u2', 'u3'],
+      );
+      final restored = CommunityPost.fromMap(post.toMap(), 'p1');
+      expect(restored.userName, 'Marc-André');
+      expect(restored.kind, 'brewing');
+      expect(restored.body, contains('V60'));
+      expect(restored.likeCount, 3);
+      expect(restored.likedByUser('u2'), isTrue);
+      expect(restored.likedByUser('u9'), isFalse);
+      expect(restored.likedByUser(null), isFalse);
     });
   });
 }

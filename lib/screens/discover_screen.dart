@@ -8,17 +8,10 @@ import '../theme/app_theme.dart';
 import '../widgets/bean_card.dart';
 import '../widgets/bean_detail_sheet.dart';
 
-/// Home: a welcoming time-aware greeting, a Discoveries section,
+/// Home: a "welcome back" greeting, a Discoveries section,
 /// and recommendations based on taste.
 class DiscoverScreen extends StatelessWidget {
   const DiscoverScreen({super.key});
-
-  String get _greeting {
-    final hour = DateTime.now().hour;
-    if (hour < 12) return 'Good morning';
-    if (hour < 18) return 'Good afternoon';
-    return 'Good evening';
-  }
 
   List<CoffeeBean> _discoveries(AppState state) {
     // Beans not yet tried, local roasters first.
@@ -51,7 +44,7 @@ class DiscoverScreen extends StatelessWidget {
     final discoveries = _discoveries(state);
     final recommended = _recommended(state);
     final name = state.userName;
-    final greeting = name.isEmpty ? _greeting : '$_greeting, $name';
+    final greeting = name.isEmpty ? 'Welcome back' : 'Welcome back, $name';
 
     return Scaffold(
       body: SafeArea(

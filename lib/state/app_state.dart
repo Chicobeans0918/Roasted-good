@@ -95,6 +95,9 @@ class AppState extends ChangeNotifier {
   String? _uid;
   UserDataSync? _sync;
 
+  /// Firebase uid of the signed-in user, null when signed out.
+  String? get uid => _uid;
+
   // ——— Catalogue ———
 
   List<CoffeeBean> get beans => List.unmodifiable(_beans);
