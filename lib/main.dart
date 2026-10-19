@@ -1,5 +1,6 @@
 import 'dart:async' show unawaited;
 
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart' as ads;
 
@@ -7,9 +8,16 @@ import 'navigation/app_shell.dart';
 import 'screens/login_screen.dart';
 import 'services/auth_service.dart';
 import 'services/firebase_bootstrap.dart';
+import 'services/notification_service.dart';
 import 'state/app_state.dart';
 import 'theme/app_theme.dart';
 import 'ads/interstitial_manager.dart';
+
+/// Background push handler — must be top-level for firebase_messaging.
+@pragma('vm:entry-point')
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  // The OS displays the notification itself; nothing to do here.
+}
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,6 +26,12 @@ Future<void> main() async {
   // runs fully offline on its bundled seed data.
   final firebaseReady = await FirebaseBootstrap.init();
   AuthService.instance = AuthService(firebaseEnabled: firebaseReady);
+
+  if (firebaseReady) {
+    FirebaseMessaging.onBackgroundMessage(
+        _firebaseMessagingBackgroundHandler);
+    unawaited(NotificationService.instance.init());
+  }
 
   // AdMob banners (test ids until real ones are configured).
   unawaited(ads.MobileAds.instance.initialize());

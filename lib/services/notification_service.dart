@@ -1,0 +1,69 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+
+/// Handles push notification registration and display.
+///
+/// Flow:
+/// 1. [init] requests iOS permission and fetches the FCM token.
+/// 2. The token is stored at `users/{uid}/private/fcm` so Cloud Functions
+///    can target this device for comment/like notifications.
+/// 3. Foreground messages are surfaced via [onForegroundMessage]; the app
+///    shell shows them as a lightweight banner.
+class NotificationService {
+  NotificationService._();
+
+  static final NotificationService instance = NotificationService._();
+
+  bool _initialized = false;
+  String? _uid;
+
+  /// Stream of messages received while the app is in the foreground.
+  Stream<RemoteMessage> get foregroundMessages =>
+      FirebaseMessaging.onMessage;
+
+  /// Call once at startup (after Firebase init). Safe to call repeatedly.
+  Future<void> init() async {
+    if (_initialized) return;
+    _initialized = true;
+    try {
+      final messaging = FirebaseMessaging.instance;
+      await messaging.requestPermission(alert: true, badge: true, sound: true);
+      // Keep the token fresh for the signed-in user.
+      FirebaseMessaging.instance.onTokenRefresh.listen((token) {
+        final uid = _uid;
+        if (uid != null) _saveToken(uid, token);
+      });
+    } catch (_) {
+      // Messaging unavailable (e.g. simulator without push) — non-fatal.
+    }
+  }
+
+  /// Call when the user signs in / out so the token follows the account.
+  Future<void> setUser(String? uid) async {
+    _uid = uid;
+    if (uid == null) return;
+    try {
+      final token = await FirebaseMessaging.instance.getToken();
+      if (token != null) await _saveToken(uid, token);
+    } catch (_) {
+      // Non-fatal.
+    }
+  }
+
+  Future<void> _saveToken(String uid, String token) async {
+    try {
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(uid)
+          .collection('private')
+          .doc('fcm')
+          .set({
+        'token': token,
+        'updatedAt': FieldValue.serverTimestamp(),
+        'platform': 'ios',
+      }, SetOptions(merge: true));
+    } catch (_) {
+      // Non-fatal — notifications just won't arrive on this device.
+    }
+  }
+}

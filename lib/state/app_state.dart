@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:async' show unawaited;
 
 import '../data/coffee_repository.dart';
 import '../data/sample_data.dart';
 import '../models/coffee_bean.dart';
 import '../models/coffee_shop.dart';
 import '../models/tried_coffee.dart';
+import '../services/notification_service.dart';
 import '../services/user_data_sync.dart';
 
 /// App-wide state: catalogue, wishlist, tasting log, ratings, and
@@ -129,6 +131,7 @@ class AppState extends ChangeNotifier {
   }) async {
     _uid = uid;
     _sync = sync;
+    unawaited(NotificationService.instance.setUser(uid));
     final remote = await sync.pull(uid);
     if (remote.tastings.isNotEmpty) {
       _tried
@@ -154,6 +157,7 @@ class AppState extends ChangeNotifier {
   void detachRemote() {
     _uid = null;
     _sync = null;
+    unawaited(NotificationService.instance.setUser(null));
   }
 
   // ——— Wishlist ———
