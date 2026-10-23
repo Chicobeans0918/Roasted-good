@@ -32,14 +32,30 @@ class NotificationService {
     _initialized = true;
     try {
       final messaging = FirebaseMessaging.instance;
-      await messaging.requestPermission(alert: true, badge: true, sound: true);
+      final settings = await messaging.requestPermission(
+          alert: true, badge: true, sound: true);
       // Restored sessions never pass through the login screen, so register
       // the token here too — otherwise already-signed-in users never get one.
       final user = FirebaseAuth.instance.currentUser;
       if (user != null) {
         _uid = user.uid;
-        final token = await messaging.getToken();
-        if (token != null) await _saveToken(user.uid, token);
+        await _saveStatus(user.uid, {
+          'permission': settings.authorizationStatus.toString(),
+          'via': 'init',
+        });
+        try {
+          final token = await messaging.getToken();
+          if (token != null) {
+            await _saveToken(user.uid, token);
+            await _saveStatus(user.uid, {'tokenSaved': true});
+          } else {
+            await _saveStatus(
+                user.uid, {'tokenSaved': false, 'tokenNull': true});
+          }
+        } catch (e) {
+          await _saveStatus(user.uid,
+              {'tokenSaved': false, 'getTokenError': e.toString()});
+        }
       }
       // Keep the token fresh for the signed-in user.
       FirebaseMessaging.instance.onTokenRefresh.listen((token) {
@@ -57,10 +73,35 @@ class NotificationService {
     if (uid == null) return;
     try {
       final token = await FirebaseMessaging.instance.getToken();
-      if (token != null) await _saveToken(uid, token);
-    } catch (_) {
-      // Non-fatal.
+      if (token != null) {
+        await _saveToken(uid, token);
+        await _saveStatus(uid, {'tokenSaved': true, 'via': 'setUser'});
+      } else {
+        await _saveStatus(
+            uid, {'tokenSaved': false, 'tokenNull': true, 'via': 'setUser'});
+      }
+    } catch (e) {
+      await _saveStatus(uid, {
+        'tokenSaved': false,
+        'getTokenError': e.toString(),
+        'via': 'setUser',
+      });
     }
+  }
+
+  /// Diagnostic breadcrumb: records what registration actually did, so a
+  /// missing token can be traced instead of failing silently.
+  Future<void> _saveStatus(String uid, Map<String, dynamic> fields) async {
+    try {
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(uid)
+          .collection('private')
+          .doc('fcm_status')
+          .set(
+              {...fields, 'updatedAt': FieldValue.serverTimestamp()},
+              SetOptions(merge: true));
+    } catch (_) {}
   }
 
   Future<void> _saveToken(String uid, String token) async {
@@ -75,8 +116,9 @@ class NotificationService {
         'updatedAt': FieldValue.serverTimestamp(),
         'platform': 'ios',
       }, SetOptions(merge: true));
-    } catch (_) {
-      // Non-fatal — notifications just won't arrive on this device.
+    } catch (e) {
+      await _saveStatus(
+          uid, {'tokenSaved': false, 'saveError': e.toString()});
     }
   }
 }
