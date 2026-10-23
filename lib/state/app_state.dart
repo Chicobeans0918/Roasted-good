@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:async' show unawaited;
@@ -92,6 +93,23 @@ class AppState extends ChangeNotifier {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(_userNameKey, _userName);
     notifyListeners();
+    // The leaderboard stores a snapshot of the name; push the new one
+    // there too, otherwise the board keeps showing the old snapshot.
+    unawaited(_syncLeaderboardName());
+  }
+
+  /// Pushes the local display name into the leaderboard doc, so the board
+  /// never keeps showing a stale snapshot (e.g. 'Coffee lover' recorded
+  /// before the name was ever set). Best-effort: never blocks the UI.
+  Future<void> _syncLeaderboardName() async {
+    final uid = _uid;
+    if (uid == null || _userName.isEmpty) return;
+    try {
+      await FirebaseFirestore.instance
+          .collection('leaderboard')
+          .doc(uid)
+          .set({'userName': _userName}, SetOptions(merge: true));
+    } catch (_) {}
   }
 
   String? _uid;
@@ -132,6 +150,8 @@ class AppState extends ChangeNotifier {
     _uid = uid;
     _sync = sync;
     unawaited(NotificationService.instance.setUser(uid));
+    // Heal a stale leaderboard name snapshot from before the name was set.
+    unawaited(_syncLeaderboardName());
     final remote = await sync.pull(uid);
     if (remote.tastings.isNotEmpty) {
       _tried
