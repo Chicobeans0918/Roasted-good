@@ -22,10 +22,13 @@ import UIKit
     channel.setMethodCallHandler { call, result in
       if call.method == "getRegistrationState" {
         let defaults = UserDefaults.standard
-        result([
-          "error": defaults.string(forKey: "apnsRegistrationError") ?? NSNull(),
+        var state: [String: Any] = [
           "hasToken": defaults.string(forKey: "apnsDeviceToken") != nil,
-        ])
+        ]
+        if let error = defaults.string(forKey: "apnsRegistrationError") {
+          state["error"] = error
+        }
+        result(state)
       } else {
         result(FlutterMethodNotImplemented)
       }
