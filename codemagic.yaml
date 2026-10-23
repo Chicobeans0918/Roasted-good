@@ -197,3 +197,20 @@ workflows:
           app-store-connect publish --path "build/ios/ipa/*.ipa" --testflight
     artifacts:
       - build/ios/ipa/*.ipa
+
+  android-apk:
+    name: Android APK
+    instance_type: linux_x2
+    max_build_duration: 60
+    environment:
+      flutter: stable
+    scripts:
+      - name: Flutter pub get
+        script: flutter pub get
+      - name: Build release APK
+        script: |
+          # Release build signs with the debug keys (see android/app/build.gradle.kts
+          # TODO) — fine for a tester sideload, not for Play Store distribution.
+          flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
