@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/services.dart';
 
 /// Handles push notification registration and display.
 ///
@@ -86,6 +87,20 @@ class NotificationService {
         try {
           final apns = await messaging.getAPNSToken();
           await _saveStatus(uid, {'apnsTokenPresent': apns != null});
+        } catch (_) {}
+        // The raw iOS registration outcome, surfaced by AppDelegate: if
+        // registration itself failed, this carries the exact iOS error
+        // (the Firebase plugin only NSLog()s it, so Dart never sees it).
+        try {
+          const channel = MethodChannel('roasted/apns');
+          final state = await channel
+              .invokeMapMethod<String, dynamic>('getRegistrationState');
+          if (state != null) {
+            await _saveStatus(uid, {
+              'apnsNativeError': state['error'],
+              'apnsNativeTokenPresent': state['hasToken'],
+            });
+          }
         } catch (_) {}
       }
       if (token == null) {
