@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 /// Handles push notification registration and display.
@@ -9,6 +10,10 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 ///    can target this device for comment/like notifications.
 /// 3. Foreground messages are surfaced via [onForegroundMessage]; the app
 ///    shell shows them as a lightweight banner.
+///
+/// The token is saved both for restored sessions (in [init]) and on
+/// sign-in (via [setUser]): previously only the sign-in path saved it,
+/// so users who were already logged in never registered a token.
 class NotificationService {
   NotificationService._();
 
@@ -28,6 +33,14 @@ class NotificationService {
     try {
       final messaging = FirebaseMessaging.instance;
       await messaging.requestPermission(alert: true, badge: true, sound: true);
+      // Restored sessions never pass through the login screen, so register
+      // the token here too — otherwise already-signed-in users never get one.
+      final user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        _uid = user.uid;
+        final token = await messaging.getToken();
+        if (token != null) await _saveToken(user.uid, token);
+      }
       // Keep the token fresh for the signed-in user.
       FirebaseMessaging.instance.onTokenRefresh.listen((token) {
         final uid = _uid;
