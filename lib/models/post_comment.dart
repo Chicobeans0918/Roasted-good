@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 /// A comment on a community post.
 /// Lives in `posts/{postId}/comments`.
+/// [parentCommentId] is null for top-level comments and set to the
+/// top-level comment's id for replies (one level of nesting only).
 class PostComment {
   const PostComment({
     required this.id,
@@ -9,6 +11,7 @@ class PostComment {
     required this.userName,
     required this.body,
     required this.createdAt,
+    this.parentCommentId,
   });
 
   final String id;
@@ -16,12 +19,14 @@ class PostComment {
   final String userName;
   final String body;
   final DateTime createdAt;
+  final String? parentCommentId;
 
   Map<String, dynamic> toMap() => {
         'userId': userId,
         'userName': userName,
         'body': body,
         'createdAt': Timestamp.fromDate(createdAt),
+        if (parentCommentId != null) 'parentCommentId': parentCommentId,
       };
 
   factory PostComment.fromMap(Map<String, dynamic> map, String id) {
@@ -34,6 +39,7 @@ class PostComment {
       createdAt: ts is Timestamp
           ? ts.toDate()
           : DateTime.fromMillisecondsSinceEpoch(0),
+      parentCommentId: map['parentCommentId'] as String?,
     );
   }
 }

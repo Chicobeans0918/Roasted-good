@@ -573,6 +573,7 @@ class _CommentsSheet extends StatefulWidget {
 class _CommentsSheetState extends State<_CommentsSheet> {
   final _controller = TextEditingController();
   bool _sending = false;
+  PostComment? _replyTo;
 
   @override
   void dispose() {
@@ -617,28 +618,46 @@ class _CommentsSheetState extends State<_CommentsSheet> {
                       ),
                     );
                   }
+                  // Threaded view: top-level comments newest first,
+                  // replies oldest-first under their parent.
+                  final topLevel = comments
+                      .where((c) => c.parentCommentId == null)
+                      .toList();
+                  final repliesByParent =
+                      <String, List<PostComment>>{};
+                  for (final c in comments) {
+                    final parentId = c.parentCommentId;
+                    if (parentId != null) {
+                      repliesByParent
+                          .putIfAbsent(parentId, () => [])
+                          .add(c);
+                    }
+                  }
+                  for (final replies in repliesByParent.values) {
+                    replies.sort((a, b) =>
+                        a.createdAt.compareTo(b.createdAt));
+                  }
                   return ListView.separated(
                     padding:
                         const EdgeInsets.fromLTRB(24, 8, 24, 16),
-                    itemCount: comments.length,
+                    itemCount: topLevel.length,
                     separatorBuilder: (_, _) =>
-                        const SizedBox(height: 12),
+                        const SizedBox(height: 16),
                     itemBuilder: (context, index) {
-                      final c = comments[index];
+                      final c = topLevel[index];
+                      final replies =
+                          repliesByParent[c.id] ?? const [];
                       return Column(
                         crossAxisAlignment:
                             CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            '${c.userName} · ${_timeAgo(c.createdAt)}',
-                            style:
-                                theme.textTheme.bodySmall?.copyWith(
-                              color: p.muted,
+                          _commentTile(context, c),
+                          for (final r in replies)
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 20, top: 10),
+                              child: _commentTile(context, r),
                             ),
-                          ),
-                          const SizedBox(height: 2),
-                          Text(c.body,
-                              style: theme.textTheme.bodyMedium),
                         ],
                       );
                     },
@@ -650,21 +669,46 @@ class _CommentsSheetState extends State<_CommentsSheet> {
               Padding(
                 padding:
                     const EdgeInsets.fromLTRB(16, 8, 16, 16),
-                child: Row(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Expanded(
-                      child: TextField(
-                        controller: _controller,
-                        maxLength: 300,
-                        decoration: const InputDecoration(
-                          hintText: 'Write a comment…',
-                          border: OutlineInputBorder(),
-                          counterText: '',
+                    if (_replyTo != null)
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 4),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Text(
+                                'Replying to ${_replyTo!.userName}',
+                                style: theme.textTheme.bodySmall
+                                    ?.copyWith(color: p.muted),
+                              ),
+                            ),
+                            InkWell(
+                              onTap: () =>
+                                  setState(() => _replyTo = null),
+                              child: const Icon(Icons.close, size: 18),
+                            ),
+                          ],
                         ),
-                        onChanged: (_) => setState(() {}),
-                        onSubmitted: (_) => _send(),
                       ),
-                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: TextField(
+                            controller: _controller,
+                            maxLength: 300,
+                            decoration: InputDecoration(
+                              hintText: _replyTo == null
+                                  ? 'Write a comment…'
+                                  : 'Write a reply…',
+                              border: const OutlineInputBorder(),
+                              counterText: '',
+                            ),
+                            onChanged: (_) => setState(() {}),
+                            onSubmitted: (_) => _send(),
+                          ),
+                        ),
                     const SizedBox(width: 8),
                     IconButton.filled(
                       icon: _sending
@@ -683,6 +727,8 @@ class _CommentsSheetState extends State<_CommentsSheet> {
                               ? null
                               : _send,
                     ),
+                      ],
+                    ),
                   ],
                 ),
               ),
@@ -692,20 +738,81 @@ class _CommentsSheetState extends State<_CommentsSheet> {
     );
   }
 
+  /// One comment row: name + time, an "Author" badge when the
+  /// commenter wrote the post, the body, and a Reply button.
+  Widget _commentTile(BuildContext context, PostComment c) {
+    final theme = Theme.of(context);
+    final p = context.palette;
+    final isAuthor = c.userId == widget.post.userId;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Expanded(
+              child: Text(
+                '${c.userName} · ${_timeAgo(c.createdAt)}',
+                style: theme.textTheme.bodySmall?.copyWith(
+                  color: p.muted,
+                ),
+              ),
+            ),
+            if (isAuthor)
+              Container(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 8, vertical: 2),
+                decoration: BoxDecoration(
+                  color: p.accent,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Text(
+                  'Author',
+                  style: theme.textTheme.labelSmall?.copyWith(
+                    color: p.onAccent,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+          ],
+        ),
+        const SizedBox(height: 2),
+        Text(c.body, style: theme.textTheme.bodyMedium),
+        if (widget.uid != null)
+          InkWell(
+            onTap: () => setState(() => _replyTo = c),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 2),
+              child: Text(
+                'Reply',
+                style: theme.textTheme.bodySmall?.copyWith(
+                  color: p.accent,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ),
+      ],
+    );
+  }
+
   Future<void> _send() async {
     final text = _controller.text.trim();
     if (text.isEmpty || _sending || widget.uid == null) return;
     setState(() => _sending = true);
+    final replyTo = _replyTo;
     final ok = await widget.service.addComment(
       postId: widget.post.id,
       userId: widget.uid!,
       userName: widget.userName,
       body: text,
+      parentCommentId:
+          replyTo == null ? null : (replyTo.parentCommentId ?? replyTo.id),
     );
     if (mounted) {
       setState(() => _sending = false);
       if (ok) {
         _controller.clear();
+        setState(() => _replyTo = null);
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(

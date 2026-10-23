@@ -144,12 +144,14 @@ class CommunityService {
   }
 
   /// Adds a comment and awards the commenter
-  /// [CommunityPoints.perComment] points.
+  /// [CommunityPoints.perComment] points. When [parentCommentId] is
+  /// set, the comment is a reply to that top-level comment.
   Future<bool> addComment({
     required String postId,
     required String userId,
     required String userName,
     required String body,
+    String? parentCommentId,
   }) async {
     try {
       await _comments(postId).add(PostComment(
@@ -158,6 +160,7 @@ class CommunityService {
         userName: userName,
         body: body.trim(),
         createdAt: DateTime.now(),
+        parentCommentId: parentCommentId,
       ).toMap());
       await _posts.doc(postId).update({
         'commentCount': FieldValue.increment(1),
